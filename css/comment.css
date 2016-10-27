@@ -1,0 +1,70 @@
+body{ background: #f6f6f6;}
+.vertical .order-num{ margin-bottom: 0.5rem; padding: 0.8rem 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.4rem; color: #212b3e; line-height: 2.5rem;}
+.vertical .cont{ background: #fff; border-top: 1px solid #dfdfdf;}
+.vertical .ad-info{ height: 12.5rem; padding: 1rem 1rem 1rem 14rem;}
+.vertical .ad-info .img-box{ position: absolute; top: 1rem; left: 1rem; width: 12.4rem; height: 12.4rem; border: 1px solid #c4c4c4; border-radius: 0.4rem; overflow: hidden;}
+.vertical .ad-info .img-box img{ border-radius: 0.4rem;}
+.vertical .ad-info .name{ width: 20rem; height: 1.5rem; margin-bottom: 0.8rem; font-size: 1.4rem; color: #212b3e; text-overflow: ellipsis; line-height: 1.5rem; white-space: nowrap; overflow: hidden;}
+.vertical .ad-info .explain{ width: 20rem; height: 7.5rem; margin-bottom: 1.5rem; font-size: 1.2rem; color: #636363; line-height: 1.5rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;}
+.vertical .ad-info .color{ font-size: 1.2rem; color: #adadad; line-height: 1.2rem;}
+.vertical .star{ height: 3.3rem; padding: 0 1rem; border-top: 1px solid #eee; font-size: 0;}
+.vertical .star p{ display: inline-block; margin-right: 1.6rem; font-size: 1.4rem; color: #212b3e; line-height: 3.3rem; vertical-align: middle;}
+.vertical .star a{ display: inline-block; width: 1.25rem; height: 1.25rem; padding: 0.4rem; vertical-align: middle; -webkit-tap-highlight-color: transparent;}
+.vertical .star a span{ display: block; width: 100%; height: 100%; background-position: -10rem -2rem;}
+.vertical .star a.on span{ background-position: -11.4rem -2rem;}
+.vertical .talking{ margin-bottom: 1rem; padding: 0 1rem;}
+.vertical .talking p{ height: 2.5rem; font-size: 1.4rem; color: #212b3e; line-height: 2.3rem;}
+.vertical .talking textarea{ width: 34.4rem; height: 16rem; padding: 0.5rem; background: #f6f6f6; border: 1px solid #dedede; font-size: 1.2rem; color: #212b3e; line-height: 1.6rem; resize: none;}
+.vertical .add-pic{ padding: 0 1rem 1.5rem;}
+.vertical .add-pic p{ height: 2.5rem; font-size: 1.4rem; color: #212b3e; line-height: 2.3rem;}
+.vertical .add-pic p span{ font-size: 1.2rem; color: #9baab5;}
+.vertical .pic-box .pic{ width: 7.9rem; height: 7.9rem; margin-right: 0.5rem; border: 1px solid #b2bdc5; border-radius: 0.4rem;}
+.vertical .pic-box .upload-btn{ top: 0; left: 0; z-index: 5; width: 100%; height: 100%;}
+.vertical .pic-box .upload-btn input{ position: relative; z-index: 3; width: 100%; height: 100%; opacity: 0;}
+.vertical .pic-box .upload-btn .bg{ top: 50%; left: 50%; z-index: 1; width: 2.7rem; height: 2.4rem; margin: -1.2rem 0 0 -1.35rem; background-position: -14.7rem -2rem;}
+.vertical .pic-box .picture{ position: relative; width: 100%; height: 100%; border-radius: 0.4rem; overflow: hidden;}
+.vertical .pic-box .picture img{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block; margin: auto;}
+.vertical .pic-box .close{ top: -0.2rem; right: -0.2rem; z-index: 9; display: none; width: 1.7rem; height: 1.7rem; background-position: -12.8rem -2rem;}
+.vertical .anonymous{ padding: 1.2rem 1rem; background: #fff; border-top: 1px solid #dfdfdf; border-bottom: 0.05rem solid #dfdfdf;}
+.vertical .anonymous a{ display: inline-block; padding-left: 3.2rem; font-size: 1.4rem; color: #818181; line-height: 2rem;}
+.vertical .anonymous a i{ top: 0; left: 0; width: 2rem; height: 2rem; background-position: -18rem 0;}
+.vertical .anonymous a.on i{ background-position: -18rem -2.2rem;}
+.vertical .anonymous input{ opacity: 0;}
+.vertical .btn-box{ padding: 1.2rem 1rem;}
+.vertical .btn-box a{ width: 100%; height: 4.5rem; background: #f0514b; border-radius: 0.4rem; font-size: 1.6rem; color: #fff; line-height: 4.5rem;}
+
+.level .order-num{ margin-bottom: 0.5rem; padding: 0.8rem 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.3rem; color: #212b3e; line-height: 2.2rem;}
+.level .cont{ border-top: 1px solid #dfdfdf;}
+.level .com-cont{ margin-bottom: 0.5rem; background: #fff;}
+.level .com-cont:last-child{ margin-bottom: 0;}
+.level .ad-info{ height: 9.8rem; padding: 0.5rem 1.5rem 0 12rem; border-bottom: 1px solid #eee;}
+.level .ad-info .img-box{ position: absolute; top: 0.5rem; left: 1.5rem; width: 9.2rem; height: 9.2rem; border: 1px solid #c4c4c4; border-radius: 0.4rem; overflow: hidden;}
+.level .ad-info .img-box img{ border-radius: 0.4rem;}
+.level .ad-info .name{ height: 2rem; margin-bottom: 0.4rem; padding-top: 0.9rem; font-size: 1.3rem; color: #212b3e; text-overflow: ellipsis; line-height: 2rem; white-space: nowrap; overflow: hidden;}
+.level .ad-info .explain{ width: 47.2rem; height: 3rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #636363; line-height: 1.5rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
+.level .ad-info .color{ font-size: 1rem; color: #adadad; line-height: 1.4rem;}
+.level .star{ height: 3.2rem; padding: 0 1.5rem; font-size: 0;}
+.level .star p{ display: inline-block; margin-right: 0.5rem; font-size: 1.2rem; color: #212b3e; line-height: 3.2rem; vertical-align: middle;}
+.level .star a{ display: inline-block; width: 1.25rem; height: 1.25rem; padding: 0.4rem; vertical-align: middle; -webkit-tap-highlight-color: transparent;}
+.level .star a span{ display: block; width: 100%; height: 100%; background-position: -10rem -2rem;}
+.level .star a.on span{ background-position: -11.4rem -2rem;}
+.level .talking{ margin-bottom: 1rem; padding: 0 1.5rem;}
+.level .talking p{ height: 1.8rem; font-size: 1.2rem; color: #212b3e; line-height: 1.2rem;}
+.level .talking textarea{ width: 56.7rem; height: 7rem; padding: 0.5rem; background: #f6f6f6; border: 1px solid #dedede; font-size: 1rem; color: #212b3e; line-height: 1.4rem; resize: none;}
+.level .add-pic{ padding: 0 1.5rem 1.5rem;}
+.level .add-pic p{ height: 2.5rem; font-size: 1.4rem; color: #212b3e; line-height: 2.3rem;}
+.level .add-pic p span{ font-size: 1.2rem; color: #9baab5;}
+.level .pic-box .pic{ width: 7.9rem; height: 7.9rem; margin-right: 0.5rem; border: 1px solid #b2bdc5; border-radius: 0.4rem;}
+.level .pic-box .upload-btn{ top: 0; left: 0; z-index: 5; width: 100%; height: 100%;}
+.level .pic-box .upload-btn input{ position: relative; z-index: 3; width: 100%; height: 100%; opacity: 0;}
+.level .pic-box .upload-btn .bg{ top: 50%; left: 50%; z-index: 1; width: 2.7rem; height: 2.4rem; margin: -1.2rem 0 0 -1.35rem; background-position: -14.7rem -2rem;}
+.level .pic-box .picture{ position: relative; width: 100%; height: 100%; border-radius: 0.4rem; overflow: hidden;}
+.level .pic-box .picture img{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block; margin: auto;}
+.level .pic-box .close{ top: -0.2rem; right: -0.2rem; z-index: 9; display: none; width: 1.7rem; height: 1.7rem; background-position: -12.8rem -2rem;}
+.level .anonymous{ padding: 1.2rem 1.5rem; background: #fff; border-top: 1px solid #dfdfdf; border-bottom: 0.05rem solid #dfdfdf;}
+.level .anonymous a{ display: inline-block; padding-left: 3.2rem; font-size: 1.3rem; color: #818181; line-height: 2rem;}
+.level .anonymous a i{ top: 0; left: 0; width: 2rem; height: 2rem; background-position: -18rem 0;}
+.level .anonymous a.on i{ background-position: -18rem -2.2rem;}
+.level .anonymous input{ opacity: 0;}
+.level .btn-box{ padding: 2.5rem 1rem;}
+.level .btn-box a{ width: 29.4rem; height: 3.8rem; margin: 0 auto; background: #f0514b; border-radius: 0.4rem; font-size: 1.3rem; color: #fff; line-height: 3.8rem;}

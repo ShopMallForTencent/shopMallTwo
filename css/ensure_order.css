@@ -1,0 +1,66 @@
+	body{background: #f6f6f6;}
+	.addsp{background: url(../images/myAddress/sprite.png) no-repeat;background-size: 20rem;}
+	.vertical .addBox .addNewAdd{display: none;}
+	.vertical .addBox{display: block;height: 7.3rem;width: 100%;line-height: 7.3rem;font-size: 1.7rem;color: #464646;text-align: center;background: #fff;position: relative;}
+	.vertical .addBox i{background-position:-10.05rem 0 ;width: 1.15rem;height: 1.7rem;display: inline-block;vertical-align: middle;margin-right:0.75rem;}
+	.vertical .addBox p{margin-left:3.2rem;}
+	.vertical .addBox p:nth-of-type(1){text-align: left;line-height: 1.5rem;padding-top:1.2rem}
+	.vertical .addBox .buyer{font-size: 1.5rem;color:#212b3e;}
+	.vertical .addBox .buyerNum{font-size: 1.4rem;margin-left:3rem;}
+		.vertical .addBox p:nth-of-type(2){text-align: left;line-height: 1.6rem;font-size: 1.2rem;color: #818181;margin-top:0.2rem;margin-right:2rem;}
+	.vertical .addBox .icon-locate{background-position: -10rem 0 ;width: 1.3rem;height: 1.4rem;position: absolute;top:4rem;left:1rem;}
+	.vertical .shopList{margin-top:0.5rem;background: #fff;}
+	.vertical .shopList .shopName{font-size: 1.5rem;color: #212b3e;height: 4.20rem;line-height: 4.3rem;border:1px solid #e9e9e9;}
+	.vertical .shopList .shopName i{background-position: -11.4rem 0;width: 1.5rem;height: 1.4rem;display: inline-block;vertical-align: middle;margin:0 0.9rem 0 0.95rem;}
+	.vertical .itemList {position: relative;padding:1rem 0 1rem 10.7rem;margin-right:1rem;margin-left:1rem;border-bottom: 1px solid #e9e9e9;}
+	.vertical .itemList .left{position: absolute;top:1rem;left:1rem;border: 1px solid #c4c4c4;width: 9.15rem;height: 9.15rem;}
+	.vertical .itemList .right{}
+	.vertical .itemList .right .listName{color: #212b3e;font-size: 1.4rem;line-height: 1.75rem;}
+	.vertical .itemList .right .color{color: #adadad;font-size: 1.2rem;margin-top:1.35rem;}
+	.vertical .itemList .nums{margin-top:1.75rem;}
+	.vertical .itemList .nums p:nth-of-type(1){color: #f0514b;font-size: 1.5rem;float: left;}
+		.vertical .itemList .nums p:nth-of-type(1) .rmb{font-size: 1.2rem;}
+	.vertical .itemList .nums p:nth-of-type(2){float: right;}
+	.vertical .countFee{padding:0.25rem 1rem 0.25rem 1rem;background: #fff;border-bottom:1px solid #e9e9e9;}
+	.vertical .countFee p{line-height: 2.7rem;}
+	.vertical .countFee p .feeName{color: #212b3e;font-size: 1.5rem;float: left;}
+		.vertical .countFee p .feeNum{float: right;font-size: 1.6rem;color:#f0514b;}
+	.vertical .countFee .feeNum span:nth-of-type(1){font-size: 1.3rem;}
+	.vertical .goPay{background: #f0514b;line-height: 4.5rem;width: 35.5rem;height: 4.5rem;color: #fff;text-align: center;font-size: 1.6rem;display: block;position: fixed;bottom: 1.4rem;left:50%;margin-left:-17.75rem;border-radius: 0.25rem;z-index: 10;}
+	.vertical .alreadySale {display: none;}
+	/*shuban*/
+	.level{padding-bottom:4.5rem;padding-bottom:5.3rem;}
+	.level .wrap{padding: 0;}
+	.level .addBox{border: 1px solid #eeeeee;}
+	.level .addBox .addNewAdd{display: none;}
+	.level .addBox{display: block;height: 7.3rem;width: 100%;line-height: 7.3rem;font-size: 1.3rem;color: #464646;text-align: center;background: #fff;position: relative;}
+	.level .addBox i{background-position:-10.05rem 0 ;width: 1.15rem;height: 1.7rem;display: inline-block;vertical-align: middle;margin-right:0.75rem;}
+	.level .addBox p{margin-left:3.15rem;}
+	.level .addBox p:nth-of-type(1){text-align: left;line-height: 1.5rem;padding-top:1.2rem}
+	.level .addBox .buyer{color:#212b3e;}
+	.level .addBox .buyerNum{margin-left:3rem;}
+	.level .addBox p:nth-of-type(2){text-align: left;line-height: 1.6rem;font-size: 1.2rem;margin-top:1rem;color: #818181;margin-right:2rem;}
+	.level .addBox .icon-locate{background-position: -10rem 0 ;width: 1.3rem;height: 1.4rem;position: absolute;top:4rem;left:1rem;}
+	.level .shopList{margin-top:0.5rem;background: #fff;}
+	.level .shopList .shopName{font-size: 1.5rem;color: #212b3e;height: 4.20rem;line-height: 4.3rem;border:1px solid #e9e9e9;}
+	.level .shopList .shopName i{background-position: -11.4rem 0;width: 1.5rem;height: 1.4rem;display: inline-block;vertical-align: middle;margin:0 0.9rem 0 0.95rem;}
+	.level .itemList {position: relative;padding:1rem 0 1rem 10.7rem;margin-right:1rem;margin-left:1rem;border-bottom: 1px solid #e9e9e9;}
+	.level .itemList .left{position: absolute;top:0.5rem;left:1.45rem;border: 1px solid #c4c4c4;width: 6.75rem;height: 6.75rem;}
+	.level .itemList .right{position: relative;}
+	.level .itemList .right .listName{color: #212b3e;font-size: 1.4rem;line-height: 1.75rem;padding-top:0.95rem;}
+	.level .itemList .right .color{color: #adadad;font-size: 1.2rem;position: absolute;top:4.8rem;left:16rem;}
+	.level .itemList .right .alreadySale{position: absolute;left: 6.7rem;top:4.8rem;font-size: 1.2rem;color: #adadad;}
+	.level .itemList .nums{margin-top:1.5rem;height: 1.95rem;}
+	.level .itemList .nums p:nth-of-type(1){color: #f0514b;font-size: 1.6rem;position: absolute;top:4.5rem;left:0rem;}
+	.level .itemList .nums p:nth-of-type(1) .rmb{font-size: 1.3rem;}
+	.level .itemList .nums p:nth-of-type(2){position: absolute;top:4.8rem;right:1.5rem;color: #adadad;}
+	.level .countFee{margin:0 0rem 0 0rem;background: #fff;padding-top:0.25rem;padding-bottom:0.25rem;border-bottom:1px solid #e9e9e9;padding-left:28rem;width: 100%;}
+	.level .countFee p{line-height: 2.7rem;}
+	.level .itemFee{float: left;}
+	.level .transportFee{float: left;margin-left:2.85rem;}
+	.level .allFee{float: left;margin-left:2.85rem;}
+	.level .countFee p .feeName{color: #212b3e;font-size: 1.3rem;}
+	.level .countFee p .feeNum{font-size: 1.6rem;color:#f0514b;}
+	.level .countFee .feeNum span:nth-of-type(1){font-size: 1.3rem;}
+	.level .goPay{background: #f0514b;line-height: 3.75rem;width: 29.5rem;height: 3.75rem;color: #fff;text-align: center;font-size: 1.4rem;display: block;position: fixed;bottom: 1.4rem;left:50%;margin-left:-14.75rem;border-radius: 0.25rem;z-index: 10;}
+	

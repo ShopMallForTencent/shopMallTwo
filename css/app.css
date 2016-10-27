@@ -1,0 +1,15 @@
+.clearfix {
+  font-size: 19px;
+}
+div {
+  background-color: blue;
+}
+body {
+  font-size: 14px;
+}
+.hello .world {
+  font-size: 12px;
+}
+h2 {
+  color: red;
+}

@@ -1,0 +1,168 @@
+﻿<div class='page-container-wrap'>
+<link rel="stylesheet" href="./css/common.css">
+<style type="text/css">
+    body,html{height: 100%;}
+    body{background: #f6f6f6;}
+    .vertical .wrap{padding: 0; height: 100%;}
+
+    .data{display: block; width: 6rem; height: 2rem; line-height: 2rem; text-align: center; font-size: 1.22rem; background: #d2d2d2; border-radius: 0.25rem; margin: 0.75rem auto; color: #fff;}
+
+    /*show*/
+    .show{ width: 35.5rem; height: 42rem; background: #f6f6f6; overflow: auto; font-size: 1.3rem; color: #212b3e; padding: 1rem;}
+     
+    /*saybox*/     
+    .saybox{ background: #fff; width: 100%; height: 3.6rem; border: 0.1rem solid #e7e5e6; position: fixed; bottom: 0; left: 0; padding: 0.85rem;  }
+    .saybox dl{overflow: hidden;}
+    .saybox dt, .saybox dd{float: left; display: inline;}
+    .saybox dt{width: 3.7rem;}
+    .saybox dt img{display: block; width: 100%;}
+    .saybox dd{width: 32rem;}  
+    .saybox dt span{width: 3rem; height: 3rem; display: block; cursor: pointer;}
+    .saybox dd input{width: 24.5rem; height: 3.5rem; border: 1px solid #cccccc; border-radius: 0.25rem; display: block; padding-left: 1rem; font-size: 1.5rem;  }
+    .saybox dd .send{width: 5rem; height: 3.3rem; display: block; text-align: center; line-height: 3.3rem; color: #fff; background: #f0514b; font-size: 1.5rem; font-weight: bold; border-radius: 0.25rem; margin: 0.25rem 0 0 1rem;}
+
+    /*facebox*/
+    #facebox{bottom: 5rem !important; left: 0 !important; width: 35.5rem; height: 14rem; background: #fff; padding: 1rem;}
+    #facebox td{width: 2.3rem;}
+    #facebox td img{display: block; width: 100%;}
+    .vertical .facebox table{display: block; width: 31rem; margin: 0 auto;}
+    .level .facebox table{display: block; width: 62rem; margin: 0 auto;}
+    
+    /*orders*/
+    .orders_main{width: 33.2rem; margin: 0 auto; border: 1px solid #c7c7c7; border-radius: 0.25rem; padding: 1.2rem 0 0 1.9rem; padding-bottom: 1.4rem; font-size: 1.3rem;}
+    .orders_main dl{overflow: hidden;}
+    .orders_main dt, .orders_main dd{float: left; display: inline;}
+    .orders_main dt{width: 6.5rem;}
+    .orders_main dd{width: 25rem;}
+
+    /*user_say*/
+    .user_say{width: 28.8rem; font-size: 1.2rem; margin-top: 3rem; clear: both; }
+    .user_say dt{width: 5rem;}
+    .user_name{color: #707070; width: 22.5rem; margin-bottom: 0.5rem;}
+    .u_right .user_name{text-align: right;}
+    .user_say dt img{display: block; width: 4rem; border-radius: 0.5rem;}
+    .user_say dd{width: 23.5rem;}
+    .user_saymsg{width: 19.5rem; background: #fff; border-radius: 0.5rem; padding: 1.5rem; text-align: justify; position: relative; line-height: 1.8rem;}
+    .show img{display: inline-block; width: 1.7rem; }
+    .u_left .user_saymsg{box-shadow: 0.25rem 0.25rem 0.5rem #dbdbdb;}
+    .u_right .user_saymsg{box-shadow: -0.25rem 0.25rem 0.5rem #dbdbdb;}
+    .u_left .user_saymsg:after{content:'三角'; text-indent: -9999px; width:0; height:0;  border-top:0.5rem solid transparent; border-bottom:0.5rem solid transparent; border-right:0.5rem solid #fff; position: absolute; top: 1rem; left: -0.5rem; }
+    .u_right .user_saymsg:after{content:'三角'; text-indent: -9999px; width:0; height:0; border-top:0.5rem solid transparent;border-bottom: 0.5rem solid transparent; border-left: 0.5rem solid #fff; position: absolute; top: 1rem; right:-0.5rem; }
+    .u_left{float: left;}
+    .u_right{float: right;}
+
+    .level .saybox dd input{width: 54rem;}
+    .level .saybox dd{width: 63rem;}
+    .level .show{width: auto;}
+    .level .wrap{padding: 0;}
+    .level tr{float: left; display: inline;}
+    .level #facebox{width: 64.5rem; height: 7rem;}
+
+</style>
+    <div class="wrap index-wrap pr" id="wrap"> 
+        
+        <div class='show' id='show'>
+            
+            <div class='orders'>
+                <span class='data'>10:34</span>
+                <div class='orders_main'>
+                    <dl>
+                        <dt>订单编号：</dt>
+                        <dd>1234567890</dd>
+                    </dl>
+                    <dl>
+                        <dt>订单金额：</dt>
+                        <dd>108元</dd>
+                    </dl>
+                    <dl>
+                        <dt>订单商品：</dt>
+                        <dd>
+                            <p>CF最新枪战模型X战1-白色</p>
+                            <p>CF最新枪战模型X战1-白色</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>订单时间：</dt>
+                        <dd>2012-08-09</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class='user_say u_left'>
+                <dl>
+                    <dt class='fl dil'><img src="images/chatting/img1.jpg"></dt>
+                    <dd class='fl dil'>
+                        <p class='user_name'>小小零神 - 小明</p>
+                        <p class='user_saymsg'>小时候<img src="images/chatting/4.gif">我一次在家写作业，突然停电了，耶耶耶耶耶！终于不用写作业了，可以看电视了。还特二的去开电视.....<img src="images/chatting/1.gif"></p>
+                    </dd>
+                </dl>
+            </div>
+            <div class='user_say u_right'>
+                <dl>
+                    <dt class='fr dil'><img src="images/chatting/img1.jpg"></dt>
+                    <dd class='fl dil'>
+                        <p class='user_name'>小小零神 - 小明</p>
+                        <p class='user_saymsg'>小时候我一次在家写作业，突然停电了，耶耶耶耶耶！终于不用写作业了，可以看电视了。还特二的去开电视.....</p>
+                    </dd>
+                </dl>
+            </div>
+            <div class='user_say u_right'>
+                <dl>
+                    <dt class='fr dil'><img src="images/chatting/img1.jpg"></dt>
+                    <dd class='fl dil'>
+                        <p class='user_name'>小小零神 - 小明</p>
+                        <p class='user_saymsg'>小时候我一次在家写作业，突然停电了，耶耶耶耶耶！终于不用写作业了，可以看电视了。还特二的去开电视.....</p>
+                    </dd>
+                </dl>
+            </div>
+            <div class='user_say u_right'>
+                <dl>
+                    <dt class='fr dil'><img src="images/chatting/img1.jpg"></dt>
+                    <dd class='fl dil'>
+                        <p class='user_name'>小小零神 - 小明</p>
+                        <p class='user_saymsg'>小时候我一次在家写作业，突然停电了，耶耶耶耶耶！终于不用写作业了，可以看电视了。还特二的去开电视.....</p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        
+        <div class='saybox'>
+            <dl>
+                <dt><span class='emotion'><img src="images/chatting/face.png"/></span></dt>
+                <dd>
+                    <p class='dil fl'><input class="input" id="saytext" name="saytext"></p>
+                    <p class='dil fl'><a class='send sub_btn' href="javascript:" title='发送'>发送</a></p>
+                </dd>
+            </dl>
+        </div>
+       
+    </div>
+</div>
+<!-- <script src="js/chatting/jquery.min.js"></script>
+<script src="js/chatting/jquery.qqFace.js"></script>
+<script>
+$(function(){
+
+    var saytext = $('#saytext');
+
+    $('.emotion').qqFace({
+        id : 'facebox', 
+        assign:'saytext', 
+        path:'images/chatting/' //表情存放的路径
+    });
+    $(".sub_btn").click(function(){
+        var str = $("#saytext").val();
+        if (str.length <= 0) {alert('不能发送空消息！'); return;};
+        $("#show").html(replace_em(str));
+        saytext.get(0).value = '';
+    });
+});
+//查看结果
+function replace_em(str){
+    str = str.replace(/\</g,'&lt;');
+    str = str.replace(/\>/g,'&gt;');
+    str = str.replace(/\n/g,'<br/>');
+    str = str.replace(/\[em_([0-9]*)\]/g,'<img src="images/chatting/$1.gif" border="0" />');
+    return str;
+}
+</script> -->

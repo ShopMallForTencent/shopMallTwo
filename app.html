@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no, email=no">
+<title>图片社区</title>
+<script>
+var _w = document.documentElement.clientWidth || document.body.clientWidth,
+	_h = document.documentElement.clientHeight || document.body.clientHeight,
+    pageW = 750;
+var screenFun = function(){
+    if (_w < _h) {
+        pageW = 750;
+        document.documentElement.style.fontSize = _w/pageW*20+'px';
+        document.body.className = 'vertical';
+    } else{
+        pageW = 1334;
+        document.documentElement.style.fontSize = _w/pageW*20+'px';
+        document.body.className = 'level';
+    }
+}
+document.addEventListener("DOMContentLoaded",function(e){
+	screenFun();
+});
+window.onresize = function(){
+	_w = document.documentElement.clientWidth || document.body.clientWidth,
+	_h = document.documentElement.clientHeight || document.body.clientHeight;
+    screenFun();
+}
+</script>
+<!-- <link rel="stylesheet" href="./css/app.css"> -->
+<script src="http://gzhcache.qq.com/assets/js/dep/zepto.min.js"></script>
+<script src="spa/spa.js"></script>
+<script src="http://gzhcache.qq.com/assets/js/dep/sea.js"></script>
+
+<script>
+seajs.config({
+	base: './',
+	alisa: {
+		'tpl': './tpl',
+		'page': './page',
+        'js': './js'
+	}
+});
+seajs.use('./boot');
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
