@@ -1,125 +1,125 @@
-body{ background: #f6f6f6;}
-.page-nav{ position: fixed; top: 0; right: 0; z-index: 99; background: #fff; overflow: hidden;}
-.page-nav-cont{ height: 6rem; overflow-x: auto; overflow-y: hidden;}
-.page-nav ::-webkit-scrollbar{ opacity: 0;}
-.page-nav ul{ width: 100%; height: 4.5rem;}
-.page-nav li{ width: 7.5rem; height: 4.4rem; border-bottom: 2px solid #e2e2e2;}
-.page-nav a{ top: 0; left: 0; width: 100%; height: 4.3rem; padding-bottom: 0.2rem; font-size: 1.5rem; color: #212b3e; line-height: 4.3rem;}
-.page-nav a.on{ padding-bottom: 0; background: #f2f2f2; border-bottom: 0.2rem solid #f0514b; color: #f0514b;}
-.page-nav i{ top: 50%; right: 0.9rem; width: 1.1rem; height: 1.1rem; margin-top: -0.6rem; border-top: 1px solid #f0514b; border-right: 1px solid #f0514b; -webkit-transform: rotate(45deg);}
-.vertical .main{ padding-top: 5.5rem;}
-.vertical .page-main{ padding-top: 0;}
-.vertical .page-nav{ width: 100%; height: 4.5rem;}
-.vertical .cont{ margin-bottom: 0.5rem; border-bottom: 1px solid #dfdfdf;}
-.vertical .page-main .cont{ margin-bottom: 0; border-bottom: none;}
-.vertical .cont .hd,
-.vertical .cont .bd{ padding: 0 1rem; background: #fff;}
-.vertical .cont .hd{ height: 4.3rem; border-top: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf;}
-.vertical .cont .hd h2{ font-size: 1.5rem; color: #212b3e; line-height: 4.3rem;}
-.vertical .cont .hd img{ width: auto; height: 1.5rem; margin-right: 1rem; vertical-align: middle;}
-.vertical .cont .state{ position: absolute; top: 0; right: 1rem; font-size: 1.4rem; color: #212b3e; line-height: 4.3rem;}
-.vertical .cont .explain{ height: 4.2rem; font-size: 1.4rem; color: #212b3e; line-height: 4.2rem;}
-.vertical .cont .explain span{ color: #f72828;}
-.vertical .lists li{ margin-bottom: 1rem; padding: 0 0 1rem 10.8rem; border-bottom: 1px solid #eee;}
-.vertical .lists .img-box{ position: absolute; top: 0; left: 0; width: 9.2rem; height: 9.2rem; border: 1px solid #c4c4c4; border-radius: 0.4rem; overflow: hidden;}
-.vertical .lists .img-box img{ border-radius: 0.4rem;}
-.vertical .lists .name{ width: 22rem; height: 3.7rem; margin-bottom: 1.1rem; padding-right: 2.7rem; font-size: 1.4rem; color: #212b3e; line-height: 1.85rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
-.vertical .lists .color{ margin-bottom: 1.4rem; font-size: 1.2rem; color: #adadad; line-height: 1.8rem;}
-.vertical .lists .price{ font-size: 1.2rem; color: #f0514b; line-height: 1.2rem;}
-.vertical .lists .sales{ display: none;}
-.vertical .lists .num{ position: absolute; right: 0; bottom: 1rem; font-size: 1.2rem; color: #adadad; line-height: 1.2rem;}
-.vertical .details{ height: 6rem; border-bottom: 1px solid #eee;}
-.vertical .details .goods{ font-size: 1.5rem; color: #212b3e; line-height: 2.5rem;}
-.vertical .details .cost{ position: absolute; top: 0; right: 0; font-size: 1.5rem; color: #212b3e; line-height: 2.4rem;}
-.vertical .details .cost p{ position: relative; padding-left: 3.7rem; text-align: right;}
-.vertical .details .cost em{ position: absolute; top: 0; left: 0;}
-.vertical .details .cost span{ font-size: 1.3rem; color: #f0514b; text-align: right;}
-.vertical .details .cost strong{ font-size: 1.4rem; font-weight: bold; color: #f0514b;}
-.vertical .details .cost b{ font-size: 1.1rem;}
-.vertical .details .cost .txt{ position: absolute; top: 0; left: 0;}
-.vertical .logistics{ padding: 0.8rem 0; border-bottom: 1px solid #eee;}
-.vertical .logistics p{ font-size: 1.4rem; color: #2f2e2e; line-height: 2.7rem;}
-.vertical .logistics a{ position: absolute; top: 50%; right: 0; width: 9.3rem; height: 3.1rem; margin-top: -1.6rem; border: 1px solid #d6d6d6; border-radius: 0.3rem; font-size: 1.4rem; color: #212b3e; line-height: 3.1rem;}
-.vertical .cont .btn-box{ padding: 1.5rem 0;}
-.vertical .cont .btn-box a{ width: 10.8rem; height: 3.9rem; margin-right: 1.25rem; border: 1px solid #a4a4a4; border-radius: 0.4rem; font-size: 1.5rem; color: #212b3e; line-height: 3.9rem;}
-.vertical .cont .btn-box a:last-child{ margin-right: 0;}
-.vertical .cont .btn-box a.red{ background: #f0514b; border-color: #f0514b; color: #fff;}
-.vertical .title{ display: table; width: 100%; height: 6.7rem; margin-bottom: 0.5rem; background: #fff; overflow: hidden;}
-.vertical .title .title-cont{ display: table-cell; vertical-align: middle;}
-.vertical .title h2{ padding: 0 1rem; font-size: 1.5rem; font-weight: bold; color: #212b3e; line-height: 2.5rem;}
-.vertical .title p{ padding: 0 1rem; font-size: 1.2rem; color: #212b3e; line-height: 2rem;}
-.vertical .title p span{ color: #f72828;}
-.vertical .address{ margin-bottom: 0.5rem; padding-bottom: 1rem; background: #fff; overflow: hidden;}
-.vertical .address .user-info{ height: 2.4rem; margin-bottom: 0.2rem; padding: 0.6rem 0 0 3.2rem; font-size: 1.4rem; color: #212b3e; line-height: 2.4rem;}
-.vertical .address .user-info strong{ margin-right: 2.8rem; font-size: 1.5rem; font-weight: bold;}
-.vertical .address .add{ width: 32rem; padding-left: 3.2rem; font-size: 1.2rem; color: #818181; line-height: 1.6rem;}
-.vertical .address .add i{ top: 50%; left: 1rem; width: 1.2rem; height: 1.5rem; margin-top: -0.75rem; background-position: -8.8rem -2rem;}
-.vertical .page-main .btn-box{ padding: 1.5rem 1rem; background: #fff;}
-.vertical .page-main .price-info{ margin-bottom: 0.5rem; padding: 0 1rem 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.5rem; color: #212b3e; text-align: right; line-height: 2.5rem;}
-.vertical .page-main .price-info em{ position: absolute; top: 0; left: 0;}
-.vertical .page-main .price-info span{ color: #f0514b;}
-.vertical .page-main .price-info strong{ font-weight: bold; color: #f0514b;}
-.vertical .page-main .order-num{ padding: 0.8rem 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.4rem; color: #818181; line-height: 2.5rem;}
-.vertical .page-main .logistics{ margin-top: 0.5rem; padding: 1rem; background: #fff; border-bottom: 1px solid #cac9c9;}
-.vertical .page-main .logistics a{ right: 1rem;}
+.order-page-wrap{ background: #f6f6f6;}
+.order-page-wrap .order-page-nav{ position: fixed; top: 0; right: 0; z-index: 99; background: #fff; overflow: hidden;}
+.order-page-wrap .order-page-nav-cont{ height: 6rem; overflow-x: auto; overflow-y: hidden;}
+.order-page-wrap .order-page-nav ::-webkit-scrollbar{ opacity: 0;}
+.order-page-wrap .order-page-nav ul{ width: 100%; height: 4.5rem;}
+.order-page-wrap .order-page-nav li{ width: 7.5rem; height: 4.4rem; border-bottom: 2px solid #e2e2e2;}
+.order-page-wrap .order-page-nav a{ top: 0; left: 0; width: 100%; height: 4.3rem; padding-bottom: 0.2rem; font-size: 1.5rem; color: #212b3e; line-height: 4.3rem;}
+.order-page-wrap .order-page-nav a.on{ padding-bottom: 0; background: #f2f2f2; border-bottom: 0.2rem solid #f0514b; color: #f0514b;}
+.order-page-wrap .order-page-nav i{ top: 50%; right: 0.9rem; width: 1.1rem; height: 1.1rem; margin-top: -0.6rem; border-top: 1px solid #f0514b; border-right: 1px solid #f0514b; -webkit-transform: rotate(45deg);}
+.vertical .order-page-wrap .main{ padding-top: 5.5rem;}
+.vertical .order-page-wrap .page-main{ padding-top: 0;}
+.vertical .order-page-wrap .order-page-nav{ width: 100%; height: 4.5rem;}
+.vertical .order-page-wrap .cont{ margin-bottom: 0.5rem; border-bottom: 1px solid #dfdfdf;}
+.vertical .order-page-wrap .page-main .cont{ margin-bottom: 0; border-bottom: none;}
+.vertical .order-page-wrap .cont .hd,
+.vertical .order-page-wrap .cont .bd{ padding: 0 1rem; background: #fff;}
+.vertical .order-page-wrap .cont .hd{ height: 4.3rem; border-top: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf;}
+.vertical .order-page-wrap .cont .hd h2{ font-size: 1.5rem; color: #212b3e; line-height: 4.3rem;}
+.vertical .order-page-wrap .cont .hd img{ width: auto; height: 1.5rem; margin-right: 1rem; vertical-align: middle;}
+.vertical .order-page-wrap .cont .state{ position: absolute; top: 0; right: 1rem; font-size: 1.4rem; color: #212b3e; line-height: 4.3rem;}
+.vertical .order-page-wrap .cont .explain{ height: 4.2rem; font-size: 1.4rem; color: #212b3e; line-height: 4.2rem;}
+.vertical .order-page-wrap .cont .explain span{ color: #f72828;}
+.vertical .order-page-wrap .lists li{ margin-bottom: 1rem; padding: 0 0 1rem 10.8rem; border-bottom: 1px solid #eee;}
+.vertical .order-page-wrap .lists .img-box{ position: absolute; top: 0; left: 0; width: 9.2rem; height: 9.2rem; border: 1px solid #c4c4c4; border-radius: 0.4rem; overflow: hidden;}
+.vertical .order-page-wrap .lists .img-box img{ border-radius: 0.4rem;}
+.vertical .order-page-wrap .lists .name{ width: 22rem; height: 3.7rem; margin-bottom: 1.1rem; padding-right: 2.7rem; font-size: 1.4rem; color: #212b3e; line-height: 1.85rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
+.vertical .order-page-wrap .lists .color{ margin-bottom: 1.4rem; font-size: 1.2rem; color: #adadad; line-height: 1.8rem;}
+.vertical .order-page-wrap .lists .price{ font-size: 1.2rem; color: #f0514b; line-height: 1.2rem;}
+.vertical .order-page-wrap .lists .sales{ display: none;}
+.vertical .order-page-wrap .lists .num{ position: absolute; right: 0; bottom: 1rem; font-size: 1.2rem; color: #adadad; line-height: 1.2rem;}
+.vertical .order-page-wrap .details{ height: 6rem; border-bottom: 1px solid #eee;}
+.vertical .order-page-wrap .details .goods{ font-size: 1.5rem; color: #212b3e; line-height: 2.5rem;}
+.vertical .order-page-wrap .details .cost{ position: absolute; top: 0; right: 0; font-size: 1.5rem; color: #212b3e; line-height: 2.4rem;}
+.vertical .order-page-wrap .details .cost p{ position: relative; padding-left: 3.7rem; text-align: right;}
+.vertical .order-page-wrap .details .cost em{ position: absolute; top: 0; left: 0;}
+.vertical .order-page-wrap .details .cost span{ font-size: 1.3rem; color: #f0514b; text-align: right;}
+.vertical .order-page-wrap .details .cost strong{ font-size: 1.4rem; font-weight: bold; color: #f0514b;}
+.vertical .order-page-wrap .details .cost b{ font-size: 1.1rem;}
+.vertical .order-page-wrap .details .cost .txt{ position: absolute; top: 0; left: 0;}
+.vertical .order-page-wrap .logistics{ padding: 0.8rem 0; border-bottom: 1px solid #eee;}
+.vertical .order-page-wrap .logistics p{ font-size: 1.4rem; color: #2f2e2e; line-height: 2.7rem;}
+.vertical .order-page-wrap .logistics a{ position: absolute; top: 50%; right: 0; width: 9.3rem; height: 3.1rem; margin-top: -1.6rem; border: 1px solid #d6d6d6; border-radius: 0.3rem; font-size: 1.4rem; color: #212b3e; line-height: 3.1rem;}
+.vertical .order-page-wrap .cont .btn-box{ padding: 1.5rem 0;}
+.vertical .order-page-wrap .cont .btn-box a{ box-sizing: border-box; width: 10.8rem; height: 3.9rem; margin-right: 1.35rem; border: 1px solid #a4a4a4; border-radius: 0.4rem; font-size: 1.5rem; color: #212b3e; line-height: 3.9rem;}
+.vertical .order-page-wrap .cont .btn-box a:last-child{ margin-right: 0;}
+.vertical .order-page-wrap .cont .btn-box a.red{ background: #f0514b; border-color: #f0514b; color: #fff;}
+.vertical .order-page-wrap .title{ display: table; width: 100%; height: 6.7rem; margin-bottom: 0.5rem; background: #fff; overflow: hidden;}
+.vertical .order-page-wrap .title .title-cont{ display: table-cell; vertical-align: middle;}
+.vertical .order-page-wrap .title h2{ padding: 0 1rem; font-size: 1.5rem; font-weight: bold; color: #212b3e; line-height: 2.5rem;}
+.vertical .order-page-wrap .title p{ padding: 0 1rem; font-size: 1.2rem; color: #212b3e; line-height: 2rem;}
+.vertical .order-page-wrap .title p span{ color: #f72828;}
+.vertical .order-page-wrap .address{ margin-bottom: 0.5rem; padding-bottom: 1rem; background: #fff; overflow: hidden;}
+.vertical .order-page-wrap .address .user-info{ height: 2.4rem; margin-bottom: 0.2rem; padding: 0.6rem 0 0 3.2rem; font-size: 1.4rem; color: #212b3e; line-height: 2.4rem;}
+.vertical .order-page-wrap .address .user-info strong{ margin-right: 2.8rem; font-size: 1.5rem; font-weight: bold;}
+.vertical .order-page-wrap .address .add{ width: 32rem; padding-left: 3.2rem; font-size: 1.2rem; color: #818181; line-height: 1.6rem;}
+.vertical .order-page-wrap .address .add i{ top: 50%; left: 1rem; width: 1.2rem; height: 1.5rem; margin-top: -0.75rem; background-position: -8.8rem -2rem;}
+.vertical .order-page-wrap .page-main .btn-box{ padding: 1.5rem 1rem; background: #fff;}
+.vertical .order-page-wrap .page-main .price-info{ margin-bottom: 0.5rem; padding: 0 1rem 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.5rem; color: #212b3e; text-align: right; line-height: 2.5rem;}
+.vertical .order-page-wrap .page-main .price-info em{ position: absolute; top: 0; left: 0;}
+.vertical .order-page-wrap .page-main .price-info span{ color: #f0514b;}
+.vertical .order-page-wrap .page-main .price-info strong{ font-weight: bold; color: #f0514b;}
+.vertical .order-page-wrap .page-main .order-num{ padding: 0.8rem 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.4rem; color: #818181; line-height: 2.5rem;}
+.vertical .order-page-wrap .page-main .logistics{ margin-top: 0.5rem; padding: 1rem; background: #fff; border-bottom: 1px solid #cac9c9;}
+.vertical .order-page-wrap .page-main .logistics a{ right: 1rem;}
 
-.level .main{ padding-top: 3.45rem;}
-.level .page-main{ padding-top: 0;}
-.level .page-nav{ left: 5.9rem; height: 3.45rem;}
-.level .page-nav ul{ height: 3.45rem;}
-.level .page-nav li{ width: 12.16rem; height: 3.4rem;}
-.level .page-nav a{ height: 3.2rem; line-height: 3.4rem;}
-.level .cont{ padding-top: 0.5rem;}
-.level .cont .hd,
-.level .cont .bd{ padding: 0 1rem; background: #fff; border-bottom: 1px solid #eee;}
-.level .cont .hd{ height: 3.3rem; border-top: 1px solid #eee;}
-.level .cont .hd h2{ font-size: 1.5rem; color: #212b3e; line-height: 3.3rem;}
-.level .cont .hd img{ width: auto; height: 1.5rem; margin-right: 1rem; vertical-align: middle;}
-.level .cont .state{ position: absolute; top: 0; right: 1rem; font-size: 1.3rem; color: #212b3e; line-height: 3.3rem;}
-.level .cont .explain{ height: 3.3rem; border-bottom: 1px solid #eee; font-size: 1.1rem; color: #212b3e; line-height: 3.3rem;}
-.level .cont .explain span{ color: #f72828;}
-.level .lists li{ height: 6.9rem; padding: 0.5rem 0 0.5rem 8rem; border-bottom: 1px solid #eee;}
-.level .lists .img-box{ position: absolute; top: 0.5rem; left: 0; width: 6.75rem; height: 6.75rem; border: 1px solid #c4c4c4; border-radius: 0.2rem; overflow: hidden;}
-.level .lists .img-box img{ border-radius: 0.2rem;}
-.level .lists .name{ width: 49.8rem; height: 4.2rem; font-size: 1.4rem; color: #212b3e; line-height: 4.2rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;}
-.level .lists .color{ position: absolute; bottom: 1.3rem; left: 26rem; font-size: 1.2rem; color: #adadad; line-height: 1.3rem;}
-.level .lists .price{ position: absolute; bottom: 1.3rem; left: 8rem; font-size: 1.3rem; color: #f0514b; line-height: 1.3rem;}
-.level .lists .sales{ position: absolute; bottom: 1.3rem; left: 16rem; font-size: 1.2rem; color: #adadad; line-height: 1.3rem;}
-.level .lists .num{ position: absolute; right: 0; bottom: 1.3rem; font-size: 1.2rem; color: #adadad; line-height: 1.3rem;}
-.level .details{ height: 3.3rem; border-bottom: 1px solid #eee;}
-.level .details .goods{ font-size: 1.3rem; color: #212b3e; line-height: 3.3rem;}
-.level .details .cost{ position: absolute; top: 0; right: 0; font-size: 1.5rem; color: #212b3e; line-height: 3.3rem;}
-.level .details .cost p{ position: relative; float: left; margin-left: 2.5rem; padding-left: 3.7rem; text-align: right;}
-.level .details .cost em{ position: absolute; top: 0; left: 0;}
-.level .details .cost span{ font-size: 1.3rem; color: #f0514b; text-align: right;}
-.level .details .cost strong{ font-size: 1.4rem; font-weight: bold; color: #f0514b;}
-.level .details .cost b{ font-size: 1.1rem;}
-.level .details .cost .txt{ position: absolute; top: 0; left: 0;}
-.level .logistics{ padding: 0.8rem 0; border-bottom: 1px solid #eee;}
-.level .logistics p{ font-size: 1.1rem; color: #2f2e2e; line-height: 2rem;}
-.level .logistics a{ position: absolute; top: 50%; right: 0; width: 7.7rem; height: 2.6rem; margin-top: -1.35rem; border: 1px solid #d6d6d6; border-radius: 0.3rem; font-size: 1.2rem; color: #212b3e; line-height: 2.6rem;}
-.level .cont .btn-box{ padding: 1.3rem 0;}
-.level .cont .btn-box a{ width: 10.8rem; height: 3rem; margin-right: 1.4rem; border: 1px solid #a4a4a4; border-radius: 0.4rem; font-size: 1.5rem; color: #212b3e; line-height: 3rem;}
-.level .cont .btn-box a:last-child{ margin-right: 0;}
-.level .cont .btn-box a.red{ background: #f0514b; border-color: #f0514b; color: #fff;}
-.level .title{ display: table; width: 100%; height: 6.7rem; margin-bottom: 0.5rem; background: #fff; overflow: hidden;}
-.level .title .title-cont{ display: table-cell; vertical-align: middle;}
-.level .title h2{ padding: 0 1rem; font-size: 1.5rem; font-weight: bold; color: #212b3e; line-height: 2.5rem;}
-.level .title p{ padding: 0 1rem; font-size: 1.2rem; color: #212b3e; line-height: 2rem;}
-.level .title p span{ color: #f72828;}
-.level .address{ margin-bottom: 0.5rem; padding-bottom: 1rem; background: #fff; overflow: hidden;}
-.level .address .user-info{ height: 2.4rem; margin-bottom: 0.2rem; padding: 0.6rem 0 0 3.2rem; font-size: 1.4rem; color: #212b3e; line-height: 2.4rem;}
-.level .address .user-info strong{ margin-right: 2.8rem; font-size: 1.5rem; font-weight: bold;}
-.level .address .add{ padding: 0 3rem 0 3.2rem; font-size: 1.2rem; color: #818181; line-height: 1.6rem;}
-.level .address .add i{ top: 50%; left: 1rem; width: 1.2rem; height: 1.5rem; margin-top: -0.75rem; background-position: -8.8rem -2rem;}
-.level .page-main .btn-box{ padding: 1.5rem 1rem; background: #fff;}
-.level .page-main .price-info{ height: 3.2rem; margin-bottom: 0.5rem; padding: 0 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.5rem; color: #212b3e; line-height: 3.2rem;}
-.level .page-main .price-info div{ float: right;}
-.level .page-main .price-info p{ float: left; margin-left: 3rem;}
-.level .page-main .price-info em{ margin-right: 0.8rem;}
-.level .page-main .price-info span{ color: #f0514b;}
-.level .page-main .price-info strong{ font-weight: bold; color: #f0514b;}
-.level .page-main .order-num{ height: 4.2rem; padding: 0 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.4rem; color: #818181; line-height: 4.2rem;}
-.level .page-main .order-num p{ float: left; margin-right: 2.5rem;}
-.level .page-main .logistics{ margin-top: 0.5rem; padding: 0 1rem 1rem; background: #fff; border-bottom: 1px solid #cac9c9;}
-.level .page-main .logistics a{ right: 1rem;}
+.level .order-page-wrap .main{ padding-top: 3.45rem;}
+.level .order-page-wrap .page-main{ padding-top: 0;}
+.level .order-page-wrap .order-page-nav{ left: 5.9rem; height: 3.45rem;}
+.level .order-page-wrap .order-page-nav ul{ height: 3.45rem;}
+.level .order-page-wrap .order-page-nav li{ width: 12.16rem; height: 3.4rem;}
+.level .order-page-wrap .order-page-nav a{ height: 3.2rem; line-height: 3.4rem;}
+.level .order-page-wrap .cont{ padding-top: 0.5rem;}
+.level .order-page-wrap .cont .hd,
+.level .order-page-wrap .cont .bd{ padding: 0 1rem; background: #fff; border-bottom: 1px solid #eee;}
+.level .order-page-wrap .cont .hd{ height: 3.3rem; border-top: 1px solid #eee;}
+.level .order-page-wrap .cont .hd h2{ font-size: 1.5rem; color: #212b3e; line-height: 3.3rem;}
+.level .order-page-wrap .cont .hd img{ width: auto; height: 1.5rem; margin-right: 1rem; vertical-align: middle;}
+.level .order-page-wrap .cont .state{ position: absolute; top: 0; right: 1rem; font-size: 1.3rem; color: #212b3e; line-height: 3.3rem;}
+.level .order-page-wrap .cont .explain{ height: 3.3rem; border-bottom: 1px solid #eee; font-size: 1.1rem; color: #212b3e; line-height: 3.3rem;}
+.level .order-page-wrap .cont .explain span{ color: #f72828;}
+.level .order-page-wrap .lists li{ height: 6.9rem; padding: 0.5rem 0 0.5rem 8rem; border-bottom: 1px solid #eee;}
+.level .order-page-wrap .lists .img-box{ position: absolute; top: 0.5rem; left: 0; width: 6.75rem; height: 6.75rem; border: 1px solid #c4c4c4; border-radius: 0.2rem; overflow: hidden;}
+.level .order-page-wrap .lists .img-box img{ border-radius: 0.2rem;}
+.level .order-page-wrap .lists .name{ width: 49.8rem; height: 4.2rem; font-size: 1.4rem; color: #212b3e; line-height: 4.2rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;}
+.level .order-page-wrap .lists .color{ position: absolute; bottom: 1.3rem; left: 26rem; font-size: 1.2rem; color: #adadad; line-height: 1.3rem;}
+.level .order-page-wrap .lists .price{ position: absolute; bottom: 1.3rem; left: 8rem; font-size: 1.3rem; color: #f0514b; line-height: 1.3rem;}
+.level .order-page-wrap .lists .sales{ position: absolute; bottom: 1.3rem; left: 16rem; font-size: 1.2rem; color: #adadad; line-height: 1.3rem;}
+.level .order-page-wrap .lists .num{ position: absolute; right: 0; bottom: 1.3rem; font-size: 1.2rem; color: #adadad; line-height: 1.3rem;}
+.level .order-page-wrap .details{ height: 3.3rem; border-bottom: 1px solid #eee;}
+.level .order-page-wrap .details .goods{ font-size: 1.3rem; color: #212b3e; line-height: 3.3rem;}
+.level .order-page-wrap .details .cost{ position: absolute; top: 0; right: 0; font-size: 1.5rem; color: #212b3e; line-height: 3.3rem;}
+.level .order-page-wrap .details .cost p{ position: relative; float: left; margin-left: 2.5rem; padding-left: 3.7rem; text-align: right;}
+.level .order-page-wrap .details .cost em{ position: absolute; top: 0; left: 0;}
+.level .order-page-wrap .details .cost span{ font-size: 1.3rem; color: #f0514b; text-align: right;}
+.level .order-page-wrap .details .cost strong{ font-size: 1.4rem; font-weight: bold; color: #f0514b;}
+.level .order-page-wrap .details .cost b{ font-size: 1.1rem;}
+.level .order-page-wrap .details .cost .txt{ position: absolute; top: 0; left: 0;}
+.level .order-page-wrap .logistics{ padding: 0.8rem 0; border-bottom: 1px solid #eee;}
+.level .order-page-wrap .logistics p{ font-size: 1.1rem; color: #2f2e2e; line-height: 2rem;}
+.level .order-page-wrap .logistics a{ position: absolute; top: 50%; right: 0; width: 7.7rem; height: 2.6rem; margin-top: -1.35rem; border: 1px solid #d6d6d6; border-radius: 0.3rem; font-size: 1.2rem; color: #212b3e; line-height: 2.6rem;}
+.level .order-page-wrap .cont .btn-box{ padding: 1.3rem 0;}
+.level .order-page-wrap .cont .btn-box a{ width: 10.8rem; height: 3rem; margin-right: 1.4rem; border: 1px solid #a4a4a4; border-radius: 0.4rem; font-size: 1.5rem; color: #212b3e; line-height: 3rem;}
+.level .order-page-wrap .cont .btn-box a:last-child{ margin-right: 0;}
+.level .order-page-wrap .cont .btn-box a.red{ background: #f0514b; border-color: #f0514b; color: #fff;}
+.level .order-page-wrap .title{ display: table; width: 100%; height: 6.7rem; margin-bottom: 0.5rem; background: #fff; overflow: hidden;}
+.level .order-page-wrap .title .title-cont{ display: table-cell; vertical-align: middle;}
+.level .order-page-wrap .title h2{ padding: 0 1rem; font-size: 1.5rem; font-weight: bold; color: #212b3e; line-height: 2.5rem;}
+.level .order-page-wrap .title p{ padding: 0 1rem; font-size: 1.2rem; color: #212b3e; line-height: 2rem;}
+.level .order-page-wrap .title p span{ color: #f72828;}
+.level .order-page-wrap .address{ margin-bottom: 0.5rem; padding-bottom: 1rem; background: #fff; overflow: hidden;}
+.level .order-page-wrap .address .user-info{ height: 2.4rem; margin-bottom: 0.2rem; padding: 0.6rem 0 0 3.2rem; font-size: 1.4rem; color: #212b3e; line-height: 2.4rem;}
+.level .order-page-wrap .address .user-info strong{ margin-right: 2.8rem; font-size: 1.5rem; font-weight: bold;}
+.level .order-page-wrap .address .add{ padding: 0 3rem 0 3.2rem; font-size: 1.2rem; color: #818181; line-height: 1.6rem;}
+.level .order-page-wrap .address .add i{ top: 50%; left: 1rem; width: 1.2rem; height: 1.5rem; margin-top: -0.75rem; background-position: -8.8rem -2rem;}
+.level .order-page-wrap .page-main .btn-box{ padding: 1.5rem 1rem; background: #fff;}
+.level .order-page-wrap .page-main .price-info{ height: 3.2rem; margin-bottom: 0.5rem; padding: 0 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.5rem; color: #212b3e; line-height: 3.2rem;}
+.level .order-page-wrap .page-main .price-info div{ float: right;}
+.level .order-page-wrap .page-main .price-info p{ float: left; margin-left: 3rem;}
+.level .order-page-wrap .page-main .price-info em{ margin-right: 0.8rem;}
+.level .order-page-wrap .page-main .price-info span{ color: #f0514b;}
+.level .order-page-wrap .page-main .price-info strong{ font-weight: bold; color: #f0514b;}
+.level .order-page-wrap .page-main .order-num{ height: 4.2rem; padding: 0 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.4rem; color: #818181; line-height: 4.2rem;}
+.level .order-page-wrap .page-main .order-num p{ float: left; margin-right: 2.5rem;}
+.level .order-page-wrap .page-main .logistics{ margin-top: 0.5rem; padding: 0 1rem 1rem; background: #fff; border-bottom: 1px solid #cac9c9;}
+.level .order-page-wrap .page-main .logistics a{ right: 1rem;}

@@ -6,36 +6,11 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no, email=no">
-<title>图片社区</title>
-<script>
-var _w = document.documentElement.clientWidth || document.body.clientWidth,
-	_h = document.documentElement.clientHeight || document.body.clientHeight,
-    pageW = 750;
-var screenFun = function(){
-    if (_w < _h) {
-        pageW = 750;
-        document.documentElement.style.fontSize = _w/pageW*20+'px';
-        document.body.className = 'vertical';
-    } else{
-        pageW = 1334;
-        document.documentElement.style.fontSize = _w/pageW*20+'px';
-        document.body.className = 'level';
-    }
-}
-document.addEventListener("DOMContentLoaded",function(e){
-	screenFun();
-});
-window.onresize = function(){
-	_w = document.documentElement.clientWidth || document.body.clientWidth,
-	_h = document.documentElement.clientHeight || document.body.clientHeight;
-    screenFun();
-}
-</script>
-<!-- <link rel="stylesheet" href="./css/app.css"> -->
+<title>首页</title>
+<link rel="stylesheet" href="./css/common.css">
 <script src="http://gzhcache.qq.com/assets/js/dep/zepto.min.js"></script>
 <script src="spa/spa.js"></script>
 <script src="http://gzhcache.qq.com/assets/js/dep/sea.js"></script>
-
 <script>
 seajs.config({
 	base: './',
@@ -48,8 +23,54 @@ seajs.config({
 seajs.use('./boot');
 </script>
 </head>
-
 <body>
+    <a class='backtotop lsp' id="backtotop" href="#" title='返回顶部'>返回顶部</a>
+    <script>
 
+    var _w = document.documentElement.clientWidth || document.body.clientWidth,
+        _h = document.documentElement.clientHeight || document.body.clientHeight,
+        pageW = 750,
+        orient = 0;
+
+    var screenFun = function(){
+        if (orient == 0) {
+            pageW = 750;
+            document.documentElement.style.fontSize = _w/pageW*20+'px';
+            document.body.className = 'vertical';
+        } else{
+            pageW = 1334;
+            document.documentElement.style.fontSize = _w/pageW*20+'px';
+            document.body.className = 'level';
+        }
+    }
+    document.addEventListener("DOMContentLoaded",function(e){
+        screenFun();
+    });
+
+    window.addEventListener("orientationchange", function() {
+        _w = document.documentElement.clientWidth || document.body.clientWidth,
+        _h = document.documentElement.clientHeight || document.body.clientHeight;
+        orient = window.orientation;
+        screenFun();
+    }, false);
+
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop,
+        oBackTop = document.getElementById('backtotop');
+
+    if (scrollTop >= _h) {
+        oBackTop.style.display = 'block';
+    } else{
+        oBackTop.style.display = 'none';
+    }
+
+    window.addEventListener('scroll',function(){
+        scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= _h) {
+            oBackTop.style.display = 'block';
+        } else{
+            oBackTop.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>

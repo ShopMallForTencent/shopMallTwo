@@ -3,55 +3,40 @@ define(function (require) {
     var tab = require('js/ware/tab');
     var swiper = require('js/ware/idangerous.swiper.min');
     return {
-        title: 'ware',
+        title: '商品详情',
         body: tpl,
         init: function () {
             var ware_nav_body = $('#ware_nav_body');
             var ware_nav = $('#ware_nav_body .ware_nav');
 
-            //商品介绍、规格参数、买家评论脚本
-            $(function(){
+             //商品介绍、规格参数、买家评论脚本
+             new lcf_tab().init({  
+                    'parent' : 'ware_nav',  
+                    'action' : 'a',   
+                    'bnt1' : 'select,noselect,spxq',  
+                    'bnt2' : 'select,noselect,ggcs',  
+                    'bnt3' : 'select,noselect,user_pj',  
+                    'event' : 'touchend'  
+              });
 
-                 new lcf_tab().init({  
-                        'parent' : 'ware_nav',  
-                        'action' : 'a',   
-                        'bnt1' : 'select,noselect,spxq',  
-                        'bnt2' : 'select,noselect,ggcs',  
-                        'bnt3' : 'select,noselect,user_pj',  
-                        'event' : 'touchend'  
-                  });
+              window.onscroll = function(){
 
-                  window.onscroll = function(){
+                    var y = document.documentElement.scrollTop || document.body.scrollTop;
 
-                        var y = document.documentElement.scrollTop || document.body.scrollTop;
-
-                        if (ware_nav_body.get(0).getBoundingClientRect().top <= 0) {
-                            ware_nav.css({
-                                'position':'fixed',
-                                'top' : 0,
-                                'right' : 0
-                            });
-                        }
-                        else
-                        {
-                            ware_nav.css({
-                                'position':'static'
-                            });
-                        }
-                   }  
-            });
-
-            //关闭弹窗函数
-            function closeDialog(id)
-            {
-                document.getElementById(id).style.display = 'none';
-            }
-
-            //显示弹窗函数
-            function showDialog(id)
-            {
-                document.getElementById(id).style.display = 'block';
-            }
+                    if (ware_nav_body.get(0).getBoundingClientRect().top <= 0) {
+                        ware_nav.css({
+                            'position':'fixed',
+                            'top' : 0,
+                            'right' : 0
+                        });
+                    }
+                    else
+                    {
+                        ware_nav.css({
+                            'position':'static'
+                        });
+                    }
+               }  
 
             //弹窗按钮选中脚本
             function gwcTcBntLogic(bnt)
