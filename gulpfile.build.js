@@ -9,11 +9,11 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     plumber = require('gulp-plumber');
 
-var tplFiles = 'tpl/**/*.tpl';
+var tplFiles = 'tpl/**/*.html';
 var lessFiles = 'css/**/*.less';
 
 gulp.task('tpl2js', function () {
-    var ext = '.tpl.js';
+    var ext = '.html.js';
     var tplPath = './tpl';
     return gulp.src(tplFiles)
         .pipe(changed(tplPath, {extension: ext}))

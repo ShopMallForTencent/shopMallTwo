@@ -1,21 +1,23 @@
-	body{background:#f6f6f6;}
-	.vertical .line{height: 4.9rem;line-height: 4.9rem;font-size: 1.5rem;color:#212b3e;padding-left:1rem;border:1px solid #d6d6d6;background: #fff;border-top:none;}
-	.vertical .line input{color: #212b3e;}
-	.vertical .line1 textarea{color: #212b3e;font-size: 1.5rem;}
-	.vertical .line1{background: #fff;color:#212b3e;line-height: 3.05rem;padding-left:1.1rem;padding-bottom:1.35rem;}
-	.vertical .line1 .clearfix{margin-top:0.25rem;}
-	.vertical .line1 .chooseArea select{font-size: 1.5rem;color: #212b3e;}
-	.vertical .line1 span{float: left;font-size: 1.5rem;color: #212b3e;margin-right:0.2rem;}
-	.vertical .line1 textarea{width: 26.45rem;height: 10.4rem;float: left;border:1px solid #d6d6d6;padding:0.6rem;border-radius:0.25rem;resize: none;margin-top:0.25rem;;}
-	.vertical .saveAdd{background: #f0514b;width: 32.5rem;height: 4.5rem;line-height: 4.5rem;text-align: center;font-size: 1.6rem;color: #fff;display: block;border-radius: 0.25rem;position: fixed;bottom:2.55rem;left:50%;margin-left:-16.25rem;}
-	
-	.level .wrap{padding:0;}
-	.level .line{height: 4.3rem;line-height: 4.3rem;font-size: 1.5rem;color:#212b3e;padding-left:1.5rem;border:1px solid #d6d6d6;background: #fff;border-top:none;}
-	.level .line input{color: #212b3e;}
-	.level .line1 textarea{color: #212b3e;font-size: 1.5rem;}
-	.level .line1{background: #fff;color:#212b3e;line-height: 3.05rem;padding-left:1.1rem;padding-bottom:1.35rem;}
-	.level .line1 .clearfix{margin-top:0.25rem;}
-	.level .line1 .chooseArea select{font-size: 1.5rem;color: #212b3e;}
-	.level .line1 span{float: left;margin-right:1.5rem;font-size: 1.4rem;color: #$212b3e;}
-	.level .line1 textarea{width: 50.4rem;height: 5rem;float: left;border:1px solid #d6d6d6;padding:0.6rem;border-radius:0.25rem;resize: none;margin-top:0.25rem;;}
-	.level .saveAdd{background: #f0514b;width: 29.5rem;height: 3.75rem;line-height: 3.75rem;text-align: center;font-size: 1.4rem;color: #fff;display: block;border-radius: 0.25rem;position: fixed;bottom:2.55rem;left:50%;margin-left:-16.25rem;}
+.input-add-wrap{background:#f6f6f6;}
+
+.vertical .input-add-wrap .line{height: 4.9rem;line-height: 4.9rem;font-size: 1.5rem;color:#212b3e;padding-left:1rem;border:1px solid #d6d6d6;background: #fff;border-top:none;}
+.vertical .input-add-wrap .line input{color: #212b3e;}
+.vertical .input-add-wrap .line1 textarea{color: #212b3e;font-size: 1.5rem;}
+.vertical .input-add-wrap .line1{background: #fff;color:#212b3e;line-height: 3.05rem;padding-left:1.1rem;padding-bottom:1.35rem;}
+.vertical .input-add-wrap .line1 .clearfix{margin-top:0.25rem;}
+.vertical .input-add-wrap .line1 .chooseArea select{font-size: 1.5rem;color: #212b3e;}
+.vertical .input-add-wrap .line1 span{float: left;font-size: 1.5rem;color: #212b3e;margin-right:0.2rem;}
+.vertical .input-add-wrap .line1 textarea{width: 26.45rem;height: 10.4rem;float: left;border:1px solid #d6d6d6;padding:0.6rem;border-radius:0.25rem;resize: none;margin-top:0.25rem;;}
+.vertical .input-add-wrap .saveAdd{background: #f0514b;width: 32.5rem;height: 4.5rem;line-height: 4.5rem;text-align: center;font-size: 1.6rem;color: #fff;display: block;border-radius: 0.25rem;position: fixed;bottom:2.55rem;left:50%;margin-left:-16.25rem;}
+
+
+.level .input-add-wrap{padding:0;padding-bottom:6rem;}
+.level .input-add-wrap .line{height: 4.3rem;line-height: 4.3rem;font-size: 1.5rem;color:#212b3e;padding-left:1.5rem;border:1px solid #d6d6d6;background: #fff;border-top:none;}
+.level .input-add-wrap .line input{color: #212b3e;}
+.level .input-add-wrap .line1 textarea{color: #212b3e;font-size: 1.5rem;}
+.level .input-add-wrap .line1{background: #fff;color:#212b3e;line-height: 3.05rem;padding-left:1.1rem;padding-bottom:1.35rem;}
+.level .input-add-wrap .line1 .clearfix{margin-top:0.25rem;}
+.level .input-add-wrap .line1 .chooseArea select{font-size: 1.5rem;color: #212b3e;}
+.level .input-add-wrap .line1 span{float: left;margin-right:1.5rem;font-size: 1.4rem;color: #$212b3e;}
+.level .input-add-wrap .line1 textarea{width: 50.4rem;height: 5rem;float: left;border:1px solid #d6d6d6;padding:0.6rem;border-radius:0.25rem;resize: none;margin-top:0.25rem;;}
+.level .input-add-wrap .saveAdd{background: #f0514b;width: 29.5rem;height: 3.75rem;line-height: 3.75rem;text-align: center;font-size: 1.4rem;color: #fff;display: block;border-radius: 0.25rem;position: absolute;bottom:1rem;left:50%;margin-left:-16.25rem;}

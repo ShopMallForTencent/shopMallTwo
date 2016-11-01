@@ -1,5 +1,7 @@
 var $doc = $(document);
 
+var ajaxPath = 'http://apps.gzh.qq.com/shop/index.php?r=';
+
 // 首页
 var pageHome = {
     route: '',
@@ -17,7 +19,7 @@ var pageHome = {
 var sortPage = {
   route: 'tpl/sort',
   classname: 'sort',
-  animate: 'fadeIn',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this;
     seajs.use(['js/sortPage'], function(viewData) {
@@ -31,7 +33,7 @@ var sortPage = {
 var shoppingCartPage = {
   route: 'tpl/shoppingCart',
   classname: 'shoppingCart',
-  animate: 'fadeIn',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this;
     seajs.use(['js/shoppingCartPage'], function(viewData) {
@@ -45,7 +47,7 @@ var shoppingCartPage = {
 var personalPage = {
   route: 'tpl/personal',
   classname: 'personal',
-  animate: 'fadeIn',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this;
     seajs.use(['js/personalPage'], function(viewData) {
@@ -58,7 +60,7 @@ var personalPage = {
 var warePage = {
   route: 'tpl/ware',
   classname: 'ware',
-  animate: 'default',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
     seajs.use(['js/warePage'], function(viewData) {
@@ -71,7 +73,7 @@ var warePage = {
 var ensureOrderPage = {
   route: 'tpl/ensureOrder',
   classname: 'ensureOrderPage',
-  animate: 'default',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
     seajs.use(['js/ensureOrderPage'], function(viewData) {
@@ -81,13 +83,13 @@ var ensureOrderPage = {
 }
 
 // 订单详情
-var OrderPage = {
-  route: 'tpl/OrderPage',
-  classname: 'OrderPage',
-  animate: 'default',
+var orderPage = {
+  route: 'tpl/order',
+  classname: 'orderPage',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
-    seajs.use(['js/OrderPage'], function(viewData) {
+    seajs.use(['js/orderPage'], function(viewData) {
       $doc.trigger('spa:initpage', [$page, viewData])
     })
   }
@@ -97,7 +99,7 @@ var OrderPage = {
 var chatSystemPage = {
   route: 'tpl/chatSystem',
   classname: 'chatSystemPage',
-  animate: 'default',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
     seajs.use(['js/chatSystemPage'], function(viewData) {
@@ -110,7 +112,7 @@ var chatSystemPage = {
 var orderDetailsPage = {
   route: 'tpl/orderDetails',
   classname: 'orderDetailsPage',
-  animate: 'default',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
     seajs.use(['js/orderDetailsPage'], function(viewData) {
@@ -120,26 +122,26 @@ var orderDetailsPage = {
 }
 
 // 售后服务
-var ServicePage = {
-  route: 'tpl/Service',
+var servicePage = {
+  route: 'tpl/service',
   classname: 'ServicePage',
-  animate: 'default',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
-    seajs.use(['js/ServicePage'], function(viewData) {
+    seajs.use(['js/servicePage'], function(viewData) {
       $doc.trigger('spa:initpage', [$page, viewData])
     })
   }
 }
 
 // 常见问题
-var ProblemPage = {
-  route: 'tpl/Problem',
-  classname: 'ProblemPage',
-  animate: 'default',
+var problemPage = {
+  route: 'tpl/problem',
+  classname: 'problemPage',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
-    seajs.use(['js/ProblemPage'], function(viewData) {
+    seajs.use(['js/problemPage'], function(viewData) {
       $doc.trigger('spa:initpage', [$page, viewData])
     })
   }
@@ -149,7 +151,7 @@ var ProblemPage = {
 var chattingPage = {
   route: 'tpl/chatting',
   classname: 'chattingPage',
-  animate: 'default',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
     seajs.use(['js/chattingPage'], function(viewData) {
@@ -162,7 +164,7 @@ var chattingPage = {
 var addressPage = {
   route: 'tpl/address',
   classname: 'addressPage',
-  animate: 'default',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
     seajs.use(['js/addressPage'], function(viewData) {
@@ -175,7 +177,7 @@ var addressPage = {
 var inputAddPage = {
   route: 'tpl/inputAdd',
   classname: 'inputAddPage',
-  animate: 'default',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
     seajs.use(['js/inputAddPage'], function(viewData) {
@@ -188,7 +190,7 @@ var inputAddPage = {
 var commentPage = {
   route: 'tpl/comment',
   classname: 'commentPage',
-  animate: 'default',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
     seajs.use(['js/commentPage'], function(viewData) {
@@ -197,8 +199,39 @@ var commentPage = {
   }
 }
 
+// 评价
+var information = {
+  route: 'tpl/information',
+  classname: 'information',
+  animate: 'default',
+  view: function() {
+    var $page = this
+    seajs.use(['js/informationPage'], function(viewData) {
+      $doc.trigger('spa:initpage', [$page, viewData])
+    })
+  }
+}
 
-$doc.trigger('spa:route', [pageHome,sortPage,shoppingCartPage,personalPage,warePage,ensureOrderPage,OrderPage,chatSystemPage,orderDetailsPage,ServicePage,ProblemPage,chattingPage,addressPage,inputAddPage,commentPage])
+
+
+$doc.trigger('spa:route', [
+      pageHome,
+      sortPage,
+      shoppingCartPage,
+      personalPage,
+      warePage,
+      ensureOrderPage,
+      orderPage,
+      chatSystemPage,
+      orderDetailsPage,
+      servicePage,
+      problemPage,
+      chattingPage,
+      addressPage,
+      inputAddPage,
+      commentPage,
+      information
+  ])
 
 // demo:侧边栏菜单
 var demoPanelSidemenu = {

@@ -148,6 +148,7 @@ var lcf_tab = function()
     }      
     
 };
+
 define(function () {
     return lcf_tab;
 });
