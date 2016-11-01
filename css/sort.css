@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 .sort-wrap .sort-page-nav{ position: absolute; top: 0; right: 0; z-index: 9; background: #fff; overflow: hidden;}
+=======
+.sort-wrap .sort-page-nav{ position: fixed; top: 0; right: 0; z-index: 99; background: #fff; overflow: hidden;}
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 .sort-wrap .sort-page-nav-cont{ height: 6rem; overflow-x: auto; overflow-y: hidden;}
 .sort-wrap .sort-page-nav ::-webkit-scrollbar{ opacity: 0;}
 .sort-wrap .sort-page-nav ul{ width: 100%; height: 4.5rem;}
@@ -10,6 +14,7 @@
 .sort-wrap .cont .tips{ padding: 1.5rem 0; font-size: 1.2rem; color: #9baab5; line-height: 1.2rem;}
 .vertical .sort-wrap .main{ padding-top: 4.5rem;}
 .vertical .sort-wrap .sort-page-nav{ width: 100%; height: 4.5rem;}
+<<<<<<< HEAD
 .vertical .sort-wrap .page-sort{ height: 3rem; padding: 0 1rem 0 0; border-bottom: 1px solid #e2e2e2;}
 .vertical .sort-wrap .page-sort a{ width: 10rem; height: 3rem; font-size: 1.2rem; color: #212b3e; line-height: 3rem;}
 .vertical .sort-wrap .page-sort a.on{ color: #f0514b;}
@@ -31,6 +36,29 @@
 .level .sort-wrap .sort-page-nav li{ width: 12.16rem; height: 3.4rem;}
 .level .sort-wrap .sort-page-nav a{ height: 3.2rem; line-height: 3.4rem;}
 .level .sort-wrap .page-sort{ position: relative; height: 2.6rem; padding: 0 1rem 0 2.8rem; border-bottom: 2px solid #e2e2e2;}
+=======
+.vertical .sort-wrap .page-sort{ height: 4.3rem; padding: 0 1rem 0 0; border-bottom: 1px solid #e2e2e2;}
+.vertical .sort-wrap .page-sort a{ width: 12rem; height: 4.3rem; font-size: 1.5rem; color: #212b3e; line-height: 4.3rem;}
+.vertical .sort-wrap .page-sort a.on{ color: #f0514b;}
+.vertical .sort-wrap .page-sort p{ width: 9.7rem; height: 4.3rem; font-size: 1.3rem; color: #9baab5; line-height: 4.3rem;}
+.vertical .sort-wrap .lists{ padding: 1.3rem 1rem 0;}
+.vertical .sort-wrap .lists li{ margin-bottom: 0.3rem; padding-left: 12.5rem;}
+.vertical .sort-wrap .lists .img-box{ position: absolute; top: 0; left: 0; width: 12.5rem; height: 12.5rem; overflow: hidden;}
+.vertical .sort-wrap .lists .name{ width: 21.3rem; height: 3.6rem; margin-bottom: 1.85rem; padding: 1.25rem 0.1rem 0 1.6rem; font-size: 1.4rem; color: #212b3e; line-height: 1.8rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
+.vertical .sort-wrap .lists .price{ height: 1.3rem; margin-bottom: 2rem; padding-left: 1.5rem; font-size: 1.3rem; color: #f0514b; line-height: 1.3rem;}
+.vertical .sort-wrap .lists .price span{ margin-left: 0.8rem; font-size: 1rem; color: #9baab5; text-decoration: line-through;}
+.vertical .sort-wrap .lists .sales,
+.vertical .sort-wrap .lists .comment{ display: none;}
+.vertical .sort-wrap .lists .all-info{ height: 2.75rem; padding-left: 1.5rem; border-bottom: 1px solid #e5e5e5; font-size: 1.1rem; color: #9baab5; line-height: 1.1rem;}
+.vertical .sort-wrap .lists .btn{ position: absolute; top: 7.7rem; right: 0; display: block; width: 7.2rem; height: 3.3rem; background: #f0514b; border-radius: 0.2rem; font-size: 1.5rem; color: #fff; text-align: center; line-height: 3.3rem;}
+
+.level .sort-wrap .main{ padding-top: 3.45rem;}
+.level .sort-wrap .sort-page-nav{ left: 5.9rem; height: 3.45rem;}
+.level .sort-wrap .sort-page-nav ul{ height: 3.45rem;}
+.level .sort-wrap .sort-page-nav li{ width: 12.16rem; height: 3.4rem;}
+.level .sort-wrap .sort-page-nav a{ height: 3.2rem; line-height: 3.4rem;}
+.level .sort-wrap .page-sort{ position: relative; height: 2.6rem; padding: 0 1rem 0 2.8rem; border-bottom: 1px solid #e2e2e2;}
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 .level .sort-wrap .page-sort a{ width: 10.8rem; height: 2.6rem; font-size: 1.2rem; color: #212b3e; line-height: 2.6rem;}
 .level .sort-wrap .page-sort a.on{ color: #f0514b;}
 .level .sort-wrap .page-sort p{ position: absolute; top: 0; right: 1rem; height: 2.6rem; font-size: 1.1rem; color: #9baab5; line-height: 2.6rem;}

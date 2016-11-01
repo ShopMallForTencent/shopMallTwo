@@ -21,8 +21,12 @@
 .ware-wrap .ware_price .lx3, .ware-wrap .ware_price .lx4{float: right;}
 .ware-wrap .ware_price .lx3{margin-right: 1.5rem;}
 .ware-wrap .swiper-container{height: 23rem; overflow: hidden; position: relative;}
+<<<<<<< HEAD
 .ware-wrap .swiper-slide{ height: 23rem !important; float: left; }
 .ware-wrap .swiper-slide img{display: block; width: 100%;}
+=======
+.ware-wrap .swiper-slide{height: 23rem !important; float: left; }
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 .ware-wrap .swiper-wrapper{position: relative;}
 
 /*ware_nav*/
@@ -86,6 +90,7 @@
 .ware-wrap .spxq li{width: 37.5rem; margin-bottom: 0.5rem;}
 
 /*gmtc*/
+<<<<<<< HEAD
 .ware-wrap .ware_sp_list{clear: both;}
 .ware-wrap .gmtc_show{ -webkit-animation:tc_bgshow 0.3s ease both; }
 .ware-wrap .gmtc_show .gmtc_main {-webkit-animation:tc_up 0.3s ease both; -webkit-transform:translate(0,50rem);}
@@ -93,18 +98,30 @@
 .ware-wrap .gmtc_hide .gmtc_main {-webkit-animation:tc_down 0.3s ease both;}
 .ware-wrap .gmtc{ width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0,0,0,0); z-index: 9999;}
 .ware-wrap .gmtc .gmtc_main{width: 37.5rem;/* height: 34rem;*/ background: #fff; position: fixed; bottom: 0; left: 0; }
+=======
+.ware-wrap .gmtc{ width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.5); z-index: 9999;}
+.ware-wrap .gmtc .gmtc_main{width: 37.5rem;/* height: 34rem;*/ background: #fff; position: fixed; bottom: 0; left: 0;}
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 .ware-wrap .gmtc .imgbox{width: 12rem; height: 12rem; position: absolute; left: 2.5rem; top: -3.3rem; border: 1px solid #d6d6d6; background: #fff;}
 .ware-wrap .gmtc .imgbox em{width: 11rem; margin: 0.5rem auto; display: block;}
 .ware-wrap .gmtc .sp_price{/*height: 9.85rem;*/ padding-bottom: 6rem; border-bottom: 1px solid #e2e2e2;}
 .ware-wrap .gmtc .sp_price_text{width: 21.8rem; height: 9.85rem; float: right; font-weight: bold;}
 .ware-wrap .gmtc .sp_price_text .p1{font-size: 1.5rem; padding: 4.2rem 0 0 0;}
 .ware-wrap .gmtc .sp_price_text .p2{font-size: 1.9rem; color: #f0514b;}
+<<<<<<< HEAD
 .ware-wrap .gmtc .sp_color{clear: both; height: 27rem; overflow: auto;}
+=======
+.ware-wrap .gmtc .sp_color{clear: both; overflow: hidden;}
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 .ware-wrap .gmtc .sp_color h2{height:4rem; line-height: 4rem; font-size: 1.4rem; color: #636a70; padding-left: 1.8rem; }
 .ware-wrap .gmtc .sp_color_bnt a{display: block; height: 2.7rem; line-height: 2.7rem; font-size: 1.0rem; text-align: center; float: left; border-radius: 0.25rem; margin: 0 0 1rem 1.6rem;  }
 .ware-wrap .gmtc .sp_color_bnt .have{ border: 1px solid #c1c2c4; color: #000; }
 .ware-wrap .gmtc .sp_color_bnt .no{ background: #dbdbdb; border: 1px solid #9baab5; color: #fff; cursor: default;}
+<<<<<<< HEAD
 .ware-wrap .gmtc .sp_color_bnt .small{padding: 0.2rem 0.8rem;}
+=======
+.ware-wrap .gmtc .sp_color_bnt .small{width: 7rem;}
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 .ware-wrap .gmtc .sp_color_bnt .center{width: 15.8rem;}
 .ware-wrap .gmtc .sp_color_bnt .big{width: 24.5rem;}
 .ware-wrap .gmtc .sp_val{padding-left: 1.65rem;}
@@ -113,6 +130,7 @@
 .ware-wrap .gmtc .sp_val .text_box{width: 5.4rem; display: inline-block;}
 .ware-wrap .gmtc .ljgmbnt{display: block; width: 100%; height: 5rem; line-height: 5rem; text-align: center; background: #f0514b; font-size: 1.6rem; color: #fff; position: absolute; bottom: 0;}
 .ware-wrap .gmtc .jrgwcbnt{ background: #ff8a3c;}
+<<<<<<< HEAD
 .ware-wrap .jrgwc .shop_car_success{position: absolute; top: 50%; left: 50%; display: block; width: 15rem; margin-left: -7.5rem; margin-top: -5rem; z-index: 9998; display: none;}
 .ware-wrap .gmtc .close{position: absolute; right: 1rem; top: 0; font-size: 3rem; color: #afb0b1;}
 .ware-wrap #ljgm .select,.ware-wrap #jrgwc .select{ background: #f0514b; border-color: #f0514b; color: #fff;}
@@ -136,6 +154,10 @@
 	0%{ -webkit-transform:translate(0,0); }
 	100%{ -webkit-transform:translate(0,50rem); }
 }
+=======
+.ware-wrap .gmtc .close{position: absolute; right: 1rem; top: 0; font-size: 3rem; color: #afb0b1;}
+.ware-wrap #ljgm .select,.ware-wrap #jrgwc .select{ background: #f0514b; border-color: #f0514b; color: #fff;}
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 
 
 /*横屏样式*/
@@ -156,5 +178,9 @@
 .level .ware-wrap .buy_nav li span{right: 8.2rem;}
 .level .ware-wrap .ware{position: fixed; height: 33rem; overflow: auto;}
 .level .ware-wrap .ware_nav_body{float: right;}
+<<<<<<< HEAD
 .level .ware-wrap .spxq, .level .ware-wrap .ggcs, .level .ware-wrap .user_pj{height: 45rem; overflow: auto;}
 
+=======
+.level .ware-wrap .spxq, .level .ware-wrap .ggcs, .level .ware-wrap .user_pj{height: 45rem; overflow: auto;}
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc

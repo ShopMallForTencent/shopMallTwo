@@ -73,7 +73,11 @@ table{border-collapse:collapse;border-spacing:0}
 .img-box img{ display: block; width: 100%;}
 
 /*backtotop*/
+<<<<<<< HEAD
 .backtotop{ display: none; width: 3.6rem; height: 3.8rem; position: fixed; bottom: 4rem; right: 1.5rem; z-index: 9997; text-indent: -9999px; background-image: url(../images/ware/sp.png); background-repeat: no-repeat; background-size: 8.35rem; background-position: -2.55rem 0;}
+=======
+.backtotop{ display: none; width: 3.6rem; height: 3.8rem; position: fixed; bottom: 6rem; right: 1.5rem; z-index: 99; text-indent: -9999px; background-image: url(../images/ware/sp.png); background-repeat: no-repeat; background-size: 8.35rem; background-position: -2.55rem 0;}
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 
 /*弹窗样式*/
 .pop{ display: none;}

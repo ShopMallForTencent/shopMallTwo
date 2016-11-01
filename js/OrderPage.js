@@ -4,6 +4,7 @@ define(function (require) {
         title: '订单列表',
         body: tpl,
         init: function () {
+<<<<<<< HEAD
         	var $pageNavUl = $('.order-page-nav ul'),
         	    $pageNavLi = $pageNavUl.find('li'),
         	    $pageNavA = $pageNavUl.find('a'),
@@ -27,6 +28,21 @@ define(function (require) {
         	    var index = $pageNavA.index($(this));
         	    $pageNavA.removeClass('on').eq(index).addClass('on');
         	});
+=======
+
+		    if (_w < _h) {
+		       $('.page-nav ul').css('width',$('.page-nav ul').find('li').length*7.5+'rem'); 
+		    } else{
+		        $('.page-nav ul').css('width',$('.page-nav ul').find('li').length*12+'rem'); 
+		    }
+		    $(window).resize(function(){
+		        if (_w < _h) {
+		           $('.page-nav ul').css('width',$('.page-nav ul').find('li').length*7.5+'rem'); 
+		        } else{
+		            $('.page-nav ul').css('width',$('.page-nav ul').find('li').length*12+'rem'); 
+		        }
+		    });
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
         }
     }
 });

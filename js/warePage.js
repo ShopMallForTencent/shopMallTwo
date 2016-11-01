@@ -7,10 +7,41 @@
         body: tpl,
         init: function () {
 
+<<<<<<< HEAD
             //加载ajax脚本
             loadjs('js/ajax/ware_ajax.js',function(){
 
                
+=======
+             //商品介绍、规格参数、买家评论脚本
+             new lcf_tab().init({  
+                    'parent' : 'ware_nav',  
+                    'action' : 'a',   
+                    'bnt1' : 'select,noselect,spxq',  
+                    'bnt2' : 'select,noselect,ggcs',  
+                    'bnt3' : 'select,noselect,user_pj',  
+                    'event' : 'touchend'  
+              });
+
+              window.onscroll = function(){
+
+                    var y = document.documentElement.scrollTop || document.body.scrollTop;
+
+                    if (ware_nav_body.get(0).getBoundingClientRect().top <= 0) {
+                        ware_nav.css({
+                            'position':'fixed',
+                            'top' : 0,
+                            'right' : 0
+                        });
+                    }
+                    else
+                    {
+                        ware_nav.css({
+                            'position':'static'
+                        });
+                    }
+               }  
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 
 
 

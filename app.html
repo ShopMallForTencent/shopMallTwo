@@ -7,6 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no, email=no">
 <title>首页</title>
+<<<<<<< HEAD
 <script>
 // 获取屏幕宽高
 var _w = document.documentElement.clientWidth || document.body.clientWidth,
@@ -83,11 +84,16 @@ window.addEventListener("orientationchange", function() {
 
 </script>
 <script type="text/javascript" src='js/art/template.js'></script>
+=======
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 <link rel="stylesheet" href="./css/common.css">
 <script src="http://gzhcache.qq.com/assets/js/dep/zepto.min.js"></script>
 <script src="spa/spa.js"></script>
 <script src="http://gzhcache.qq.com/assets/js/dep/sea.js"></script>
+<<<<<<< HEAD
 <script src="js/library.js"></script>
+=======
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 <script>
 seajs.config({
 	base: './',
@@ -101,11 +107,62 @@ seajs.use('./boot');
 </script>
 </head>
 <body>
+<<<<<<< HEAD
     <!-- 公共弹窗-提示框 S -->
     <div class="pop pop-tips" id="pop-tips">
         <p class="" id="pop-tips-icon"></p>
         <p class="text txc" id="pop-tips-text"></p>
     </div>
     <!-- 公共弹窗-提示框 E -->
+=======
+    <a class='backtotop lsp' id="backtotop" href="#" title='返回顶部'>返回顶部</a>
+    <script>
+
+    var _w = document.documentElement.clientWidth || document.body.clientWidth,
+        _h = document.documentElement.clientHeight || document.body.clientHeight,
+        pageW = 750,
+        orient = 0;
+
+    var screenFun = function(){
+        if (orient == 0) {
+            pageW = 750;
+            document.documentElement.style.fontSize = _w/pageW*20+'px';
+            document.body.className = 'vertical';
+        } else{
+            pageW = 1334;
+            document.documentElement.style.fontSize = _w/pageW*20+'px';
+            document.body.className = 'level';
+        }
+    }
+    document.addEventListener("DOMContentLoaded",function(e){
+        screenFun();
+    });
+
+    window.addEventListener("orientationchange", function() {
+        _w = document.documentElement.clientWidth || document.body.clientWidth,
+        _h = document.documentElement.clientHeight || document.body.clientHeight;
+        orient = window.orientation;
+        screenFun();
+    }, false);
+
+    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop,
+        oBackTop = document.getElementById('backtotop');
+
+    if (scrollTop >= _h) {
+        oBackTop.style.display = 'block';
+    } else{
+        oBackTop.style.display = 'none';
+    }
+
+    window.addEventListener('scroll',function(){
+        scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= _h) {
+            oBackTop.style.display = 'block';
+        } else{
+            oBackTop.style.display = 'none';
+        }
+    });
+</script>
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 </body>
 </html>

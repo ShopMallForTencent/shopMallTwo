@@ -149,6 +149,21 @@ var lcf_tab = function()
     
 };
 
+<<<<<<< HEAD
+=======
+//¹Ø±Õµ¯´°º¯Êý
+function closeDialog(id)
+{
+    document.getElementById(id).style.display = 'none';
+}
+
+//ÏÔÊ¾µ¯´°º¯Êý
+function showDialog(id)
+{
+    document.getElementById(id).style.display = 'block';
+}
+
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 define(function () {
     return lcf_tab;
 });

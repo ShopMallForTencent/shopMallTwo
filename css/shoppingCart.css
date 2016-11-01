@@ -53,7 +53,11 @@
 .level .shopping-cart-wrap .right .actNum{position: absolute;top:1.8rem;right:0rem;color: #212b3e;font-size: 1.44rem;text-align: center;}
 .level .shopping-cart-wrap .right .actNum a{border: 1px solid #d6d6d6;display: block;width: 2.35rem;height: 2.4rem;float: left;color: #212b3e;}
 .level .shopping-cart-wrap .right .actNum span{border-top:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6;float: left;width: 4.8rem;height: 2.4rem;text-align: center;display:inline-block ;}
+<<<<<<< HEAD
 .level .shopping-cart-wrap .right .remain{position: absolute;top:0.2rem;right:0.2rem;color: #f0514b;font-size: 1rem;}
+=======
+.level .shopping-cart-wrap .right .remain{position: absolute;top:0.4rem;right:0.2rem;color: #f0514b;font-size: 1rem;}
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 .level .shopping-cart-wrap .countAll{height: 4.4rem;line-height: 4.4rem;font-size: 1.4rem;color:#818181;position: relative;padding-left:4rem;border-bottom:1px solid #e0e0e0;}
 .level .shopping-cart-wrap .countAll .choose{top:1.2rem;left:1.5rem;}
 
@@ -65,4 +69,8 @@
 .level .shopping-cart-wrap .countAll .operate-delete{background: #ff8a3c;}
 .level .shopping-cart-wrap .countAll .operate-goPay{background: #f0514b;}
 /*失效*/
+<<<<<<< HEAD
 .level .shopping-cart-wrap .cartSort .fail p,.level .cartSort .fail a,.level .cartSort .fail input{color: #adadad;border-color: #adadad;}
+=======
+.level .shopping-cart-wrap .cartSort .fail p,.level .cartSort .fail a,.level .cartSort .fail input{color: #adadad;border-color: #adadad;}
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc

@@ -5,15 +5,25 @@ define(function (require) {
         title: '购物车',
         body: tpl,
         init: function () {
+<<<<<<< HEAD
              console.log($(".reduce").get(0))
             //	计算每个店铺中商品总价
 			$(".reduce").each(function(){
 				countAllMoney($(this));
+=======
+            
+            //	计算每个店铺中商品总价
+			$(".reduce").each(function(){
+		//		countAllMoney($(this));
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 				$(this).css("color","#adadad");
 			});
 			
 			$(".reduce").on("touchend",function(){
+<<<<<<< HEAD
 				console.log(0)
+=======
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 				var oItemNum=$(this).parent().find(".itemNum").text();
 				oItemNum--;
 				if(oItemNum<=1){
@@ -25,7 +35,10 @@ define(function (require) {
 				
 			});
 			$(".plus").on("touchend",function(){
+<<<<<<< HEAD
 				console.log(1)
+=======
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 				var oItemNum=$(this).parent().find(".itemNum").text();
 				$(this).prev().prev().css({"color":"#212b3e"});
 				oItemNum++;
@@ -45,7 +58,10 @@ define(function (require) {
 				var where=arrow.parents(".cartSort");
 				var oPriceAll=where.find(".price");
 				var oItemNum=where.find(".itemNum");
+<<<<<<< HEAD
 				//console.log(oPriceAll)
+=======
+>>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 		//		console.log(where.find(".price"));
 		//		console.log(where.find(".itemNum"));
 				var allMoney=null;
