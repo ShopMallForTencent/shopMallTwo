@@ -5,25 +5,20 @@ define(function (require) {
         title: '购物车',
         body: tpl,
         init: function () {
-<<<<<<< HEAD
-             console.log($(".reduce").get(0))
+
             //	计算每个店铺中商品总价
 			$(".reduce").each(function(){
 				countAllMoney($(this));
-=======
-            
-            //	计算每个店铺中商品总价
-			$(".reduce").each(function(){
-		//		countAllMoney($(this));
->>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
-				$(this).css("color","#adadad");
+				var oItemNum=$(this).parent().find(".itemNum").text();
+
+				if(oItemNum==1){
+
+					$(this).css("color","#adadad");
+				}
+				
 			});
 			
 			$(".reduce").on("touchend",function(){
-<<<<<<< HEAD
-				console.log(0)
-=======
->>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 				var oItemNum=$(this).parent().find(".itemNum").text();
 				oItemNum--;
 				if(oItemNum<=1){
@@ -32,18 +27,20 @@ define(function (require) {
 				}
 				$(this).parent().find(".itemNum").text(oItemNum--);
 				countAllMoney($(this));
+				addProNum($(this).attr('proId'),-1)
 				
 			});
 			$(".plus").on("touchend",function(){
-<<<<<<< HEAD
-				console.log(1)
-=======
->>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 				var oItemNum=$(this).parent().find(".itemNum").text();
 				$(this).prev().prev().css({"color":"#212b3e"});
 				oItemNum++;
+				if(oItemNum>=$(this).attr('stock')){
+					oItemNum=$(this).attr('stock')
+					$(this).css("color","#adadad");
+				}
 				$(this).parent().find(".itemNum").text(oItemNum);
 				countAllMoney($(this));
+				addProNum($(this).attr('proId'),1)
 			});
 			//库存为1加减按钮解绑事件
 			$(".shopItem").each(function(index){
@@ -58,10 +55,7 @@ define(function (require) {
 				var where=arrow.parents(".cartSort");
 				var oPriceAll=where.find(".price");
 				var oItemNum=where.find(".itemNum");
-<<<<<<< HEAD
 				//console.log(oPriceAll)
-=======
->>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 		//		console.log(where.find(".price"));
 		//		console.log(where.find(".itemNum"));
 				var allMoney=null;
@@ -81,7 +75,10 @@ define(function (require) {
 			}
 			//点击编辑  删除
 			var alreadyEdit=0;
+			var proId=null;
+			var proIdArr=[];
 			$(".shopName").find("a").on("touchend",function(){
+				
 				if($(this).attr("edit")=="1"){
 					$(this).text("完成");
 					$(this).parent().parent().find(".operate").attr("class","operate operate-delete").text("删除");
@@ -99,11 +96,13 @@ define(function (require) {
 							$(this).parents(".cartSort").remove();
 						}
 		//				countAllMoney($(this));
+
 					});
 					$(this).parents(".cartSort").find(".actNum").hide();
 					$(this).parents(".cartSort").find(".total").hide();
 					alreadyEdit=1;
 					$(".shopItem").find(".choose").on("touchend",function(){
+						
 						if(alreadyEdit==1)
 							checked($(this));
 					});
@@ -133,13 +132,41 @@ define(function (require) {
 					checked.addClass("choose-sure");
 					checked.attr("has","1");
 					checked.parents(".shopItem").attr("del","1");
+						console.log(checked.attr('proId'));
+						
+						if(proId != null){
+							proId += ","+checked.attr('proId')
+						}else{
+							proId = checked.attr('proId')
+						}
+						proIdArr.push(checked.attr('proId'));
+						console.log(proIdArr)
+						
 				}
 				else{
 					checked.removeClass("choose-sure");
 					checked.attr("has","0");
 					checked.parents(".shopItem").attr("del","0");
+					proId=null;
+					for(var i in proIdArr){
+						if(checked.attr('proId')==proIdArr[i]){
+							proIdArr.splice(i,1)
+						}
+						
+					}
+				
+					for(var j=0; j<proIdArr.length; j++){
+						if(proId != null){
+							proId += ","+proIdArr[j]
+						}else{
+							proId = proIdArr[j]
+						}
+					}
+					console.log(proIdArr)
+					
 					
 				}
+				console.log(proId)
 				//全部电狗
 				cntChooseLen=checked.parents(".cartSort").find(".choose").length-1;
 				cntChooseSure=checked.parents(".cartSort").find(".choose-sure").length;
@@ -169,6 +196,22 @@ define(function (require) {
 					$(this).parent().parent().find(".choose").addClass("choose-sure").attr("has","1");
 					$(this).parents(".cartSort").attr("delAll","1");
 					$(this).parents(".cartSort").find(".shopItem").attr("del","1");
+					//console.log()
+					proId = null;
+					var cose = $(this).parent().parent().find(".choose")
+					for(var i=0; i<cose.length; i++){
+						proIdArr.push(cose.eq(i).attr('proId'));
+						proIdArr.splice(cose.length-1,1);
+					}
+					for(var j=0; j<cose.length; j++){
+						if(proId != null){
+							proId += ","+cose[j]
+						}else{
+							proId = cose[j]
+						}
+					}
+
+					
 				}
 				else{
 					$(this).removeClass("choose-sure");
@@ -176,6 +219,7 @@ define(function (require) {
 					$(this).parent().parent().find(".choose").removeClass("choose-sure").attr("has","0");
 					$(this).parents(".cartSort").attr("delAll","0");
 					$(this).parents(".cartSort").find(".shopItem").attr("del","0");
+					proId = null
 				}
 				if(alreadyEdit==0){
 					$(this).parents(".cartSort").find(".fail").children("a").attr("has","0").removeClass("choose-sure");
@@ -183,9 +227,43 @@ define(function (require) {
 				}
 
 			});
+
+			$('.operate').on('touchend',function() {
+
+				// if(proId==null&&alreadyEdit==0){
+				// 	alert("请选择你要购买的商品")
+				// 	return;
+				// }
+				// if(proId!=null&&alreadyEdit==0){
+				// 	// delPro(proId)
+				// 	 //#tpl/ensureOrder
+				// }
+				// if(proId==null&&alreadyEdit==1){
+				// 	alert("请选择你要删除的商品")
+				// 	return;
+				// }
+				// if(proId!=null&&alreadyEdit==1){
+				// 	delPro(proId)
+				// 	// #tpl/ensureOrder
+				// }
+			})
+			
+
+			// if(proId==null){
+			// 				alert("请选择你要删除的商品")
+			// 			}else{
+			// 				delPro(proId)
+			// 			}
 	
-	
+	//console.log($('.actNum .itemNum').length)
 
         }
     }
 });
+
+
+
+
+// var arr = [0,1,2]
+// arr.splice(2,1);
+// console.log(arr)

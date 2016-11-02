@@ -1,7 +1,7 @@
 ﻿html,body{ width: 100%; height: 100%;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,figure{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-ol,ul{list-style:none}
+ol,ul,li{list-style:none}
 body{font:12px/1.5 "Microsoft YaHei",Helvetica,STHeiTi,sans-serif;color:#333;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:none;-webkit-touch-callout:none;-webkit-user-select:text;-webkit-tap-highlight-color:transparent;word-break:break-all;word-wrap:break-word;}
 h1,h2,h3,h4,h5,h6{font-weight:normal}
 h1{width: 100%; height: 0; font-size: 0; text-indent: -9999em; line-height: 500%; overflow: hidden;}
@@ -73,11 +73,7 @@ table{border-collapse:collapse;border-spacing:0}
 .img-box img{ display: block; width: 100%;}
 
 /*backtotop*/
-<<<<<<< HEAD
 .backtotop{ display: none; width: 3.6rem; height: 3.8rem; position: fixed; bottom: 4rem; right: 1.5rem; z-index: 9997; text-indent: -9999px; background-image: url(../images/ware/sp.png); background-repeat: no-repeat; background-size: 8.35rem; background-position: -2.55rem 0;}
-=======
-.backtotop{ display: none; width: 3.6rem; height: 3.8rem; position: fixed; bottom: 6rem; right: 1.5rem; z-index: 99; text-indent: -9999px; background-image: url(../images/ware/sp.png); background-repeat: no-repeat; background-size: 8.35rem; background-position: -2.55rem 0;}
->>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 
 /*弹窗样式*/
 .pop{ display: none;}

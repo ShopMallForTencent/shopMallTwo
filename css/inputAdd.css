@@ -11,7 +11,6 @@
 .vertical .input-add-wrap .saveAdd{background: #f0514b;width: 32.5rem;height: 4.5rem;line-height: 4.5rem;text-align: center;font-size: 1.6rem;color: #fff;display: block;border-radius: 0.25rem;position: fixed;bottom:2.55rem;left:50%;margin-left:-16.25rem;}
 
 
-<<<<<<< HEAD
 .level .input-add-wrap{padding:0;padding-bottom:6rem;}
 .level .input-add-wrap .line{height: 4.3rem;line-height: 4.3rem;font-size: 1.5rem;color:#212b3e;padding-left:1.5rem;border:1px solid #d6d6d6;background: #fff;border-top:none;}
 .level .input-add-wrap .line input{color: #212b3e;}
@@ -22,15 +21,3 @@
 .level .input-add-wrap .line1 span{float: left;margin-right:1.5rem;font-size: 1.4rem;color: #$212b3e;}
 .level .input-add-wrap .line1 textarea{width: 50.4rem;height: 5rem;float: left;border:1px solid #d6d6d6;padding:0.6rem;border-radius:0.25rem;resize: none;margin-top:0.25rem;;}
 .level .input-add-wrap .saveAdd{background: #f0514b;width: 29.5rem;height: 3.75rem;line-height: 3.75rem;text-align: center;font-size: 1.4rem;color: #fff;display: block;border-radius: 0.25rem;position: absolute;bottom:1rem;left:50%;margin-left:-16.25rem;}
-=======
-.level .input-add-wraps .wrap{padding:0;padding-bottom:6rem;}
-.level .input-add-wraps .line{height: 4.3rem;line-height: 4.3rem;font-size: 1.5rem;color:#212b3e;padding-left:1.5rem;border:1px solid #d6d6d6;background: #fff;border-top:none;}
-.level .input-add-wraps .line input{color: #212b3e;}
-.level .input-add-wraps .line1 textarea{color: #212b3e;font-size: 1.5rem;}
-.level .input-add-wraps .line1{background: #fff;color:#212b3e;line-height: 3.05rem;padding-left:1.1rem;padding-bottom:1.35rem;}
-.level .input-add-wraps .line1 .clearfix{margin-top:0.25rem;}
-.level .input-add-wraps .line1 .chooseArea select{font-size: 1.5rem;color: #212b3e;}
-.level .input-add-wraps .line1 span{float: left;margin-right:1.5rem;font-size: 1.4rem;color: #$212b3e;}
-.level .input-add-wraps .line1 textarea{width: 50.4rem;height: 5rem;float: left;border:1px solid #d6d6d6;padding:0.6rem;border-radius:0.25rem;resize: none;margin-top:0.25rem;;}
-.level .input-add-wraps .saveAdd{background: #f0514b;width: 29.5rem;height: 3.75rem;line-height: 3.75rem;text-align: center;font-size: 1.4rem;color: #fff;display: block;border-radius: 0.25rem;position: absolute;bottom:1rem;left:50%;margin-left:-16.25rem;}
->>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc

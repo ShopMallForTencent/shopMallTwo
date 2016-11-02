@@ -5,11 +5,12 @@ $.ajax({
 	dataType: 'jsonp',
 	success: function(data){
 	
-console.log(data.result.review)
+	console.log(data)
 
 	   //填充内容到html
 	    var banner_data = {
 	      isAdmin: true,
+	      public_list : data.result,
 	      bannerImg_list: data.result.banner,
 	      introduction : data.result.introduction,
 	      name : data.result.name,
@@ -19,7 +20,10 @@ console.log(data.result.review)
 	      t_stock : data.result.t_stock,
 	      g_specification : data.result.g_specification,
 	      p_specification : data.result.p_specification,
-	      review : data.result.review
+	      review : data.result.review,
+	      countent : data.result.countent,
+	      parameter : data.result.parameter
+
 	    };
 
 	    var bannerImg = template('banner', banner_data);
@@ -37,6 +41,15 @@ console.log(data.result.review)
 
 	    var review_art = template('user_art', banner_data);
 	    document.getElementById('user_comment').innerHTML = review_art;
+
+	    var countent_art = template('spxq_art', banner_data);
+	    document.getElementById('spxq').innerHTML = countent_art;
+
+	    var parameter_art = template('ggcs_art', banner_data);
+	    document.getElementById('ggcs_table').innerHTML = parameter_art;
+
+	    var user_pj_art = template('user_pj_art', banner_data);
+	    document.getElementById('discuss_pj').innerHTML = user_pj_art;
 
 
 	    ajax_Success(data.result.p_specification);
@@ -252,8 +265,14 @@ $('#jrgwc .jrgwcbnt').on('touchend', function(){
 	}); 
 });
 
+//立即购买请求
+// $('#ljgm .ljgmbnt').on('touchend', function(){
+	
+// });
 
+/********template部分********/
 
+//评价的star
 template.helper('dateFormat', function (score) {
 	var result = "";
 	for(var i=0; i<score; i++){
@@ -262,15 +281,25 @@ template.helper('dateFormat', function (score) {
     return result; 
 });
 
+//评价的图片
 template.helper('getUserImage', function (imagelist) {
 	var result = '';
 	imagelist = eval("("+imagelist+")"); 
 	for(var i=0; i<imagelist.length; i++)
 	{
 		var imgPath = imagelist[i];
-		
 		result+="<li class='fl dil'><img src="+imgPath+"></li>";
 	}
+    return result; 
+});
+
+//规格参数
+template.helper('wareSpecifications', function (obj) {
+
+	// console.log(obj)
+
+	var result ='<tr><td colspan="2"><strong>'+1+'</strong></td></tr><tr><td class="tdo">'+2+'</td><td>'+3+'</td></tr>';
+	
     return result; 
 });
 

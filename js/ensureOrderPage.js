@@ -4,6 +4,21 @@ define(function (require) {
         title: '订单确认',
         body: tpl,
         init: function () {
+
+        	//加载ajax脚本
+            loadjs('js/ajax/ensureOrderAjax.js',function(){
+
+               
+
+
+
+
+
+                
+
+            }); 
+
+
             console.log('done');
         }
     }

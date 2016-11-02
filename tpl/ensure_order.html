@@ -1,115 +1,64 @@
 ﻿<div class='page-container-wrap'>
     <link rel="stylesheet" href="./css/ensure_order.css" />
     <div class="wrap index-wrap ensure-order-wrap pr ovh" id="wrap">
-        <!--<div class="nav-box txc">
-            <ul class="">
-                <li class="nav-1"><a href="#"><i class="icon icon-1 db bc sp"></i><span>首页</span></a></li>
-                <li class="nav-2"><a href="#tpl/sort"><i class="icon icon-2 db bc sp"></i><span>分类</span></a></li>
-                <li class="nav-3"><a href="#tpl/shoppingCart"><i class="icon icon-3 db bc sp"></i><span>购物车</span><strong>5</strong></a></li>
-                <li class="nav-4"><a href="#tpl/personal"><i class="icon icon-4 db bc sp"></i><span>我的</span><strong>22</strong></a></li>
-            </ul>
-        </div>-->
-<<<<<<< HEAD
         <a class='backtotop lsp' href="javascript:;" title='返回顶部'>返回顶部</a>
         <div class="border-box">
-            <a href="#tpl/address" class="addBox">
-                <span class="addNewAdd"><i class="addsp"></i>请添加地址</span>
-                <p><span class="buyer">黄志烁</span><span class="buyerNum">13560344966</span></p>
-                <p class="buyerAdd">广东省深圳市南山区科兴科学园C1广东省深圳市南山区科兴 科学园C1广东省深圳市</p>
-                <i class="icon-locate addsp"></i>
-            </a>
-            <div class="shopList">
-                <p class="shopName"><i class="addsp"></i>特罗蒙得户外店</p>
-                <div class="itemList clearfix">
-                    <img src="images/myAddress/pic1.jpg" alt="pic" class="left" />
-                    <div class="right">
-                        <p class="listName">CF最新枪战模型X战1CF最新X战1C F最新枪战模型X战1</p>
-                        <p class="alreadySale">已售 <span>999</span> 笔</p>
-                        <p class="color">颜色：黑色</p>
-                        <div class="nums clearfix">
-                            <p><span class="rmb">￥</span><span>229</span></p>
-                            <p><span>1</span>件</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="itemList clearfix">
-                    <img src="images/myAddress/pic1.jpg" alt="pic" class="left" />
-                    <div class="right">
-                        <p class="listName">CF最新枪战模型X战1CF最新X战1C F最新枪战模型X战1</p>
-                        <p class="alreadySale">已售 <span>999</span> 笔</p>
-                        <p class="color">颜色：黑色</p>
-                        <div class="nums clearfix">
-                            <p><span>￥</span><span>229</span></p>
-                            <p><span>1</span>件</p>
-                        </div>
-                    </div>
-                </div>
+            <div id='user_address'>
+                <script id="address_art" type="text/html">  
+                {{if isAdmin}}    
+                     <a href="#tpl/address" class="addBox">
+                        <span class="addNewAdd"><i class="addsp"></i>请添加地址</span>
+                        <p><span class="buyer">{{msg.receiver.consignee}}</span><span class="buyerNum">{{msg.receiver.phone}}</span></p>
+                        <p class="buyerAdd">{{msg.receiver.area_name}}{{msg.receiver.address}}</p>
+                        <i class="icon-locate addsp"></i>
+                    </a>
+                    {{/if}}  
+                </script>
             </div>
-            <div class="countFee clearfix">
-                <p class="itemFee clearfix">
-                    <span class="feeName">商品金额</span>
-                    <span class="feeNum"><span>￥</span>458</span>
-                </p>
-                <p class="transportFee clearfix">
-                    <span class="feeName">运费</span>
-                    <span class="feeNum"><span>￥</span>10</span>
-                </p>
-                <p class="allFee clearfix">
-                    <span class="feeName">总价格</span>
-                    <span class="feeNum"><span>￥</span><strong>498</strong></span>
-                </p>
+            <div id='shopList'>
+               <script id="warelist_art" type="text/html">  
+                {{if isAdmin}}   
+                    <div class="shopList">
+                        <p class="shopName"><i class="addsp"></i>{{msg.b_name}}</p>
+                        {{each msg.product as value index}}  
+                        <div class="itemList clearfix">
+                            <img src={{msg.product[index].image}} alt="pic" class="left" />
+                            <div class="right">
+                                <p class="listName">{{msg.product[index].introduction}}</p>
+                                <p class="alreadySale">已售 <span>{{msg.product[index].stock}}</span> 笔</p>
+                                {{each msg.product[index].specification as value i}}
+                                    <p class="color">{{msg.product[index].specification[i]}}</p>
+                                {{/each}}
+                                <div class="nums clearfix">
+                                    <p><span class="rmb">￥</span><span>{{msg.product[index].price}}</span></p>
+                                    <p><span>{{msg.product[index].quantity}}</span>{{msg.product[index].unit}}</p>
+                                </div>
+                            </div>
+                        </div>
+                       {{/each}}  
+                    </div>
+                 {{/if}}  
+                </script> 
+            </div>
+            <div class="countFee clearfix" id='countFee'>
+                <script id="countFee_art" type="text/html">  
+                {{if isAdmin}}  
+                    <p class="itemFee clearfix">
+                        <span class="feeName">商品金额</span>
+                        <span class="feeNum"><span>￥</span>{{ #msg.product | getPrice }}</span>
+                    </p>
+                    <p class="transportFee clearfix">
+                        <span class="feeName">运费</span>
+                        <span class="feeNum"><span>￥</span>{{msg.receiver.freight}}</span>
+                    </p>
+                    <p class="allFee clearfix">
+                        <span class="feeName">总价格</span>
+                        <span class="feeNum"><span>￥</span><strong>{{ #msg.product,msg.receiver.freight | getPrice }}</strong></span>
+                    </p>
+                {{/if}}  
+                </script>
             </div>
             <a href="javascript:;" class="goPay">立即支付</a>
         </div>
-=======
-        <a href="#tpl/my_address" class="addBox">
-            <span class="addNewAdd"><i class="addsp"></i>请添加地址</span>
-            <p><span class="buyer">黄志烁</span><span class="buyerNum">13560344966</span></p>
-            <p class="buyerAdd">广东省深圳市南山区科兴科学园C1广东省深圳市南山区科兴 科学园C1广东省深圳市</p>
-            <i class="icon-locate addsp"></i>
-        </a>
-        <div class="shopList">
-            <p class="shopName"><i class="addsp"></i>特罗蒙得户外店</p>
-            <div class="itemList clearfix">
-                <img src="images/myAddress/pic1.jpg" alt="pic" class="left" />
-                <div class="right">
-                    <p class="listName">CF最新枪战模型X战1CF最新X战1C F最新枪战模型X战1</p>
-                    <p class="alreadySale">已售 <span>999</span> 笔</p>
-                    <p class="color">颜色：黑色</p>
-                    <div class="nums clearfix">
-                        <p><span class="rmb">￥</span><span>229</span></p>
-                        <p><span>1</span>件</p>
-                    </div>
-                </div>
-            </div>
-            <div class="itemList clearfix">
-                <img src="images/myAddress/pic1.jpg" alt="pic" class="left" />
-                <div class="right">
-                    <p class="listName">CF最新枪战模型X战1CF最新X战1C F最新枪战模型X战1</p>
-                    <p class="alreadySale">已售 <span>999</span> 笔</p>
-                    <p class="color">颜色：黑色</p>
-                    <div class="nums clearfix">
-                        <p><span>￥</span><span>229</span></p>
-                        <p><span>1</span>件</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="countFee clearfix">
-            <p class="itemFee clearfix">
-                <span class="feeName">商品金额</span>
-                <span class="feeNum"><span>￥</span>458</span>
-            </p>
-            <p class="transportFee clearfix">
-                <span class="feeName">运费</span>
-                <span class="feeNum"><span>￥</span>10</span>
-            </p>
-            <p class="allFee clearfix">
-                <span class="feeName">总价格</span>
-                <span class="feeNum"><span>￥</span><strong>498</strong></span>
-            </p>
-        </div>
-        <a href="javascript:;" class="goPay">立即支付</a>
->>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
     </div>
 </div>

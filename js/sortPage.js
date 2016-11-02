@@ -24,21 +24,12 @@ define(function (require) {
 			            $pageNavUl.css('width',$pageNavLi.length*12.16+'rem');
 			        }
 			    });
-<<<<<<< HEAD
 			    $pageNavA.on('touchend',function(){
-=======
-
-			    $pageNavA.on('tap',function(){
->>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 			        var index = $pageNavA.index($(this));
 			        $pageNavA.removeClass('on').eq(index).addClass('on');
 			    });
 
-<<<<<<< HEAD
 			    $('.page-sort a').on('touchend',function(){
-=======
-			    $('.page-sort a').on('tap',function(){
->>>>>>> be8975b4bbb4e331c69294b16914238bd7938acc
 			        var index = $('.page-sort a').index($(this));
 			        $('.page-sort a').removeClass('on').eq(index).addClass('on');
 			    });
