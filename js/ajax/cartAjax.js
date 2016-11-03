@@ -45,13 +45,35 @@ function addProNum (productID,ProNum) {
 	console.log("productID:"+productID+","+"ProNum:"+ProNum)
 	$.ajax({
 		url:ajaxPath + '/cart/change',
-		type:'GET',
-		dataType:'jsonp',
+		type : 'POST',
+		dataType: 'json',
+		xhrFields: {withCredentials: true},
+	    crossDomain: true,
 		data : {"p_id" : productID,"quantity" : ProNum},
 		success:function (data) {
 		console.log(data.msg)
 
 
+		},
+		error:function () {
+		console.log('fail')
+		}
+	})
+}
+
+//去结算
+function buyPro (productID,Bid) {
+	console.log("productID:"+productID+","+"b_id:"+Bid)
+	$.ajax({
+		url:ajaxPath + '/cart/confirmation',
+		type:'GET',
+		dataType:'jsonp',
+		data : {"p_ids" : productID,"b_id" : Bid},
+		success:function (data) {
+		console.log(data.msg)
+			Ec_Socket.dir = '购物车';
+			Ec_Socket.data.push(productID);
+			Ec_Socket.data.push(Bid);
 		},
 		error:function () {
 		console.log('fail')

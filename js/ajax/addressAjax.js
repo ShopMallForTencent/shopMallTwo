@@ -15,7 +15,8 @@ $.ajax({
 
 	     var resulthtml = template('addtemplate', addData);
 	     document.getElementById('myAdd').innerHTML = resulthtml;
-	     addsuccess()
+	     addsuccess();
+	     addEvetnForAddress();
 	},
 	error : function(){
 
@@ -28,13 +29,13 @@ function addDdfault (productID) {
 	console.log("r_id:"+productID)
 	$.ajax({
 		url:ajaxPath + 'receiver/default',
-		type:'GET',
-		dataType:'jsonp',
+		type : 'POST',
+		dataType: 'json',
+		xhrFields: {withCredentials: true},
+	    crossDomain: true,
 		data : {"r_id" : productID},
 		success:function (data) {
-		console.log(data.msg)
-
-
+			console.log(data.msg);
 		},
 		error:function () {
 		console.log('fail')
@@ -47,18 +48,20 @@ function addEdit(productID){
 	console.log("r_id:"+productID)
 	$.ajax({
 		url:ajaxPath + 'receiver/edit',
-		type:'GET',
-		dataType:'jsonp',
+		type : 'GET',
+		dataType: 'jsonp',
 		data : {"r_id" : productID},
 		success:function (data) {
-		console.log(data.msg)
-
-
+			console.log(data)
+			addMsg.msg = data;
+			console.log(data)
 		},
 		error:function () {
-		console.log('fail')
+			console.log('fail')
 		}
 	})
+
+	window.location.href = '#tpl/inputAdd';
 }
 
 //删除地址
@@ -66,8 +69,10 @@ function addDel(productID){
 	console.log("r_id:"+productID)
 	$.ajax({
 		url:ajaxPath + 'receiver/del',
-		type:'GET',
-		dataType:'jsonp',
+		type : 'POST',
+		dataType: 'json',
+		xhrFields: {withCredentials: true},
+	    crossDomain: true,
 		data : {"r_id" : productID},
 		success:function (data) {
 		console.log(data.msg)
@@ -93,5 +98,37 @@ function addsuccess(){
 	      $setDefault.eq(i).parents(".myAdd").insertBefore($(".myAdd").eq(0))
 	    }
 	 }
-  
 }
+
+
+function addEvetnForAddress()
+{
+	//修改收货地址
+	$('#myAdd .addevent').on('touchend', function(){
+
+		var name = $(this).find('.uName').html();
+		var phone = $(this).find('.uTel').html();
+		var address = $(this).find('.addDetail').text();
+
+		var user_address = $(document.body).find('#user_address');
+		user_address.find('.buyer').html(name);
+		user_address.find('.buyerNum').html(phone);
+		user_address.find('.buyerAdd').html(address);
+
+		window.location.href = '#tpl/ensureOrder';
+
+	});
+}
+
+$('#new_address').on('touchend', function(){
+	$('#border-box .name').get(0).value = '';
+	$('#border-box .phone').get(0).value = '';
+	$('#border-box .postcodes').get(0).value = '';
+	$('#cmbXxdz').get(0).value = '';
+	document.getElementById('cmbProvince').innerHTML = '';
+	document.getElementById('cmbCity').innerHTML = '';
+	document.getElementById('cmbArea').innerHTML = '';
+});
+
+
+

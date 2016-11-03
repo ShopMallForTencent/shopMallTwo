@@ -2,10 +2,11 @@
 $.ajax({
 	url: ajaxPath + '/goods/getById&g_id=999',
 	type : 'POST',
-	dataType: 'jsonp',
+	dataType: 'json',
+	xhrFields: {withCredentials: true},
+	crossDomain: true,
 	success: function(data){
-	
-	console.log(data)
+		console.log(data)
 
 	   //填充内容到html
 	    var banner_data = {
@@ -246,7 +247,9 @@ $('#jrgwc .jrgwcbnt').on('touchend', function(){
 	$.ajax({
 		url: ajaxPath + '/cart/add',
 		type : 'POST',
-		dataType: 'jsonp',
+		dataType: 'json',
+		xhrFields: {withCredentials: true},
+	    crossDomain: true,
 		data : {"quantity" : 22, "p_id" : 1, "g_id" : 1},
 		success: function(data){
 			var jrgwc = $('#jrgwc');
@@ -274,9 +277,14 @@ $('#jrgwc .jrgwcbnt').on('touchend', function(){
 
 //评价的star
 template.helper('dateFormat', function (score) {
+	var scoreArr = [];
+	scoreArr.push(String(score).split("."))	
 	var result = "";
-	for(var i=0; i<score; i++){
+	for(var i=0; i<parseInt(scoreArr[0][0]); i++){
 		result+="<em class='star dil lsp red'></em>";
+	}
+	if(scoreArr[0].length>1){
+		result +="<em style='width:"+parseInt(scoreArr[0][1])/10*1.35+"rem'"+"class='star dil lsp red'></em>"
 	}
     return result; 
 });

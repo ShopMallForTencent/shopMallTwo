@@ -4,8 +4,8 @@
 .vertical .comment-wrap .ad-info{ height: 12.5rem; padding: 1rem 1rem 1rem 14rem;}
 .vertical .comment-wrap .ad-info .img-box{ position: absolute; top: 1rem; left: 1rem; width: 12.4rem; height: 12.4rem; border: 1px solid #c4c4c4; border-radius: 0.4rem; overflow: hidden;}
 .vertical .comment-wrap .ad-info .img-box img{ border-radius: 0.4rem;}
-.vertical .comment-wrap .ad-info .name{ width: 20rem; height: 1.5rem; margin-bottom: 0.8rem; font-size: 1.4rem; color: #212b3e; text-overflow: ellipsis; line-height: 1.5rem; white-space: nowrap; overflow: hidden;}
-.vertical .comment-wrap .ad-info .explain{ width: 20rem; height: 7.5rem; margin-bottom: 1.5rem; font-size: 1.2rem; color: #636363; line-height: 1.5rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;}
+.vertical .comment-wrap .ad-info .name{ width: 20rem; height: 1.5rem; margin-bottom: 0.8rem; padding-top: 0.5rem; font-size: 1.4rem; color: #212b3e; text-overflow: ellipsis; line-height: 1.5rem; white-space: nowrap; overflow: hidden;}
+.vertical .comment-wrap .ad-info .explain{ width: 20rem; height: 7.5rem; margin-bottom: 0.5rem; font-size: 1.2rem; color: #636363; line-height: 1.5rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;}
 .vertical .comment-wrap .ad-info .color{ font-size: 1.2rem; color: #adadad; line-height: 1.2rem;}
 .vertical .comment-wrap .star{ height: 3.3rem; padding: 0 1rem; border-top: 1px solid #eee; font-size: 0;}
 .vertical .comment-wrap .star p{ display: inline-block; margin-right: 1.6rem; font-size: 1.4rem; color: #212b3e; line-height: 3.3rem; vertical-align: middle;}

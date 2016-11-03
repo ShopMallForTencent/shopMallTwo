@@ -2,9 +2,10 @@
 .my-address-wrap .addsp{background: url(../images/myAddress/sprite.png) no-repeat;background-size: 20rem;}
 .vertical .my-address-wrap .myAdd{border-top:1px solid #dfdfdf;border-bottom:1px solid #dfdfdf;background: #fff;}
 .vertical .my-address-wrap .wrap{padding-bottom: 6rem;;}
-.vertical .my-address-wrap .myAdd{margin-top:0.5rem;}
+.vertical .my-address-wrap .myAdd{margin-top:0.5rem; cursor: pointer;}
 .vertical .my-address-wrap .myAdd:nth-of-type(1){margin-top:0;}
 .vertical .my-address-wrap .myAdd .userNameTel{font-size: 1.4rem;font-weight: bold;color:#212b3e;padding: 1.49rem 1rem 0 1rem;}
+.my-address-wrap .addevent{display: block;}
 .vertical .my-address-wrap .myAdd .userNameTel .uName{font-size: 1.5rem;}
 .vertical .my-address-wrap .myAdd .userNameTel .uTel{margin-left:2.35rem;font-size: 1.4rem;}
 .vertical .my-address-wrap .myAdd .addDetail{color: #9baab5;margin-top:0.85rem;font-size: 1.4rem;padding: 0rem 1rem 0 1rem;}

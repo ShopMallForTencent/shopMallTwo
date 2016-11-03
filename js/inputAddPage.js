@@ -1,12 +1,14 @@
 define(function (require) {
     var tpl = require('tpl/inputAdd.html');
-    var addJs = require('js/inputAdd/inputAdd');
+    var aIn = require('js/ajax/socket/addressInputAddress');
     return {
         title: '新增收货地址',
         body: tpl,
         init: function () {
             
-        	addressInit('cmbProvince', 'cmbCity', 'cmbArea');
+        	loadjs('js/ajax/inputAddressAjax.js',function(){
+
+            }); 
 
         }
     }

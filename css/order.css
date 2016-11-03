@@ -1,52 +1,57 @@
 .order-page-wrap{ background: #f6f6f6;}
+.order-page-wrap .border-box{ overflow-y: scroll !important;}
 .order-page-wrap .order-page-nav{ position: absolute; top: 0; right: 0; z-index: 9; background: #fff; overflow: hidden;}
 .order-page-wrap .order-page-nav-cont{ height: 6rem; overflow-x: auto; overflow-y: hidden;}
 .order-page-wrap .order-page-nav ::-webkit-scrollbar{ opacity: 0;}
 .order-page-wrap .order-page-nav ul{ width: 100%; height: 4.5rem;}
-.order-page-wrap .order-page-nav li{ width: 7.5rem; height: 4.4rem; border-bottom: 2px solid #e2e2e2;}
-.order-page-wrap .order-page-nav a{ top: 0; left: 0; width: 100%; height: 4.3rem; padding-bottom: 0.2rem; font-size: 1.5rem; color: #212b3e; line-height: 4.3rem;}
+.order-page-wrap .order-page-nav li{ width: 7.5rem; height: 4.5rem;/* border-bottom: 2px solid #e2e2e2;*/}
+.order-page-wrap .order-page-nav a{ top: 0; left: 0; width: 100%; height: 4.3rem;/* padding-bottom: 0.2rem;*/ border-bottom: 0.2rem solid #e2e2e2; font-size: 1.5rem; color: #212b3e; line-height: 4.3rem;}
 .order-page-wrap .order-page-nav a.on{ padding-bottom: 0; background: #f2f2f2; border-bottom: 0.2rem solid #f0514b; color: #f0514b;}
 .order-page-wrap .order-page-nav i{ top: 50%; right: 0.9rem; width: 1.1rem; height: 1.1rem; margin-top: -0.6rem; border-top: 1px solid #f0514b; border-right: 1px solid #f0514b; -webkit-transform: rotate(45deg);}
 .vertical .order-page-wrap .main{ padding-top: 5.5rem;}
 .vertical .order-page-wrap .page-main{ padding-top: 0;}
 .vertical .order-page-wrap .order-page-nav{ width: 100%; height: 4.5rem;}
-.vertical .order-page-wrap .cont{ margin-bottom: 0.5rem; border-bottom: 1px solid #dfdfdf;}
+.vertical .order-page-wrap .cont{ margin-bottom: 1rem; border-bottom: 1px solid #dfdfdf;}
 .vertical .order-page-wrap .page-main .cont{ margin-bottom: 0; border-bottom: none;}
 .vertical .order-page-wrap .cont .hd,
 .vertical .order-page-wrap .cont .bd{ padding: 0 1rem; background: #fff;}
-.vertical .order-page-wrap .cont .hd{ height: 4.3rem; border-top: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf;}
-.vertical .order-page-wrap .cont .hd h2{ font-size: 1.5rem; color: #212b3e; line-height: 4.3rem;}
+.vertical .order-page-wrap .cont .hd{ height: 4.3rem;/* border-top: 1px solid #dfdfdf;*/ border-bottom: 1px solid #dfdfdf;}
+.vertical .order-page-wrap .cont .hd h2{ font-size: 1.2rem; color: #212b3e; line-height: 4.4rem;}
 .vertical .order-page-wrap .cont .hd img{ width: auto; height: 1.5rem; margin-right: 1rem; vertical-align: middle;}
-.vertical .order-page-wrap .cont .state{ position: absolute; top: 0; right: 1rem; font-size: 1.4rem; color: #212b3e; line-height: 4.3rem;}
+.vertical .order-page-wrap .cont .state{ position: absolute; top: 0; right: 1rem; font-size: 1.4rem; color: #f0514b; line-height: 4.3rem;}
 .vertical .order-page-wrap .cont .explain{ height: 4.2rem; font-size: 1.4rem; color: #212b3e; line-height: 4.2rem;}
 .vertical .order-page-wrap .cont .explain span{ color: #f72828;}
-.vertical .order-page-wrap .lists li{ margin-bottom: 1rem; padding: 0 0 1rem 10.8rem; border-bottom: 1px solid #eee;}
-.vertical .order-page-wrap .lists .img-box{ position: absolute; top: 0; left: 0; width: 9.2rem; height: 9.2rem; border: 1px solid #c4c4c4; border-radius: 0.4rem; overflow: hidden;}
-.vertical .order-page-wrap .lists .img-box img{ border-radius: 0.4rem;}
-.vertical .order-page-wrap .lists .name{ width: 22rem; height: 3.7rem; margin-bottom: 1.1rem; padding-right: 2.7rem; font-size: 1.4rem; color: #212b3e; line-height: 1.85rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
+.vertical .order-page-wrap .lists li{ margin-bottom: 1rem; padding: 0 0 1rem 10.8rem;/* border-bottom: 1px solid #eee;*/}
+.vertical .order-page-wrap .lists .img-box{ position: absolute; top: 0; left: 0; width: 9.2rem; height: 9.2rem;/* border: 1px solid #c4c4c4;*//* border-radius: 0.4rem;*/ overflow: hidden;}
+.vertical .order-page-wrap .lists .img-box img{/* border-radius: 0.4rem;*/}
+.vertical .order-page-wrap .lists .name{ width: 22rem; height: 3.7rem; margin-bottom: 1.1rem; padding-right: 2.7rem; font-size: 1.1rem; color: #212b3e; line-height: 1.85rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
 .vertical .order-page-wrap .lists .color{ margin-bottom: 1.4rem; font-size: 1.2rem; color: #adadad; line-height: 1.8rem;}
 .vertical .order-page-wrap .lists .price{ font-size: 1.2rem; color: #f0514b; line-height: 1.2rem;}
 .vertical .order-page-wrap .lists .sales{ display: none;}
 .vertical .order-page-wrap .lists .num{ position: absolute; right: 0; bottom: 1rem; font-size: 1.2rem; color: #adadad; line-height: 1.2rem;}
-.vertical .order-page-wrap .details{ height: 6rem; border-bottom: 1px solid #eee;}
-.vertical .order-page-wrap .details .goods{ font-size: 1.5rem; color: #212b3e; line-height: 2.5rem;}
-.vertical .order-page-wrap .details .cost{ position: absolute; top: 0; right: 0; font-size: 1.5rem; color: #212b3e; line-height: 2.4rem;}
-.vertical .order-page-wrap .details .cost p{ position: relative; padding-left: 3.7rem; text-align: right;}
-.vertical .order-page-wrap .details .cost em{ position: absolute; top: 0; left: 0;}
-.vertical .order-page-wrap .details .cost span{ font-size: 1.3rem; color: #f0514b; text-align: right;}
-.vertical .order-page-wrap .details .cost strong{ font-size: 1.4rem; font-weight: bold; color: #f0514b;}
-.vertical .order-page-wrap .details .cost b{ font-size: 1.1rem;}
+.vertical .order-page-wrap .details{ height: 3rem; border-bottom: 1px solid #eee;}
+.vertical .order-page-wrap .details .goods{ font-size: 1.5rem; color: #212b3e; line-height: 3rem;}
+.vertical .order-page-wrap .details .cost{ position: absolute; top: 0; right: 0; font-size: 1.3rem; color: #212b3e; line-height: 3rem;}
+.vertical .order-page-wrap .details .cost p{ position: relative; float: left; margin-left: 1.0rem;/* padding-left: 3.2rem;*/ text-align: right;}
+.vertical .order-page-wrap .details .cost p:nth-child(1){ margin-left: 0;}
+.vertical .order-page-wrap .details .fare{ font-size: 1.0rem;}
+.vertical .order-page-wrap .details .fare b{ font-size: 0.8rem;}
+/*.vertical .order-page-wrap .details .cost em{ position: absolute; top: 0; left: 0;}*/
+/*.vertical .order-page-wrap .details .cost span{ font-size: 1.3rem; color: #f0514b; text-align: right;}*/
+.vertical .order-page-wrap .details .cost strong{ font-size: 1.2rem; font-weight: bold; color: #f0514b;}
+.vertical .order-page-wrap .details .cost .paid b{ font-size: 1rem;}
 .vertical .order-page-wrap .details .cost .txt{ position: absolute; top: 0; left: 0;}
 .vertical .order-page-wrap .logistics{ padding: 0.8rem 0; border-bottom: 1px solid #eee;}
 .vertical .order-page-wrap .logistics p{ font-size: 1.4rem; color: #2f2e2e; line-height: 2.7rem;}
 .vertical .order-page-wrap .logistics a{ position: absolute; top: 50%; right: 0; width: 9.3rem; height: 3.1rem; margin-top: -1.6rem; border: 1px solid #d6d6d6; border-radius: 0.3rem; font-size: 1.4rem; color: #212b3e; line-height: 3.1rem;}
 .vertical .order-page-wrap .cont .btn-box{ padding: 1.5rem 0;}
-.vertical .order-page-wrap .cont .btn-box a{ box-sizing: border-box; width: 10.8rem; height: 3.9rem; margin-right: 1.35rem; border: 1px solid #a4a4a4; border-radius: 0.4rem; font-size: 1.5rem; color: #212b3e; line-height: 3.9rem;}
+.vertical .order-page-wrap .cont .btn-box a{ box-sizing: border-box; width: 8.64rem; height: 3.12rem; margin-right: 1.08rem; border: 1px solid #a4a4a4; border-radius: 0.4rem; font-size: 1.2rem; color: #212b3e; line-height: 3.12rem;}
 .vertical .order-page-wrap .cont .btn-box a:last-child{ margin-right: 0;}
 .vertical .order-page-wrap .cont .btn-box a.red{ background: #f0514b; border-color: #f0514b; color: #fff;}
 .vertical .order-page-wrap .title{ display: table; width: 100%; height: 6.7rem; margin-bottom: 0.5rem; background: #fff; overflow: hidden;}
 .vertical .order-page-wrap .title .title-cont{ display: table-cell; vertical-align: middle;}
-.vertical .order-page-wrap .title h2{ padding: 0 1rem; font-size: 1.5rem; font-weight: bold; color: #212b3e; line-height: 2.5rem;}
+.vertical .order-page-wrap .title h2{ padding: 0 1rem; font-size: 1.5rem; color: #212b3e; line-height: 2.5rem;}
+.vertical .order-page-wrap .title span{ font-weight: bold;}
 .vertical .order-page-wrap .title p{ padding: 0 1rem; font-size: 1.2rem; color: #212b3e; line-height: 2rem;}
 .vertical .order-page-wrap .title p span{ color: #f72828;}
 .vertical .order-page-wrap .address{ margin-bottom: 0.5rem; padding-bottom: 1rem; background: #fff; overflow: hidden;}
@@ -55,9 +60,10 @@
 .vertical .order-page-wrap .address .add{ width: 32rem; padding-left: 3.2rem; font-size: 1.2rem; color: #818181; line-height: 1.6rem;}
 .vertical .order-page-wrap .address .add i{ top: 50%; left: 1rem; width: 1.2rem; height: 1.5rem; margin-top: -0.75rem; background-position: -8.8rem -2rem;}
 .vertical .order-page-wrap .page-main .btn-box{ padding: 1.5rem 1rem; background: #fff;}
-.vertical .order-page-wrap .page-main .price-info{ margin-bottom: 0.5rem; padding: 0 1rem 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.5rem; color: #212b3e; text-align: right; line-height: 2.5rem;}
+.vertical .order-page-wrap .page-main .price-info{ margin-bottom: 0.5rem; padding: 0 1rem 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.5rem; color: #818181; text-align: right; line-height: 2.5rem;}
+.vertical .order-page-wrap .page-main .price-info p:last-child{ color: #212b3e;}
 .vertical .order-page-wrap .page-main .price-info em{ position: absolute; top: 0; left: 0;}
-.vertical .order-page-wrap .page-main .price-info span{ color: #f0514b;}
+/*.vertical .order-page-wrap .page-main .price-info span{ color: #f0514b;}*/
 .vertical .order-page-wrap .page-main .price-info strong{ font-weight: bold; color: #f0514b;}
 .vertical .order-page-wrap .page-main .order-num{ padding: 0.8rem 1rem; background: #fff; border-bottom: 1px solid #dfdfdf; font-size: 1.4rem; color: #818181; line-height: 2.5rem;}
 .vertical .order-page-wrap .page-main .logistics{ margin-top: 0.5rem; padding: 1rem; background: #fff; border-bottom: 1px solid #cac9c9;}
@@ -88,12 +94,14 @@
 .level .order-page-wrap .lists .num{ position: absolute; right: 0; bottom: 1.3rem; font-size: 1.2rem; color: #adadad; line-height: 1.3rem;}
 .level .order-page-wrap .details{ height: 3.3rem; border-bottom: 1px solid #eee;}
 .level .order-page-wrap .details .goods{ font-size: 1.3rem; color: #212b3e; line-height: 3.3rem;}
-.level .order-page-wrap .details .cost{ position: absolute; top: 0; right: 0; font-size: 1.5rem; color: #212b3e; line-height: 3.3rem;}
-.level .order-page-wrap .details .cost p{ position: relative; float: left; margin-left: 2.5rem; padding-left: 3.7rem; text-align: right;}
-.level .order-page-wrap .details .cost em{ position: absolute; top: 0; left: 0;}
-.level .order-page-wrap .details .cost span{ font-size: 1.3rem; color: #f0514b; text-align: right;}
-.level .order-page-wrap .details .cost strong{ font-size: 1.4rem; font-weight: bold; color: #f0514b;}
-.level .order-page-wrap .details .cost b{ font-size: 1.1rem;}
+.level .order-page-wrap .details .cost{ position: absolute; top: 0; right: 0; font-size: 1.3rem; color: #212b3e; line-height: 3.3rem;}
+.level .order-page-wrap .details .cost p{ position: relative; float: left; margin-left: 1.2rem;/* padding-left: 3.7rem;*/ text-align: right;}
+.level .order-page-wrap .details .fare{ font-size: 1.0rem;}
+.level .order-page-wrap .details .fare b{ font-size: 0.8rem;}
+/*.level .order-page-wrap .details .cost em{ position: absolute; top: 0; left: 0;}*/
+/*.level .order-page-wrap .details .cost span{ font-size: 1.3rem; color: #f0514b; text-align: right;}*/
+.level .order-page-wrap .details .cost strong{ font-size: 1.2rem; font-weight: bold; color: #f0514b;}
+.level .order-page-wrap .details .cost .paid b{ font-size: 1.0rem;}
 .level .order-page-wrap .details .cost .txt{ position: absolute; top: 0; left: 0;}
 .level .order-page-wrap .logistics{ padding: 0.8rem 0; border-bottom: 1px solid #eee;}
 .level .order-page-wrap .logistics p{ font-size: 1.1rem; color: #2f2e2e; line-height: 2rem;}

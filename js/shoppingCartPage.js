@@ -1,11 +1,12 @@
 define(function (require) {
     var tpl = require('tpl/shoppingCart.html');
     var cartAjax = require('js/ajax/cartAjax');
+    var ecSocket = require('js/ajax/socket/ensureOrder_Cart');
     return {
         title: '购物车',
         body: tpl,
         init: function () {
-
+        	
             //	计算每个店铺中商品总价
 			$(".reduce").each(function(){
 				countAllMoney($(this));
@@ -37,6 +38,9 @@ define(function (require) {
 				if(oItemNum>=$(this).attr('stock')){
 					oItemNum=$(this).attr('stock')
 					$(this).css("color","#adadad");
+				}else{
+					console.log(99)
+					$(this).css("color","#212b3e");
 				}
 				$(this).parent().find(".itemNum").text(oItemNum);
 				countAllMoney($(this));
@@ -167,7 +171,7 @@ define(function (require) {
 					
 				}
 				console.log(proId)
-				//全部电狗
+				//全部订购
 				cntChooseLen=checked.parents(".cartSort").find(".choose").length-1;
 				cntChooseSure=checked.parents(".cartSort").find(".choose-sure").length;
 				if(checked.parents(".cartSort").find(".countAll").find(".choose").attr("has")=="1"){
@@ -200,17 +204,21 @@ define(function (require) {
 					proId = null;
 					var cose = $(this).parent().parent().find(".choose")
 					for(var i=0; i<cose.length; i++){
+						console.log(cose.eq(i).attr('proId'))
 						proIdArr.push(cose.eq(i).attr('proId'));
 						proIdArr.splice(cose.length-1,1);
+						
 					}
-					for(var j=0; j<cose.length; j++){
+					console.log(proIdArr)
+					for(var j=0; j<proIdArr.length; j++){
 						if(proId != null){
-							proId += ","+cose[j]
+							proId += ","+proIdArr[j]
+							console.log(proIdArr)
 						}else{
-							proId = cose[j]
+							proId = proIdArr[j]
 						}
 					}
-
+					console.log(proId)
 					
 				}
 				else{
@@ -230,22 +238,25 @@ define(function (require) {
 
 			$('.operate').on('touchend',function() {
 
-				// if(proId==null&&alreadyEdit==0){
-				// 	alert("请选择你要购买的商品")
-				// 	return;
-				// }
-				// if(proId!=null&&alreadyEdit==0){
-				// 	// delPro(proId)
-				// 	 //#tpl/ensureOrder
-				// }
-				// if(proId==null&&alreadyEdit==1){
-				// 	alert("请选择你要删除的商品")
-				// 	return;
-				// }
-				// if(proId!=null&&alreadyEdit==1){
-				// 	delPro(proId)
-				// 	// #tpl/ensureOrder
-				// }
+				if(proId==null&&alreadyEdit==0){
+					alert("请选择你要购买的商品")
+					return;
+				}
+				if(proId!=null&&alreadyEdit==0){
+					console.log(proId,$(this).attr('bId'))
+					buyPro(proId,$(this).attr('bId'));
+					window.location.href = '#tpl/ensureOrder';
+					// delPro(proId)
+					 //#tpl/ensureOrder
+				}
+				if(proId==null&&alreadyEdit==1){
+					alert("请选择你要删除的商品")
+					return;
+				}
+				if(proId!=null&&alreadyEdit==1){
+					delPro(proId)
+					// #tpl/ensureOrder
+				}
 			})
 			
 
