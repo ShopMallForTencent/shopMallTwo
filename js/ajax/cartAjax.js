@@ -1,22 +1,25 @@
-$.ajax({
-	url:ajaxPath + '/cart/list',
-	type:'GET',
-	dataType:'jsonp',
-	success:function (data) {
-		console.log(data)
-		console.log(data.result[0].product[0].p_id)
-		var cartData = {
-			isAdmin: true,
-			bName:data.result
-		};
-		var cartHtml = template('carttemplate', cartData);
-		document.getElementById('cartSort').innerHTML = cartHtml;
-		
-	},
-	error:function () {
-		console.log('fail')
-	}
-})
+//购物车列表
+function cartList(func){
+		$.ajax({
+		url:ajaxPath + '/cart/list',
+		type:'GET',
+		dataType:'jsonp',
+		success:function (data) {
+			console.log(data)
+			console.log(data.result[0].product[0].p_id)
+			var cartData = {
+				isAdmin: true,
+				bName:data.result
+			};
+			var cartHtml = template('carttemplate', cartData);
+			document.getElementById('cartSort').innerHTML = cartHtml;
+			func();
+		},
+		error:function () {
+			console.log('fail');
+		}
+	})
+}
 
 
 
@@ -80,3 +83,4 @@ function buyPro (productID,Bid) {
 		}
 	})
 }
+

@@ -3,16 +3,18 @@ var municipal = document.getElementById('cmbCity');
 var cmbArea = document.getElementById('cmbArea');
 var cityArr = [cmbProvince, municipal,cmbArea ];
 
+
 //为真，则代表从编辑进入本页面
 if (addMsg.msg.result) 
 {
+	//填充内容到表单
 	$('#border-box .name').get(0).value = addMsg.msg.result['consignee'];
 	$('#border-box .phone').get(0).value = addMsg.msg.result['phone'];
 	$('#border-box .postcodes').get(0).value = addMsg.msg.result['z_code'];
 	$('#cmbXxdz').get(0).value = addMsg.msg.result['address'];
-	//var id = addMsg.msg.result['a_id'];
-	console.log(addMsg.msg.result)
-	// getCmbArea(null, id);
+	//获取地址ID
+	var treePath = addMsg.msg.result.t_path.split(',');
+	treePath.push(addMsg.msg.result.a_id);
 	for(var i=0; i<addMsg.msg.result.area.length; i++)
 	{
 		for(var j=0; j<addMsg.msg.result.area[i].length; j++)
@@ -22,36 +24,45 @@ if (addMsg.msg.result)
 			option.text = city['name'];
 			option.setAttribute("name", city['name']);
 			option.value = city['id'];
+			for(var z=0; z<treePath.length; z++)
+			{
+				if(option.value == treePath[z])
+				{
+					option.selected = true;
+				}
+			}
 			cityArr[i].appendChild( option );
 			cityArr[i].style.display = 'block';
 		}
 	}
 }
+else
+{
+	//加载省份
+	$.ajax({
+		url: ajaxPath + '/area/tops',
+		type : 'GET',
+		dataType: 'jsonp',
+		success: function(data){
+			cmbProvince.options.add(new Option('请选择', '请选择'));
 
-//加载省份
-$.ajax({
-	url: ajaxPath + '/area/tops',
-	type : 'GET',
-	dataType: 'jsonp',
-	success: function(data){
-
-		cmbProvince.options.add(new Option('请选择', '请选择'));
-
-		for(var i=0; i<data.result.length; i++)
-		{
-			var provinces = data.result[i];
-			var option = document.createElement('option');
-			option.text = provinces['name'];
-			option.setAttribute("name", provinces['name']);
-			option.value = provinces['id'];
-			cmbProvince.appendChild( option );
+			for(var i=0; i<data.result.length; i++)
+			{
+				var provinces = data.result[i];
+				var option = document.createElement('option');
+				option.text = provinces['name'];
+				option.setAttribute("name", provinces['name']);
+				option.value = provinces['id'];
+				cmbProvince.appendChild( option );
+			}
+		},
+		error : function(){
+		   console.log('fail');
 		}
-	},
-	error : function(){
-	   console.log('fail');
-	}
 
-});
+	});
+}
+
 
 //省份改变时获取县
 function getMunicipal(self, id){
@@ -151,56 +162,94 @@ $('#saveAdd').on('touchend', function(){
 	 	 xxdz = document.getElementById('cmbXxdz').value;
 
 	 if (name.length <=0) {
-	 	alert('收货人姓名不能为空');
+	 	showTips({
+            'type':false,
+            'text':'收货人姓名不能为空',
+            'time':2000
+        });
 	 	return;
 	 }
 
 	 //手机号码校验
 	 if (phone.length <= 0) 
 	 {
-	 	 alert('手机号码不能为空');
+	 	 showTips({
+            'type':false,
+            'text':'手机号码不能为空',
+            'time':2000
+        });
 	 	 return;
 	 }
 	 if( !/^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/i.test(phone) )
 	 { 
-		 alert("手机号码格式有误！请重新填写！"); 
+		 showTips({
+            'type':false,
+            'text':'手机号码格式有误！请重新填写！',
+            'time':2000
+         });
 		 return; 
 	 } 
 
 	 //邮编校验
 	 if (postcodes.length <= 0) 
 	 {
-	 	alert('邮编不能为空');
+	 	showTips({
+            'type':false,
+            'text':'邮编不能为空',
+            'time':2000
+         });
 	 	return;
 	 }
 	 if ( !/^[1-9][0-9]{5}$/.test(postcodes)) 
 	 {
-	 	alert('邮编格式错误');
+	 	showTips({
+            'type':false,
+            'text':'邮编格式错误',
+            'time':2000
+         });
 	 	return;
 	 }
 
 	 if (shen == '请选择') 
 	 {
-	 	alert('请选择省');
+	 	showTips({
+            'type':false,
+            'text':'请选择省',
+            'time':2000
+         });
 	 	return;
 	 }
 
 	 if (xian == '请选择') 
 	 {
-	 	alert('请选择县');
+	 	showTips({
+            'type':false,
+            'text':'请选择县',
+            'time':2000
+         });
 	 	return;
 	 }
 
 	 if (shi == '请选择') 
 	 {
-	 	alert('请选市');
+	 	showTips({
+            'type':false,
+            'text':'请选市',
+            'time':2000
+         });
 	 	return;
 	 }
 	 
 	 if (xxdz.length <= 0) {
-	 	alert('请填写详细地址');
+	 	showTips({
+            'type':false,
+            'text':'请填写详细地址',
+            'time':2000
+         });
 	 	return;
 	 }
+
+// console.log( typeof addMsg.msg + '???????????????????')
 
 	 //提交
 	 $.ajax({
@@ -216,11 +265,22 @@ $('#saveAdd').on('touchend', function(){
 	    	'phone' : phone, 
 	    	'z_code' : postcodes,  
 	    	'address' : xxdz, 
-	    	'is_def' : 0 
+	    	'is_def' : typeof addMsg.msg == 'string'? 0 : addMsg.msg.result.is_default
 	    },
 		success: function(data){
 			console.log(data);
 			window.location.href = '#tpl/address';	
+
+//清空表单内容，不然下次进来会有上一次的内容?????????????????????????????????????????????????????????????????????????????????
+addMsg.msg = '';
+$('#border-box .name').get(0).value = '';
+$('#border-box .phone').get(0).value = '';
+$('#border-box .postcodes').get(0).value = '';
+$('#cmbXxdz').get(0).value = '';
+document.getElementById('cmbProvince').innerHTML = '';
+document.getElementById('cmbCity').innerHTML = '';
+document.getElementById('cmbArea').innerHTML = '';
+
 		},
 		error : function(err){
 		   console.log(err);

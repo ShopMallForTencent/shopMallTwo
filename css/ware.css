@@ -4,6 +4,9 @@
 .ware-wrap .withebg{background: #fff;}
 .ware-wrap img{display: block; width: 100%;}
 
+.ware-wrap .border-box{ border-bottom-width: 5.4rem;}
+.level .ware-wrap .border-box{ border-left: none;}
+
 /*下拉加载提示*/
 .tips{ padding: 1.8rem 0 2rem; font-size: 1.2rem; color: #9baab5; line-height: 1.2rem;}
 
@@ -58,7 +61,7 @@
 .ware-wrap .buydata{height: 4rem; line-height: 4rem; font-size: 1.2rem;}
 
 /*buy_nav*/
-.ware-wrap .buy_nav{ width: 37.5rem; height: 5.4rem; position: fixed; bottom: 0; left: 0;}
+.ware-wrap .buy_nav{ width: 37.5rem; height: 5.4rem; position: absolute; bottom: 0; left: 0;}
 .ware-wrap .buy_nav li{line-height: 5.4rem; text-align: center; position: relative;}
 .ware-wrap .buy_nav .lx3, .ware-wrap .buy_nav .lx4{font-size: 1.7rem; font-weight: bold; width: 10.9rem;} 
 .ware-wrap .buy_nav .lx1, .ware-wrap .buy_nav .lx2{width: 7.85rem; text-indent: -9999px;}

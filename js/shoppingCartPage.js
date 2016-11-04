@@ -8,7 +8,22 @@ define(function (require) {
         init: function () {
         	
             //	计算每个店铺中商品总价
-			$(".reduce").each(function(){
+			
+			
+
+			// if(proId==null){
+			// 				alert("请选择你要删除的商品")
+			// 			}else{
+			// 				delPro(proId)
+			// 			}
+	
+	//console.log($('.actNum .itemNum').length)
+
+        },
+        beforeopen:function(){
+        	cartList(function(){
+
+        	$(".reduce").each(function(){
 				countAllMoney($(this));
 				var oItemNum=$(this).parent().find(".itemNum").text();
 
@@ -258,19 +273,14 @@ define(function (require) {
 					// #tpl/ensureOrder
 				}
 			})
-			
 
-			// if(proId==null){
-			// 				alert("请选择你要删除的商品")
-			// 			}else{
-			// 				delPro(proId)
-			// 			}
-	
-	//console.log($('.actNum .itemNum').length)
-
+        	});
         }
     }
 });
+
+
+
 
 
 

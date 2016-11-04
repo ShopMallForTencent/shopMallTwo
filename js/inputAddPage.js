@@ -5,8 +5,12 @@ define(function (require) {
         title: '新增收货地址',
         body: tpl,
         init: function () {
-            
-        	loadjs('js/ajax/inputAddressAjax.js',function(){
+  
+        },
+
+        beforeopen : function(){
+
+            loadjs('js/ajax/inputAddressAjax.js',function(){
 
             }); 
 

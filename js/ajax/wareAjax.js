@@ -62,6 +62,11 @@ $.ajax({
 }); 
 
 
+
+//定义全局变量
+var that=null;
+var selArr=[];
+var selCancel = false;
 //ajax请求成功后调用
 function ajax_Success(arr)
 { 
@@ -78,68 +83,120 @@ function ajax_Success(arr)
 	});
 
 	//弹窗按钮选中脚本
-	//gwcTcBntLogic('#ljgm .sp_color_bnt a');
-	//gwcTcBntLogic('#jrgwc .sp_color_bnt a');
+
+	sel($('#sp_color_gm a')) //立即购买
+	sel($('#sp_color_jrgwc a'))//加入购物车
+	
+function sel(Did){
+	console.log()
 
 
-	$('#sp_color_gm a').on('touchend', function(){
+	Did.on('touchend', function(){
 			
 		  //取消
 		  if(this.className.indexOf('select') != -1)
-		  {
+		  {   selCancel = true
 		  	  $(this).removeClass('select');
-		  	  var selectBnt = getSelectBnt($('#sp_color_gm a'));
-		  	  pds( selectBnt.length > 1? $(this) : $('#sp_color_gm a'), arr );
+		  	  var selectBnt = getSelectBnt(Did);
+		  	  // pds( selectBnt.length > 1? $(this) : $('#sp_color_gm a'), arr );
+		  	  selg($(this).attr("zdy"),arr,Did)
 		  	  console.log('取消');
+		  	 
 		  }
 		  //选中
 		  else if(this.className.indexOf('no') == -1)
-		  {
+		  {	  selCancel = false
+		  	  selg($(this).attr("zdy"),arr,Did)
 		  	  $(this).addClass('select');
-		  	  pds( $(this), arr );
+		  	  //pds( $(this), arr );
 		  	  console.log('选中')
+		  	  	
 		  }	
 	});
+}
+
+
 
 }
 
 
 
 
-function pds(bntArr, arr)
-{	
-	//拿到所有选中的按钮
-	var selectBnt = getSelectBnt(bntArr);
-	if (selectBnt.length <= 0) {
-		bntArr.removeClass('no');
+function selg(zdy,arr,Did){
+	if(Did.selector!=that){
+			console.log(Did.selector)
+			selArr=[]
+		}
+	that = Did.selector
+	
+	if(selCancel){
+		console.log(selCancel)
+		for(var i=0; i<selArr.length; i++){
+			if(zdy==selArr[i]){
+				selArr.splice(i,1)
+			}
+		}
+	}else{
+		selArr.push(zdy)
+	}
+	if(selArr.length>=1){
+		console.log(selArr)
+		pds( selArr, arr,Did );
+	}else{
+		Did.removeClass('no');
 		return;
 	}
+	console.log(selArr)
+
+}
+
+// 判断一个数组是否包含另一个数组
+function isContained(a, b){
+    if(!(a instanceof Array) || !(b instanceof Array)) return false;
+    if(a.length < b.length) return false;
+    var aStr = a.toString();
+    for(var i = 0, len = b.length; i < len; i++){
+       if(aStr.indexOf(b[i]) == -1) return false;
+    }
+    return true;
+}
+	
+
+
+function pds(bntArr, arr,Did)
+{	
+
+	
+	
+	//拿到所有选中的按钮
+	var selectBnt = bntArr;
+
+	
+	
 
 	//判断arr数组中，是否包含按钮的zdy
 	var result = [];
 	for(var i=0; i<arr.length; i++)
 	{
 		var ps = arr[i].p_s;
-		for(var j=0; j<ps.length; j++)
-		{
-			var val = parseInt(ps[j]);
-			for(var k=0; k<selectBnt.length; k++)
-			{
-				var  sbnt = selectBnt[k];
-				if (val == parseInt(sbnt.attr('zdy'))) 
-				{
-					result.push(ps);
-				}
-			}
-		}
+
+    	
+    	if(isContained(ps,selectBnt)){
+    		result.push(ps)
+    	}
+
+		
+		
 	}
 
-	console.log(result)
+	
 
-	for(var k=0; k<$('#sp_color_gm a').length; k++)
+	for(var k=0; k<Did.length; k++)
 	{
-		var bnt = $('#sp_color_gm a').eq(k);	
+		var bnt = Did.eq(k);	
 		//result中不包含bnt的zdy，则变灰
+		
+		 console.log(selectBnt.length)
 		if(!isHaveValue(parseInt(bnt.attr('zdy')), result))
 		{
 			bnt.addClass('no');
@@ -149,6 +206,7 @@ function pds(bntArr, arr)
 			bnt.removeClass('no');
 		}
 	}
+	
 
 }
 
@@ -250,8 +308,9 @@ $('#jrgwc .jrgwcbnt').on('touchend', function(){
 		dataType: 'json',
 		xhrFields: {withCredentials: true},
 	    crossDomain: true,
-		data : {"quantity" : 22, "p_id" : 1, "g_id" : 1},
+		data : {"quantity" : 1, "p_id" : 123, "g_id" : 999},
 		success: function(data){
+			console.log(data)
 			var jrgwc = $('#jrgwc');
 			jrgwc.addClass('gmtc_show');
 			jrgwc.find('.shop_car_success').show();
@@ -303,18 +362,20 @@ template.helper('getUserImage', function (imagelist) {
 
 //规格参数
 template.helper('wareSpecifications', function (obj) {
-
-	// console.log(obj)
-
-	var result ='<tr><td colspan="2"><strong>'+1+'</strong></td></tr><tr><td class="tdo">'+2+'</td><td>'+3+'</td></tr>';
+	var result ='';
+	 console.log(obj)
+	 for(var i=0; i<obj.length; i++){
+	 	result +='<tr><td colspan="2"><strong>'+obj[i].p_name+'</strong></td></tr>';
+	 	for(var j=0; j<obj[i].p_value.length; j++){
+	 		result += '<tr><td class="tdo">'+obj[i].p_value[j].pg_name+'</td><td>'+obj[i].p_value[j].pg_value+'</td></tr>'
+	 	}
+	 }
+	
 	
     return result; 
 });
 
  
-
-
-
 
 
 

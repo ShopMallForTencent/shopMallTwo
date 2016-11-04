@@ -13,8 +13,8 @@
 .vertical .shopping-cart-wrap .shopItem a.choose-sure:before,.vertical .shopping-cart-wrap .countAll a.choose-sure:before{ width: 2rem; height: 2rem; background-position: 0 0;}
 .vertical .shopping-cart-wrap .left{position:absolute;left:4rem;top:1rem;width: 9.15rem;height: 9.15rem;/*border:1px solid #c4c4c4;*/}
 .vertical .shopping-cart-wrap .right{}
-.vertical .shopping-cart-wrap .right .itemName{ height: 3.5rem; color: #212b3e;font-size: 1.2rem;line-height: 1.75rem;margin-bottom:0.3rem;padding-top: 0.2rem;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2; overflow: hidden;}
-.vertical .shopping-cart-wrap .right .itemColor{color: #adadad;font-size: 1.2rem;line-height: 1.2rem;margin-bottom:2rem;}
+.vertical .shopping-cart-wrap .right .itemName{ height: 3.5rem; color: #212b3e;font-size: 1.3rem;line-height: 1.75rem;margin-bottom:0.3rem;padding-top: 0.2rem;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2; overflow: hidden;}
+.vertical .shopping-cart-wrap .right .itemColor{color: #adadad;font-size: 1.2rem;line-height: 1.2rem;margin-bottom:1.6rem;}
 .vertical .shopping-cart-wrap .right .alreadySale{display: none;}
 .vertical .shopping-cart-wrap .right .fee{color: #f0514b;font-size: 1.8rem;line-height: 1.8rem;}
 .vertical .shopping-cart-wrap .right .fee span{/*font-size: 1.2rem;*/}

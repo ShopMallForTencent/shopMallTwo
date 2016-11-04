@@ -3,7 +3,6 @@
 .ensure-order-wrap strong{font-weight: bold;;}
 .ensure-order-wrap .addsp{background: url(../images/myAddress/sprite.png) no-repeat;background-size: 20rem;}
 .vertical .ensure-order-wrap .border-box{ padding-bottom: 8.5rem;}
-.vertical .ensure-order-wrap .addBox .addNewAdd{display: none;}
 .vertical .ensure-order-wrap .addBox{display: block;height: 7.3rem;width: 100%;line-height: 7.3rem;font-size: 1.7rem;color: #464646;text-align: center;background: #fff;position: relative;}
 .vertical .ensure-order-wrap .addBox i{background-position:-10.05rem 0 ;width: 1.15rem;height: 1.7rem;display: inline-block;vertical-align: middle;margin-right:0.75rem;}
 .vertical .ensure-order-wrap .addBox p{margin-left:3.2rem;}

@@ -42,25 +42,31 @@
     }
 })(Zepto);
 
+// 显示/隐藏弹窗
+function showPop(e) {
+    document.getElementById(e).style.display = 'block';
+}
+function hidePop(e) {
+    document.getElementById(e).style.display = 'none';
+}
+
+// 显示提示框
 function showTips(obj){
-    // showDialog.show({
-    //     id:'pop-tips',      //需要弹出的id，如果是弹出页面上的div，则该选项为必选
-    //     bgcolor:"#000",//弹出“遮罩”的颜色，格式为"#FF6600"，可选，默认为"#fff"
-    //     opacity:50 //弹出“遮罩”的透明度，格式为｛10-100｝，可选
-    // });
-    // var time = obj.time || 2000;
-    // if (obj.type == true) {
-    //     $('#pop-tips-icon').attr('class','icon-1');
-    // } else{
-    //     $('#pop-tips-icon').attr('class','icon-2');
-    // }
-    // $('#pop-tips-text').html(obj.text);
-    // var timer = null;
-    // $('#_overlay_').on('touchend',function(){
-    //     showDialog.hide();
-    //     clearTimeout(timer);
-    // });
-    // timer = setTimeout(function(){
-    //     showDialog.hide();
-    // },time);
+    showPop('pop-tips');
+    var time = obj.time || 2000;
+    if (obj.type == true) {  
+        document.getElementById('pop-tips-icon').className = 'icon-1';
+    } else{
+        document.getElementById('pop-tips-icon').className = 'icon-2';
+    }
+    document.getElementById('pop-tips-text').innerHTML = obj.text;
+    var timer = null;
+    document.getElementById('pop-tips').addEventListener('touchend',function(){
+        hidePop('pop-tips');
+        clearTimeout(timer);
+        return false;
+    },false);
+    timer = setTimeout(function(){
+        hidePop('pop-tips');
+    },time);
 }

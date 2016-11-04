@@ -236,6 +236,19 @@ var information = {
   }
 }
 
+// 退款
+var refund = {
+  route: 'tpl/refund',
+  classname: 'refund',
+  animate: 'default',
+  view: function() {
+    var $page = this
+    seajs.use(['js/refundPage'], function(viewData) {
+      $doc.trigger('spa:initpage', [$page, viewData])
+    })
+  }
+}
+
 
 
 $doc.trigger('spa:route', [
@@ -254,7 +267,8 @@ $doc.trigger('spa:route', [
       addressPage,
       inputAddPage,
       commentPage,
-      information
+      information,
+      refund
   ])
 
 // demo:侧边栏菜单

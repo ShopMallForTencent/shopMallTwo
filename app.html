@@ -37,16 +37,16 @@ document.addEventListener("DOMContentLoaded",function(e){
 });
 
 // 切换横竖屏执行(PC端)
-window.addEventListener('resize',function(){
-    _w = document.documentElement.clientWidth || document.body.clientWidth,
-    _h = document.documentElement.clientHeight || document.body.clientHeight;
-    if (_w < _h) {
-        orient = 0;
-    } else{
-        orient = 90;
-    }
-    screenFun();
-});
+// window.addEventListener('resize',function(){
+//     _w = document.documentElement.clientWidth || document.body.clientWidth,
+//     _h = document.documentElement.clientHeight || document.body.clientHeight;
+//     if (_w < _h) {
+//         orient = 0;
+//     } else{
+//         orient = 90;
+//     }
+//     screenFun();
+// });
 // 切换横竖屏执行(移动端)
 window.addEventListener("orientationchange", function() {
     _w = document.documentElement.clientWidth || document.body.clientWidth,
@@ -79,8 +79,6 @@ window.addEventListener("orientationchange", function() {
 //         oBackTop.style.display = 'none';
 //     }
 // }); 
-
-
 </script>
 <script type="text/javascript" src='js/art/template.js'></script>
 <link rel="stylesheet" href="./css/common.css">
@@ -103,9 +101,36 @@ seajs.use('./boot');
 <body>
     <!-- 公共弹窗-提示框 S -->
     <div class="pop pop-tips" id="pop-tips">
-        <p class="" id="pop-tips-icon"></p>
-        <p class="text txc" id="pop-tips-text"></p>
+        <div class="pop-tips-cont">
+            <p class="" id="pop-tips-icon"></p>
+            <p class="text txc" id="pop-tips-text"></p>
+        </div>  
     </div>
     <!-- 公共弹窗-提示框 E -->
+    <!-- 通用弹窗 S -->
+    <div class="pop pop-dialog" id="pop_test">
+        <div class="dialog-wrap">
+            <div class="dialog-cont">
+                <div class="dialog-bg">
+                    <p class="txc">提示提示提示提示提示提示提示</p>
+                    <div class="btn-box txc">
+                        <a href="javascipt:;" class="dil confirm-btn">申请退款</a>
+                        <a href="javascipt:hidePop('pop_test');" class="dil cancel-btn">点错了</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop pop-dialog" id="pop_test_2">
+        <div class="dialog-wrap">
+            <div class="dialog-cont">
+                <div class="dialog-bg">
+                    <a href="javascript:hidePop('pop_test_2');" class="close">×</a>
+                    <p class="txc">先和客服确认退款信息再申请退款，否则可能发生退款不成功的情况。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 通用弹窗 E -->
 </body>
 </html>
