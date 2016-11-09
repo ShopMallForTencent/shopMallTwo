@@ -56,7 +56,7 @@
       // 当前视图z-index
       curPagezIndex = 2002,
       // 缓存视图数量，默认0缓存全部
-      viewcachecount = 0,
+      viewcachecount = 5,
       // 页面视图缓存
       pagescache = {},
       // 面板视图缓存

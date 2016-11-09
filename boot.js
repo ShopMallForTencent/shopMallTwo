@@ -1,5 +1,31 @@
 var $doc = $(document);
 
+var ajaxPath = 'http://apps.gzh.qq.com/shop/index.php?r=';
+
+//动态加载js， 公共
+function loadjs(src,func)  
+{     
+    //判断这个js文件存在直接执行回调  
+    var scripts = document.getElementsByTagName('script') ;  
+    for(i in scripts)  
+        if(scripts[i].src == src)  
+            return func() ;  
+    if(typeof func != 'function')  
+    {  
+        console.log('param 2 is not a function!!') ;  
+        return false ;  
+    }  
+    var script = document.createElement('script') ;  
+    script.type ='text/javascript' ;  
+    script.src = src ;  
+    var head = document.getElementsByTagName('head').item(0);  
+    head.appendChild(script);  
+
+    script.onload = function(){  
+        func();  
+    }  
+}  
+
 // 首页
 var pageHome = {
     route: '',
@@ -15,7 +41,7 @@ var pageHome = {
 
 // 分类页
 var sortPage = {
-  route: 'tpl/sort',
+  route: 'tpl/category',
   classname: 'sort',
   animate: 'slideInLeft',
   view: function() {
@@ -29,7 +55,7 @@ var sortPage = {
 
 // 购物车
 var shoppingCartPage = {
-  route: 'tpl/shoppingCart',
+  route: 'tpl/cart',
   classname: 'shoppingCart',
   animate: 'slideInLeft',
   view: function() {
@@ -43,7 +69,7 @@ var shoppingCartPage = {
 
 // 个人中心
 var personalPage = {
-  route: 'tpl/personal',
+  route: 'tpl/me',
   classname: 'personal',
   animate: 'slideInLeft',
   view: function() {
@@ -56,7 +82,7 @@ var personalPage = {
 
 // 商品详情页
 var warePage = {
-  route: 'tpl/ware',
+  route: 'tpl/detail',
   classname: 'ware',
   animate: 'slideInLeft',
   view: function() {
@@ -69,7 +95,7 @@ var warePage = {
 
 // 支付页
 var ensureOrderPage = {
-  route: 'tpl/ensureOrder',
+  route: 'tpl/orderConfirm',
   classname: 'ensureOrderPage',
   animate: 'slideInLeft',
   view: function() {
@@ -134,7 +160,7 @@ var servicePage = {
 
 // 常见问题
 var problemPage = {
-  route: 'tpl/problem',
+  route: 'tpl/help',
   classname: 'problemPage',
   animate: 'slideInLeft',
   view: function() {
@@ -173,7 +199,7 @@ var addressPage = {
 
 // 新增收货地址
 var inputAddPage = {
-  route: 'tpl/inputAdd',
+  route: 'tpl/addressEdit',
   classname: 'inputAddPage',
   animate: 'slideInLeft',
   view: function() {
@@ -210,6 +236,19 @@ var information = {
   }
 }
 
+// 退款
+var refund = {
+  route: 'tpl/refund',
+  classname: 'refund',
+  animate: 'default',
+  view: function() {
+    var $page = this
+    seajs.use(['js/refundPage'], function(viewData) {
+      $doc.trigger('spa:initpage', [$page, viewData])
+    })
+  }
+}
+
 
 
 $doc.trigger('spa:route', [
@@ -228,7 +267,8 @@ $doc.trigger('spa:route', [
       addressPage,
       inputAddPage,
       commentPage,
-      information
+      information,
+      refund
   ])
 
 // demo:侧边栏菜单

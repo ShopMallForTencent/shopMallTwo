@@ -149,18 +149,6 @@ var lcf_tab = function()
     
 };
 
-//¹Ø±Õµ¯´°º¯Êý
-function closeDialog(id)
-{
-    document.getElementById(id).style.display = 'none';
-}
-
-//ÏÔÊ¾µ¯´°º¯Êý
-function showDialog(id)
-{
-    document.getElementById(id).style.display = 'block';
-}
-
 define(function () {
     return lcf_tab;
 });

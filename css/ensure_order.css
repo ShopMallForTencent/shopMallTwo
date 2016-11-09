@@ -1,8 +1,8 @@
 .ensure-order-wrap{background: #f6f6f6;}
+.ensure-order-wrap .border-box{ border: none;}
 .ensure-order-wrap strong{font-weight: bold;;}
 .ensure-order-wrap .addsp{background: url(../images/myAddress/sprite.png) no-repeat;background-size: 20rem;}
-.vertical .ensure-order-wrap{padding-bottom:8rem}
-.vertical .ensure-order-wrap .addBox .addNewAdd{display: none;}
+.vertical .ensure-order-wrap .border-box{ padding-bottom: 8.5rem;}
 .vertical .ensure-order-wrap .addBox{display: block;height: 7.3rem;width: 100%;line-height: 7.3rem;font-size: 1.7rem;color: #464646;text-align: center;background: #fff;position: relative;}
 .vertical .ensure-order-wrap .addBox i{background-position:-10.05rem 0 ;width: 1.15rem;height: 1.7rem;display: inline-block;vertical-align: middle;margin-right:0.75rem;}
 .vertical .ensure-order-wrap .addBox p{margin-left:3.2rem;}
@@ -30,9 +30,11 @@
 .vertical .ensure-order-wrap .countFee .feeNum span:nth-of-type(1){font-size: 1.3rem;}
 .vertical .ensure-order-wrap .goPay{background: #f0514b;line-height: 4.5rem;width: 35.5rem;height: 4.5rem;color: #fff;text-align: center;font-size: 1.6rem;display: block;position: absolute;bottom: 2rem;left:50%;margin-left:-17.75rem;border-radius: 0.25rem;z-index: 10;}
 .vertical .ensure-order-wrap .alreadySale {display: none;}
+
 /*shuban*/
+.level .ensure-order-wrap .border-box{ padding-bottom: 6.25rem;}
 .level .ensure-order-wrap{padding-bottom:2rem}
-.level .ensure-order-wrap{padding: 0;padding-bottom:5.3rem;}
+.level .ensure-order-wrap{padding: 0;}
 .level .ensure-order-wrap .addBox{border: 1px solid #eeeeee;}
 .level .ensure-order-wrap .addBox .addNewAdd{display: none;}
 .level .ensure-order-wrap .addBox{display: block;height: 7.3rem;width: 100%;line-height: 7.3rem;font-size: 1.3rem;color: #464646;text-align: center;background: #fff;position: relative;}
@@ -64,4 +66,4 @@
 .level .ensure-order-wrap .countFee p .feeName{color: #212b3e;font-size: 1.3rem;}
 .level .ensure-order-wrap .countFee p .feeNum{font-size: 1.6rem;color:#f0514b;}
 .level .ensure-order-wrap .countFee .feeNum span:nth-of-type(1){font-size: 1.3rem;}
-.level .ensure-order-wrap .goPay{background: #f0514b;line-height: 3.75rem;width: 29.5rem;height: 3.75rem;color: #fff;text-align: center;font-size: 1.4rem;display: block;position: absolute;bottom: 0rem;left:50%;margin-left:-14.75rem;border-radius: 0.25rem;z-index: 10;}
+.level .ensure-order-wrap .goPay{background: #f0514b;line-height: 3.75rem;width: 29.5rem;height: 3.75rem;color: #fff;text-align: center;font-size: 1.4rem;display: block;position: absolute;bottom: 0.3rem;left:50%;margin-left:-14.75rem;border-radius: 0.25rem;z-index: 10;overflow: hidden;}

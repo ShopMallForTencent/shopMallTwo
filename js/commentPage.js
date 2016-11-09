@@ -13,7 +13,7 @@ define(function (require) {
 						total[i] = {
 							'num':i,
 							'n':0
-						}; 
+						};
 					};
 					picHTML1 = '<div class="pic pr fl"><div class="upload-btn pa"><input accept="image/*" name="pic';
 					picHTML2 = '" type="file"><i class="bg pa db sp"></i></div><div class="picture ovh"></div><a href="javascript:;" class="close pa db sp"></a></div>';
@@ -59,6 +59,12 @@ define(function (require) {
 					});
 				});
 			});
+        },
+        beforeopen : function(){
+        	// 重置滚动条到顶部
+        	$('.comment-wrap .border-box').scrollTop(0,0);
+        	// 控制底部导航栏状态
+        	$('.nav-box').hide();
         }
     }
 });

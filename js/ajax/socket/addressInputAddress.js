@@ -1,0 +1,3 @@
+var addMsg = {
+	msg : null
+}

@@ -2,9 +2,10 @@
 .my-address-wrap .addsp{background: url(../images/myAddress/sprite.png) no-repeat;background-size: 20rem;}
 .vertical .my-address-wrap .myAdd{border-top:1px solid #dfdfdf;border-bottom:1px solid #dfdfdf;background: #fff;}
 .vertical .my-address-wrap .wrap{padding-bottom: 6rem;;}
-.vertical .my-address-wrap .myAdd{margin-top:0.5rem;}
+.vertical .my-address-wrap .myAdd{margin-top:0.5rem; cursor: pointer;}
 .vertical .my-address-wrap .myAdd:nth-of-type(1){margin-top:0;}
 .vertical .my-address-wrap .myAdd .userNameTel{font-size: 1.4rem;font-weight: bold;color:#212b3e;padding: 1.49rem 1rem 0 1rem;}
+.my-address-wrap .addevent{display: block;}
 .vertical .my-address-wrap .myAdd .userNameTel .uName{font-size: 1.5rem;}
 .vertical .my-address-wrap .myAdd .userNameTel .uTel{margin-left:2.35rem;font-size: 1.4rem;}
 .vertical .my-address-wrap .myAdd .addDetail{color: #9baab5;margin-top:0.85rem;font-size: 1.4rem;padding: 0rem 1rem 0 1rem;}
@@ -25,7 +26,7 @@
 /*html,body{ height:100%}
 .black{display:none;_position:absolute;position:fixed;top:0;left:0;width: 100%;height: 100%;background: black;opacity: 0.5;filter: alpha(opacity=50);z-index: 10;}*/
 .level .my-address-wrap{padding-bottom:5rem;}
-.level .my-address-wrap{padding: 0;}
+.level .my-address-wrap{padding: 0; padding-bottom: 5.45rem;}
 .level .my-address-wrap .myAdd{background: #fff;border:1px solid #eeeeee;}
 .level .my-address-wrap .userNameTel{padding-left:3.25rem;padding-top:1.35rem;color:#212b3e;;}
 .level .my-address-wrap .userNameTel .uName{font-size: 1.3rem;}
@@ -41,6 +42,6 @@
 .level .my-address-wrap .icon-right{background-position: 0 0;width: 2.05rem;height: 2.1rem;}
 .level .my-address-wrap .icon-edit{background-position: -4.9rem 0;width: 1.3rem;height: 1.4rem;}
 .level .my-address-wrap .icon-delete{background-position: -6.7rem 0;width: 1.35rem;height: 1.4rem;}
-.level .my-address-wrap .newAdd{display: block;width: 29.5rem;height: 3.75rem;background: #f0514b;border-radius: 0.25rem;position: fixed;bottom:0.85rem;left:50%;margin-left: -14.75rem;text-align: center;line-height: 3.75rem;font-size: 1.4rem;color: #fff;z-index: 10;}
+.level .my-address-wrap .newAdd{display: block;width: 29.5rem;height: 3.75rem;background: #f0514b;border-radius: 0.25rem;position: absolute;bottom:0.85rem;left:50%;margin-left: -14.75rem;text-align: center;line-height: 3.75rem;font-size: 1.4rem;color: #fff;z-index: 10;}
 .level .my-address-wrap .newAdd i{background-position: -8.3rem 0;width: 1.5rem;height: 1.8rem;display: inline-block;vertical-align:middle;line-height: 4.5rem;margin-right:0.8rem;}
 	

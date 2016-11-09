@@ -7,10 +7,85 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no, email=no">
 <title>首页</title>
+<script>
+// 获取屏幕宽高
+var _w = document.documentElement.clientWidth || document.body.clientWidth,
+    _h = document.documentElement.clientHeight || document.body.clientHeight,
+    pageW = 750,
+    orient = 0;
+if (_w < _h) {
+    orient = 0;
+} else{
+    orient = 90;
+}
+
+// 根据宽高写入rem的方法
+var screenFun = function(){
+    if (_w < _h || orient == 0) {
+        pageW = 750;
+        document.documentElement.style.fontSize = _w/pageW*20+'px';
+        document.body.className = 'vertical';
+    } else{
+        pageW = 1334;
+        document.documentElement.style.fontSize = _w/pageW*20+'px';
+        document.body.className = 'level';
+    }
+}
+// 页面加载完成执行
+document.addEventListener("DOMContentLoaded",function(e){
+    screenFun();
+});
+
+// 切换横竖屏执行(PC端)
+// window.addEventListener('resize',function(){
+//     _w = document.documentElement.clientWidth || document.body.clientWidth,
+//     _h = document.documentElement.clientHeight || document.body.clientHeight;
+//     if (_w < _h) {
+//         orient = 0;
+//     } else{
+//         orient = 90;
+//     }
+//     screenFun();
+// });
+// 切换横竖屏执行(移动端)
+window.addEventListener("orientationchange", function() {
+    _w = document.documentElement.clientWidth || document.body.clientWidth,
+    _h = document.documentElement.clientHeight || document.body.clientHeight;
+    orient = window.orientation;
+    screenFun();
+}, false);
+
+// 返回顶部方法
+// var scrollTop, oBackTop;
+
+// window.addEventListener('load',function(){
+//     scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+//     oBackTop = document.getElementById('backtotop');
+//     if (scrollTop >= _h) {
+//         oBackTop.style.display = 'block';
+//     } else{
+//         oBackTop.style.display = 'none';
+//     }
+//     oBackTop.addEventListener('touchend',function(){
+//         document.documentElement.scrollTop = document.body.scrollTop =0;
+//     },false);
+// });
+
+// window.addEventListener('scroll',function(){
+//     scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+//     if (scrollTop >= _h) {
+//         oBackTop.style.display = 'block';
+//     } else{
+//         oBackTop.style.display = 'none';
+//     }
+// }); 
+</script>
+<script type="text/javascript" src='js/art/template.js'></script>
 <link rel="stylesheet" href="./css/common.css">
 <script src="http://gzhcache.qq.com/assets/js/dep/zepto.min.js"></script>
 <script src="spa/spa.js"></script>
 <script src="http://gzhcache.qq.com/assets/js/dep/sea.js"></script>
+<script src="js/library.js"></script>
 <script>
 seajs.config({
 	base: './',
@@ -24,53 +99,48 @@ seajs.use('./boot');
 </script>
 </head>
 <body>
-    <a class='backtotop lsp' id="backtotop" href="#" title='返回顶部'>返回顶部</a>
-    <script>
-
-    var _w = document.documentElement.clientWidth || document.body.clientWidth,
-        _h = document.documentElement.clientHeight || document.body.clientHeight,
-        pageW = 750,
-        orient = 0;
-
-    var screenFun = function(){
-        if (orient == 0) {
-            pageW = 750;
-            document.documentElement.style.fontSize = _w/pageW*20+'px';
-            document.body.className = 'vertical';
-        } else{
-            pageW = 1334;
-            document.documentElement.style.fontSize = _w/pageW*20+'px';
-            document.body.className = 'level';
-        }
-    }
-    document.addEventListener("DOMContentLoaded",function(e){
-        screenFun();
-    });
-
-    window.addEventListener("orientationchange", function() {
-        _w = document.documentElement.clientWidth || document.body.clientWidth,
-        _h = document.documentElement.clientHeight || document.body.clientHeight;
-        orient = window.orientation;
-        screenFun();
-    }, false);
-
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop,
-        oBackTop = document.getElementById('backtotop');
-
-    if (scrollTop >= _h) {
-        oBackTop.style.display = 'block';
-    } else{
-        oBackTop.style.display = 'none';
-    }
-
-    window.addEventListener('scroll',function(){
-        scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if (scrollTop >= _h) {
-            oBackTop.style.display = 'block';
-        } else{
-            oBackTop.style.display = 'none';
-        }
-    });
-</script>
+    <!-- 底部导航 S -->
+    <div class="nav-box txc">
+        <ul class="">
+            <li class="nav-1"><a href="#"><i class="icon icon-1 db bc sp"></i><span>首页</span></a></li>
+            <li class="nav-2"><a href="#tpl/category"><i class="icon icon-2 db bc sp"></i><span>分类</span></a></li>
+            <li class="nav-3"><a href="#tpl/cart"><i class="icon icon-3 db bc sp"></i><span>购物车</span><strong>5</strong></a></li>
+            <li class="nav-4"><a href="#tpl/me"><i class="icon icon-4 db bc sp"></i><span>我的</span><strong>22</strong></a></li>
+        </ul>
+    </div>
+    <!-- 底部导航 E -->
+    <!-- 公共弹窗-提示框 S -->
+    <div class="pop pop-tips" id="pop-tips">
+        <div class="pop-tips-cont">
+            <p class="" id="pop-tips-icon"></p>
+            <p class="text txc" id="pop-tips-text"></p>
+        </div>  
+    </div>
+    <!-- 公共弹窗-提示框 E -->
+    <!-- 通用弹窗 S -->
+    <div class="pop pop-dialog" id="pop_test">
+        <div class="dialog-wrap">
+            <div class="dialog-cont">
+                <div class="dialog-bg">
+                    <p class="txc">提示提示提示提示提示提示提示</p>
+                    <div class="btn-box txc">
+                        <a href="javascipt:;" class="dil confirm-btn">申请退款</a>
+                        <a href="javascipt:hidePop('pop_test');" class="dil cancel-btn">点错了</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pop pop-dialog" id="pop_test_2">
+        <div class="dialog-wrap">
+            <div class="dialog-cont">
+                <div class="dialog-bg">
+                    <a href="javascript:hidePop('pop_test_2');" class="close">×</a>
+                    <p class="txc">先和客服确认退款信息再申请退款，否则可能发生退款不成功的情况。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 通用弹窗 E -->
 </body>
 </html>

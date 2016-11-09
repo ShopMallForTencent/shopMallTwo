@@ -1,0 +1,47 @@
+﻿<div class='page-container-wrap'>
+	<link rel="stylesheet" href="./css/my_address.css" />
+	<div class="wrap index-wrap my-address-wrap pr ovh" id="wrap">
+		<a class='backtotop lsp' href="javascript:;" title='返回顶部'>返回顶部</a>
+		<div class="border-box">
+			<div id="myAdd">
+				<script id="addtemplate" type="text/html">
+				 {{if isAdmin}}
+		            {{each addResult as value i}}
+			            <div class="myAdd">
+			            	<a class='addevent' href='javascript:' rId={{addResult[i].r_id}}>
+								<p class="userNameTel"><span class="uName">{{addResult[i].consignee}}</span><span class="uTel">{{addResult[i].phone}}</span></p>
+								<p class="addDetail"><i class="addsp"></i>{{addResult[i].area_name}}{{addResult[i].address}}</p>
+							</a>
+							<div class="default clearfix">
+								<a href='javascript:;' class="left setThisAdd"def={{addResult[i].is_default}} rId={{addResult[i].r_id}}>
+									<i class="icon-setDefault addsp "></i><span>设为默认</span>
+								</a>
+								<a href='javascript:;' class="edit" rId={{addResult[i].r_id}}>
+									<i class="icon-edit addsp"></i>编辑
+								</a>
+								<a href='javascript:;' class="delete" rId={{addResult[i].r_id}}>
+									<i class="icon-delete addsp"></i>删除
+								</a>
+							</div>
+						</div>
+		            {{/each}}
+	            {{/if}}
+	            </script>
+	         </div>
+			<a id='new_address' href="#tpl/addressEdit" class="newAdd"><i class="addsp"></i><span>新增收货地址</span></a>
+		</div>
+	</div>
+	<div class="pop pop-dialog" id="delete_address">
+        <div class="dialog-wrap">
+            <div class="dialog-cont">
+                <div class="dialog-bg">
+                    <p class="txc">是否删除该地址？</p>
+                    <div class="btn-box txc">
+                        <a href="javascript:hidePop('delete_address');" class="dil confirm-btn">确认</a>
+                        <a href="javascript:hidePop('delete_address');" class="dil cancel-btn">取消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

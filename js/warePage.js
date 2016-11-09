@@ -1,11 +1,35 @@
-define(function (require) {
-    var tpl = require('tpl/ware.html');
+﻿define(function (require) {
+    var tpl = require('tpl/detail.html');
     var tab = require('js/ware/tab');
     var swiper = require('js/ware/idangerous.swiper.min');
+    var wareAjax = require('js/ajax/wareAjax');
+    var ewSocket = require('js/ajax/socket/ensureOrderWare');
     return {
         title: '商品详情',
         body: tpl,
         init: function () {
+
+            // 显示隐藏返回顶部按钮
+            $backtotop = $('.ware-wrap .backtotop');
+            $('.ware-wrap .border-box').on('scroll',function(){
+                var scrollTop = $(this).scrollTop();
+                if (scrollTop > _h) {
+                    $backtotop.show();
+                } else{
+                    $backtotop.hide();
+                }
+            });
+            $backtotop.on('click',function(){
+                $(this).parent().find('.border-box').scrollTop(0,0);
+            });
+
+            wareList(function(){
+
+                textBox('#ljgm');
+                textBox('#jrgwc');
+
+            });
+
             var ware_nav_body = $('#ware_nav_body');
             var ware_nav = $('#ware_nav_body .ware_nav');
 
@@ -19,7 +43,7 @@ define(function (require) {
                     'event' : 'touchend'  
               });
 
-              window.onscroll = function(){
+              document.getElementById('page-container-wrap').onscroll = function(){
 
                     var y = document.documentElement.scrollTop || document.body.scrollTop;
 
@@ -36,58 +60,71 @@ define(function (require) {
                             'position':'static'
                         });
                     }
-               }  
+            }  
 
-            //弹窗按钮选中脚本
-            function gwcTcBntLogic(bnt)
+            function textBox(id)
             {
-                var old = 0;
+                var t = $(id + ' .text_box');
 
-                $(bnt).on('touchend', function(){
+                if (parseInt(t.html()) <=1) {
+                    $(id + ' .min').css('color','#adadad')
+                }
 
-                    if (this.className.indexOf('no') != -1 || old == $(this).index()) {return;}
 
-                    $(this).addClass('select');
 
-                    $(bnt).eq(old).removeClass('select');
-
-                    old = $(this).index();
-
-                });
-            }
-            gwcTcBntLogic('#ljgm .sp_color_bnt a');
-            gwcTcBntLogic('#jrgwc .sp_color_bnt a');
-
-            //弹窗中的 + 和 - 脚本
-            function textBox(id,add,min)
-            {
-                var t = $(id);  
-                $(add).click(function(){      
-                    t.html(parseInt(t.html())+1)  
+                $(id + ' .add').click(function(){
+                    t.html(parseInt(t.html())+1);
+                    if ( parseInt(t.html())+1 >= $(id).find('.kc').html() ) 
+                    {   
+                        t.html($(id).find('.kc').html())
+                        $(this).css('color','adadad')
+                        return
+                    }else{
+                        $(id + ' .min').css('color','#333')
+                        
+                    }
                 })  
-                $(min).click(function(){  
-                    if (parseInt(t.html()) <=0) {return;}
-                    t.html(parseInt(t.html())-1);    
+                $(id + ' .min').click(function(){
+                    t.html(parseInt(t.html())-1);   
+                console.log("数量"+parseInt(t.html()))  
+                    if (parseInt(t.html()) <=1) {
+                        t.html(1)
+                        $(id + ' .min').css('color','#adadad')
+                        return;
+                    }else{
+                         $(id + ' .min').css('color','#333')
+                        
+                    }
+                     
                 })   
             }
-            textBox('#ljgm .text_box','#ljgm .add', '#ljgm .min');
-            textBox('#jrgwc .text_box','#jrgwc .add', '#jrgwc .min');
-
-            //头图轮播脚本 
-             $(function(){
-
-                var swiper_container = $('#swiper-container');
-                var length = $('#swiper-container .swiper-slide').length;
-                var sp_idx =  $('#swiper-container .sp_idx');
-                sp_idx.html('1/' + length);
-
-                var mySwiper = new Swiper('.swiper-container',{
-                    onSlideChangeEnd:function(swiper){ 
-                        sp_idx.html(swiper.activeIndex+1 + '/' + length);
-                    }
-                })
-
-             });
+        },
+        beforeopen : function(){
+            // 控制底部导航栏状态
+            $('.nav-box').hide();
         }
     }
 });
+
+
+//关闭弹窗函数
+function closeDialog(id)
+{   
+   $('#' + id).find('.select').removeClass('select');
+   $('#' + id).find('.no').removeClass('no');
+   selArr = [];
+
+    $('#'+id).removeClass('gmtc_show');
+    $('#'+id).addClass('gmtc_hide');
+    setTimeout(function(){
+        $('#'+id).removeClass('gmtc_hide');
+        $('#'+id).addClass('gmtc_show');
+        $('#'+id).hide();
+    },300);
+}
+
+//显示弹窗函数
+function showDialog(id)
+{
+    document.getElementById(id).style.display = 'block';
+}
