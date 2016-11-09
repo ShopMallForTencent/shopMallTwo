@@ -1,5 +1,9 @@
 ﻿define(function (require) {
+<<<<<<< HEAD
     var tpl = require('tpl/detail.html');
+=======
+    var tpl = require('tpl/ware.html');
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
     var tab = require('js/ware/tab');
     var swiper = require('js/ware/idangerous.swiper.min');
     var wareAjax = require('js/ajax/wareAjax');
@@ -9,6 +13,7 @@
         body: tpl,
         init: function () {
 
+<<<<<<< HEAD
             // 显示隐藏返回顶部按钮
             $backtotop = $('.ware-wrap .backtotop');
             $('.ware-wrap .border-box').on('scroll',function(){
@@ -29,6 +34,20 @@
                 textBox('#jrgwc');
 
             });
+=======
+            //加载ajax脚本
+            loadjs('js/ajax/wareAjax.js',function(){
+
+               
+
+
+
+
+
+                
+
+            }); 
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
 
             var ware_nav_body = $('#ware_nav_body');
             var ware_nav = $('#ware_nav_body .ware_nav');
@@ -43,7 +62,11 @@
                     'event' : 'touchend'  
               });
 
+<<<<<<< HEAD
               document.getElementById('page-container-wrap').onscroll = function(){
+=======
+            document.getElementById('page-container-wrap').onscroll = function(){
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
 
                     var y = document.documentElement.scrollTop || document.body.scrollTop;
 
@@ -61,6 +84,7 @@
                         });
                     }
             }  
+<<<<<<< HEAD
 
             function textBox(id)
             {
@@ -71,6 +95,8 @@
                 }
 
 
+=======
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
 
                 $(id + ' .add').click(function(){
                     t.html(parseInt(t.html())+1);
@@ -98,10 +124,15 @@
                      
                 })   
             }
+<<<<<<< HEAD
         },
         beforeopen : function(){
             // 控制底部导航栏状态
             $('.nav-box').hide();
+=======
+            textBox('#ljgm .text_box','#ljgm .add', '#ljgm .min');
+            textBox('#jrgwc .text_box','#jrgwc .add', '#jrgwc .min');
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
         }
     }
 });
@@ -110,10 +141,13 @@
 //关闭弹窗函数
 function closeDialog(id)
 {   
+<<<<<<< HEAD
    $('#' + id).find('.select').removeClass('select');
    $('#' + id).find('.no').removeClass('no');
    selArr = [];
 
+=======
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
     $('#'+id).removeClass('gmtc_show');
     $('#'+id).addClass('gmtc_hide');
     setTimeout(function(){

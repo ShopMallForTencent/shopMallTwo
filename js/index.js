@@ -16,15 +16,22 @@ define(function (require) {
 			});
 
             // 显示隐藏返回顶部按钮
+<<<<<<< HEAD
             $backtotop = $('.index-wrap .backtotop');
             $('.index-wrap .border-box').on('scroll',function(){
                 var scrollTop = $(this).scrollTop();
+=======
+            $('.index-wrap .border-box').on('scroll',function(){
+                var scrollTop = $(this).scrollTop(),
+                    $backtotop = $(this).parent().find('.backtotop');
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
                 if (scrollTop > _h) {
                     $backtotop.show();
                 } else{
                     $backtotop.hide();
                 }
             });
+<<<<<<< HEAD
             $backtotop.on('click',function(){
                 $(this).parent().find('.border-box').scrollTop(0,0);
             });
@@ -37,6 +44,8 @@ define(function (require) {
             $('.nav-box li').removeClass('on').eq(0).addClass('on');
             // 加载轮播图
             indexBanner();
+=======
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
         }
     }
 });

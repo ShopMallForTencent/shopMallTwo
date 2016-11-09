@@ -1,4 +1,5 @@
 function ensureOList(){
+<<<<<<< HEAD
 	
 	/*
 		cart/confirmation 	 : 购物车页去结算
@@ -72,6 +73,35 @@ function ensureOList(){
 		document.getElementById('countFee').innerHTML = plist;
 
 	}
+=======
+
+	$.ajax({
+		url: Ec_Socket.dir == 'null'? ajaxPath + '/product/confirmation' : ajaxPath + '/cart/confirmation',
+		type : 'GET',
+		dataType: 'jsonp',
+		data : Ec_Socket.dir == 'null'? {"p_id" : 234, "g_id" : 999, "b_id" : 1} : {"p_ids" : Ec_Socket.data[0],"b_id" : Ec_Socket.data[1]},
+		success: function(data){
+
+			//填充内容到html
+			var eorder_data = {
+		      	msg : data.result,
+		    }
+
+		    var elist = template('address_art', eorder_data);
+		    document.getElementById('user_address').innerHTML = elist;
+
+		    var wlist = template('warelist_art', eorder_data);
+		    document.getElementById('shopList').innerHTML = wlist;
+
+		    var plist = template('countFee_art', eorder_data);
+		    document.getElementById('countFee').innerHTML = plist;
+
+		},
+		error : function(){
+		   console.log('fail');
+		}
+	});
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
 
 }
 
@@ -100,7 +130,11 @@ template.helper('getPrice', function (obj, yf) {
 		result+=parseInt(yf);
 	};
 
+<<<<<<< HEAD
     return result / 100; 
+=======
+    return result; 
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
 });
 
 /*获取总价格，包括邮费*/

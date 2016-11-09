@@ -1,5 +1,9 @@
 define(function (require) {
+<<<<<<< HEAD
     var tpl = require('tpl/address.html');
+=======
+    var tpl = require('tpl/my_address.html');
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
     var aIn = require('js/ajax/socket/addressInputAddress');
     var addressAjax = require('js/ajax/addressAjax');
     return {
@@ -10,6 +14,7 @@ define(function (require) {
 
         beforeopen : function()
         {
+<<<<<<< HEAD
 
 
             // 重置滚动条到顶部
@@ -31,6 +36,9 @@ define(function (require) {
                    addDdfault (defaultId)
                 //addDdfault (defaultId)
               }
+=======
+            addressList(function(){
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
 
               //选择默认地址
                $(".setThisAdd").on("touchend",function(){
@@ -52,6 +60,7 @@ define(function (require) {
                //编辑地址
                 $(".edit").on("touchend",function(){
                    addEdit($(this).attr('rId'))
+<<<<<<< HEAD
                    // window.location.href="#tpl/addressEdit";
                 })
                 var addLen = 0;
@@ -74,6 +83,20 @@ define(function (require) {
                     });
 
                     // console.log($(self).parents('#myAdd').find('.myAdd').length)
+=======
+                   // window.location.href="#tpl/inputAdd";
+                })
+
+                //删除地址提示弹窗
+                $(".delete").on("touchend",function(){
+                    var self = this;
+                    showPop('delete_address');
+                    //删除地址
+                    $('#delete_address .btn-box a').eq(0).on('touchend', function(){
+                         $(self).parents(".myAdd").remove();
+                         addDel($(self).attr('rId'));
+                    });
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
                 });
 
                 //初始化默认地址
@@ -87,6 +110,7 @@ define(function (require) {
                 }
 
                 //修改收货地址
+<<<<<<< HEAD
                 $('#myAdd .addevent').on('click', function(){
                  
                   var name = $(this).find('.uName').html();
@@ -137,6 +161,22 @@ define(function (require) {
 
 
 
+=======
+                $('#myAdd .addevent').on('touchend', function(){
+                   
+                    var name = $(this).find('.uName').html();
+                    var phone = $(this).find('.uTel').html();
+                    var address = $(this).find('.addDetail').text();
+
+                    var user_address = $(document.body).find('#user_address');
+                    user_address.find('.buyer').html(name);
+                    user_address.find('.buyerNum').html(phone);
+                    user_address.find('.buyerAdd').html(address);
+
+                    window.location.href = '#tpl/ensureOrder';
+
+                  });
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
             });
         }
     }
