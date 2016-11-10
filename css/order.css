@@ -2,11 +2,23 @@
 .order-page-wrap .order-page-nav{ position: absolute; top: 0; right: 0; z-index: 9; background: #fff; overflow: hidden;}
 .order-page-wrap .order-page-nav-cont{ height: 6rem; overflow-x: auto; overflow-y: hidden;}
 .order-page-wrap .order-page-nav::-webkit-scrollbar{ opacity: 0;}
+<<<<<<< HEAD
 .order-page-wrap .order-page-nav ul{ width: 100%; height: 4.4rem;}
 .order-page-wrap .order-page-nav li{ width: 7.5rem; height: 4.4rem;}
 .order-page-wrap .order-page-nav a{ bottom: 0; left: 0; width: 100%; height: 4.2rem; border-bottom: 0.2rem solid #ebebeb; font-size: 1.5rem; color: #212b3e; line-height: 4.2rem;}
 .order-page-wrap .order-page-nav a.on{ background: #f2f2f2; border-bottom-color: #fb4c45; color: #fb4c45;}
 .order-page-wrap .order-page-nav i{ top: 50%; right: 0.9rem; display: none; width: 1.1rem; height: 1.1rem; margin-top: -0.6rem; border-top: 1px solid #ff0000; border-right: 1px solid #ff0000; -webkit-transform: rotate(45deg);}
+=======
+.order-page-wrap .order-page-nav ul{ width: 100%; height: 4.5rem;}
+.order-page-wrap .order-page-nav li{ width: 7.5rem; height: 4.5rem;/* border-bottom: 2px solid #e2e2e2;*/}
+<<<<<<< HEAD
+.order-page-wrap .order-page-nav a{ bottom: 0; left: 0; width: 100%; height: 4.3rem;/* padding-bottom: 0.2rem;*/ border-bottom: 0.2rem solid #e2e2e2; font-size: 1.5rem; color: #212b3e; line-height: 4.3rem;}
+=======
+.order-page-wrap .order-page-nav a{ top: 0; left: 0; width: 100%; height: 4.3rem;/* padding-bottom: 0.2rem;*/ border-bottom: 0.2rem solid #e2e2e2; font-size: 1.5rem; color: #212b3e; line-height: 4.3rem;}
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+.order-page-wrap .order-page-nav a.on{ padding-bottom: 0; background: #f2f2f2; border-bottom: 0.2rem solid #f0514b; color: #f0514b;}
+.order-page-wrap .order-page-nav i{ top: 50%; right: 0.9rem; width: 1.1rem; height: 1.1rem; margin-top: -0.6rem; border-top: 1px solid #f0514b; border-right: 1px solid #f0514b; -webkit-transform: rotate(45deg);}
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 .vertical .order-page-wrap .main{ padding-top: 5.5rem;}
 .vertical .order-page-wrap .page-main{ padding-top: 0;}
 .vertical .order-page-wrap .order-page-nav{ width: 100%; height: 4.4rem;}

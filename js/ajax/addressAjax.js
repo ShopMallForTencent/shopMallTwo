@@ -6,6 +6,13 @@ function addressList(func)
 		type : 'GET',
 		dataType: 'jsonp',
 		success: function(data){
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+		console.log(data)
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 		   //填充内容到html
 		    var addData = {
 		      isAdmin: true,
@@ -54,7 +61,15 @@ function addEdit(productID){
 		data : {"r_id" : productID},
 		success:function (data) {
 			addMsg.msg = data;
+<<<<<<< HEAD
 			window.location.href = '#tpl/addressEdit';
+=======
+<<<<<<< HEAD
+			window.location.href = '#tpl/addressEdit';
+=======
+			window.location.href = '#tpl/inputAdd';
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 		},
 		error:function () {
 			console.log('fail')

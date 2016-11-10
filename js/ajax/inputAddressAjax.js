@@ -5,7 +5,15 @@ var cityArr = [cmbProvince, municipal,cmbArea ];
 
 
 //为真，则代表从编辑进入本页面
+<<<<<<< HEAD
 if (addMsg.msg != null) 
+=======
+<<<<<<< HEAD
+if (addMsg.msg != null) 
+=======
+if (addMsg.msg.result) 
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 {
 	//填充内容到表单
 	$('#border-box .name').get(0).value = addMsg.msg.result['consignee'];
@@ -105,6 +113,14 @@ function getCmbArea(self, id){
 
 	var parentId = (typeof id == 'undefined' ? $(self).get(0).value : id);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+	console.log(parentId)
+
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 	$.ajax({
 		url: ajaxPath + '/area/listByParent',
 		type : 'GET',
@@ -251,23 +267,64 @@ $('#saveAdd').on('touchend', function(){
 
 	 //提交
 	 $.ajax({
+<<<<<<< HEAD
 		url: ajaxPath + (addMsg.msg != null? '/receiver/update' : '/receiver/add'),
+=======
+<<<<<<< HEAD
+		url: ajaxPath + (addMsg.msg != null? '/receiver/update' : '/receiver/add'),
+=======
+		url: ajaxPath + (addMsg.msg.result? '/receiver/update':'/receiver/add'),
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 		type : 'POST',
 		dataType: 'json',
 		xhrFields: {withCredentials: true},
 	    crossDomain: true,
 	    data : {
+<<<<<<< HEAD
 	    	'r_id' : addMsg.msg != null? addMsg.msg.result.r_id : '',
+=======
+<<<<<<< HEAD
+	    	'r_id' : addMsg.msg != null? addMsg.msg.result.r_id : '',
+=======
+	    	'r_id' : addMsg.msg.result? addMsg.msg.result.r_id : '',
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 	    	'a_id' :  cmbArea.style.display == 'none' ? municipal.options[municipal.selectedIndex].value : cmbArea.options[cmbArea.selectedIndex].value, 
 	    	'consignee' :name, 
 	    	'phone' : phone, 
 	    	'z_code' : postcodes,  
 	    	'address' : xxdz, 
+<<<<<<< HEAD
 	    	'is_def' : addMsg.msg == null?  0 : addMsg.msg.result.is_default
+=======
+<<<<<<< HEAD
+	    	'is_def' : addMsg.msg == null?  0 : addMsg.msg.result.is_default
+=======
+	    	'is_def' : typeof addMsg.msg == 'string'? 0 : addMsg.msg.result.is_default
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 	    },
 		success: function(data){
 			console.log(data);
 			window.location.href = '#tpl/address';	
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+//清空表单内容，不然下次进来会有上一次的内容?????????????????????????????????????????????????????????????????????????????????
+addMsg.msg = '';
+$('#border-box .name').get(0).value = '';
+$('#border-box .phone').get(0).value = '';
+$('#border-box .postcodes').get(0).value = '';
+$('#cmbXxdz').get(0).value = '';
+document.getElementById('cmbProvince').innerHTML = '';
+document.getElementById('cmbCity').innerHTML = '';
+document.getElementById('cmbArea').innerHTML = '';
+
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 		},
 		error : function(err){
 		   console.log(err);

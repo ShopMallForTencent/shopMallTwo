@@ -5,7 +5,15 @@
 .chat-system-wrap .data{display: block; width: 6rem; height: 2rem; line-height: 2rem; text-align: center; font-size: 1.22rem; background: #d2d2d2; border-radius: 0.25rem; margin: 0.75rem auto; color: #fff;}
 
 /*show*/
+<<<<<<< HEAD
 .chat-system-wrap .show{ box-sizing: border-box; width: 100%; height: 100%; background: #f6f6f6; font-size: 1.3rem; color: #212b3e; padding: 1rem 1rem 6.5rem; overflow-x: hidden; overflow-y: auto;}
+=======
+<<<<<<< HEAD
+.chat-system-wrap .show{ box-sizing: border-box; width: 100%; height: 100%; background: #f6f6f6; font-size: 1.3rem; color: #212b3e; padding: 1rem 1rem 6.5rem; overflow-x: hidden; overflow-y: auto;}
+=======
+.chat-system-wrap .show{ box-sizing: border-box; width: 100%; height: 100%; background: #f6f6f6; font-size: 1.3rem; color: #212b3e; padding: 1rem 1rem 6.5rem; overflow: auto;}
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
  
 /*saybox*/     
 .chat-system-wrap .saybox{ background: #fff; width: 100%; height: 3.6rem; border: 0.1rem solid #e7e5e6; position: fixed; bottom: 0; left: 0; padding: 0.85rem;  }

@@ -1,9 +1,18 @@
 .shopping-cart-wrap{background: #f6f6f6;}
 .cartsp{background: url(../images/myAddress/sprite.png) no-repeat;background-size: 20rem;}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 .shopping-cart-wrap #cartSort{ position: relative; min-height: 100%;}
 .shopping-cart-wrap .not-product{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #fff;}
 .shopping-cart-wrap .not-product img{ position: absolute; top: 40%; left: 50%; width: 4.45rem; height: 3.9rem; margin: -3.9rem 0 0 -2.225rem;}
 .shopping-cart-wrap .not-product p{ position: absolute; top: 40%; left: 0; width: 100%; margin-top: 2rem; font-size: 1.4rem; color: #1a1a1a; text-align: center; line-height: 2rem;}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 .vertical .shopping-cart-wrap .cartSort{margin-bottom: 1rem;background: #fff;}
 .vertical .shopping-cart-wrap .cs{margin-top:0.5rem;}
 .vertical .shopping-cart-wrap .shopName{border:1px solid #e9e9e9;height: 4.3rem;line-height: 4.3rem;padding-left:3.2rem;position: relative;font-size: 1.3rem;color:#212b3e;line-height: 4.3rem;}

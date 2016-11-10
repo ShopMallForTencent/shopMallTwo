@@ -6,7 +6,14 @@ define(function (require) {
         title: '订单列表',
         body: tpl,
         init: function () {
+<<<<<<< HEAD
             // 订单页内导航
+=======
+<<<<<<< HEAD
+            // 订单页内导航
+=======
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
         	var $pageNavUl = $('.order-page-nav ul'),
         	    $pageNavLi = $pageNavUl.find('li'),
         	    $pageNavA = $pageNavUl.find('a'),
@@ -26,7 +33,11 @@ define(function (require) {
         	        $pageNavUl.css('width',$pageNavLi.length*12.16+'rem');
         	    }
         	});
+<<<<<<< HEAD
             // 选择订单状态查询
+=======
+<<<<<<< HEAD
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
         	$pageNavA.on('click',function(){
                 if ($(this).hasClass('on')) return;
         	    var thisState = $(this).attr('data-state');
@@ -56,10 +67,19 @@ define(function (require) {
 
             orderPageInfo(2,10,1);
             // orderPageReturnAll(10,1)
+<<<<<<< HEAD
         },
         afteropen : function(){
             // 订单状态
             orderListsState(orderState);
+=======
+=======
+        	$pageNavA.on('touchend',function(){
+        	    var index = $pageNavA.index($(this));
+        	    $pageNavA.removeClass('on').eq(index).addClass('on');
+        	});
+>>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
+>>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
         }
     }
 });
