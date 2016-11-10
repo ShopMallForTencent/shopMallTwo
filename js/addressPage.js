@@ -10,8 +10,6 @@ define(function (require) {
 
         beforeopen : function()
         {
-
-
             // 重置滚动条到顶部
             $('.my-address-wrap .border-box').scrollTop(0,0);
             // 控制底部导航栏状态
@@ -57,19 +55,19 @@ define(function (require) {
                 var addLen = 0;
                 //删除地址提示弹窗
                 $(".delete").on("touchend",function(){
-                    var self = this;
+                    var self = $(this);
                     // console.log($(self).parents('#myAdd').find('.myAdd').length)
                     showPop('delete_address');
                     //删除地址
                     $('#delete_address .btn-box a').eq(0).on('touchend', function(){
                       
                          addLen = $(self).parents('#myAdd').find('.myAdd').length;
+                         addDel($(self).attr('rId'));
                          $(self).parents(".myAdd").remove();
                          addLen--;
-                         addDel($(self).attr('rId'));
                          if(addLen==0){
-                          var user_address = $(document.body).find('#user_address');
-                          user_address.html("<a href='#tpl/address' class='addBox'><span class='addNewAdd'><i class='addsp'></i>请添加地址</span></a>")
+                          var user_address = $(document.body).find('#myAdd');
+                          user_address.html('<div class="tips txc"><img src="images/myAddress/adress-icon.png" alt="没有收货地址"><p>当前还没有地址，赶紧添加地址吧！</p></div>')
                          }
                     });
 

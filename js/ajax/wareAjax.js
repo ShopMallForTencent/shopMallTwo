@@ -123,7 +123,7 @@ function ajax_Success(arr)
 			 	 var p_s = arr[i].p_s;
 			 	 if (isContained(p_s, selArr)) 
 			 	 {
-			 	 	console.log($(Did).get(0))
+			 	 	//console.log($(Did).get(0))
 			 	 	 var img = arr[i].image;
 			 	 	 var price = arr[i].price;
 			 	 	 var kc = arr[i].stock;
@@ -132,13 +132,13 @@ function ajax_Success(arr)
 			 	 	 if (Did == '#sp_color_jrgwc') 
 			 	 	 {
 			 	 	 	$('#jrgwc .imgbox em img').get(0).src = img;
-			 	 	 	$('#jrgwc .sp_price_text .p2 span').html(price);
+			 	 	 	$('#jrgwc .sp_price_text .p2 span').html(price/100);
 			 	 	 	$('#jrgwc .kc').html(kc);
 			 	 	 }
 			 	 	 else
 			 	 	 {
 			 	 	 	$('#ljgm .imgbox em img').get(0).src = img;
-			 	 	 	$('#ljgm .sp_price_text .p2 span').html(price);
+			 	 	 	$('#ljgm .sp_price_text .p2 span').html(price/100);
 			 	 	 	$('#ljgm .kc').html(kc);
 			 	 	 }
 			 	 	 break;

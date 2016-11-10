@@ -6,29 +6,36 @@
 			<div id="myAdd">
 				<script id="addtemplate" type="text/html">
 				 {{if isAdmin}}
-		            {{each addResult as value i}}
-			            <div class="myAdd">
-			            	<a class='addevent' href='javascript:' rId={{addResult[i].r_id}}>
-								<p class="userNameTel"><span class="uName">{{addResult[i].consignee}}</span><span class="uTel">{{addResult[i].phone}}</span></p>
-								<p class="addDetail"><i class="addsp"></i>{{addResult[i].area_name}}{{addResult[i].address}}</p>
-							</a>
-							<div class="default clearfix">
-								<a href='javascript:;' class="left setThisAdd"def={{addResult[i].is_default}} rId={{addResult[i].r_id}}>
-									<i class="icon-setDefault addsp "></i><span>设为默认</span>
+				 	{{if addResult.length <= 0}}
+				 		<div class="tips txc">
+				 			<img src="images/myAddress/adress-icon.png" alt="没有收货地址">
+				 			<p>当前还没有地址，赶紧添加地址吧！</p>
+				 		</div>
+					 	{{else}}
+			            {{each addResult as value i}}
+				            <div class="myAdd">
+				            	<a class='addevent' href='javascript:' rId={{addResult[i].r_id}}>
+									<p class="userNameTel"><span class="uName">{{addResult[i].consignee}}</span><span class="uTel">{{addResult[i].phone}}</span></p>
+									<p class="addDetail"><i class="addsp"></i>{{addResult[i].area_name}}{{addResult[i].address}}</p>
 								</a>
-								<a href='javascript:;' class="edit" rId={{addResult[i].r_id}}>
-									<i class="icon-edit addsp"></i>编辑
-								</a>
-								<a href='javascript:;' class="delete" rId={{addResult[i].r_id}}>
-									<i class="icon-delete addsp"></i>删除
-								</a>
+								<div class="default clearfix">
+									<a href='javascript:;' class="left setThisAdd"def={{addResult[i].is_default}} rId={{addResult[i].r_id}}>
+										<i class="icon-setDefault addsp "></i><span>设为默认</span>
+									</a>
+									<a href='javascript:;' class="edit" rId={{addResult[i].r_id}}>
+										<i class="icon-edit addsp"></i>编辑
+									</a>
+									<a href='javascript:;' class="delete" rId={{addResult[i].r_id}}>
+										<i class="icon-delete addsp"></i>删除
+									</a>
+								</div>
 							</div>
-						</div>
-		            {{/each}}
+			            {{/each}}
+			        {{/if}}  	
 	            {{/if}}
 	            </script>
 	         </div>
-			<a id='new_address' href="#tpl/addressEdit" class="newAdd"><i class="addsp"></i><span>新增收货地址</span></a>
+			<a id='new_address' href="javascript:;" class="newAdd"><i class="addsp"></i><span>新增收货地址</span></a>
 		</div>
 	</div>
 	<div class="pop pop-dialog" id="delete_address">

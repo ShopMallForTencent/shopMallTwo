@@ -1,6 +1,5 @@
 define(function (require) {
     var tpl = require('tpl/comment.html');
-    var library = require('js/comment/library');
     return {
         title: '订单评价',
         body: tpl,

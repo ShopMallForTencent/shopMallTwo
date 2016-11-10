@@ -1,5 +1,10 @@
 .my-address-wrap{background: #f6f6f6;}
+.my-address-wrap .border-box{ border: none;}
 .my-address-wrap .addsp{background: url(../images/myAddress/sprite.png) no-repeat;background-size: 20rem;}
+.my-address-wrap #myAdd{ min-height: 100%;}
+.my-address-wrap .tips{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #fff;}
+.my-address-wrap .tips img{ position: absolute; top: 40%; left: 50%; width: 6.4rem; height: 6.4rem; margin: -5rem 0 0 -3.2rem;}
+.my-address-wrap .tips p{ position: absolute; top: 50%; left: 0; width: 100%; margin-top: -2rem; font-size: 1.4rem; color: #1a1a1a; line-height: 2rem;}
 .vertical .my-address-wrap .myAdd{border-top:1px solid #dfdfdf;border-bottom:1px solid #dfdfdf;background: #fff;}
 .vertical .my-address-wrap .wrap{padding-bottom: 6rem;;}
 .vertical .my-address-wrap .myAdd{margin-top:0.5rem; cursor: pointer;}

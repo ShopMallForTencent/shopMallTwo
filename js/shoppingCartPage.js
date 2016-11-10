@@ -109,8 +109,6 @@ define(function (require) {
 			}
 			//点击编辑  删除
 			var alreadyEdit=0;
-			var proId=null;
-			var proIdArr=[];
 			var cartChoiceObj = {};
 			$(".shopName").find("a").on("touchend",function(){
 				if($(this).attr("edit")=="1"){
@@ -181,12 +179,6 @@ define(function (require) {
 					checked.addClass("choose-sure");
 					checked.attr("has","1");
 					checked.parents(".shopItem").attr("del","1");
-					if(proId != null){
-						proId += ","+checked.attr('proId')
-					}else{
-						proId = checked.attr('proId')
-					}
-					proIdArr.push(checked.attr('proId'));
 					if (cartChoiceObj[thisBid]) {
 						var newArr = cartChoiceObj[thisBid]['choose'];
 					} else{
@@ -200,20 +192,6 @@ define(function (require) {
 					checked.removeClass("choose-sure");
 					checked.attr("has","0");
 					checked.parents(".shopItem").attr("del","0");
-					proId=null;
-					for(var i in proIdArr){
-						if(checked.attr('proId')==proIdArr[i]){
-							proIdArr.splice(i,1)
-						}
-						
-					}
-					for(var j=0; j<proIdArr.length; j++){
-						if(proId != null){
-							proId += ","+proIdArr[j]
-						}else{
-							proId = proIdArr[j]
-						}
-					}
 					cartChoiceObj[thisBid]['choose'].splice($.inArray(checked.attr('proId'),cartChoiceObj[thisBid]['choose']),1);
 				}
 				var single=[];var allMoney=0;
@@ -260,26 +238,12 @@ define(function (require) {
 					$(this).parent().parent().find(".choose").addClass("choose-sure").attr("has","1");
 					$(this).parents(".cartSort").attr("delAll","1");
 					$(this).parents(".cartSort").find(".shopItem").attr("del","1");
-					proId = null;
-					var cose = $(this).parent().parent().find(".choose")
-					for(var i=0; i<cose.length; i++){
-						proIdArr.push(cose.eq(i).attr('proId'));
-						proIdArr.splice(cose.length-1,1);
-						
-					}
-					for(var j=0; j<proIdArr.length; j++){
-						if(proId != null){
-							proId += ","+proIdArr[j]
-						}else{
-							proId = proIdArr[j]
-						}
-					}
 					countAllMoney($(this));
 
 					var newArr = [];
-					for (var i = 0; i < $(this).parents('.cartSort').find('.shopItem').length; i++) {
-						newArr.push(cose.eq(i).attr('proId'));
-					};
+					$(this).parents('.cartSort').find('.shopItem .choose').each(function(){
+						newArr.push($(this).attr('proId'));
+					});
 					cartChoiceObj[thisBid] = {};
 					cartChoiceObj[thisBid]['choose'] = newArr;
 				}
@@ -290,7 +254,6 @@ define(function (require) {
 					$(this).parent().parent().find(".choose").removeClass("choose-sure").attr("has","0");
 					$(this).parents(".cartSort").attr("delAll","0");
 					$(this).parents(".cartSort").find(".shopItem").attr("del","0");
-					proId = null
 					cartChoiceObj[thisBid]['choose'] = [];
 				}
 				if(alreadyEdit==0){

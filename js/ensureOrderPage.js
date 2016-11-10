@@ -64,7 +64,7 @@ define(function (require) {
                         {
                             showTips({
                                 'type':false,
-                                'text':'没有默认的收货地址！',
+                                'text':'没有收货地址！',
                                 'time':2000
                             });
                         }    

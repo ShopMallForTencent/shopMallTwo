@@ -189,24 +189,24 @@ $('#saveAdd').on('touchend', function(){
 	 } 
 
 	 //邮编校验
-	 if (postcodes.length <= 0) 
-	 {
-	 	showTips({
-            'type':false,
-            'text':'邮编不能为空',
-            'time':2000
-         });
-	 	return;
-	 }
-	 if ( !/^[1-9][0-9]{5}$/.test(postcodes)) 
-	 {
-	 	showTips({
-            'type':false,
-            'text':'邮编格式错误',
-            'time':2000
-         });
-	 	return;
-	 }
+	 // if (postcodes.length <= 0) 
+	 // {
+	 // 	showTips({
+  //           'type':false,
+  //           'text':'邮编不能为空',
+  //           'time':2000
+  //        });
+	 // 	return;
+	 // }
+	 // if ( !/^[1-9][0-9]{5}$/.test(postcodes)) 
+	 // {
+	 // 	showTips({
+  //           'type':false,
+  //           'text':'邮编格式错误',
+  //           'time':2000
+  //        });
+	 // 	return;
+	 // }
 
 	 if (shen == '请选择') 
 	 {

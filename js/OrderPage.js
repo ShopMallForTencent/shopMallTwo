@@ -1,6 +1,7 @@
 define(function (require) {
     var tpl = require('tpl/order_list.html');
     var orderPageAjax = require('js/ajax/orderPageAjax');
+    // var orderLibrary = require('js/library');
     return {
         title: '订单列表',
         body: tpl,
@@ -25,9 +26,11 @@ define(function (require) {
         	        $pageNavUl.css('width',$pageNavLi.length*12.16+'rem');
         	    }
         	});
+            // 选择订单状态查询
         	$pageNavA.on('click',function(){
-        	    var index = $pageNavA.index($(this));
-        	    $pageNavA.removeClass('on').eq(index).addClass('on');
+                if ($(this).hasClass('on')) return;
+        	    var thisState = $(this).attr('data-state');
+                orderListsState(thisState);
         	});
 
             // 显示隐藏返回顶部按钮
@@ -53,6 +56,10 @@ define(function (require) {
 
             orderPageInfo(2,10,1);
             // orderPageReturnAll(10,1)
+        },
+        afteropen : function(){
+            // 订单状态
+            orderListsState(orderState);
         }
     }
 });

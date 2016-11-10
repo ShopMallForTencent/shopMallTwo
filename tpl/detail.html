@@ -95,33 +95,60 @@
                 </div> 
                 <div id='user_comment'>
                     <script id="user_art" type="text/html">  
-                    {{if isAdmin}} 
-                        {{each review as value index}} 
-                        <div class='user'>  
-                            <ul class='user_buy_data'>
-                                <li class='dil lx1 fl'><span><img src={{review[index].portrait}}></span></li>
-                                <li class='dil lx2 fl'>{{review[index].name}}</li>
-                                <li class='dil lx3 fr'>{{review[index].c_time}}</li>
-                            </ul>
-                            <div class='user_main'>
-                                <p class='starlilst'>
-                                    {{ #review[index].score | dateFormat}}
-                                </p>
-                                <p class='pj gray'>{{review[index].content}}</p>
-                                <ol>
-                                     {{ #review[index].image | getUserImage }}
-                                </ol>
-                                <p class='buydata gray'>
-                                    <span class='fl'>类别：<em>{{review[index].specifications}}</em></span>
-                                    <span class='fr'>购买日期：<em>{{review[index].p_time}}</em></span>
-                                </p>
-                            </div>
-                        </div>
-                        {{/each}}  
+                    {{if isAdmin}}
+                        {{if review.length == 0}}
+                            <div class="tips txc">该商品尚无买家评论</div>
+                            {{else if review.length > 0 && review.length <= 3}}
+                                {{each review as value index}} 
+                                <div class='user'>  
+                                    <ul class='user_buy_data'>
+                                        <li class='dil lx1 fl'><span><img src={{review[index].portrait}}></span></li>
+                                        <li class='dil lx2 fl'>{{review[index].name}}</li>
+                                        <li class='dil lx3 fr'>{{review[index].c_time}}</li>
+                                    </ul>
+                                    <div class='user_main'>
+                                        <p class='starlilst'>
+                                            {{ #review[index].score | dateFormat}}
+                                        </p>
+                                        <p class='pj gray'>{{review[index].content}}</p>
+                                        <ol>
+                                             {{ #review[index].image | getUserImage }}
+                                        </ol>
+                                        <p class='buydata gray'>
+                                            <span class='fl'>类别：<em>{{review[index].specifications}}</em></span>
+                                            <span class='fr'>购买日期：<em>{{review[index].p_time}}</em></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                {{/each}}
+                            {{else if review.length > 3}}
+                                {{each review as value index}} 
+                                <div class='user'>  
+                                    <ul class='user_buy_data'>
+                                        <li class='dil lx1 fl'><span><img src={{review[index].portrait}}></span></li>
+                                        <li class='dil lx2 fl'>{{review[index].name}}</li>
+                                        <li class='dil lx3 fr'>{{review[index].c_time}}</li>
+                                    </ul>
+                                    <div class='user_main'>
+                                        <p class='starlilst'>
+                                            {{ #review[index].score | dateFormat}}
+                                        </p>
+                                        <p class='pj gray'>{{review[index].content}}</p>
+                                        <ol>
+                                             {{ #review[index].image | getUserImage }}
+                                        </ol>
+                                        <p class='buydata gray'>
+                                            <span class='fl'>类别：<em>{{review[index].specifications}}</em></span>
+                                            <span class='fr'>购买日期：<em>{{review[index].p_time}}</em></span>
+                                        </p>
+                                    </div>
+                                </div>
+                                {{/each}}
+                                <div class="tips txc">下拉加载更多...</div>
+                        {{/if}}
                     {{/if}}  
                     </script> 
                 </div>
-                <div class="tips txc">下拉加载更多...</div>
             </div>
             <!--买家评论 E -->
         </div>

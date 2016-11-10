@@ -42,6 +42,37 @@
     }
 })(Zepto);
 
+// 订单页的选中状态
+var orderState = 'all';
+function getOrderState(string){
+    orderState = string;
+}
+function orderListsState(orderState) {
+    var $wrap = $('#order-lists-wrap'),
+        $navCont = $wrap.find('.order-page-nav-cont');
+        $navA = $wrap.find('.order-page-nav-cont a'),
+        $cont = $wrap.find('#order-page-lists .cont');
+    $navA.removeClass('on');
+    $navCont.scrollLeft(0);
+    $cont.hide();
+    if (orderState == 'all') {
+        $cont.show();
+    } else{
+        $cont.each(function(){
+            if ($(this).attr('data-state') == orderState) {
+                $(this).show();  
+            };
+        });
+    }
+    $navA.each(function(){
+        if ($(this).attr('data-state') == orderState) {
+            $(this).addClass('on');
+            var index = $navA.index($(this));
+            $navCont.scrollLeft(index*($(this).width()),0)
+        };
+    });
+}
+
 // 显示/隐藏弹窗
 function showPop(e) {
     document.getElementById(e).style.display = 'block';

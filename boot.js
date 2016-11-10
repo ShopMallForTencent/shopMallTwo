@@ -16,7 +16,7 @@ function loadjs(src,func)
         return false ;  
     }  
     var script = document.createElement('script') ;  
-    script.type ='text/javascript' ;  
+    script.type ='text/javascript';  
     script.src = src ;  
     var head = document.getElementsByTagName('head').item(0);  
     head.appendChild(script);  
@@ -335,7 +335,6 @@ var demoPanelTransit = {
 }
 
 $doc.trigger('spa:panel', [demoPanelSidemenu, demoPanelAlert, demoPanelConfirm, demoPanelTransit])
-
 
 $(function() {
   $doc.trigger('spa:boot')
