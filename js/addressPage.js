@@ -1,29 +1,19 @@
 define(function (require) {
-<<<<<<< HEAD
     var tpl = require('tpl/address.html');
-=======
-<<<<<<< HEAD
-    var tpl = require('tpl/address.html');
-=======
-    var tpl = require('tpl/my_address.html');
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
     var aIn = require('js/ajax/socket/addressInputAddress');
     var addressAjax = require('js/ajax/addressAjax');
+    var eaSocket = require('js/ajax/socket/ensureOrderAdd');
     return {
         title: '地址管理',
         body: tpl,
         init: function () {
+
         },
 
         beforeopen : function()
         {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
+            btnKey()
+            console.log(addBtnKey)
             // 重置滚动条到顶部
             $('.my-address-wrap .border-box').scrollTop(0,0);
             // 控制底部导航栏状态
@@ -43,12 +33,6 @@ define(function (require) {
                    addDdfault (defaultId)
                 //addDdfault (defaultId)
               }
-<<<<<<< HEAD
-=======
-=======
-            addressList(function(){
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 
               //选择默认地址
                $(".setThisAdd").on("touchend",function(){
@@ -70,10 +54,6 @@ define(function (require) {
                //编辑地址
                 $(".edit").on("touchend",function(){
                    addEdit($(this).attr('rId'))
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
                    // window.location.href="#tpl/addressEdit";
                 })
                 var addLen = 0;
@@ -96,23 +76,6 @@ define(function (require) {
                     });
 
                     // console.log($(self).parents('#myAdd').find('.myAdd').length)
-<<<<<<< HEAD
-=======
-=======
-                   // window.location.href="#tpl/inputAdd";
-                })
-
-                //删除地址提示弹窗
-                $(".delete").on("touchend",function(){
-                    var self = this;
-                    showPop('delete_address');
-                    //删除地址
-                    $('#delete_address .btn-box a').eq(0).on('touchend', function(){
-                         $(self).parents(".myAdd").remove();
-                         addDel($(self).attr('rId'));
-                    });
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
                 });
 
                 //初始化默认地址
@@ -126,25 +89,26 @@ define(function (require) {
                 }
 
                 //修改收货地址
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
                 $('#myAdd .addevent').on('click', function(){
-                 
-                  var name = $(this).find('.uName').html();
-                  var phone = $(this).find('.uTel').html();
-                  var address = $(this).find('.addDetail').text();
-                  var rid = $(this).attr('rid')
+                   if(addBtnKey){
+                    console.log()
+                      var name = $(this).find('.uName').html();
+                      var phone = $(this).find('.uTel').html();
+                      var address = $(this).find('.addDetail').text();
+                      var rid = $(this).attr('rid')
 
-                  var user_address = $(document.body).find('#user_address');
-                  user_address.html("<a href='#tpl/address' class='addBox'><p><span class='buyer'></span><span class='buyerNum'></span></p><p class='buyerAdd'></p><i class='icon-locate addsp'></i></a>")
-                  user_address.find('.buyer').html(name);
-                  user_address.find('.buyerNum').html(phone);
-                  user_address.find('.buyerAdd').html(address);
-                  user_address.find('.addBox').attr('rid',rid)
-
-                  window.location.href = '#tpl/orderConfirm';
+                      var user_address = $(document.body).find('#user_address');
+                      user_address.html('<a href="#tpl/address" class="addBox" rid="'+rid+'"><p class="user-info"><strong class="buyer">'+name+'</strong><span class="buyerNum">'+phone+'</span></p><p class="add pr"><i class="pa ht sp"></i>'+address+'</p></a>')
+                      // user_address.find('.buyer').html(name);
+                      // user_address.find('.buyerNum').html(phone);
+                      // user_address.find('.buyerAdd').html(address);
+                      // user_address.find('.addBox').attr('rid',rid)
+                      addBtnKey=false;
+                      window.location.href = '#tpl/orderConfirm';
+                   }else{
+                    return;
+                   }
+                  
 
                 });
 
@@ -180,26 +144,10 @@ define(function (require) {
 
 
 
-<<<<<<< HEAD
-=======
-=======
-                $('#myAdd .addevent').on('touchend', function(){
-                   
-                    var name = $(this).find('.uName').html();
-                    var phone = $(this).find('.uTel').html();
-                    var address = $(this).find('.addDetail').text();
-
-                    var user_address = $(document.body).find('#user_address');
-                    user_address.find('.buyer').html(name);
-                    user_address.find('.buyerNum').html(phone);
-                    user_address.find('.buyerAdd').html(address);
-
-                    window.location.href = '#tpl/ensureOrder';
-
-                  });
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
             });
+        },
+        afterclose:function(){
+           addBtnKey=false;
         }
     }
 });

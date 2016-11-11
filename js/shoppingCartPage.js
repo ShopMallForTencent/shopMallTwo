@@ -1,27 +1,11 @@
 define(function (require) {
-<<<<<<< HEAD
     var tpl = require('tpl/cart.html');
     var cartAjax = require('js/ajax/cartAjax');
     var ecSocket = require('js/ajax/socket/ensureOrderCart');
-=======
-<<<<<<< HEAD
-    var tpl = require('tpl/cart.html');
-    var cartAjax = require('js/ajax/cartAjax');
-    var ecSocket = require('js/ajax/socket/ensureOrderCart');
-=======
-    var tpl = require('tpl/shoppingCart.html');
-    var cartAjax = require('js/ajax/cartAjax');
-    var ecSocket = require('js/ajax/socket/ensureOrder_Cart');
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
     return {
         title: '购物车',
         body: tpl,
         init: function () {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 
         },
         beforeopen:function(){
@@ -35,30 +19,6 @@ define(function (require) {
 			//	计算每个店铺中商品总价
         	$(".reduce").each(function(){
 //				countAllMoney($(this));
-<<<<<<< HEAD
-=======
-=======
-        	
-            //	计算每个店铺中商品总价
-			
-			
-
-			// if(proId==null){
-			// 				alert("请选择你要删除的商品")
-			// 			}else{
-			// 				delPro(proId)
-			// 			}
-	
-	//console.log($('.actNum .itemNum').length)
-
-        },
-        beforeopen:function(){
-        	cartList(function(){
-
-        	$(".reduce").each(function(){
-				countAllMoney($(this));
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 				var oItemNum=$(this).parent().find(".itemNum").text();
 
 				if(oItemNum==1){
@@ -76,21 +36,11 @@ define(function (require) {
 					$(this).css("color","#adadad");
 				}
 				$(this).parent().find(".itemNum").text(oItemNum--);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 				console.log($(this).parents(".shopItem").find(".choose").attr("has"));
 				if($(this).parents(".shopItem").find(".choose").attr("has")==1){
 					countAllMoney($(this));
 				}
 				
-<<<<<<< HEAD
-=======
-=======
-				countAllMoney($(this));
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 				addProNum($(this).attr('proId'),-1)
 				
 			});
@@ -106,21 +56,11 @@ define(function (require) {
 					$(this).css("color","#212b3e");
 				}
 				$(this).parent().find(".itemNum").text(oItemNum);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 				console.log($(this).parents(".shopItem").find(".choose").attr("has"));
 				if($(this).parents(".shopItem").find(".choose").attr("has")==1){
 					countAllMoney($(this));
 				}
 				
-<<<<<<< HEAD
-=======
-=======
-				countAllMoney($(this));
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 				addProNum($(this).attr('proId'),1)
 			});
 			//库存为1加减按钮解绑事件
@@ -169,17 +109,10 @@ define(function (require) {
 			}
 			//点击编辑  删除
 			var alreadyEdit=0;
-<<<<<<< HEAD
 			var cartChoiceObj = {};
-=======
-			var proId=null;
-			var proIdArr=[];
-<<<<<<< HEAD
-			var cartChoiceObj = {};
-=======
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 			$(".shopName").find("a").on("touchend",function(){
+				cartChoiceObj = {};
+				$(this).parents('.cartSort').find('.choose-sure').removeClass('choose-sure').attr("has","0");
 				if($(this).attr("edit")=="1"){
 					$(this).text("完成");
 					$(this).parent().parent().find(".operate").attr("class","operate operate-delete").text("删除");
@@ -212,14 +145,6 @@ define(function (require) {
 							};
 							delPro(cartChoiceObj[thisBid]['choose'].toString());
 						}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-		//				countAllMoney($(this));
-
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 					});
 					$(this).parents(".cartSort").find(".actNum").hide();
 					$(this).parents(".cartSort").find(".total").hide();
@@ -234,7 +159,21 @@ define(function (require) {
 					$(this).text("编辑");
 					$(this).parent().parent().find(".operate").attr("class","operate operate-goPay").text("去结算");
 					$(this).attr("edit","1");
-					$(this).parent().parent().find(".operate").off(); 
+					$(this).parent().parent().find(".operate").off().on('touchend',function(){
+						if (alreadyEdit == 0) {
+							var thisBid = $(this).attr('bId');
+							if(cartChoiceObj[thisBid] == undefined || cartChoiceObj[thisBid]['choose'] == undefined || cartChoiceObj[thisBid]['choose'].length <= 0){
+								showTips({
+			                        'type':false,
+			                        'text':'请选择你要购买的商品',
+			                        'time':2000
+			                    });
+								return;
+							} else{
+								buyPro(cartChoiceObj[thisBid]['choose'].toString(),thisBid);
+							}
+						}
+					}); 
 					$(this).parents(".cartSort").find(".actNum").show();
 					$(this).parents(".cartSort").find(".total").show();
 					$(".cartSort").find(".fail").children("a").off().removeClass("choose-sure").attr("has","0");
@@ -256,16 +195,6 @@ define(function (require) {
 					checked.addClass("choose-sure");
 					checked.attr("has","1");
 					checked.parents(".shopItem").attr("del","1");
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-					if(proId != null){
-						proId += ","+checked.attr('proId')
-					}else{
-						proId = checked.attr('proId')
-					}
-					proIdArr.push(checked.attr('proId'));
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 					if (cartChoiceObj[thisBid]) {
 						var newArr = cartChoiceObj[thisBid]['choose'];
 					} else{
@@ -274,48 +203,11 @@ define(function (require) {
 					newArr.push(checked.attr('proId'));
 					cartChoiceObj[thisBid] = {};
 					cartChoiceObj[thisBid]['choose'] = newArr;
-<<<<<<< HEAD
-=======
-=======
-						console.log(checked.attr('proId'));
-						
-						if(proId != null){
-							proId += ","+checked.attr('proId')
-						}else{
-							proId = checked.attr('proId')
-						}
-						proIdArr.push(checked.attr('proId'));
-						console.log(proIdArr)
-						
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 				}
 				else{
 					checked.removeClass("choose-sure");
 					checked.attr("has","0");
 					checked.parents(".shopItem").attr("del","0");
-<<<<<<< HEAD
-=======
-					proId=null;
-					for(var i in proIdArr){
-						if(checked.attr('proId')==proIdArr[i]){
-							proIdArr.splice(i,1)
-						}
-						
-					}
-<<<<<<< HEAD
-=======
-				
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
-					for(var j=0; j<proIdArr.length; j++){
-						if(proId != null){
-							proId += ","+proIdArr[j]
-						}else{
-							proId = proIdArr[j]
-						}
-					}
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 					cartChoiceObj[thisBid]['choose'].splice($.inArray(checked.attr('proId'),cartChoiceObj[thisBid]['choose']),1);
 				}
 				var single=[];var allMoney=0;
@@ -331,16 +223,6 @@ define(function (require) {
 				});
 				checked.parents(".cartSort").find(".lastAll").text(allMoney.toFixed(2));
 				
-<<<<<<< HEAD
-=======
-=======
-					console.log(proIdArr)
-					
-					
-				}
-				console.log(proId)
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 				//全部订购
 				cntChooseLen=checked.parents(".cartSort").find(".choose").length-1;
 				cntChooseSure=checked.parents(".cartSort").find(".choose-sure").length;
@@ -372,40 +254,6 @@ define(function (require) {
 					$(this).parent().parent().find(".choose").addClass("choose-sure").attr("has","1");
 					$(this).parents(".cartSort").attr("delAll","1");
 					$(this).parents(".cartSort").find(".shopItem").attr("del","1");
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-					proId = null;
-					var cose = $(this).parent().parent().find(".choose")
-					for(var i=0; i<cose.length; i++){
-=======
-					//console.log()
-					proId = null;
-					var cose = $(this).parent().parent().find(".choose")
-					for(var i=0; i<cose.length; i++){
-						console.log(cose.eq(i).attr('proId'))
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
-						proIdArr.push(cose.eq(i).attr('proId'));
-						proIdArr.splice(cose.length-1,1);
-						
-					}
-<<<<<<< HEAD
-					for(var j=0; j<proIdArr.length; j++){
-						if(proId != null){
-							proId += ","+proIdArr[j]
-=======
-					console.log(proIdArr)
-					for(var j=0; j<proIdArr.length; j++){
-						if(proId != null){
-							proId += ","+proIdArr[j]
-							console.log(proIdArr)
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
-						}else{
-							proId = proIdArr[j]
-						}
-					}
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 					countAllMoney($(this));
 
 					var newArr = [];
@@ -414,13 +262,6 @@ define(function (require) {
 					});
 					cartChoiceObj[thisBid] = {};
 					cartChoiceObj[thisBid]['choose'] = newArr;
-<<<<<<< HEAD
-=======
-=======
-					console.log(proId)
-					
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 				}
 				else{
 					$(this).parent(".countAll").find(".lastAll").text(0.00);
@@ -429,15 +270,7 @@ define(function (require) {
 					$(this).parent().parent().find(".choose").removeClass("choose-sure").attr("has","0");
 					$(this).parents(".cartSort").attr("delAll","0");
 					$(this).parents(".cartSort").find(".shopItem").attr("del","0");
-<<<<<<< HEAD
 					cartChoiceObj[thisBid]['choose'] = [];
-=======
-					proId = null
-<<<<<<< HEAD
-					cartChoiceObj[thisBid]['choose'] = [];
-=======
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 				}
 				if(alreadyEdit==0){
 					$(this).parents(".cartSort").find(".fail").children("a").attr("has","0").removeClass("choose-sure");
@@ -446,12 +279,8 @@ define(function (require) {
 			});
 
 			$('.operate').on('touchend',function() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
-				var thisBid = $(this).attr('bId');
 				if (alreadyEdit == 0) {
+					var thisBid = $(this).attr('bId');
 					if(cartChoiceObj[thisBid] == undefined || cartChoiceObj[thisBid]['choose'] == undefined || cartChoiceObj[thisBid]['choose'].length <= 0){
 						showTips({
 	                        'type':false,
@@ -464,30 +293,6 @@ define(function (require) {
 					}
 				} else if (alreadyEdit == 1) {
 					
-<<<<<<< HEAD
-=======
-=======
-
-				if(proId==null&&alreadyEdit==0){
-					alert("请选择你要购买的商品")
-					return;
-				}
-				if(proId!=null&&alreadyEdit==0){
-					console.log(proId,$(this).attr('bId'))
-					buyPro(proId,$(this).attr('bId'));
-					window.location.href = '#tpl/ensureOrder';
-					// delPro(proId)
-					 //#tpl/ensureOrder
-				}
-				if(proId==null&&alreadyEdit==1){
-					alert("请选择你要删除的商品")
-					return;
-				}
-				if(proId!=null&&alreadyEdit==1){
-					delPro(proId)
-					// #tpl/ensureOrder
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 				}
 			})
 

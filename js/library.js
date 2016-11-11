@@ -44,8 +44,10 @@
 
 // 订单页的选中状态
 var orderState = 'all';
+var orderType = false;
 function getOrderState(string){
     orderState = string;
+    orderType = true;
 }
 function orderListsState(orderState) {
     var $wrap = $('#order-lists-wrap'),
@@ -53,7 +55,7 @@ function orderListsState(orderState) {
         $navA = $wrap.find('.order-page-nav-cont a'),
         $cont = $wrap.find('#order-page-lists .cont');
     $navA.removeClass('on');
-    $navCont.scrollLeft(0);
+    // $navCont.scrollLeft(0);
     $cont.hide();
     if (orderState == 'all') {
         $cont.show();
@@ -68,11 +70,49 @@ function orderListsState(orderState) {
         if ($(this).attr('data-state') == orderState) {
             $(this).addClass('on');
             var index = $navA.index($(this));
-            $navCont.scrollLeft(index*($(this).width()),0)
+            if (orderType) {
+                $navCont.scrollLeft(index*($(this).width()),0);
+                orderType = false;
+            };   
         };
     });
 }
 
+// 分类页页的选中状态
+var sortState = 'all';
+var sortType = false;
+function getsortState(string){
+    sortState = string;
+    sortType = true;
+}
+function FnSortState(sortState) {
+    var $wrap = $('#sort-wrap'),
+        $navCont = $wrap.find('.sort-page-nav-cont');
+        $navA = $wrap.find('.sort-page-nav-cont a'),
+        $sortLi = $wrap.find('#sort-lists li');
+    $navA.removeClass('on');
+    // $navCont.scrollLeft(0);
+    $sortLi.hide();
+    if (sortState == 'all') {
+        $sortLi.show();
+    } else{
+        $sortLi.each(function(){
+            if ($(this).attr('data-state') == sortState) {
+                $(this).show();  
+            };
+        });
+    }
+    $navA.each(function(){
+        if ($(this).attr('data-state') == sortState) {
+            $(this).addClass('on');
+            var index = $navA.index($(this));
+            if (sortType) {
+                $navCont.scrollLeft(index*($(this).width()),0);
+                sortType = false;
+            };   
+        };
+    });
+}
 // 显示/隐藏弹窗
 function showPop(e) {
     document.getElementById(e).style.display = 'block';

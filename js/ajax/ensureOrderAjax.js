@@ -1,8 +1,4 @@
 function ensureOList(){
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 	
 	/*
 		cart/confirmation 	 : 购物车页去结算
@@ -13,17 +9,18 @@ function ensureOList(){
 	if (Ew_Socket.data != null) 
 	{
 		$.ajax({
-			url: ajaxPath + '/product/confirmation' ,
+			url: ajaxPath + '/member/confirmationToPay' ,
 			type : 'GET',
 			dataType: 'jsonp',
 			data : {
 				"p_id" : Ew_Socket.data['p_id'], 
 				"g_id" : Ew_Socket.data['g_id'], 
 				"b_id" : Ew_Socket.data['b_id'], 
-				"quantity" : Ew_Socket.data['quantity']
+				"quantity" : Ew_Socket.data['quantity'],
+				"from" : "p"
 			}, 
 			success: function(data){
-
+				console.log(data.result[0].receiver.id)
 				//填充内容到html
 				var eorder_data = {
 			      	msg : data.result,
@@ -53,6 +50,7 @@ function ensureOList(){
 	//购物车页去结算
 	else
 	{
+		console.log(Ec_Socket.data)
 		if (Ec_Socket.data.length <= 0) 
 		{	
 			window.location.href = '#tpl/cart';
@@ -62,6 +60,7 @@ function ensureOList(){
 		var eorder_data = {
 	      	msg : Ec_Socket.data.result
 	    }
+	    console.log(Ec_Socket.data.result)
 	    if(isFirst){
 		 var elist = template('address_art', eorder_data);
 		 document.getElementById('user_address').innerHTML = elist;
@@ -76,38 +75,6 @@ function ensureOList(){
 		document.getElementById('countFee').innerHTML = plist;
 
 	}
-<<<<<<< HEAD
-=======
-=======
-
-	$.ajax({
-		url: Ec_Socket.dir == 'null'? ajaxPath + '/product/confirmation' : ajaxPath + '/cart/confirmation',
-		type : 'GET',
-		dataType: 'jsonp',
-		data : Ec_Socket.dir == 'null'? {"p_id" : 234, "g_id" : 999, "b_id" : 1} : {"p_ids" : Ec_Socket.data[0],"b_id" : Ec_Socket.data[1]},
-		success: function(data){
-
-			//填充内容到html
-			var eorder_data = {
-		      	msg : data.result,
-		    }
-
-		    var elist = template('address_art', eorder_data);
-		    document.getElementById('user_address').innerHTML = elist;
-
-		    var wlist = template('warelist_art', eorder_data);
-		    document.getElementById('shopList').innerHTML = wlist;
-
-		    var plist = template('countFee_art', eorder_data);
-		    document.getElementById('countFee').innerHTML = plist;
-
-		},
-		error : function(){
-		   console.log('fail');
-		}
-	});
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 
 }
 
@@ -136,15 +103,7 @@ template.helper('getPrice', function (obj, yf) {
 		result+=parseInt(yf);
 	};
 
-<<<<<<< HEAD
     return result / 100; 
-=======
-<<<<<<< HEAD
-    return result / 100; 
-=======
-    return result; 
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 });
 
 /*获取总价格，包括邮费*/

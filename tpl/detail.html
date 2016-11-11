@@ -66,13 +66,17 @@
 
             <!--规格参数 S -->
             <div id='ggcs' class='ggcs' style='display:none;'>
-                <table border='1' id='ggcs_table'>
-                    <script id="ggcs_art" type="text/html">  
-                    {{if isAdmin}} 
-                        {{ #parameter | wareSpecifications }}
+                <script id="ggcs_art" type="text/html">  
+                    {{if isAdmin}}
+                        <div class="table-box">
+                            <table border='1'>
+                                {{ #parameter | wareSpecifications }}
+                            </table>
+                        </div>
+                        {{else}}
+                        <p class="not">没有规格参数！</p>
                     {{/if}}  
-                    </script>
-                </table>
+                </script>
             </div>
             <!--规格参数 E -->
 
@@ -155,8 +159,8 @@
         <!--buy_nav S -->
         <div class='buy_nav' id='buy_nav'>
             <ul class='yh'>
-                <li class='fl lx1'><a href="#tpl/chatSystem" title='客服'>客服</a></li>
-                <li class='fl lx2'><span>5</span><a href="#tpl/cart" title='购物车'>购物车</a></li>
+                <li class='fl lx1'><a href="#tpl/chatSystem" title='客服'><strong>客服</strong><i></i></a></li>
+                <li class='fl lx2'><span>5</span><a href="#tpl/cart" title='购物车'><strong>购物车</strong><i></i></a></li>
                 <li class='fl lx3'><a href="javascript:showDialog('jrgwc')" title='加入购物车'>加入购物车</a></li>
                 <li class='fl lx4'><a href="javascript:showDialog('ljgm')" title='立即购买'>立即购买</a></li>
                 <li class='fl lx5'><a href="javascript:" title='已售完'>已售完</a></li>
@@ -183,7 +187,7 @@
                             {{each g_specification as value index}} 
                             <div class='ware_sp_list'> 
                                 <h2>{{g_specification[index].name}}</h2>
-                                <div class='sp_color_bnt' id=sp_color_bnt_{{index}}>
+                                <div class='sp_color_bnt clearfix' id=sp_color_bnt_{{index}}>
                                     {{each g_specification[index].value as value count}} 
                                         <a zdy={{g_specification[index].value[count].id}} class='have small' href="javascript:">{{g_specification[index].value[count].name }}</a>
                                     {{/each}} 
@@ -193,15 +197,15 @@
                         {{/if}}  
                         </script>  
                     </div>
-                    <div class='sp_val' id='sp_val_ljgm'>
+                    <div class='sp_val clearfix' id='sp_val_ljgm'>
                         <script id="sp_val_ljgm_art" type="text/html">  
                         <p class='dil'>数量　</p>
                         <div class='jzq dil'>
                             <span class='min'>-</span>  
                             <span class='text_box'>1</span>   
-                            <span class='add'>+</span>  
+                            <span class='add'>+</span>
+                            <strong>(库存: <em class='kc'>{{p_specification[0].stock}}</em>)</strong>
                         </div>
-                        <p class='dil'>　库存: <em class='kc'>{{p_specification[0].stock}}</em></p>
                          </script>  
                     </div>
                     <a class='ljgmbnt' href="javascript:" title='立即购买'>立即购买</a>

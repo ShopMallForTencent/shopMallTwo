@@ -1,24 +1,16 @@
 define(function (require) {
     var tpl = require('tpl/order_list.html');
     var orderPageAjax = require('js/ajax/orderPageAjax');
-    // var orderLibrary = require('js/library');
     return {
         title: '订单列表',
         body: tpl,
         init: function () {
-<<<<<<< HEAD
             // 订单页内导航
-=======
-<<<<<<< HEAD
-            // 订单页内导航
-=======
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
-        	var $pageNavUl = $('.order-page-nav ul'),
+        	var $pageNavUl = $('#order-lists-wrap .order-page-nav ul'),
         	    $pageNavLi = $pageNavUl.find('li'),
         	    $pageNavA = $pageNavUl.find('a'),
-        	    $pageNavI = $('.sort-page-nav i');
-        	if ($pageNavLi.length > 4) {
+        	    $pageNavI = $('#order-lists-wrap .order-page-nav .p-none');
+        	if ($pageNavLi.length > 5) {
         	    $pageNavI.css('display','block');
         	};
         	if (_w < _h) {
@@ -33,11 +25,7 @@ define(function (require) {
         	        $pageNavUl.css('width',$pageNavLi.length*12.16+'rem');
         	    }
         	});
-<<<<<<< HEAD
             // 选择订单状态查询
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
         	$pageNavA.on('click',function(){
                 if ($(this).hasClass('on')) return;
         	    var thisState = $(this).attr('data-state');
@@ -62,24 +50,14 @@ define(function (require) {
             // 重置滚动条到顶部
             $('.order-lists-wrap .border-box').scrollTop(0,0);
             // 控制底部导航栏状态
-            $('.nav-box').show();
-            $('.nav-box li').removeClass('on').eq(3).addClass('on');
+            $('.nav-box').hide();
 
             orderPageInfo(2,10,1);
             // orderPageReturnAll(10,1)
-<<<<<<< HEAD
         },
         afteropen : function(){
             // 订单状态
             orderListsState(orderState);
-=======
-=======
-        	$pageNavA.on('touchend',function(){
-        	    var index = $pageNavA.index($(this));
-        	    $pageNavA.removeClass('on').eq(index).addClass('on');
-        	});
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
         }
     }
 });

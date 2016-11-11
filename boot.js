@@ -223,11 +223,11 @@ var commentPage = {
   }
 }
 
-// 评价
+// 客服
 var information = {
   route: 'tpl/information',
   classname: 'information',
-  animate: 'default',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
     seajs.use(['js/informationPage'], function(viewData) {
@@ -240,10 +240,23 @@ var information = {
 var refund = {
   route: 'tpl/refund',
   classname: 'refund',
-  animate: 'default',
+  animate: 'slideInLeft',
   view: function() {
     var $page = this
     seajs.use(['js/refundPage'], function(viewData) {
+      $doc.trigger('spa:initpage', [$page, viewData])
+    })
+  }
+}
+
+// 支付成功
+var refund = {
+  route: 'tpl/success',
+  classname: 'success',
+  animate: 'slideInLeft',
+  view: function() {
+    var $page = this
+    seajs.use(['js/successPage'], function(viewData) {
       $doc.trigger('spa:initpage', [$page, viewData])
     })
   }

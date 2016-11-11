@@ -10,11 +10,13 @@
                 {{if bName.length}}
                     {{each bName as value i}}
                     <div class="cartSort" >
-                        <p class="shopName">
-                            <span><i class="cartsp home"></i>{{bName[i].b_name}}</span>
+                        <div class="shopName">
+                            <h2>
+                                <img src="images/store-icon-1.png" alt="icon">
+                                <span>{{bName[i].b_name}}</span>
+                            </h2>
                             <a href="javascript:;" edit="1">编辑</a>
-                        </p>
-
+                        </div>
                         {{each bName[i].product as value j}}
                         <div class="shopItem" del="0">
                             <a href="javascript:;" class="choose cartsp" has="0" proId={{bName[i].product[j].p_id}}></a>

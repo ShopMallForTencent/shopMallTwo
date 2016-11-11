@@ -1,8 +1,4 @@
 ﻿//ajax请求
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 function wareList(func){
 
 	$.ajax({
@@ -52,7 +48,7 @@ function wareList(func){
 		    document.getElementById('spxq').innerHTML = countent_art;
 
 		    var parameter_art = template('ggcs_art', banner_data);
-		    document.getElementById('ggcs_table').innerHTML = parameter_art;
+		    document.getElementById('ggcs').innerHTML = parameter_art;
 
 		    var user_pj_art = template('user_pj_art', banner_data);
 		    document.getElementById('discuss_pj').innerHTML = user_pj_art;
@@ -79,72 +75,6 @@ function wareList(func){
 
 }
  
-<<<<<<< HEAD
-=======
-=======
-$.ajax({
-	url: ajaxPath + '/goods/getById&g_id=999',
-	type : 'POST',
-	dataType: 'json',
-	xhrFields: {withCredentials: true},
-	crossDomain: true,
-	success: function(data){
-		console.log(data)
-
-	   //填充内容到html
-	    var banner_data = {
-	      isAdmin: true,
-	      public_list : data.result,
-	      bannerImg_list: data.result.banner,
-	      introduction : data.result.introduction,
-	      name : data.result.name,
-	      price : data.result.price,
-	      market_price : data.result.market_price,
-	      sales : data.result.sales,
-	      t_stock : data.result.t_stock,
-	      g_specification : data.result.g_specification,
-	      p_specification : data.result.p_specification,
-	      review : data.result.review,
-	      countent : data.result.countent,
-	      parameter : data.result.parameter
-
-	    };
-
-	    var bannerImg = template('banner', banner_data);
-	    document.getElementById('swiper-wrapper').innerHTML = bannerImg;
-
-	    var introduction = template('ware_msg_art', banner_data);
-	    document.getElementById('ware_msg').innerHTML = introduction;
-
-	    var ware_price_art = template('ware_price_art', banner_data);
-	    document.getElementById('ware_price').innerHTML = ware_price_art;
-
-	    var ljgm_art = template('ljgm_art', banner_data);
-	    document.getElementById('sp_color_gm').innerHTML = ljgm_art;
-	    document.getElementById('sp_color_jrgwc').innerHTML = ljgm_art;
-
-	    var review_art = template('user_art', banner_data);
-	    document.getElementById('user_comment').innerHTML = review_art;
-
-	    var countent_art = template('spxq_art', banner_data);
-	    document.getElementById('spxq').innerHTML = countent_art;
-
-	    var parameter_art = template('ggcs_art', banner_data);
-	    document.getElementById('ggcs_table').innerHTML = parameter_art;
-
-	    var user_pj_art = template('user_pj_art', banner_data);
-	    document.getElementById('discuss_pj').innerHTML = user_pj_art;
-
-
-	    ajax_Success(data.result.p_specification);
-	},
-	error : function(){
-
-	  console.log('fail')
-	}
-}); 
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 
 
 
@@ -168,10 +98,6 @@ function ajax_Success(arr)
 	});
 
 	//弹窗按钮选中脚本
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 	sel('#sp_color_gm') //立即购买
 	sel('#sp_color_jrgwc')//加入购物车
 	
@@ -225,65 +151,11 @@ function ajax_Success(arr)
 
 function selg(zdy,arr,Did){
 	if(Did.selector!=that){
-<<<<<<< HEAD
-=======
-=======
-
-	sel($('#sp_color_gm a')) //立即购买
-	sel($('#sp_color_jrgwc a'))//加入购物车
-	
-function sel(Did){
-	console.log()
-
-
-	Did.on('touchend', function(){
-			
-		  //取消
-		  if(this.className.indexOf('select') != -1)
-		  {   selCancel = true
-		  	  $(this).removeClass('select');
-		  	  var selectBnt = getSelectBnt(Did);
-		  	  // pds( selectBnt.length > 1? $(this) : $('#sp_color_gm a'), arr );
-		  	  selg($(this).attr("zdy"),arr,Did)
-		  	  console.log('取消');
-		  	 
-		  }
-		  //选中
-		  else if(this.className.indexOf('no') == -1)
-		  {	  selCancel = false
-		  	  selg($(this).attr("zdy"),arr,Did)
-		  	  $(this).addClass('select');
-		  	  //pds( $(this), arr );
-		  	  console.log('选中')
-		  	  	
-		  }	
-	});
-}
-
-
-
-}
-
-
-
-
-function selg(zdy,arr,Did){
-	if(Did.selector!=that){
-			console.log(Did.selector)
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 			selArr=[]
 		}
 	that = Did.selector
 	
 	if(selCancel){
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-		console.log(selCancel)
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 		for(var i=0; i<selArr.length; i++){
 			if(zdy==selArr[i]){
 				selArr.splice(i,1)
@@ -293,21 +165,11 @@ function selg(zdy,arr,Did){
 		selArr.push(zdy)
 	}
 	if(selArr.length>=1){
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-		console.log(selArr)
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 		pds( selArr, arr,Did );
 	}else{
 		Did.removeClass('no');
 		return;
 	}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
 
 function pds(bntArr, arr,Did)
@@ -315,67 +177,20 @@ function pds(bntArr, arr,Did)
 	//拿到所有选中的按钮
 	var selectBnt = bntArr;
 
-=======
-	console.log(selArr)
-
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
-}
-
-function pds(bntArr, arr,Did)
-{	
-	//拿到所有选中的按钮
-	var selectBnt = bntArr;
-
-<<<<<<< HEAD
-=======
-	
-	
-
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 	//判断arr数组中，是否包含按钮的zdy
 	var result = [];
 	for(var i=0; i<arr.length; i++)
 	{
 		var ps = arr[i].p_s;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
     	if(isContained(ps,selectBnt)){
     		result.push(ps)
     	}	
 	}
 
-<<<<<<< HEAD
-=======
-=======
-
-    	
-    	if(isContained(ps,selectBnt)){
-    		result.push(ps)
-    	}
-
-		
-		
-	}
-
-	
-
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 	for(var k=0; k<Did.length; k++)
 	{
 		var bnt = Did.eq(k);	
 		//result中不包含bnt的zdy，则变灰
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-		
-		 console.log(selectBnt.length)
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 		if(!isHaveValue(parseInt(bnt.attr('zdy')), result))
 		{
 			bnt.addClass('no');
@@ -385,14 +200,6 @@ function pds(bntArr, arr,Did)
 			bnt.removeClass('no');
 		}
 	}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-	
-
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 }
 
 
@@ -411,37 +218,6 @@ function getSelectBnt(bntArr)
 	return selectBnt;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
-//判断数组是否包含value
-function pd(array, value)
-{
-	var tempArr = [];
-	
-	for(var i=0; i<array.length; i++)
-	{
-		var ps = array[i].p_s;
-		
-		for(var j=0; j<ps.length; j++)
-		{
-			var val = ps[j];
-			
-			if(val == value){
-				tempArr.push(ps);
-				break;
-			}
-		}
-	}
-
-	return tempArr;
-}
-
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 function isHaveValue(bntZdy, result) // bnt = 1, result[0] = 2
 {
 	var flag = false;
@@ -461,10 +237,6 @@ function isHaveValue(bntZdy, result) // bnt = 1, result[0] = 2
 	return false;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 // 判断一个数组是否包含另一个数组
 function isContained(a, b){
     if(!(a instanceof Array) || !(b instanceof Array)) return false;
@@ -580,19 +352,20 @@ function ljgm(data)
 		}
 
 		if (p_id != null) 
-		{
+		 {   //console.log(0)
 			$.ajax({
-				url: ajaxPath + 'product/confirmation',
+				url: ajaxPath + '/member/confirmationToPay',
 				type : 'get',
 				dataType: 'json',
 				data : {
 					"quantity" : parseInt($('#ljgm .text_box').html()),
 					 "p_id" : p_id, 
 					 "g_id" : data.result.g_id,
-					 "b_id" : data.result.b_id
+					 "b_id" : data.result.b_id,
+					 "from" : "p"
 				},
 				success: function(dt){
-					
+					console.log(dt.result[0].receiver)
 					Ew_Socket.data = {
 						"quantity" : parseInt($('#ljgm .text_box').html()),
 						 "p_id" : p_id, 
@@ -614,72 +387,6 @@ function ljgm(data)
 	 
 	});
 }
-<<<<<<< HEAD
-=======
-=======
-
-
-
-//弹窗按钮选中脚本
-function gwcTcBntLogic(bnt)
-{
-    var old = 0;
-
-    $(bnt).on('touchend', function(){
-
-        if (this.className.indexOf('no') != -1 || old == $(this).index()) {return;}
-
-        $(this).addClass('select');
-
-        $(bnt).eq(old).removeClass('select');
-
-        old = $(this).index();
-
-    });
-}
-
-
-
-
-
-
-
-
-
-
-//加入购物车请求
-$('#jrgwc .jrgwcbnt').on('touchend', function(){
-	$.ajax({
-		url: ajaxPath + '/cart/add',
-		type : 'POST',
-		dataType: 'json',
-		xhrFields: {withCredentials: true},
-	    crossDomain: true,
-		data : {"quantity" : 1, "p_id" : 123, "g_id" : 999},
-		success: function(data){
-			console.log(data)
-			var jrgwc = $('#jrgwc');
-			jrgwc.addClass('gmtc_show');
-			jrgwc.find('.shop_car_success').show();
-			setTimeout(function(){
-				jrgwc.find('.shop_car_success').hide();
-				setTimeout(function(){
-					closeDialog('jrgwc');
-				},250);
-			},2000);
-		},
-		error : function(){
-		  alert('加入购物车失败！');
-		}
-	}); 
-});
-
-//立即购买请求
-// $('#ljgm .ljgmbnt').on('touchend', function(){
-	
-// });
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 
 /********template部分********/
 
@@ -712,21 +419,12 @@ template.helper('getUserImage', function (imagelist) {
 //规格参数
 template.helper('wareSpecifications', function (obj) {
 	var result ='';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-	 console.log(obj)
->>>>>>> f9aba7e0b65262449af2f09a105bf06a9c9dbe98
->>>>>>> abf3471762f674642de5a6a09c8cd93b9bfd403a
 	 for(var i=0; i<obj.length; i++){
-	 	result +='<tr><td colspan="2"><strong>'+obj[i].p_name+'</strong></td></tr>';
+	 	result +='<tr><th colspan="2"><strong>'+obj[i].p_name+'</strong></th></tr>';
 	 	for(var j=0; j<obj[i].p_value.length; j++){
 	 		result += '<tr><td class="tdo">'+obj[i].p_value[j].pg_name+'</td><td>'+obj[i].p_value[j].pg_value+'</td></tr>'
 	 	}
 	 }
-	
-	
     return result; 
 });
 

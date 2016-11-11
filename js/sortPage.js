@@ -23,7 +23,7 @@ define(function (require) {
 			        $pageNavLi = $pageNavUl.find('li'),
 			        $pageNavA = $pageNavUl.find('a'),
 			        $pageNavI = $('.sort-page-nav i');
-			    if ($pageNavLi.length > 4) {
+			    if ($pageNavLi.length > 5) {
 			        $pageNavI.css('display','block');
 			    };
 			    // 改变顶部导航的宽度
@@ -40,11 +40,12 @@ define(function (require) {
 			            $pageNavUl.css('width',$pageNavLi.length*12.16+'rem');
 			        }
 			    });
-			    // 顶部导航选中效果
-			    $pageNavA.on('touchend',function(){
-			        var index = $pageNavA.index($(this));
-			        $pageNavA.removeClass('on').eq(index).addClass('on');
-			    });
+		        // 选择订单状态查询
+		    	$pageNavA.on('click',function(){
+		            if ($(this).hasClass('on')) return;
+		    	    var thisState = $(this).attr('data-state');
+		            FnSortState(thisState);
+		    	});
 
 			    // 商品排行选中效果
 			    $('.page-sort a').on('touchend',function(){
@@ -70,6 +71,10 @@ define(function (require) {
         	// 控制底部导航栏状态
         	$('.nav-box').show();
         	$('.nav-box li').removeClass('on').eq(1).addClass('on');
+        },
+        afteropen : function(){
+            // 订单状态
+            FnSortState(sortState);
         }
     }
 });

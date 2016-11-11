@@ -1,13 +1,12 @@
 define(function (require) {
-    var tpl = require('tpl/order_detail.html');
+    var tpl = require('tpl/success.html');
     return {
-        title: '订单详情',
+        title: '支付成功',
         body: tpl,
         init: function () {
-            console.log('done');
             // 显示隐藏返回顶部按钮
-            $backtotop = $('.order-details-wrap .backtotop');
-            $('.order-details-wrap .border-box').on('scroll',function(){
+            $backtotop = $('.success-wrap .backtotop');
+            $('.success-wrap .border-box').on('scroll',function(){
                 var scrollTop = $(this).scrollTop();
                 if (scrollTop > _h) {
                     $backtotop.show();
@@ -20,10 +19,10 @@ define(function (require) {
             });
         },
         beforeopen : function(){
-        	// 重置滚动条到顶部
-        	$('.order-details-wrap .border-box').scrollTop(0,0);
-        	// 控制底部导航栏状态
-        	$('.nav-box').hide();
+            // 重置滚动条到顶部
+            $('.success-wrap .border-box').scrollTop(0,0);
+            // 控制底部导航栏状态
+            $('.nav-box').hide();
         }
     }
 });
