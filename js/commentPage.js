@@ -57,6 +57,17 @@ define(function (require) {
 						$(this).addPicDiv(n);
 					});
 				});
+
+				// 选择评价星星
+				var $star = $('#comment-star a'),
+					starNum = 5;  // 星级
+				$star.on('touchend',function(){
+					starNum = $star.index($(this)) + 1;
+					$star.removeClass('on');
+					for (var i = 0; i < starNum; i++) {
+						$star.eq(i).addClass('on');
+					};
+				});
 			});
         },
         beforeopen : function(){

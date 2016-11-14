@@ -1,5 +1,6 @@
 .order-page-wrap{ background: #f6f6f6;}
 .order-page-wrap .border-box{ border: none;}
+.order-page-wrap .backtotop{ bottom: 4rem;}
 .order-page-wrap .order-page-nav{ position: absolute; top: 0; right: 0; z-index: 9; background: #fff; overflow: hidden;}
 .order-page-wrap .order-page-nav-cont{ height: 6rem; overflow-x: auto; overflow-y: hidden;}
 .order-page-wrap .order-page-nav::-webkit-scrollbar{ opacity: 0;}
@@ -49,7 +50,7 @@
 .vertical .order-page-wrap .title{ display: table; width: 100%; height: 6.7rem; margin-bottom: 1rem; background: #fff; overflow: hidden;}
 .vertical .order-page-wrap .title .title-cont{ display: table-cell; vertical-align: middle;}
 .vertical .order-page-wrap .title h2{ padding: 0 1rem; font-size: 1.5rem; color: #212b3e; line-height: 2.5rem;}
-.vertical .order-page-wrap .title span{ font-weight: bold;}
+.vertical .order-page-wrap .title span{ /*font-weight: bold;*/ color: #fb4c45;}
 .vertical .order-page-wrap .title p{ padding: 0 1rem; font-size: 1.2rem; color: #212b3e; line-height: 2rem;}
 .vertical .order-page-wrap .title p span{ color: #f72828;}
 .vertical .order-page-wrap .address{ margin-bottom: 1rem; padding-bottom: 1rem; background: #fff; overflow: hidden;}

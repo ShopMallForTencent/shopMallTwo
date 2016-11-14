@@ -16,7 +16,7 @@
 .vertical .shopping-cart-wrap .shopItem .choose:before,.vertical .shopping-cart-wrap .countAll .choose:before{width: 2.05rem;height: 2.05rem;position: absolute;left: 0;top:0;content:'';display: block;background: url(../images/myAddress/sprite.png) no-repeat;background-size: 20rem;background-position: -13.45rem 0;-webkit-transform: scale(0.85);}
 .vertical .shopping-cart-wrap .shopItem a.choose-sure,.vertical .shopping-cart-wrap .countAll a.choose-sure{width: 2rem;height: 2rem;border: none;}
 .vertical .shopping-cart-wrap .shopItem a.choose-sure:before,.vertical .shopping-cart-wrap .countAll a.choose-sure:before{ width: 2rem; height: 2rem; background-position: 0 0;}
-.vertical .shopping-cart-wrap .left{position:absolute;left:4rem;top:1rem;width: 9.15rem;height: 9.15rem;/*border:1px solid #c4c4c4;*/}
+.vertical .shopping-cart-wrap .left{position:absolute;left:4rem;top:1rem;width: 9.15rem;height: 9.15rem;border:1px solid #ddd;}
 .vertical .shopping-cart-wrap .right{}
 .vertical .shopping-cart-wrap .right .itemName{ height: 3.6rem; color: #1a1a1a;font-size: 1.2rem;line-height: 1.8rem;margin-bottom:0.4rem;padding-top: 0.1rem;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2; overflow: hidden;}
 .vertical .shopping-cart-wrap .right .itemColor{color: #a6a6a6;font-size: 1.1rem;line-height: 1.8rem;margin-bottom:1.1rem;}

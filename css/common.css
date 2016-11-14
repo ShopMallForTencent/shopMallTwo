@@ -97,9 +97,9 @@ table{border-collapse:collapse;border-spacing:0}
 .dialog-wrap .dialog-bg{ position: relative; width: 30rem; background: #fff; margin: 0 auto; padding: 4rem 1rem; border-radius: 0.6rem;}
 .dialog-wrap .close{ position: absolute; top: 0; right: 0; z-index: 9; padding: 0.4rem; font-size: 2.4rem; color: #212121; text-align: center; line-height: 2.0rem;}
 .dialog-wrap p{ padding: 1rem 0; font-size: 1.6rem; color: #212121; line-height: 2.6rem;}
-.dialog-wrap .btn-box{ padding-top: 2rem;}
-.dialog-wrap .btn-box a{ width: 10.8rem; height: 3.2rem; margin: 0 1rem; border: 1px solid #a4a4a4; border-radius: 0.4rem; font-size: 1.4rem; color: #212121; line-height: 3.2rem;}
-.dialog-wrap .btn-box a.cancel-btn{ background: #f0514b; border-color: #f0514b; color: #fff;}
+.dialog-wrap .pop-btn-box{ padding-top: 2rem;}
+.dialog-wrap .pop-btn-box a{ width: 10.8rem; height: 3.2rem; margin: 0 1rem; border: 1px solid #a4a4a4; border-radius: 0.4rem; font-size: 1.4rem; color: #212121; line-height: 3.2rem;}
+.dialog-wrap .pop-btn-box a.cancel-btn{ background: #f0514b; border-color: #f0514b; color: #fff;}
 
 /*公用*/
 .page-container-wrap{overflow:auto; height:100%; -webkit-overflow-scrolling:touch; background: #fff;}

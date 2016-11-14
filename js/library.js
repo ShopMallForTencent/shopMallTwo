@@ -58,7 +58,11 @@ function orderListsState(orderState) {
     // $navCont.scrollLeft(0);
     $cont.hide();
     if (orderState == 'all') {
-        $cont.show();
+        $cont.each(function(){
+            if($(this).attr('data-state') != 'sh'){
+                $(this).show();
+            }
+        });
     } else{
         $cont.each(function(){
             if ($(this).attr('data-state') == orderState) {
