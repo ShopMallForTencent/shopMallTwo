@@ -1,7 +1,7 @@
 .input-add-wrap{background:#f6f6f6;}
 .input-add-wrap .border-box{ border: none;}
 .vertical .input-add-wrap .border-box{ padding-bottom: 6.5rem;}
-.vertical .input-add-wrap .line{ position: relative; height: 2.5rem; line-height: 2.5rem; font-size: 1.3rem;color:#1a1a1a;padding: 1.25rem 0 1.25rem 8.8rem;border:1px solid #ddd;background: #fff;border-top:none;}
+.vertical .input-add-wrap .line{ position: relative; height: 2.5rem; line-height: 2.5rem; font-size: 1.3rem;color:#1a1a1a;padding: 1.25rem 0 1.25rem 8.8rem;border:1px solid #eaeaea;background: #fff;border-top:none;}
 .vertical .input-add-wrap .line span{ position: absolute; top: 50%; left: 1rem; display: block; height: 2.5rem; margin-top: -1.25rem;}
 .vertical .input-add-wrap .line input{ border: none; width: 27.6rem; height: 2.5rem; }
 .vertical .input-add-wrap .line1{ line-height: 2.5rem; font-size: 1.3rem;color:#1a1a1a;}

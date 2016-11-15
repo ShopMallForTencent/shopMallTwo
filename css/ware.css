@@ -31,7 +31,7 @@
 
 /*ware_nav*/
 .ware-wrap .ware_nav_body{ height: 4.5rem; background: #fff; line-height: 4.5rem;}
-.ware-wrap .ware_nav a{width: 12.5rem; text-align: center; border-bottom:1px solid #dfdfdf; font-size: 1.4rem; color: #1a1a1a;}
+.ware-wrap .ware_nav a{width: 12.5rem; text-align: center; border-bottom:1px solid #eaeaea; font-size: 1.4rem; color: #1a1a1a;}
 .ware-wrap .ware_nav .select{border-bottom-color: #fb4c45; color: #fb4c45;}
 
 /*discuss*/
@@ -79,7 +79,7 @@
 .ware-wrap .yh .lx6{display: none;}
 .ware-wrap .buy_nav .lx1 strong,
 .ware-wrap .buy_nav .lx2 strong{ position: absolute; display: block; top: 3.6rem; left: 0; width: 100%; font-size: 1rem; color: #494949; line-height: 1rem; text-align: center;}
-.ware-wrap .buy_nav .lx1 i{ display: block; position: absolute; top: 50%; margin-top: -1.5rem; left: 50%; margin-left: -1.1rem; width: 2.2rem; height:2.15rem; background: url('../images/ware/sp.png') no-repeat 0 -7.55rem; background-size: 8.35rem; text-indent: 0; font-size: 1rem; font-weight: normal; color: #5d5d5d; line-height: 6rem; pointer-events: none;}
+.ware-wrap .buy_nav .lx1 i{ display: block; position: absolute; top: 50%; margin-top: -1.3rem; left: 50%; margin-left: -0.9rem; width: 1.85rem; height:1.7rem; background: url('../images/sprites.png') no-repeat -30.15rem 0; background-size: 37.5rem; text-indent: 0; font-size: 1rem; font-weight: normal; color: #5d5d5d; line-height: 6rem; pointer-events: none;}
 .ware-wrap .buy_nav .lx2 i{ display: block; position: absolute; top: 50%; margin-top: -1.5rem; left: 50%; margin-left: -1.05rem; width: 2.1rem; height:1.9rem; background: url('../images/sprites.png') no-repeat -4.4rem 0rem; background-size: 37.5rem; text-indent: 0; font-size: 1rem; font-weight: normal; color: #5d5d5d; line-height: 6rem; pointer-events: none;}
 .ware-wrap .swiper-container .sp_idx{width: 2.5rem; height: 2.5rem; line-height: 2.5rem; font-size: 1.2rem; color: #fff; position: absolute; right: 2rem; bottom: 2rem; text-indent: 0;  border-radius: 100%; z-index: 1000; background: rgba(0,0,0,0.5); text-align: center;}
 
@@ -107,7 +107,7 @@
 .ware-wrap .gmtc .gmtc_main{width: 37.5rem; padding-bottom: 7rem; background: #fff; position: fixed; bottom: 0; left: 0; }
 .ware-wrap .gmtc .imgbox{width: 12rem; height: 12rem; position: absolute; left: 1.5rem; top: -3.3rem; border: 1px solid #d6d6d6; background: #fff;}
 .ware-wrap .gmtc .imgbox em{width: 10rem; margin: 0 auto; display: block; overflow: hidden;}
-.ware-wrap .gmtc .sp_price{padding-bottom: 11rem; border-bottom: 1px solid #ddd;}
+.ware-wrap .gmtc .sp_price{padding-bottom: 11rem; border-bottom: 1px solid #eaeaea;}
 .ware-wrap .gmtc .sp_price_text{width: 21.7rem; height: 9.85rem; float: right; font-weight: bold;}
 .ware-wrap .gmtc .sp_price_text .p1{font-size: 1.4rem; color: #1a1a1a; line-height: 2.2rem; padding: 1.6rem 0 1rem 0;}
 .ware-wrap .gmtc .sp_price_text .p2{font-size: 1.5rem; color: #fb4c45; line-height: 1.5rem;}

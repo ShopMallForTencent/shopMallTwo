@@ -8,14 +8,14 @@
                 {{if isAdmin}}
                     <div class="per-header">
                         <div class="per-cen ovh">
-                            <p class="per-pic ovh fl"><img src="{{bName.member.portrait}}" alt="{{bName.member.name}}"/></p>
+                            <p class="per-pic ovh fl"><img src="{{meInfo.member.portrait}}" alt="{{meInfo.member.name}}"/></p>
                             <p class="per-name-id ovh fl">
-                                <span class="pre-name">{{bName.member.name}}</span>
+                                <span class="pre-name">{{meInfo.member.name}}</span>
                                 <span class="pre-id">ID:</span>
                             </p>
                         </div>
                     </div>
-                    <div class="per-box per-order ovh">
+                    <div class="per-box per-order border-line-bot ovh">
                         <!-- <a class="order-name pr" href="#tpl/order"> -->
                         <a class="order-name pr" href="#tpl/order" onclick="getOrderState('all')">
                             <i class="sp pa">{{if total > 0}}<b>{{if total > 99}}99+{{else}}total{{/if}}</b>{{/if}}</i><span class="order-left">我的订单</span>
@@ -25,21 +25,21 @@
                     <div class="per-box pre-order-list">
                         <div class="list-box">
                             <ul>
-                                <li><a href="#tpl/order" onclick="getOrderState('dfk')"><span class="payment per-sp">{{if bName.order.dfk > 0}}<i>{{if bName.order.dfk > 99}}99+{{else}}bName.order.dfk{{/if}}</i>{{/if}}</span>待付款</a></li>
-                                <li><a href="#tpl/order" onclick="getOrderState('dfh')"><span class="delivery-send per-sp">{{if bName.order.dfh > 0}}<i>{{if bName.order.dfh > 99}}99+{{else}}bName.order.dfh{{/if}}</i>{{/if}}</span>待发货</a></li>
-                                <li><a href="#tpl/order" onclick="getOrderState('dsh')"><span class="delivery-take per-sp">{{if bName.order.dsh > 0}}<i>{{if bName.order.dsh > 99}}99+{{else}}bName.order.dsh{{/if}}</i>{{/if}}</span>待收货</a></li>
-                                <li><a href="#tpl/order" onclick="getOrderState('dpj')"><span class="evaluate per-sp">{{if bName.order.dpj > 0}}<i>{{if bName.order.dpj > 99}}99+{{else}}bName.order.dpj{{/if}}</i>{{/if}}</span>待评价</a></li>
-                                <li><a href="#tpl/order" onclick="getOrderState('sh')"><span class="service per-sp">{{if bName.order.sh > 0}}<i>{{if bName.order.sh > 99}}99+{{else}}bName.order.sh{{/if}}</i>{{/if}}</span>售后</a></li> 
+                                <li><a href="#tpl/order" onclick="getOrderState('dfk')"><span class="payment sp">{{if meInfo.order.dfk > 0}}<i>{{if meInfo.order.dfk > 99}}99+{{else}}{{meInfo.order.dfk}}{{/if}}</i>{{/if}}</span>待付款</a></li>
+                                <li><a href="#tpl/order" onclick="getOrderState('dfh')"><span class="delivery-send sp">{{if meInfo.order.dfh > 0}}<i>{{if meInfo.order.dfh > 99}}99+{{else}}{{meInfo.order.dfh}}{{/if}}</i>{{/if}}</span>待发货</a></li>
+                                <li><a href="#tpl/order" onclick="getOrderState('dsh')"><span class="delivery-take sp">{{if meInfo.order.dsh > 0}}<i>{{if meInfo.order.dsh > 99}}99+{{else}}{{meInfo.order.dsh}}{{/if}}</i>{{/if}}</span>待收货</a></li>
+                                <li><a href="#tpl/order" onclick="getOrderState('dpj')"><span class="evaluate sp">{{if meInfo.order.dpj > 0}}<i>{{if meInfo.order.dpj > 99}}99+{{else}}{{meInfo.order.dpj}}{{/if}}</i>{{/if}}</span>待评价</a></li>
+                                <li><a href="#tpl/order" onclick="getOrderState('sh')"><span class="service sp">{{if meInfo.order.sh > 0}}<i>{{if meInfo.order.sh > 99}}99+{{else}}{{meInfo.order.sh}}{{/if}}</i>{{/if}}</span>售后</a></li> 
                             </ul>
                         </div>
                     </div>
-                    <div class="per-box pre-msg">
+                    <div class="per-box pre-msg border-line-bot">
                         <a class="order-name pr" href="#tpl/chatting">
-                            <i class="sp pa"></i><span class="order-left">消息中心{{if bName.msg > 0}}<b>{{if bName.msg > 99}}99+{{else}}bName.msg{{/if}}</b>{{/if}}</span>
+                            <i class="sp pa"></i><span class="order-left">消息中心{{if meInfo.msg > 0}}<b>{{if meInfo.msg > 99}}99+{{else}}meInfo.msg{{/if}}</b>{{/if}}</span>
                             <span class="fr right-ico"><b class="per-sp"></b></span>
                         </a>
                     </div>
-                    <div class="per-box pre-add">
+                    <div class="per-box pre-add border-line-bot">
                         <a class="order-name pr" href="#tpl/address">
                             <i class="sp pa"></i><span class="order-left">收货地址管理</span>
                             <span class="fr right-ico"><b class="per-sp"></b></span>

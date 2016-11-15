@@ -10,8 +10,6 @@
                     <li class="pr fl"><a href="javascript:;" class="pa db" data-state="dfh">待发货</a></li>
                     <li class="pr fl"><a href="javascript:;" class="pa db" data-state="dsh">待收货</a></li>
                     <li class="pr fl"><a href="javascript:;" class="pa db" data-state="dpj">待评价</a></li>
-                    <li class="pr fl"><a href="javascript:;" class="pa db" data-state="ygb">已关闭</a></li>
-                    <li class="pr fl"><a href="javascript:;" class="pa db" data-state="ywc">已完成</a></li>
                     <li class="pr fl"><a href="javascript:;" class="pa db" data-state="sh">售后</a></li>
                 </ul>
             </div>
@@ -59,7 +57,7 @@
                         <div class="btn-box clearfix">
                             <p class="fr txc">
                                 <a href="#tpl/chatSystem" class="fl">咨询客服</a>
-                                <a href="javascript:;" class="fl cancellation">取消订单</a>
+                                <a href="javascript:showPop('cancel-order');" class="fl cancellation">取消订单</a>
                                 <a href="#tpl/orderConfirm" class="fl red">去支付</a>
                             </p>
                         </div>
@@ -198,7 +196,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cont" data-state="sh">
+                <div class="cont" data-state="sh" style="display:none">
                     <div class="hd pr">
                         <h2>
                             <img src="images/store-icon-1.png" alt="icon">
@@ -246,7 +244,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cont" data-state="sh">
+                <div class="cont" data-state="sh" style="display:none">
                     <div class="hd pr">
                         <h2>
                             <img src="images/store-icon-1.png" alt="icon">
@@ -292,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cont" data-state="sh">
+                <div class="cont" data-state="sh" style="display:none">
                     <div class="hd pr">
                         <h2>
                             <img src="images/store-icon-1.png" alt="icon">
@@ -334,13 +332,13 @@
                         </div>
                         <div class="btn-box clearfix">
                             <p class="fr txc">
-                                <a href="#tpl/refund" class="fl">查看详情</a>
+                                <a href="javascript:showPop('cancel-refund');" class="fl">取消退款</a>
                                 <a href="javascript:;" class="fl red">取消退款</a>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="cont" data-state="ywc">
+                <div class="cont" data-state="all">
                     <div class="hd pr">
                         <h2>
                             <img src="images/store-icon-1.png" alt="icon">
@@ -386,7 +384,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cont" data-state="ygb">
+                <div class="cont" data-state="all">
                     <div class="hd pr">
                         <h2>
                             <img src="images/store-icon-1.png" alt="icon">
@@ -433,6 +431,34 @@
                     </div>
                 </div>
             </script>
+        </div>
+        <!-- 取消订单 -->
+        <div class="pop pop-dialog" id="cancel-order">
+            <div class="dialog-wrap">
+                <div class="dialog-cont">
+                    <div class="dialog-bg">
+                        <p class="txc">您确定取消订单吗？</p>
+                        <div class="pop-btn-box txc">
+                            <a href="javascript:;" class="dil confirm-btn">取消订单</a>
+                            <a href="javascript:hidePop('cancel-order');" class="dil cancel-btn">点错了</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 取消退款 -->
+        <div class="pop pop-dialog" id="cancel-refund">
+            <div class="dialog-wrap">
+                <div class="dialog-cont">
+                    <div class="dialog-bg">
+                        <p class="txc">您确定取消退款吗？</p>
+                        <div class="pop-btn-box txc">
+                            <a href="javascript:;" class="dil confirm-btn">取消退款</a>
+                            <a href="javascript:hidePop('cancel-refund');" class="dil cancel-btn">点错了</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

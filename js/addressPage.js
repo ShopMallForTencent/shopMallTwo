@@ -74,7 +74,7 @@ define(function (require) {
                           user_address.html('<div class="tips txc"><img src="images/myAddress/adress-icon.png" alt="没有收货地址"><p>当前还没有地址，赶紧添加地址吧！</p></div>')
                          }
                     });
-
+                    return false;
                     // console.log($(self).parents('#myAdd').find('.myAdd').length)
                 });
 

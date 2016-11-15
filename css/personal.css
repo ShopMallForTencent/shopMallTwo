@@ -14,7 +14,7 @@
 .vertical .personal-wrap .per-cen .per-name-id{padding: 1.5rem 0 0 1.2rem; color: #fff;}
 .vertical .personal-wrap .per-cen .pre-name{font-size: 1.5rem; /*font-weight: bold;*/ display: block}
 .vertical .personal-wrap .per-cen .pre-id{font-size: 1.2rem;  display: block}
-.vertical .personal-wrap .per-box{width: 37.5rem; height: 4.5rem;border-top: 1px solid #ddd;/* border-bottom: 1px solid #dfdfdf;*/ background: #fff;}
+.vertical .personal-wrap .per-box{ position: relative; width: 37.5rem; height: 4.5rem;/* border-top: 1px solid #eaeaea;*/ background: #fff;}
 .vertical .personal-wrap .pre-order-list{margin-bottom: 1rem}
 .vertical .personal-wrap .per-order .order-name{line-height: 4.5rem; font-size: 1.4rem; color: #1a1a1a; display: block; width: 100%; height: 100%;}
 .vertical .personal-wrap .per-order b{display: none}
@@ -22,20 +22,18 @@
 .vertical .personal-wrap .order-name i{width: 1.4rem; height: 1.7rem; display: inline-block; background-position: -24.2rem 0; top: 50%; margin-top: -0.85rem; left: 1rem;}
 .vertical .personal-wrap .right-ico{padding-right: 1rem; color: #a7a7a7; font-size: 1.3rem;}
 .vertical .personal-wrap .right-ico b{width: 0.8rem; height: 1.1rem; display: inline-block; background-position: -13.4rem 0; margin-left: 0.3rem}
-.vertical .personal-wrap .per-order,
-.vertical .personal-wrap .pre-msg{border: none;}
-.vertical .personal-wrap .pre-order-list{height: auto;border-color: #eaeaea;}
+.vertical .personal-wrap .pre-order-list{height: auto;}
 .vertical .personal-wrap .pre-order-list .list-box{margin: 0 auto; padding: 1.8rem 0 1rem; width: 34.5rem;}
 .vertical .personal-wrap .pre-order-list ul{width: 36rem;}
 .vertical .personal-wrap .pre-order-list ul li{float: left; width: 6.4rem; margin-right: 0.5rem; margin-bottom: 1rem; text-align: center; font-size: 1.2rem; /*font-weight: bold;*/ }
 .vertical .personal-wrap .pre-order-list ul li a{width: 100%; height: 100%; display: block; padding-top: 1rem; color: #494949;}
 .vertical .personal-wrap .pre-order-list ul li span{display: block; height: 1.95rem; margin: 0 auto 1rem; position: relative}
-.vertical .personal-wrap .pre-order-list ul li span i{position: absolute; color: #ffffff; font-size: 0.8rem;  line-height: 1.6rem; text-align: center; background: #f0514b; border-radius: 100%; font-style: normal; display: block; right: -0.8rem; top: -0.6rem; padding: 0.1rem; width: 1.6rem; height: 1.6rem;}
-.vertical .personal-wrap .pre-order-list li .payment{width: 2.25rem; background-position: 0 -2.3rem;}
-.vertical .personal-wrap .pre-order-list li .delivery-send{width: 2.2rem; background-position: -2.8rem -2.3rem;}
-.vertical .personal-wrap .pre-order-list li .delivery-take{width: 2.5rem; background-position: -5.5rem -2.3rem;}
-.vertical .personal-wrap .pre-order-list li .evaluate{width: 1.9rem; background-position: -8.35rem -2.3rem;}
-.vertical .personal-wrap .pre-order-list li .service{width: 2.15rem; background-position: -10.8rem -2.3rem;}
+.vertical .personal-wrap .pre-order-list ul li span i{position: absolute; color: #fff; font-size: 0.8rem; line-height: 1.4rem; text-align: center; background: #f0514b; border-radius: 100%; font-style: normal; display: block; right: -0.8rem; top: -0.6rem; padding: 0.1rem; width: 1.4rem; height: 1.4rem;}
+.vertical .personal-wrap .pre-order-list li .payment{ width: 2.3rem; background-position: -25rem -2rem;}
+.vertical .personal-wrap .pre-order-list li .delivery-send{width: 2.2rem; background-position: -27.4rem -2rem;}
+.vertical .personal-wrap .pre-order-list li .delivery-take{width: 2.4rem; background-position: -29.7rem -2rem;}
+.vertical .personal-wrap .pre-order-list li .evaluate{width: 2rem; background-position: -32.2rem -2rem;}
+.vertical .personal-wrap .pre-order-list li .service{width: 1.8rem; background-position: -34.3rem -2rem;}
 .vertical .personal-wrap .pre-msg,.vertical .personal-wrap .pre-add{border-bottom: none; line-height:4.5rem }
 .vertical .personal-wrap .pre-pro{line-height:4.5rem }
 .vertical .personal-wrap .pre-msg a,.vertical .personal-wrap .pre-add a,.vertical .personal-wrap .pre-pro a,.vertical .help-wrap .service-list a,.vertical .personal-wrap .fun-int a{width: 100%; height: 100%; display: block; font-size: 1.2rem}
@@ -46,7 +44,7 @@
 
 /*problem*/
 .help-wrap{ background: #f6f6f6;}
-.vertical .help-wrap .per-box{ height: 4.5rem; background: #fff; border-bottom: 1px solid #ddd; line-height:4.5rem;}
+.vertical .help-wrap .per-box{ height: 4.5rem; background: #fff; border-bottom: 1px solid #eaeaea; line-height:4.5rem;}
 .vertical .help-wrap .per-box:last-child{ border-bottom: none;}
 .vertical .help-wrap .per-box a{ display: block; padding-left: 3.5rem; font-size: 1.5rem; color: #1a1a1a;}
 .vertical .help-wrap .per-box a i{ top: 50%; left: 1rem; width: 1.45rem; height: 1.45rem; margin-top: -0.725rem;}
@@ -56,7 +54,7 @@
 /*service*/
 .service-wrap{ background: #f6f6f6;}
 .vertical .service-wrap .service-box{padding: 1rem; background: #fff;}
-.vertical .service-wrap .service-box ul li{width: 100%; padding-bottom: 1.2rem; overflow: hidden; border-bottom: 1px solid #ddd; margin-bottom: 1.6rem}
+.vertical .service-wrap .service-box ul li{width: 100%; padding-bottom: 1.2rem; overflow: hidden; border-bottom: 1px solid #eaeaea; margin-bottom: 1.6rem}
 .vertical .service-wrap .service-box ul li:last-child{ margin-bottom: 0; border-bottom: none;}
 .vertical .service-wrap .service-box li .service-title{ width: 100%; padding: 0.4rem 0; color: #1a1a1a; font-size: 1.3rem; line-height: 2.2rem; font-weight: bold;}
 .vertical .service-wrap .service-box li .service-txt{width: 100%; color: #6e6e6e; font-size: 1.1rem; line-height: 1.8rem;}
@@ -64,7 +62,7 @@
 
 
 /*level-problem*/
-.level .help-wrap .per-box{width: 58.9rem; height: 4.5rem;  border: 1px solid #dfdfdf; border-top: none; background: #ffffff; margin: 0 auto;}
+.level .help-wrap .per-box{width: 58.9rem; height: 4.5rem;  border: 1px solid #eaeaea; border-top: none; background: #ffffff; margin: 0 auto;}
 .level .help-wrap .per-box .order-name{line-height: 4.5rem; font-size: 1.2rem;  color: #212b3e; display: block; width: 100%; height: 100%;}
 .level .help-wrap .service-list .order-name i{ width: 1.45rem; height: 1.45rem; background-position: -6.2rem -5.3rem; top: 50%; margin-top: -0.725rem; left: 1.5rem}
 .level .help-wrap .fun-int .order-name i{ width: 1.45rem; height: 1.45rem; background-position: -7.9rem -5.2rem; top: 50%; margin-top: -0.725rem; left: 1.5rem}
@@ -89,7 +87,7 @@
 .level .personal-wrap .per-cen .pre-name{font-size: 1.7rem;/* font-weight: bold; */display: block}
 .level .personal-wrap .per-cen .pre-id{font-size: 1.2rem;  display: block}
 .level .personal-wrap .per-order .right-ico{display: none}
-.level .personal-wrap .per-order{width: 10rem; height: 9.65rem; border-top: 1px solid #dfdfdf; position: absolute; top: 13.55rem; left: 1rem; z-index: 5}
+.level .personal-wrap .per-order{width: 10rem; height: 9.65rem; border-top: 1px solid #eaeaea; position: absolute; top: 13.55rem; left: 1rem; z-index: 5}
 
 .level .personal-wrap .order-name .order-left{margin-left: 3.6rem;/* font-weight: bold;*/}
 .level .personal-wrap .order-name i{width: 1.45rem; height: 1.55rem; display: inline-block; background-position: 0 0; top: 50%; margin-top: -0.725rem; left: 1rem;}
@@ -105,7 +103,7 @@
 .level .personal-wrap .pre-add .order-name i{ width: 1.8rem; height: 2rem; background-position: -2rem -5rem; margin-top: -0.9rem}
 .level .personal-wrap .pre-pro .order-name i{ width: 2rem; height: 2rem; background-position: -3.8rem -5rem; margin-top: -0.9rem}
 .level .personal-wrap .pre-order-list{width: 31.4rem; height: 19.8rem; position: absolute; top: 13.55rem; left: 1rem; background: none; border: none;}
-.level .personal-wrap .pre-order-list  li{width: 10rem; height: 9.65rem; border: 1px solid #dfdfdf; position: absolute; background: #ffffff; text-align: center; font-size: 1.2rem;/* font-weight: bold;*/ line-height: 12.5rem}
+.level .personal-wrap .pre-order-list  li{width: 10rem; height: 9.65rem; border: 1px solid #eaeaea; position: absolute; background: #ffffff; text-align: center; font-size: 1.2rem;/* font-weight: bold;*/ line-height: 12.5rem}
 .level .personal-wrap .pre-order-list  li a{width: 100%; height: 100%; display: block;}
 .level .personal-wrap .pre-order-list  li:nth-child(1){top:0; left: 10.6rem; }
 .level .personal-wrap .pre-order-list  li:nth-child(2){top:0; right: 0; }
@@ -119,5 +117,5 @@
 .level .personal-wrap .pre-order-list ul li .delivery-take{background-position: -9rem -7.5rem; width: 2.8rem}
 .level .personal-wrap .pre-order-list ul li .evaluate{background-position: -12rem -7.5rem; width: 2.8rem}
 .level .personal-wrap .pre-order-list ul li .service{background-position: -14.8rem -7.4rem; width: 2.8rem}
-.level .personal-wrap .pre-add{margin-top: 0.45rem; border-top: 1px solid #dfdfdf;}
+.level .personal-wrap .pre-add{margin-top: 0.45rem; border-top: 1px solid #eaeaea;}
 .level .personal-wrap .pre-msg .order-left b{ color: #ffffff; font-size: 1rem;  line-height: 1.5rem; text-align: center; background: #f0514b; border-radius: 100%; font-style: normal; display: inline-block;  padding: 0.2rem 0; min-width: 1.8rem; margin-left: 0.5rem; position: absolute; top: 50%; margin-top: -0.9rem}

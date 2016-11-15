@@ -23,7 +23,6 @@ define(function (require) {
             $('.refund-wrap .border-box').scrollTop(0,0);
             // 控制底部导航栏状态
             $('.nav-box').hide();
-           
         }
     }
 });

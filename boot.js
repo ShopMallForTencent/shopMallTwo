@@ -250,7 +250,7 @@ var refund = {
 }
 
 // 支付成功
-var refund = {
+var success = {
   route: 'tpl/success',
   classname: 'success',
   animate: 'slideInLeft',
