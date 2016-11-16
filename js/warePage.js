@@ -9,14 +9,31 @@
         body: tpl,
         init: function () {
 
-            // 显示隐藏返回顶部按钮
-            $backtotop = $('.ware-wrap .backtotop');
+            // 显示隐藏返回顶部按钮和吸顶
+            var ware_nav_body = $('#ware_nav_body');
+            var ware_nav = $('#ware_nav_body .ware_nav');
+            var $backtotop = $('.ware-wrap .backtotop');
             $('.ware-wrap .border-box').on('scroll',function(){
                 var scrollTop = $(this).scrollTop();
                 if (scrollTop > _h) {
                     $backtotop.show();
                 } else{
                     $backtotop.hide();
+                }
+
+                if (ware_nav_body.get(0).getBoundingClientRect().top <= 0) {
+                    ware_nav.css({
+                        'position':'fixed',
+                        'top' : 0,
+                        'right' : 0,
+                        'z-index':999
+                    });
+                }
+                else
+                {
+                    ware_nav.css({
+                        'position':'static'
+                    });
                 }
             });
             $backtotop.on('click',function(){
@@ -30,9 +47,6 @@
 
             });
 
-            var ware_nav_body = $('#ware_nav_body');
-            var ware_nav = $('#ware_nav_body .ware_nav');
-
              //商品介绍、规格参数、买家评论脚本
              new lcf_tab().init({  
                     'parent' : 'ware_nav',  
@@ -42,25 +56,6 @@
                     'bnt3' : 'select,noselect,user_pj',  
                     'event' : 'touchend'  
               });
-
-              document.getElementById('page-container-wrap').onscroll = function(){
-
-                    var y = document.documentElement.scrollTop || document.body.scrollTop;
-
-                    if (ware_nav_body.get(0).getBoundingClientRect().top <= 0) {
-                        ware_nav.css({
-                            'position':'fixed',
-                            'top' : 0,
-                            'right' : 0
-                        });
-                    }
-                    else
-                    {
-                        ware_nav.css({
-                            'position':'static'
-                        });
-                    }
-            }  
 
             function textBox(id)
             {
@@ -100,6 +95,8 @@
             }
         },
         beforeopen : function(){
+            // 重置滚动条到顶部
+            $('.ware-wrap .border-box').scrollTop(0,0);
             // 控制底部导航栏状态
             $('.nav-box').hide();
         },

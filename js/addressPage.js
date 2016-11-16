@@ -7,12 +7,22 @@ define(function (require) {
         title: '地址管理',
         body: tpl,
         init: function () {
-
+          if ($('#myAdd .addevent')) {
+              $('#myAdd .myAdd').removeClass('on');
+              $('#myAdd .addevent').each(function(){
+                if ($(this).attr('rid') == addRid) {
+                  $(this).parent().addClass('on');
+                };
+              })
+          };
         },
 
         beforeopen : function()
         {
-            btnKey()
+            btnKey();
+          
+
+
             console.log(addBtnKey)
             // 重置滚动条到顶部
             $('.my-address-wrap .border-box').scrollTop(0,0);
@@ -84,7 +94,7 @@ define(function (require) {
                     if($setDefault.eq(i).attr('def')==1){
                       $setDefault.eq(i).find("i").removeClass("icon-setDefault").addClass("icon-right");
                       $setDefault.eq(i).find("i").parent().find("span").text("默认地址");
-                      $setDefault.eq(i).parents(".myAdd").insertBefore($(".myAdd").eq(0))
+                      $setDefault.eq(i).parents(".myAdd").insertBefore($(".myAdd").eq(0));
                     }
                 }
 

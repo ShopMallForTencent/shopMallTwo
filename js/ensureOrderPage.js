@@ -15,42 +15,52 @@ define(function (require) {
             $('.goPay').on('touchend',function(){
                 console.log( Ec_Socket.dir )
                 var luj ;
-                if(Ec_Socket.dir==='购物车')
-                {
-                    luj="c"
-                }
-                else
-                {
-                    luj="p"
-                }
+                var dataRet;
+                var proNum;
+                
                 var proArr = [];
                 bid=$('.shopList').attr('bid');
                 rid=$('.addBox').attr('rid');
+                if(rid==null){
+                    showTips({
+                        'type':false,
+                        'text':"没有收货地址",
+                        'time':2000
+                    });
+                    return;
+                }
                 
                 $('.itemList').each(function(i){
-                    proArr[i] = {};
-                    proArr[i]['p_id'] = $(this).attr('pid');
-                    proArr[i]['quantity'] = $(this).attr('qty');
+                    //proArr[i] = {};
+                    proArr[i]= $(this).attr('pid');
+                    proNum= $(this).attr('qty');
                 })
-                var pro = JSON.stringify(proArr)
-                // console.log(JSON.stringify(proArr))
-                console.log("来自于"+luj+","+"rid:"+rid+","+"bid:"+bid+","+"products:"+pro)
-                
+                var pro = proArr.join(",")
+                if(Ec_Socket.dir=="c"){
+                //console.log("进来了")
+                    //luj="c"
+                    dataRet = {"r_id":rid,"b_id":bid,"p_ids":pro,"from":"c"}
+                    //console.log("我传的参数r_id:"+rid+","+"b_id:"+bid+","+"p_ids:"+pro+","+"from:c")
+                }
+                else if(Ec_Socket.dir=='p'){
+                    dataRet = {"r_id":rid,"b_id":bid,"p_id":pro,"quantity":proNum,"from":"p"}
+                    //console.log("我传的参数r_id:"+rid+","+"b_id:"+bid+","+"p_id:"+pro+","+"quantity:"+proNum+","+"from:p")
+                }else{
+                    //这里是订单进来支付的接口(目前没有o_id接口)
+                   dataRet = {"r_id":rid,"o_id":pro,"from":"o"}
+                   //console.log("我传的参数r_id:"+rid+","+"o_id:"+pro+","+"from:o")
+                }
+
+                // console.log(dataRet)
                 $.ajax({
                     url: ajaxPath + '/order/toPay',
                     type : 'POST',
                     dataType: 'json',
                     xhrFields: {withCredentials: true},
                     crossDomain: true,
-                    data : 
-                    {
-                        "r_id":rid,
-                         "b_id":bid,
-                         "products":pro,
-                         "from":luj
-                    },
+                    data : dataRet,
                     success: function(data){
-                        console.log(data.result + '?????????????');
+                        console.log("data.ret:"+data.ret);
                         console.log("appid:"+data.result.appid);
                         console.log("url_params:"+data.result.url_params);
                         console.log("openid:"+data.result.openid);
@@ -66,7 +76,7 @@ define(function (require) {
                         {
                             showTips({
                                 'type':false,
-                                'text':'没有收货地址！',
+                                'text':data.ret,
                                 'time':2000
                             });
                         }    

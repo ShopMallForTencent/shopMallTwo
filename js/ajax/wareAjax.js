@@ -356,6 +356,7 @@ function ljgm(data)
 				},
 				success: function(dt){
 					console.log(dt.result[0].receiver)
+					Ec_Socket.dir = 'p';
 					Ew_Socket.data = {
 						"quantity" : parseInt($('#ljgm .text_box').html()),
 						 "p_id" : p_id, 

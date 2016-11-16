@@ -281,7 +281,8 @@ $doc.trigger('spa:route', [
       inputAddPage,
       commentPage,
       information,
-      refund
+      refund,
+      success
   ])
 
 // demo:侧边栏菜单

@@ -25,14 +25,16 @@
 .ware-wrap .ware_price .lx3, .ware-wrap .ware_price .lx4{float: right; font-size: 1.2rem; line-height: 3.2rem;}
 .ware-wrap .ware_price .lx3{ margin-right: 1.5rem;}
 .ware-wrap .swiper-container{height: 25rem; overflow: hidden; position: relative;}
-.ware-wrap .swiper-slide{ height: 25rem !important; float: left; }
+.ware-wrap .swiper-slide{ height: 25rem !important; float: left; overflow: hidden;}
 .ware-wrap .swiper-slide img{display: block; width: 100%;}
 .ware-wrap .swiper-wrapper{position: relative;}
 
 /*ware_nav*/
 .ware-wrap .ware_nav_body{ height: 4.5rem; background: #fff; line-height: 4.5rem;}
-.ware-wrap .ware_nav a{width: 12.5rem; text-align: center; border-bottom:1px solid #eaeaea; font-size: 1.4rem; color: #1a1a1a;}
-.ware-wrap .ware_nav .select{border-bottom-color: #fb4c45; color: #fb4c45;}
+.ware-wrap .ware_nav{ background: #fff;}
+.ware-wrap .ware_nav a{width: 12.5rem; text-align: center;/* border-bottom:1px solid #eaeaea;*/ font-size: 1.4rem; color: #1a1a1a;}
+.ware-wrap .ware_nav .select{ color: #fb4c45;}
+.ware-wrap .ware_nav .select:before{border-bottom-color: #fb4c45;}
 
 /*discuss*/
 .ware-wrap .discuss_pj{ height: 4.4rem; line-height: 4.4rem; padding: 0 1rem; margin-bottom: 1rem; background: #fff;}
@@ -40,7 +42,7 @@
 .ware-wrap .discuss_pj dt, .ware-wrap .discuss_pj dd{float: left; display: inline;}
 .ware-wrap .discuss_pj dd{float: right; padding-right: 0.5rem;}
 .ware-wrap .discuss_pj dt{font-size: 1.2rem; color: #a6a6a6;}
-.ware-wrap .discuss_pj dt strong{ font-size: 1.5rem;}
+.ware-wrap .discuss_pj dt strong{ font-size: 1.3rem;}
 .ware-wrap .discuss_pj dd span{font-size: 1.3rem; color: #1a1a1a; padding-right: 0.5rem;}
 .ware-wrap .starlilst .star{width: 1.35rem; height: 1.3rem; }
 .ware-wrap .starlilst .hui{background-position: 0 0;}
@@ -48,29 +50,30 @@
 
 /*user_pj*/
 .ware-wrap .user{ margin-bottom: 1rem; background: #fff;}
-.ware-wrap .user_pj{padding-bottom: 5rem;}
+/*.ware-wrap .user_pj{padding-bottom: 5rem;}*/
 .ware-wrap .user_buy_data{height: 4.7rem; line-height: 4.7rem; font-size: 1.5rem; padding: 0 1rem;}
 .ware-wrap .user_buy_data li{ height: 100%;}
-.ware-wrap .user_buy_data img{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block; width: 100%; margin: auto;}
-.ware-wrap .user_buy_data .lx1 span{ position: absolute; top: 50%; left: 0; width: 2.7rem; height: 2.7rem; display: block; margin-top: -1.35rem; border-radius: 100%; overflow: hidden;}
+.ware-wrap .user_buy_data img{/* position: absolute; top: 0; right: 0; bottom: 0; left: 0; display: block; width: 100%; margin: auto;*/}
+.ware-wrap .user_buy_data .lx1 span{ position: absolute; top: 50%; left: 0; width: 2.7rem; height: 2.7rem; display: block; margin-top: -1.35rem; border-radius: 100% !important; overflow: hidden;}
 .ware-wrap .user_buy_data .lx1{ position: relative; width: 2.7rem; margin-right: 1rem;}
 .ware-wrap .user_buy_data .lx2{ font-size: 1.4rem; color: #1a1a1a;}
 .ware-wrap .user_buy_data .lx3{font-size: 1.2rem; color: #a6a6a6;}
-.ware-wrap .user_main{width: 35.5rem; padding-top: 1rem; margin: 0 auto; border-top: 1px solid #e5e5e5; }
+.ware-wrap .user_main{width: 35.5rem; padding-top: 1rem; margin: 0 auto;}
 .ware-wrap .pj{padding-top: 1rem; font-size: 1.2rem; color: #1a1a1a; line-height: 1.8rem;}
 .ware-wrap .user_main ol{padding-top: 1rem; overflow: hidden;}
-.ware-wrap .user_main ol li{width: 10rem; margin: 0 0.5rem 0.5rem 0;}
+.ware-wrap .user_main ol li{ position: relative; width: 10rem;/* height: 10rem;*/ margin: 0 0.5rem 0.5rem 0;}
+.ware-wrap .user_main ol li:before{ position: absolute; top: 0; left: 0; content: ''; width: 200%; height: 200%; box-sizing: border-box; border: 1px solid #eaeaea; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0;}
 .ware-wrap .buydata{height: 4rem; line-height: 4rem; font-size: 1.2rem; color: #a6a6a6;}
 
 /*buy_nav*/
 .ware-wrap .buy_nav{ width: 37.5rem; height: 5.4rem; position: absolute; bottom: 0; left: 0; z-index: 9;}
 .ware-wrap .buy_nav li{ height: 5.4rem; line-height: 5.4rem; text-align: center; position: relative;}
-.ware-wrap .buy_nav .lx3, .ware-wrap .buy_nav .lx4{font-size: 1.7rem; font-weight: bold; width: 10.9rem;} 
+.ware-wrap .buy_nav .lx3, .ware-wrap .buy_nav .lx4{font-size: 1.7rem; width: 10.9rem;} 
 .ware-wrap .buy_nav .lx1, .ware-wrap .buy_nav .lx2{width: 7.85rem;}
-.ware-wrap .buy_nav .lx5{width: 21.8rem; background: #8b8b8b; font-size: 1.6rem; font-weight: bold;}
-.ware-wrap .buy_nav .lx6{width: 21.8rem; background: #8b8b8b; font-size: 1.6rem; font-weight: bold;}
 .ware-wrap .buy_nav .lx3{background: #ff8a3c;}
 .ware-wrap .buy_nav .lx4{background: #f0514b;}
+.ware-wrap .buy_nav .lx5,
+.ware-wrap .buy_nav .lx6{width: 21.8rem; background: #8b8b8b; font-size: 1.6rem;}
 .ware-wrap .buy_nav a{ position: relative; display: block; color: #fff; width: 100%; height: 100%; overflow: hidden;}
 .ware-wrap .buy_nav .lx1,.ware-wrap .buy_nav .lx2{background: #fff;}
 .ware-wrap .buy_nav li span{ z-index: 999; display: block; width: 1.2rem; height: 1.2rem; line-height: 1.2rem; border-radius: 100%; text-align: center; background: #f0514b; border: 1px solid #fff; position: absolute; top:1rem; right: 2rem; color: #fff; text-indent: 0; font-size: 0.8rem;}
@@ -95,7 +98,9 @@
 .ware-wrap .ggcs .not{ font-size: 1.2rem; color: #a6a6a6; line-height: 13.6rem;}
 
 /*spxq*/
-.ware-wrap .spxq li{width: 37.5rem; margin-bottom: 0.5rem;}
+.ware-wrap .spxq ul{ padding: 1rem 0; background: #fff;}
+.ware-wrap .spxq li{ width: 35.5rem; margin-bottom: 0.5rem; padding: 0 1rem; font-size: 1.2rem; color: #1a1a1a; line-height: 2.2rem;}
+.ware-wrap .spxq .not-explain{ font-size: 1.2rem; color: #a6a6a6; line-height: 12rem;}
 
 /*gmtc*/
 .ware-wrap .ware_sp_list{clear: both;}
@@ -107,31 +112,41 @@
 .ware-wrap .gmtc .gmtc_main{width: 37.5rem; padding-bottom: 7rem; background: #fff; position: fixed; bottom: 0; left: 0; }
 .ware-wrap .gmtc .imgbox{width: 12rem; height: 12rem; position: absolute; left: 1.5rem; top: -3.3rem; border: 1px solid #d6d6d6; background: #fff;}
 .ware-wrap .gmtc .imgbox em{width: 10rem; margin: 0 auto; display: block; overflow: hidden;}
-.ware-wrap .gmtc .sp_price{padding-bottom: 11rem; border-bottom: 1px solid #eaeaea;}
-.ware-wrap .gmtc .sp_price_text{width: 21.7rem; height: 9.85rem; float: right; font-weight: bold;}
-.ware-wrap .gmtc .sp_price_text .p1{font-size: 1.4rem; color: #1a1a1a; line-height: 2.2rem; padding: 1.6rem 0 1rem 0;}
-.ware-wrap .gmtc .sp_price_text .p2{font-size: 1.5rem; color: #fb4c45; line-height: 1.5rem;}
-.ware-wrap .gmtc .sp_color{clear: both;/* height: 27rem;*/ padding-bottom: 1rem; overflow: auto;}
+.ware-wrap .gmtc .sp_price{padding-bottom: 11rem;}
+.ware-wrap .gmtc .sp_price_text{width: 21.7rem; height: 9.85rem; float: right;}
+.ware-wrap .gmtc .sp_price_text .p1{ height: 4.4rem; font-size: 1.4rem; color: #1a1a1a; line-height: 2.2rem; margin-bottom: 1rem; padding: 1.6rem 3rem 0 0; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
+.ware-wrap .gmtc .sp_price_text .p2{font-size: 1.7rem; color: #fb4c45; line-height: 1.5rem;}
+.ware-wrap .gmtc .sp_color{clear: both;/* height: 27rem;*/ margin-bottom: 1rem; padding: 1rem 0; overflow: auto;}
 .ware-wrap .gmtc .sp_color h2{height:3.2rem; line-height: 3.2rem; font-size: 1.3rem; color: #6e6e6e; padding: 0.3rem 0 0 1.6rem; }
 .ware-wrap .gmtc .sp_color_bnt a{display: block; height: 2.7rem; line-height: 2.7rem; font-size: 1.0rem; text-align: center; float: left; border-radius: 0.25rem; margin: 0 0 0.5rem 1.6rem;  }
-.ware-wrap .gmtc .sp_color_bnt .have{ border: 1px solid #c1c2c4; color: #000; }
-.ware-wrap .gmtc .sp_color_bnt .no{ background: #dbdbdb; border: 1px solid #9baab5; color: #fff; cursor: default;}
+.ware-wrap .gmtc .sp_color_bnt .have{ position: relative;/* border: 1px solid #c1c2c4;*/ color: #000;}
+.ware-wrap .gmtc .sp_color_bnt .have:before{ position: absolute; top: 0; left: 0; content: ''; box-sizing: border-box; width: 200%; height: 200%;  border: 1px solid #c1c2c4; -webkit-transform: scale(0.5); -webkit-transform-origin: left top;}
+.ware-wrap .gmtc .sp_color_bnt .no{ background: #dbdbdb; color: #fff; cursor: default;}
 .ware-wrap .gmtc .sp_color_bnt .small{padding: 0.2rem 0.8rem;}
 .ware-wrap .gmtc .sp_color_bnt .center{width: 15.8rem;}
 .ware-wrap .gmtc .sp_color_bnt .big{width: 24.5rem;}
 .ware-wrap .gmtc .sp_val{padding-left: 1.65rem;}
-.ware-wrap .gmtc .sp_val .jzq{ float: right; padding-right: 1.6rem; font-size: 1.3rem; color: #1a1a1a; line-height: 2.8rem;}
+.ware-wrap .gmtc .sp_val .jzq{ float: right; margin-right: 1.6rem; font-size: 1.3rem; color: #1a1a1a; line-height: 2.8rem;}
 .ware-wrap .gmtc .sp_val p{ font-size: 1.3rem; color: #6e6e6e; line-height: 2.8rem;}
-.ware-wrap .gmtc .sp_val span{ float: left; text-align: center; font-size: 1.6rem; height: 2.7rem; line-height: 2.7rem; border: 1px solid #d6d6d6;}
-.ware-wrap .gmtc .sp_val .min, .ware-wrap .gmtc .sp_val .add{width: 2.7rem; background: #fff; cursor: pointer; font-size: 2.8rem; line-height: 2.2rem; color: #1a1a1a; font-weight: normal;}
-.ware-wrap .gmtc .sp_val .min{ font-size: 3.4rem; line-height: 1.9rem;}
+
+/*.vertical .shopping-cart-wrap .right .actNum{ position: absolute; bottom:1.2rem; right:1rem; color: #212b3e; font-size: 1.44rem;text-align: center;}
+.vertical .shopping-cart-wrap .right .actNum p{ border-top:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6;}
+.vertical .shopping-cart-wrap .right .actNum a{ box-sizing: border-box; border: 1px solid #d6d6d6; border-top: none; border-bottom: none; width: 2.35rem;height: 2.4rem;float: left; font-size: 2.6rem;color: #212b3e;line-height: 2.4rem;}
+.vertical .shopping-cart-wrap .right .actNum a.plus{ font-size: 2.0rem; line-height: 2.2rem;}
+.vertical .shopping-cart-wrap .right .actNum span{ box-sizing: border-box; float: left;width: 5.35rem; height: 2.4rem;text-align: center;line-height: 2.6rem;}*/
+
+.ware-wrap .gmtc .sp_val .jzq div{ border-top:1px solid #d6d6d6; border-bottom:1px solid #d6d6d6; color: #212b3e; font-size: 1.44rem;text-align: center;}
+/*.ware-wrap .gmtc .sp_val span{ float: left; text-align: center; font-size: 1.6rem; height: 2.7rem; line-height: 2.7rem;}*/
+.ware-wrap .gmtc .sp_val .jzq span{ box-sizing: border-box; float: left; width: 5.35rem; height: 2.4rem; text-align: center;line-height: 2.6rem;}
+.ware-wrap .gmtc .sp_val .jzq .min, .ware-wrap .gmtc .sp_val .jzq .add{ border: 1px solid #d6d6d6; border-top: none; border-bottom: none; width: 2.35rem;height: 2.4rem; font-size: 2.6rem; color: #212b3e;line-height: 2.4rem;}
+.ware-wrap .gmtc .sp_val .jzq .add{ font-size: 2.0rem; line-height: 2.2rem;}
 .ware-wrap .gmtc .sp_val .text_box{width: 5.4rem;}
-.ware-wrap .gmtc .sp_val .jzq strong{ float: left; height: 2.7rem; margin-left: 1.2rem; line-height: 3.4rem;}
+.ware-wrap .gmtc .sp_val .jzq strong{ float: left; height: 2.7rem; margin-right: 1.2rem; line-height: 3.4rem;}
 .ware-wrap .gmtc .ljgmbnt{display: block; width: 100%; height: 5rem; line-height: 5rem; text-align: center; background: #f0514b; font-size: 1.6rem; color: #fff; position: absolute; bottom: 0;}
 .ware-wrap .gmtc .jrgwcbnt{ background: #ff8a3c;}
 .ware-wrap .jrgwc .shop_car_success{position: absolute; top: 50%; left: 50%; display: block; width: 15rem; margin-left: -7.5rem; margin-top: -5rem; z-index: 9998; display: none;}
-.ware-wrap .gmtc .close{position: absolute; right: 1rem; top: 0; font-size: 3rem; color: #afb0b1;}
-.ware-wrap #ljgm .select,.ware-wrap #jrgwc .select{ background: #f0514b; border-color: #f0514b; color: #fff;}
+.ware-wrap .gmtc .close{position: absolute; right: 1rem; top: 0; z-index: 99; font-size: 3rem; color: #afb0b1;}
+.ware-wrap #ljgm .select,.ware-wrap #jrgwc .select{ background: #f0514b; color: #fff;}
 @-webkit-keyframes tc_bgshow 
 {
 	0%{ background: rgba(0,0,0,0); }

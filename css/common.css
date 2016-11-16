@@ -85,8 +85,10 @@ table{border-collapse:collapse;border-spacing:0}
 .level .backtotop{ bottom: 4rem;}
 
 /*0.5px线条*/
+.border-line,
 .border-line-top,
 .border-line-bot{ position: relative;}
+.border-line:before{ position: absolute; top: 0; left: 0; content: ''; width: 200%; height: 200%; box-sizing: border-box; border: 1px solid #eaeaea; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0;}
 .border-line-top:before,
 .border-line-bot:before{ position: absolute; left: 0; content: ''; width: 100%; -webkit-transform: scaleY(0.5); -webkit-transform-origin: 0 0;}
 .border-line-top:before{ top: 0; border-top: 1px solid #eaeaea;}

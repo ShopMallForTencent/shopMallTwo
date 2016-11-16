@@ -27,13 +27,13 @@
                <script id="warelist_art" type="text/html">  
                 {{if true}}   
                     <div class="shopList" bid={{msg[0].b_id}}>
-                        <h2 class="shopName">
+                        <h2 class="shopName border-line-bot">
                             <img src="images/store-icon-1.png" alt="icon">
                             <span>{{msg[0].b_name}}</span>
                         </h2>
                         {{each msg[0].product as value index}}  
                         <div class="itemList clearfix" pid={{msg[0].product[index].id}} qty={{msg[0].product[index].quantity}}>
-                            <div class="img-box"><img src={{msg[0].product[index].image}} alt="pic" class="left" /></div>
+                            <div class="img-box border-line"><img src={{msg[0].product[index].image}} alt="pic" class="left" /></div>
                             <div class="right">
                                 <p class="listName">{{msg[0].product[index].introduction}}</p>
                                 <p class="alreadySale">已售 <span>{{msg[0].product[index].stock}}</span> 笔</p>
@@ -51,7 +51,7 @@
                  {{/if}}  
                 </script> 
             </div>
-            <div class="countFee clearfix" id='countFee'>
+            <div class="countFee border-line-top clearfix" id='countFee'>
                 <script id="countFee_art" type="text/html">  
                 {{if msg[0].product.length}}  
                     <p class="itemFee clearfix">
@@ -69,8 +69,8 @@
                 {{/if}}  
                 </script>
             </div>
-            <a href="javascript:;" class="goPay">立即支付</a>
         </div>
+        <a href="javascript:;" class="goPay">立即支付</a>
     </div>
     <div class="pop pop-tips" id="noaddress">
         <div class="pop-tips-cont">
