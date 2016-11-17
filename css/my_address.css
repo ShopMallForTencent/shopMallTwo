@@ -7,7 +7,7 @@
 .vertical .my-address-wrap .wrap{padding-bottom: 6rem;;}
 .vertical .my-address-wrap .myAdd{ margin-bottom: 1rem; padding-left: 1rem; background: #fff; cursor: pointer;}
 .vertical .my-address-wrap .myAdd:last-child{ margin-bottom: 0;}
-.vertical .my-address-wrap .myAdd .userNameTel{font-size: 1.5rem;font-weight: bold;color:#1a1a1a; line-height: 4.5rem; padding: 0.3rem 1rem 0 0;}
+.vertical .my-address-wrap .myAdd .userNameTel{font-size: 1.5rem;color:#1a1a1a; line-height: 4.5rem; padding: 0.3rem 1rem 0 0;}
 .my-address-wrap .addevent{ position: relative; display: block;}
 .my-address-wrap .myAdd.on .addevent{ padding-left: 3.8rem;}
 .my-address-wrap .myAdd.on .addevent:before{ position: absolute; top: 50%; left: 0.6rem; content: ''; width: 1.05rem; height: 0.8rem; margin-top: -0.4rem; background: url(../images/sprites.png) no-repeat -22.8rem -2rem; background-size: 37.5rem;}
@@ -16,19 +16,20 @@
 .vertical .my-address-wrap .border-box{ border-width: 6.2rem;}
 .vertical .my-address-wrap .myAdd .userNameTel .uTel{margin-left:2.35rem;}
 .vertical .my-address-wrap .myAdd .addDetail{ padding-bottom: 2rem; color: #6e6e6e;font-size: 1.2rem; line-height: 1.6rem;}
-.vertical .my-address-wrap .myAdd .default{line-height: 4.4rem;font-size: 0;color: #848689;border-top:1px solid #eaeaea;}
-.vertical .my-address-wrap .myAdd .default i{ position: relative; display: inline-block; width: 1.9rem; height: 1.9rem; background: #fff; border: 1px solid #727272; border-radius: 100%; margin-right:0.9rem;line-height: 4.4rem;vertical-align:middle;}
-.vertical .my-address-wrap .myAdd .default .icon-right:before{ position: absolute; top: 50%; left: 50%; content: ''; width: 0.8rem; height: 0.8rem; margin: -0.4rem 0 0 -0.4rem; border-radius: 50%; background: #6e6e6e;}
+.vertical .my-address-wrap .myAdd .default{line-height: 4.4rem;font-size: 0;color: #848689;}
+.vertical .my-address-wrap .myAdd .default .setThisAdd i{ position: relative; display: inline-block; width: 1.6rem; height: 1.6rem; background: #fff; border: 1px solid #727272; border-radius: 100%; margin-right:0.9rem;line-height: 4.4rem;vertical-align:middle;}
+.vertical .my-address-wrap .myAdd .default .icon-right:before{ position: absolute; top: 50%; left: 50%; content: ''; width: 0.6rem; height: 0.6rem; margin: -0.3rem 0 0 -0.3rem; border-radius: 50%; background: #6e6e6e;}
 .vertical .my-address-wrap .myAdd .default .left{float: left;color: #1a1a1a;font-size: 1.2rem; line-height: 4.4rem;}
+.vertical .my-address-wrap .myAdd .default .left span{ display: inline-block; vertical-align: middle;}
 .vertical .my-address-wrap .myAdd .default .edit{float: right;margin-left:1.75rem;font-size: 1.2rem;margin-right:1rem;}
 .vertical .my-address-wrap .myAdd .default .delete{float: right;font-size: 1.2rem;}
 .vertical .my-address-wrap .icon-right{background-position: 0 0;width: 2.05rem;height: 2.1rem;}
-.vertical .my-address-wrap .icon-edit{background-position: -4.9rem 0;width: 1.3rem;height: 1.4rem;}
-.vertical .my-address-wrap .icon-delete{background-position: -6.7rem 0;width: 1.35rem;height: 1.4rem;}
+.vertical .my-address-wrap .icon-edit{ display: inline-block; margin-right: 0.4rem; line-height: 4.25rem;vertical-align: middle; background-position: -4.9rem 0;width: 1.3rem;height: 1.4rem;}
+.vertical .my-address-wrap .icon-delete{ display: inline-block; margin-right: 0.4rem; line-height: 4.25rem;vertical-align: middle; background-position: -6.7rem 0;width: 1.35rem;height: 1.4rem;}
 .my-address-wrap .tc-succSave{width:24.5rem ;height: 7.3rem;background: rgba(0,0,0,0.65);padding-top:2.35rem;border-radius: 0.4rem;}
 .my-address-wrap .tc-succSave .icon-succ{display:block;width: 2.3rem;height: 2.3rem;background-position: -2.3rem 0;margin:0 auto;}
 .my-address-wrap .tc-succSave .word{font-size: 1.5rem;color:#fff;text-align: center;margin-top:0.9rem;}
-.vertical .my-address-wrap .newAdd{display: block;width: 35.5rem;height: 4.5rem;background: #f0514b;border-radius: 0.25rem;position: fixed;bottom:0.85rem;left:50%;margin-left: -17.75rem;text-align: center;line-height: 4.5rem;font-size: 1.6rem;color: #fff;}
+.vertical .my-address-wrap .newAdd{display: block;width: 35.5rem;height: 4.5rem;background: #f0514b;border-radius: 0.25rem;position: absolute;bottom:0.85rem;left:50%; z-index: 9; margin-left: -17.75rem;text-align: center;line-height: 4.5rem;font-size: 1.6rem;color: #fff;}
 .vertical .my-address-wrap .newAdd i{background-position: -8.3rem 0;width: 1.5rem;height: 1.8rem;display: inline-block;vertical-align:middle;line-height: 4.5rem;margin-right:0.8rem;}
 /*html,body{ height:100%}
 .black{display:none;_position:absolute;position:fixed;top:0;left:0;width: 100%;height: 100%;background: black;opacity: 0.5;filter: alpha(opacity=50);z-index: 10;}*/

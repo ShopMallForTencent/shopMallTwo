@@ -9,7 +9,7 @@
 .vertical .refund-wrap .title p{ padding: 0 1rem; font-size: 1.2rem; color: #212b3e; line-height: 2rem;}
 .vertical .refund-wrap .cartSort{margin-bottom: 1rem;background: #fff;}
 .vertical .refund-wrap .cs{margin-top:0.5rem;}
-.vertical .refund-wrap .shopName{ border-bottom:1px solid #eaeaea;height: 4.3rem; margin-bottom: 2rem; padding: 0 1rem;position: relative;}
+.vertical .refund-wrap .shopName{ height: 4.3rem; margin-bottom: 2rem; padding: 0 1rem;position: relative;}
 .vertical .refund-wrap .shopName h2{ font-size: 1.4rem; color: #1a1a1a; line-height: 4.3rem;}
 .vertical .refund-wrap .shopName img{ width: auto; height: 1.5rem; margin-right: 1rem; vertical-align: middle;}
 
@@ -25,7 +25,7 @@
 .vertical .refund-wrap .right .fee{color: #fb4c45;font-size: 1.5rem;line-height: 1.7rem;}
 .vertical .refund-wrap .right .fee span{/*font-size: 1.2rem;*/}
 .vertical .refund-wrap .right .remain{position: absolute;top:6.20rem;right:1rem;color: #f0514b;font-size: 1rem;}
-.vertical .refund-wrap .countAll{ width: 32.5rem; height: 3.6rem; margin: 0 auto; line-height: 3.6rem;font-size: 1.2rem;color:#1a1a1a;position: relative;padding-left:3rem;border-bottom:1px solid #eaeaea;}
+.vertical .refund-wrap .countAll{ width: 32.5rem; height: 3.6rem; margin: 0 auto; line-height: 3.6rem;font-size: 1.2rem;color:#1a1a1a;position: relative;padding-left:3rem;}
 .vertical .refund-wrap .countAll .choose{top: 0.8rem;left:0;}
 
 .vertical .refund-wrap .countAll .total{ position: absolute;top:0;right: 1rem; text-align: right;}
@@ -35,9 +35,9 @@
 .vertical .refund-wrap .countAll .total .refund-money{ font-size: 1.4rem;}
 .vertical .refund-wrap .countAll .total .refund-money b{ margin-left: 0.3rem; color: #fb4c45;}
 .vertical .refund-wrap .countAll .total .refund-money span{ font-size: 1.5rem; color: #fb4c45;}
-.vertical .refund-wrap .order-num{ padding: 1rem; background: #fff; border-bottom: 1px solid #eaeaea; font-size: 1.2rem; color: #6e6e6e; line-height: 2.2rem;}
+.vertical .refund-wrap .order-num{ padding: 1rem; background: #fff; font-size: 1.2rem; color: #6e6e6e; line-height: 2.2rem;}
 .vertical .refund-wrap .order-num .see-btn{ position: absolute; top: 50%; right: 1rem; width: 8.7rem; height: 3.12rem; margin-top: -1.56rem; border: 1px solid #6e6e6e; border-radius: 0.4rem; font-size: 1.2rem; color: #1a1a1a; line-height: 3.12rem;}
-.vertical .refund-wrap .reason{ width: 35.5rem; margin: 0 auto; padding: 2rem 0; background: #fff; border-bottom: 1px solid #eaeaea; font-size: 1.3rem; color: #1a1a1a; line-height: 2.5rem;}
+.vertical .refund-wrap .reason{ width: 35.5rem; margin: 0 auto; padding: 2rem 0; background: #fff; font-size: 1.3rem; color: #1a1a1a; line-height: 2.5rem;}
 .vertical .refund-wrap .reason select{ box-sizing: border-box; width: 15rem; height: 2.5rem; margin-left: 1rem; padding: 0 0.5rem; border: 1px solid #d6d6d6; font-size: 1.3rem; color: #000; line-height: 2.5rem;}
 .vertical .refund-wrap .btn-box{ padding: 1.5rem 1rem; background: #fff;}
 .vertical .refund-wrap .btn-box a{ width: 8.7rem; height: 3.12rem; margin-right: 1rem; border: 1px solid #d6d6d6; border-radius: 0.4rem; font-size: 1.2rem; color: #1a1a1a; line-height: 3.12rem;}

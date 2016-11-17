@@ -8,7 +8,7 @@
 .level .ware-wrap .border-box{ border-left: none;}
 
 /*下拉加载提示*/
-.tips{ padding: 1.8rem 0 2rem; font-size: 1.2rem; color: #9baab5; line-height: 1.2rem;}
+.tips{ padding: 1.8rem 0 2rem; background: #fff; font-size: 1.2rem; color: #9baab5; line-height: 1.2rem;}
 
 /*ware*/
 .ware-wrap .ware{ margin-bottom: 1rem;}
@@ -37,8 +37,8 @@
 .ware-wrap .ware_nav .select:before{border-bottom-color: #fb4c45;}
 
 /*discuss*/
-.ware-wrap .discuss_pj{ height: 4.4rem; line-height: 4.4rem; padding: 0 1rem; margin-bottom: 1rem; background: #fff;}
-.ware-wrap .discuss_pj dl{overflow: hidden; font-size: 1.5rem; clear: both; }
+.ware-wrap .discuss_pj{ height: 4.4rem; line-height: 4.4rem; margin-bottom: 1rem; background: #fff;}
+.ware-wrap .discuss_pj dl{ padding: 0 1rem;overflow: hidden; font-size: 1.5rem; clear: both; }
 .ware-wrap .discuss_pj dt, .ware-wrap .discuss_pj dd{float: left; display: inline;}
 .ware-wrap .discuss_pj dd{float: right; padding-right: 0.5rem;}
 .ware-wrap .discuss_pj dt{font-size: 1.2rem; color: #a6a6a6;}
@@ -118,9 +118,9 @@
 .ware-wrap .gmtc .sp_price_text .p2{font-size: 1.7rem; color: #fb4c45; line-height: 1.5rem;}
 .ware-wrap .gmtc .sp_color{clear: both;/* height: 27rem;*/ margin-bottom: 1rem; padding: 1rem 0; overflow: auto;}
 .ware-wrap .gmtc .sp_color h2{height:3.2rem; line-height: 3.2rem; font-size: 1.3rem; color: #6e6e6e; padding: 0.3rem 0 0 1.6rem; }
-.ware-wrap .gmtc .sp_color_bnt a{display: block; height: 2.7rem; line-height: 2.7rem; font-size: 1.0rem; text-align: center; float: left; border-radius: 0.25rem; margin: 0 0 0.5rem 1.6rem;  }
+.ware-wrap .gmtc .sp_color_bnt a{display: block; height: 2.7rem; line-height: 2.9rem; font-size: 1.0rem; text-align: center; float: left; border-radius: 0.25rem; margin: 0 0 0.5rem 1.6rem;}
 .ware-wrap .gmtc .sp_color_bnt .have{ position: relative;/* border: 1px solid #c1c2c4;*/ color: #000;}
-.ware-wrap .gmtc .sp_color_bnt .have:before{ position: absolute; top: 0; left: 0; content: ''; box-sizing: border-box; width: 200%; height: 200%;  border: 1px solid #c1c2c4; -webkit-transform: scale(0.5); -webkit-transform-origin: left top;}
+.ware-wrap .gmtc .sp_color_bnt .have:before{ position: absolute; top: 0; left: 0; content: ''; box-sizing: border-box; width: 200%; height: 200%;  border: 1px solid #c1c2c4; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0;}
 .ware-wrap .gmtc .sp_color_bnt .no{ background: #dbdbdb; color: #fff; cursor: default;}
 .ware-wrap .gmtc .sp_color_bnt .small{padding: 0.2rem 0.8rem;}
 .ware-wrap .gmtc .sp_color_bnt .center{width: 15.8rem;}
@@ -141,12 +141,16 @@
 .ware-wrap .gmtc .sp_val .jzq .min, .ware-wrap .gmtc .sp_val .jzq .add{ border: 1px solid #d6d6d6; border-top: none; border-bottom: none; width: 2.35rem;height: 2.4rem; font-size: 2.6rem; color: #212b3e;line-height: 2.4rem;}
 .ware-wrap .gmtc .sp_val .jzq .add{ font-size: 2.0rem; line-height: 2.2rem;}
 .ware-wrap .gmtc .sp_val .text_box{width: 5.4rem;}
-.ware-wrap .gmtc .sp_val .jzq strong{ float: left; height: 2.7rem; margin-right: 1.2rem; line-height: 3.4rem;}
+.ware-wrap .gmtc .sp_val .jzq strong{ float: left; height: 2.7rem; margin-right: 1.2rem; line-height: 2.8rem;}
 .ware-wrap .gmtc .ljgmbnt{display: block; width: 100%; height: 5rem; line-height: 5rem; text-align: center; background: #f0514b; font-size: 1.6rem; color: #fff; position: absolute; bottom: 0;}
 .ware-wrap .gmtc .jrgwcbnt{ background: #ff8a3c;}
 .ware-wrap .jrgwc .shop_car_success{position: absolute; top: 50%; left: 50%; display: block; width: 15rem; margin-left: -7.5rem; margin-top: -5rem; z-index: 9998; display: none;}
 .ware-wrap .gmtc .close{position: absolute; right: 1rem; top: 0; z-index: 99; font-size: 3rem; color: #afb0b1;}
 .ware-wrap #ljgm .select,.ware-wrap #jrgwc .select{ background: #f0514b; color: #fff;}
+.ware-wrap #ljgm .select:before,
+.ware-wrap #jrgwc .select:before,
+.ware-wrap #ljgm .no:before,
+.ware-wrap #jrgwc .no:before{ display: none;}
 @-webkit-keyframes tc_bgshow 
 {
 	0%{ background: rgba(0,0,0,0); }

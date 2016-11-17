@@ -7,22 +7,12 @@ define(function (require) {
         title: '地址管理',
         body: tpl,
         init: function () {
-          if ($('#myAdd .addevent')) {
-              $('#myAdd .myAdd').removeClass('on');
-              $('#myAdd .addevent').each(function(){
-                if ($(this).attr('rid') == addRid) {
-                  $(this).parent().addClass('on');
-                };
-              })
-          };
+          
         },
 
         beforeopen : function()
         {
             btnKey();
-          
-
-
             console.log(addBtnKey)
             // 重置滚动条到顶部
             $('.my-address-wrap .border-box').scrollTop(0,0);
@@ -155,6 +145,16 @@ define(function (require) {
 
 
             });
+        },
+        afteropen: function(){
+          if ($('#myAdd .addevent')) {
+              $('#myAdd .myAdd').removeClass('on');
+              $('#myAdd .addevent').each(function(){
+                if ($(this).attr('rid') == addRid) {
+                  $(this).parent().addClass('on');
+                };
+              })
+          };
         },
         afterclose:function(){
            addBtnKey=false;

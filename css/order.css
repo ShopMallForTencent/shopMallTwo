@@ -13,6 +13,7 @@
 .vertical .order-page-wrap .page-main{ padding-top: 0;}
 .vertical .order-page-wrap .order-page-nav{ width: 100%; height: 4.4rem;}
 .vertical .order-page-wrap .cont{ margin-bottom: 1rem;}
+/*.vertical .order-page-wrap .cont:last-child{ margin-bottom: 0;}*/
 .vertical .order-page-wrap .page-main .cont{ margin-bottom: 0; border-bottom: none;}
 .vertical .order-page-wrap .cont .hd,
 .vertical .order-page-wrap .cont .bd{ padding: 0 1rem; background: #fff;}
@@ -32,21 +33,26 @@
 .vertical .order-page-wrap .lists .sales{ display: none;}
 .vertical .order-page-wrap .lists .refund-txt{ position: absolute; top: 6.2rem; left: 10.8rem; font-size: 1rem; color: #fb4c45; line-height: 1rem;}
 .vertical .order-page-wrap .lists .num{ position: absolute; right: 0; bottom: 1rem; font-size: 1.2rem; color: #a6a6a6; line-height: 1.2rem;}
+.vertical .order-page-wrap .lists .see-details{ top: 4.475rem; right: 0; z-index: 9; padding: 0.3rem 0.4rem 0.2rem; border-radius: 0.5; font-size: 1rem; color: #f0514b; -webkit-tap-highlight-color: rgba(0,0,0,0.1);}
+.vertical .order-page-wrap .lists .see-details:before{ position: absolute; top: 0; left: 0; content: ''; width: 200%; height: 200%; box-sizing: border-box; border: 1px solid #f0514b; border-radius: 0.5; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0;}
 .vertical .order-page-wrap .details{ height: 2.6rem;}
 .vertical .order-page-wrap .details .cost{ position: absolute; top: 0; right: 0; font-size: 1.4rem; color: #1a1a1a; line-height: 1.4rem;}
 .vertical .order-page-wrap .details .cost p{ position: relative; float: left; margin-left: 0.5rem; text-align: right;}
 .vertical .order-page-wrap .details .cost .fare{ margin-left: 0; font-size: 1.0rem; line-height: 1.8rem;}
 .vertical .order-page-wrap .details .cost .fare b{ font-size: 0.8rem;}
-.vertical .order-page-wrap .details .cost strong{ font-size: 1.2rem; font-weight: bold; color: #f0514b;}
-.vertical .order-page-wrap .details .cost .paid b{ font-size: 1rem;}
+.vertical .order-page-wrap .details .cost strong{ font-size: 1.4rem; color: #f0514b;}
+.vertical .order-page-wrap .details .cost .paid b{ font-size: 1.1rem;}
 .vertical .order-page-wrap .details .cost .txt{ position: absolute; top: 0; left: 0;}
-.vertical .order-page-wrap .logistics{ padding: 1rem 0; border-bottom: 1px solid #eaeaea;}
+.vertical .order-page-wrap .logistics{ padding: 1rem 0; }
 .vertical .order-page-wrap .logistics p{ font-size: 1.2rem; color: #6e6e6e; line-height: 2.1rem;}
-.vertical .order-page-wrap .logistics a{ position: absolute; top: 50%; right: 0; width: 8.7rem; height: 3.12rem; margin-top: -1.56rem; border: 1px solid #6e6e6e; border-radius: 0.4rem; font-size: 1.2rem; color: #1a1a1a; line-height: 3.26rem;}
+.vertical .order-page-wrap .logistics a{ position: absolute; top: 50%; right: 0; width: 8.7rem; height: 3.12rem; margin-top: -1.56rem; border-radius: 0.4rem; font-size: 1.2rem; color: #1a1a1a; line-height: 3.26rem;}
+.vertical .order-page-wrap .logistics a:before{ position: absolute; top: 0; left: 0; content: ''; width: 200%; height: 200%; box-sizing: border-box; border: 1px solid #d6d6d6; border-radius: 0.4rem; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0;}
 .vertical .order-page-wrap .btn-box{ padding: 1.5rem 0;}
-.vertical .order-page-wrap .btn-box a{ width: 8.7rem; height: 3.12rem; margin-right: 1rem; border: 1px solid #d6d6d6; border-radius: 0.4rem; font-size: 1.2rem; color: #1a1a1a; line-height: 3.26rem;}
+.vertical .order-page-wrap .btn-box a{ position: relative; width: 8.7rem; height: 3.12rem; margin-right: 1rem; border-radius: 0.4rem; font-size: 1.2rem; color: #1a1a1a; line-height: 3.26rem;}
+.vertical .order-page-wrap .btn-box a:before{ position: absolute; top: 0; left: 0; content: ''; width: 200%; height: 200%; box-sizing: border-box; border: 1px solid #d6d6d6; border-radius: 0.4rem; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0;}
 .vertical .order-page-wrap .btn-box a:last-child{ margin-right: 0;}
-.vertical .order-page-wrap .btn-box a.red{ background: #fb4c45; border-color: #fb4c45; color: #fff;}
+.vertical .order-page-wrap .btn-box a.red{ background: #fb4c45; color: #fff;}
+.vertical .order-page-wrap .btn-box a.red:before{ border-color: #fb4c45;}
 .vertical .order-page-wrap .title{ display: table; width: 100%; height: 6.7rem; margin-bottom: 1rem; background: #fff; overflow: hidden;}
 .vertical .order-page-wrap .title .title-cont{ display: table-cell; vertical-align: middle;}
 .vertical .order-page-wrap .title h2{ padding: 0 1rem; font-size: 1.5rem; color: #212b3e; line-height: 2.5rem;}
@@ -58,13 +64,13 @@
 .vertical .order-page-wrap .address .user-info strong{ margin-right: 2.8rem; font-size: 1.5rem; font-weight: bold;}
 .vertical .order-page-wrap .address .add{ width: 32rem; padding-left: 3.2rem; font-size: 1.2rem; color: #6e6e6e; line-height: 1.6rem;}
 .vertical .order-page-wrap .address .add i{ top: 50%; left: 1rem; width: 1.2rem; height: 1.5rem; margin-top: -0.75rem; background-position: -8.8rem -2rem;}
-.vertical .order-page-wrap .page-main .price-info{ margin-bottom: 1rem; padding: 0 1rem 1rem; background: #fff; border-bottom: 1px solid #eaeaea; font-size: 1.4rem; color: #818181; text-align: right; line-height: 2.5rem;}
+.vertical .order-page-wrap .page-main .price-info{ margin-bottom: 1rem; padding: 0 1rem 1rem; background: #fff; font-size: 1.4rem; color: #818181; text-align: right; line-height: 2.5rem;}
 .vertical .order-page-wrap .page-main .price-info p:last-child{ color: #212b3e;}
 .vertical .order-page-wrap .page-main .price-info em{ position: absolute; top: 0; left: 0;}
 /*.vertical .order-page-wrap .page-main .price-info span{ color: #f0514b;}*/
 .vertical .order-page-wrap .page-main .price-info b{ font-size: 1.05rem;}
 .vertical .order-page-wrap .page-main .price-info strong{ font-weight: bold; color: #f0514b;}
-.vertical .order-page-wrap .page-main .order-num{ padding: 0.8rem 1rem; background: #fff; border-bottom: 1px solid #eaeaea; font-size: 1.4rem; color: #818181; line-height: 2.5rem;}
+.vertical .order-page-wrap .page-main .order-num{ padding: 0.8rem 1rem; background: #fff; font-size: 1.4rem; color: #818181; line-height: 2.5rem;}
 .vertical .order-page-wrap .page-main .logistics{ margin: 1rem 0; padding: 1rem; background: #fff;}
 .vertical .order-page-wrap .page-main .logistics a{ right: 1rem;}
 .vertical .order-details-wrap .border-box{ border-bottom: 6.12rem solid rgba(255,255,255,0);}
@@ -93,7 +99,7 @@
 .level .order-page-wrap .cont .state{ position: absolute; top: 0; right: 1rem; font-size: 1.3rem; color: #212b3e; line-height: 3.3rem;}
 .level .order-page-wrap .cont .explain{ height: 3.3rem; border-bottom: 1px solid #eee; font-size: 1.1rem; color: #212b3e; line-height: 3.3rem;}
 .level .order-page-wrap .cont .explain span{ color: #f72828;}
-.level .order-page-wrap .lists li{ height: 6.9rem; padding: 0.5rem 0 0.5rem 8rem; border-bottom: 1px solid #eee;}
+.level .order-page-wrap .lists li{ height: 6.9rem; padding: 0.5rem 0 0.5rem 8rem;}
 .level .order-page-wrap .lists .img-box{ position: absolute; top: 0.5rem; left: 0; width: 6.75rem; height: 6.75rem; border: 1px solid #c4c4c4; border-radius: 0.2rem; overflow: hidden;}
 .level .order-page-wrap .lists .img-box img{ border-radius: 0.2rem;}
 .level .order-page-wrap .lists .name{ width: 49.8rem; height: 4.2rem; font-size: 1.4rem; color: #212b3e; line-height: 4.2rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;}
@@ -101,7 +107,7 @@
 .level .order-page-wrap .lists .price{ position: absolute; bottom: 1.3rem; left: 8rem; font-size: 1.3rem; color: #f0514b; line-height: 1.3rem;}
 .level .order-page-wrap .lists .sales{ position: absolute; bottom: 1.3rem; left: 16rem; font-size: 1.2rem; color: #adadad; line-height: 1.3rem;}
 .level .order-page-wrap .lists .num{ position: absolute; right: 0; bottom: 1.3rem; font-size: 1.2rem; color: #adadad; line-height: 1.3rem;}
-.level .order-page-wrap .details{ height: 3.3rem; border-bottom: 1px solid #eee;}
+.level .order-page-wrap .details{ height: 3.3rem;}
 .level .order-page-wrap .details .goods{ font-size: 1.3rem; color: #212b3e; line-height: 3.3rem;}
 .level .order-page-wrap .details .cost{ position: absolute; top: 0; right: 0; font-size: 1.3rem; color: #212b3e; line-height: 3.3rem;}
 .level .order-page-wrap .details .cost p{ position: relative; float: left; margin-left: 1.2rem;/* padding-left: 3.7rem;*/ text-align: right;}

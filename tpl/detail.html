@@ -90,23 +90,25 @@
                 <div id='discuss_pj' class='discuss_pj'>
                     <script id="user_pj_art" type="text/html"> 
                     {{if isAdmin}} 
-                    <dl>
-                        <dt class='gray'><strong>评价 </strong><span>({{review.length}}条)</span></dt>
-                        <dd>
-                            <span>综合评价</span>
-                            <p class='starlilst fr'>
-                                {{ #public_list.ave_score | dateFormat}}
-                            </p>
-                        </dd>
-                     </dl>
-                     {{/if}}  
+                        <dl>
+                            <dt class='gray'><strong>评价 </strong><span>({{review.length}}条)</span></dt>
+                            <dd>
+                                <span>综合评价</span>
+                                <p class='starlilst fr'>
+                                    {{ #public_list.ave_score | dateFormat}}
+                                </p>
+                            </dd>
+                         </dl>
+                         {{if review.length == 0}}
+                            <div class="tips txc">暂时没有客户评论，赶紧来评论吧！</div>
+                         {{/if}}
+                    {{/if}}
                     </script> 
                 </div> 
                 <div id='user_comment'>
                     <script id="user_art" type="text/html">  
                     {{if isAdmin}}
                         {{if review.length == 0}}
-                            <div class="tips txc">没有客户评论，赶紧来评论吧！</div>
                             {{else if review.length > 0 && review.length <= 3}}
                                 {{each review as value index}} 
                                 <div class='user'>  

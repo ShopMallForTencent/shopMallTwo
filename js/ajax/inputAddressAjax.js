@@ -8,9 +8,9 @@ var cityArr = [cmbProvince, municipal,cmbArea ];
 if (addMsg.msg != null) 
 {
 	//填充内容到表单
-	$('#border-box .name').get(0).value = addMsg.msg.result['consignee'];
-	$('#border-box .phone').get(0).value = addMsg.msg.result['phone'];
-	$('#border-box .postcodes').get(0).value = addMsg.msg.result['z_code'];
+	$('.input-add-wrap .name').get(0).value = addMsg.msg.result['consignee'];
+	$('.input-add-wrap .phone').get(0).value = addMsg.msg.result['phone'];
+	$('.input-add-wrap .postcodes').get(0).value = addMsg.msg.result['z_code'];
 	$('#cmbXxdz').get(0).value = addMsg.msg.result['address'];
 	//获取地址ID
 	var treePath = addMsg.msg.result.t_path.split(',');
@@ -147,12 +147,33 @@ $('#cmbCity').on('change', function(){
 	getCmbArea(this);
 });
 
+//隐藏保存按钮
+// $('.input-add-wrap input,.input-add-wrap textarea').focus(function(){
+// 	$('.vertical .input-add-wrap .border-box').css('border-bottom-width:','0');
+// 	$('#saveAdd').css('z-index',-1);
+// }).blur(function(){
+// 	$('.vertical .input-add-wrap .border-box').css('border-bottom-width:','6.5rem');
+// 	$('#saveAdd').css('z-index',9);
+// });
+var addressPageH = $(window).height();
+$(window).on('resize',function(){
+	var _h = $(window).height();
+	if (_h < addressPageH) {
+		$('.vertical .input-add-wrap .border-box').css('border-bottom-width','0rem');
+		$('.vertical #saveAdd').css('z-index',-1);
+	} else{
+		setTimeout(function(){
+			$('.vertical .input-add-wrap .border-box').css('border-bottom-width','6.5rem');
+			$('#saveAdd').css('z-index',9);
+		},200);
+	}
+});
+
 //保存收货地址
 $('#saveAdd').on('touchend', function(){
-
-	 var name = $('#border-box .name').get(0).value;
-	 var phone = $('#border-box .phone').get(0).value;
-	 var postcodes = $('#border-box .postcodes').get(0).value;
+	 var name = $('.input-add-wrap .name').get(0).value;
+	 var phone = $('.input-add-wrap .phone').get(0).value;
+	 var postcodes = $('.input-add-wrap .postcodes').get(0).value;
 
 	 var shen = cmbProvince.options[cmbProvince.selectedIndex].text;
 	 	 xian = typeof municipal.options[municipal.selectedIndex] == 'undefined' ? '' : municipal.options[municipal.selectedIndex].text;

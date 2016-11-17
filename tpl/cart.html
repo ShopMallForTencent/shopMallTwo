@@ -24,10 +24,14 @@
                             <div class="right">
                                 <p class="itemName"><a href='#tpl/detail'>{{bName[i].product[j].full_name}}</a></p>
                                 <p class="itemColor">
-                                {{each bName[i].product[j].specification as value k}}
-                                    {{bName[i].product[j].specification[k]}}&nbsp;&nbsp;&nbsp;
-                                {{/each}}
-                                
+                                    {{each bName[i].product[j].specification as value k}}
+                                        {{bName[i].product[j].specification[k]}}
+                                        {{if k == 0}}
+                                            <br />
+                                            {{else}}
+                                            &nbsp;&nbsp;&nbsp;
+                                        {{/if}}
+                                    {{/each}}
                                 </p>
                                 <p class="alreadySale">已售 <span>999</span> 笔</p>
                                 <p class="fee"><span>￥</span><span class="price">{{bName[i].product[j].price/100}}</span></p>
