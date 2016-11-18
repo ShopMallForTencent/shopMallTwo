@@ -62,7 +62,7 @@
                 var t = $(id + ' .text_box');
 
                 if (parseInt(t.html()) <=1) {
-                    $(id + ' .min').css('color','#adadad')
+                    $(id + ' .min').css({'color':'#adadad','-webkit-tap-highlight-color':'rgba(0,0,0,0)'});
                 }
 
 
@@ -72,10 +72,10 @@
                     if ( parseInt(t.html())+1 >= $(id).find('.kc').html() ) 
                     {   
                         t.html($(id).find('.kc').html())
-                        $(this).css('color','adadad')
+                        $(this).css({'color':'#adadad','-webkit-tap-highlight-color':'rgba(0,0,0,0)'});
                         return
                     }else{
-                        $(id + ' .min').css('color','#333')
+                        $(id + ' .min').css({'color':'#1a1a1a','-webkit-tap-highlight-color':'rgba(0,0,0,0.1)'})
                         
                     }
                 })  
@@ -84,10 +84,10 @@
                 console.log("数量"+parseInt(t.html()))  
                     if (parseInt(t.html()) <=1) {
                         t.html(1)
-                        $(id + ' .min').css('color','#adadad')
+                        $(id + ' .min').css({'color':'#adadad','-webkit-tap-highlight-color':'rgba(0,0,0,0)'})
                         return;
                     }else{
-                         $(id + ' .min').css('color','#333')
+                         $(id + ' .min').css({'color':'#1a1a1a','-webkit-tap-highlight-color':'rgba(0,0,0,0.1)'})
                         
                     }
                      

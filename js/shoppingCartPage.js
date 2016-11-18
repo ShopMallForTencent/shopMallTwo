@@ -23,7 +23,7 @@ define(function (require) {
 
 				if(oItemNum==1){
 
-					$(this).css("color","#adadad");
+					$(this).css({'color':'#adadad','-webkit-tap-highlight-color':'rgba(0,0,0,0)'});
 				}
 				
 			});
@@ -33,7 +33,7 @@ define(function (require) {
 				oItemNum--;
 				if(oItemNum<=1){
 					oItemNum=1;
-					$(this).css("color","#adadad");
+					$(this).css({'color':'#adadad','-webkit-tap-highlight-color':'rgba(0,0,0,0)'});
 				}
 				$(this).parent().find(".itemNum").text(oItemNum--);
 				console.log($(this).parents(".shopItem").find(".choose").attr("has"));
@@ -50,10 +50,10 @@ define(function (require) {
 				oItemNum++;
 				if(oItemNum>=$(this).attr('stock')){
 					oItemNum=$(this).attr('stock')
-					$(this).css("color","#adadad");
+					$(this).css({'color':'#adadad','-webkit-tap-highlight-color':'rgba(0,0,0,0)'});
 				}else{
 					console.log(99)
-					$(this).css("color","#212b3e");
+					$(this).css({'color':'#1a1a1a','-webkit-tap-highlight-color':'rgba(0,0,0,0.1)'});
 				}
 				$(this).parent().find(".itemNum").text(oItemNum);
 				console.log($(this).parents(".shopItem").find(".choose").attr("has"));

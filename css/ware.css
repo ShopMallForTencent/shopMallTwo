@@ -138,7 +138,7 @@
 .ware-wrap .gmtc .sp_val .jzq div{ border-top:1px solid #d6d6d6; border-bottom:1px solid #d6d6d6; color: #212b3e; font-size: 1.44rem;text-align: center;}
 /*.ware-wrap .gmtc .sp_val span{ float: left; text-align: center; font-size: 1.6rem; height: 2.7rem; line-height: 2.7rem;}*/
 .ware-wrap .gmtc .sp_val .jzq span{ box-sizing: border-box; float: left; width: 5.35rem; height: 2.4rem; text-align: center;line-height: 2.6rem;}
-.ware-wrap .gmtc .sp_val .jzq .min, .ware-wrap .gmtc .sp_val .jzq .add{ border: 1px solid #d6d6d6; border-top: none; border-bottom: none; width: 2.35rem;height: 2.4rem; font-size: 2.6rem; color: #212b3e;line-height: 2.4rem;}
+.ware-wrap .gmtc .sp_val .jzq .min, .ware-wrap .gmtc .sp_val .jzq .add{ border: 1px solid #d6d6d6; border-top: none; border-bottom: none; width: 2.35rem;height: 2.4rem; font-size: 2.6rem; color: #212b3e;line-height: 2.4rem; cursor: pointer; -webkit-tap-highlight-color: rgba(0,0,0,0.1)}
 .ware-wrap .gmtc .sp_val .jzq .add{ font-size: 2.0rem; line-height: 2.2rem;}
 .ware-wrap .gmtc .sp_val .text_box{width: 5.4rem;}
 .ware-wrap .gmtc .sp_val .jzq strong{ float: left; height: 2.7rem; margin-right: 1.2rem; line-height: 2.8rem;}

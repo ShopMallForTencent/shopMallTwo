@@ -2,13 +2,13 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,figure{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 ol,ul,li{list-style:none}
-body{font:12px/1.5 "Microsoft YaHei",Helvetica,STHeiTi,sans-serif;color:#333;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:none;-webkit-touch-callout:none;-webkit-user-select:text;-webkit-tap-highlight-color:transparent;word-break:break-all;word-wrap:break-word;}
+body{font:12px/1.5 "Microsoft YaHei",Helvetica,STHeiTi,sans-serif;color:#1a1a1a;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:none;-webkit-touch-callout:none;-webkit-user-select:text;-webkit-tap-highlight-color:transparent;word-break:break-all;word-wrap:break-word;}
 h1,h2,h3,h4,h5,h6{font-weight:normal}
 h1{width: 100%; height: 0; font-size: 0; text-indent: -9999em; line-height: 500%; overflow: hidden;}
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:inherit}
 input,select,form,img{vertical-align:middle;outline:none}
 strong,b,em{ font-weight: normal; font-style: normal;}
-a{text-decoration:none;outline:0;color:#333;}
+a{text-decoration:none;outline:0;color:#1a1a1a;}
 div,a,input,select,option{outline:none}
 table{border-collapse:collapse;border-spacing:0}
 .db{display: block;}
