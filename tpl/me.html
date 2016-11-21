@@ -18,7 +18,7 @@
                     <div class="per-box per-order border-line-bot ovh">
                         <!-- <a class="order-name pr" href="#tpl/order"> -->
                         <a class="order-name pr" href="#tpl/order" onclick="getOrderState('all')">
-                            <i class="sp pa">{{if total > 0}}<b>{{if total > 99}}99+{{else}}total{{/if}}</b>{{/if}}</i><span class="order-left">我的订单</span>
+                            <i class="sp pa">{{if total > 0}}<b>{{if total > 99}}99+{{else}}{{total}}{{/if}}</b>{{/if}}</i><span class="order-left">我的订单</span>
                             <span class="fr right-ico">查看全部订单<b class="per-sp"></b></span>
                         </a>
                     </div>

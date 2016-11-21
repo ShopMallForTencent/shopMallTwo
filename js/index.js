@@ -9,9 +9,30 @@ define(function (require) {
             // banner轮播效果
             Zepto(function($){
 			    imgSlide = new mo.Slide({
-			        target: $('#banner-box li'),
+			        target: $('#banner-box .img-slide li'),
 			        direction: 'x',
-                    controller: true
+                    controller: true,
+                    event:{
+                        change:function(){
+                            var index = this.curPage;
+                            var leftNum,rightNum;
+                            var $smallLi = $('#banner-box .small-img li');
+                            $smallLi.removeClass('none left right');
+                            if (index == 0) {
+                                leftNum = 2;
+                            } else{
+                                leftNum = index - 1;
+                            }
+                            if (index == 2) {
+                                rightNum = 0;
+                            } else{
+                                rightNum = index + 1;
+                            }
+                            $smallLi.eq(leftNum).addClass('left');
+                            $smallLi.eq(index).addClass('none');
+                            $smallLi.eq(rightNum).addClass('right');
+                        }
+                    }
 			    });
 			});
 

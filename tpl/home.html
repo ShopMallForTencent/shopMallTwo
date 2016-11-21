@@ -3,16 +3,32 @@
     <div class="wrap index-wrap pr ovh">
         <a class='backtotop lsp' href="javascript:;" title='返回顶部'>返回顶部</a>
         <div class="border-box">
-            <div class="banner-box pr" id="banner-box"></div>
-            <script id="indexbannertemplate" type="text/html">
+            <div class="banner-box pr" id="banner-box">
+                <ul class="img-slide">
+                    <li><a href="javascript:;"><img src="images/v1.jpg" alt="v1"></a></li>
+                    <li><a href="javascript:;"><img src="images/v2.jpg" alt="v1"></a></li>
+                    <li><a href="javascript:;"><img src="images/v3.jpg" alt="v1"></a></li>
+                </ul>
+                <ul class="small-img">
+                    <li><a href="javascript:;"><img src="images/v1.jpg" alt="v1"></a></li>
+                    <li><a href="javascript:;"><img src="images/v2.jpg" alt="v1"></a></li>
+                    <li><a href="javascript:;"><img src="images/v3.jpg" alt="v1"></a></li>
+                </ul>
+            </div>
+            <!--<script id="indexbannertemplate" type="text/html">
                 {{if isAdmin}}
-                    <ul>
+                    <ul class="img-slide">
                         {{each bName value as i}}
                             <li><a href="{{bName[i].advertisers.url}}"><img src="{{bName[i].advertisers.image}}" alt="{{bName[i].advertisers.title}}"></a></li>
                         {{/each}}
                     </ul>
+                    <ul class="small-img">
+                        {{each bName value as i}}
+                            <li><img src="{{bName[i].advertisers.image}}" alt="{{bName[i].advertisers.title}}"></li>
+                        {{/each}}
+                    </ul>
                 {{/if}}
-            </script>
+            </script>-->
             <div class="index-page-nav">
                 <ul class="txc clearfix">
                     <li class="fl"><a href="#tpl/category" onclick="getsortState('yf')"><strong class="db bc"><i class="db sp"></i></strong><span>衣服</span></a></li>
@@ -33,7 +49,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -42,7 +58,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -51,7 +67,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -60,7 +76,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -79,7 +95,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -88,7 +104,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -97,7 +113,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -106,7 +122,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -125,7 +141,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -134,7 +150,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -143,7 +159,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -152,7 +168,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -171,7 +187,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -180,7 +196,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -189,7 +205,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>
@@ -198,7 +214,7 @@
                                 <p class="img-box"><img src="images/index-pic-1.jpg" alt="商品图"></p>
                                 <p class="name">CF最新枪战模型X战1</p>
                                 <p class="price"><strong>￥229</strong><span>￥229</span></p>
-                                <p class="sales">销量：<span>900</span></p>
+                                <p class="sales border-line-bot">销量：<span>900</span></p>
                                 <p class="comment">评论：<span>300</span></p>
                                 <a href="#tpl/detail" class="enter-btn pa db"></a>
                                 <a href="javascript:;" class="btn">去购买</a>

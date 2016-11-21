@@ -7,13 +7,13 @@ define(function (require) {
         	
         },
         beforeopen: function(){
-        	// 重置滚动条到顶部
-        	$('.chat-system-wrap .border-box').scrollTop($('.chat-system-wrap .border-box').height());
+        	// 重置滚动条到底部
+        	$('.chat-system-wrap .border-box').scrollTop($('.chat-system-wrap #show').height());
         	// 控制底部导航栏状态
         	$('.nav-box').hide();
         },
         afteropen: function(){
-            $('.chat-system-wrap .border-box').scrollTop($('.chat-system-wrap .border-box').height());
+            $('.chat-system-wrap .border-box').scrollTop($('.chat-system-wrap #show').height());
         }
     }
 });
