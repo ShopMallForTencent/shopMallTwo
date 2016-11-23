@@ -3,14 +3,12 @@
     <div class="wrap cart-wrap shopping-cart-wrap pr ovh">
         <a class='backtotop lsp' href="javascript:;" title='返回顶部'>返回顶部</a>
         <div class="border-box">
-            <!--start-->
-            
-                <div id="cartSort"></div>
+            <div id="cartSort"></div>
             <script id="carttemplate" type="text/html">
                 {{if bName.length}}
                     {{each bName as value i}}
                     <div class="cartSort" >
-                        <div class="shopName">
+                        <div class="shopName border-line-bot">
                             <h2>
                                 <img src="images/store-icon-1.png" alt="icon">
                                 <span>{{bName[i].b_name}}</span>
@@ -20,22 +18,28 @@
                         {{each bName[i].product as value j}}
                         <div class="shopItem" del="0">
                             <a href="javascript:;" class="choose cartsp" has="0" proId={{bName[i].product[j].p_id}}></a>
-                            <a href='#tpl/detail'><img src={{bName[i].product[j].image}} alt="" class="left"/></a>
+                            <a href='#tpl/detail' class="left db border-line"><img src={{bName[i].product[j].image}} alt="" class=""/></a>
                             <div class="right">
                                 <p class="itemName"><a href='#tpl/detail'>{{bName[i].product[j].full_name}}</a></p>
                                 <p class="itemColor">
-                                {{each bName[i].product[j].specification as value k}}
-                                    {{bName[i].product[j].specification[k]}}&nbsp;&nbsp;&nbsp;
-                                {{/each}}
-                                
+                                    {{each bName[i].product[j].specification as value k}}
+                                        {{bName[i].product[j].specification[k]}}&nbsp;&nbsp;&nbsp;
+                                    {{/each}}
                                 </p>
                                 <p class="alreadySale">已售 <span>999</span> 笔</p>
                                 <p class="fee"><span>￥</span><span class="price">{{bName[i].product[j].price/100}}</span></p>
-                                <p class="actNum"><a href="javascript:;" class="reduce" proId={{bName[i].product[j].p_id}}>-</a><span class="itemNum">{{bName[i].product[j].quantity}}</span><a href="javascript:;" class="plus" proId={{bName[i].product[j].p_id}} stock={{bName[i].product[j].stock}}>+</a></p>
+                                <div class="actNum">
+                                    <div class="stock-info pa txr">商品库存仅剩3件</div>
+                                    <p class="clearfix">
+                                        <a href="javascript:;" class="reduce" proId={{bName[i].product[j].p_id}}>-</a>
+                                        <span class="itemNum">{{bName[i].product[j].quantity}}</span>
+                                        <a href="javascript:;" class="plus" proId={{bName[i].product[j].p_id}} stock={{bName[i].product[j].stock}}>+</a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                        {{/each}}
-                       <div class="countAll">
+                       <div class="countAll border-line-top">
                             <a href="javascript:;" class="choose cartsp" has="0"></a>
                             全选
                             <p class="total">合计：<span>￥</span><span class="lastAll">0</span></p>
@@ -53,4 +57,3 @@
         </div>
     </div>
 </div>
-<!-- <script src="js/shoppingCart.js"></script> -->

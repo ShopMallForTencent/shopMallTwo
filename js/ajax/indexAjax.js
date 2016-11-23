@@ -1,5 +1,5 @@
 // 首页数据请求
-function indexBanner (callback) {
+function indexBannerAjax (callback) {
 	$.ajax({
 		url:ajaxPath + '/ad/listByPositionId',
 		type:'GET',

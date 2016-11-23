@@ -79,7 +79,7 @@ function buyPro (productID,Bid) {
 			//有货
 			if (data.ret != 4009) 
 			{
-				Ec_Socket.dir = '购物车';
+				Ec_Socket.dir = 'c';
 				Ec_Socket.data = data;
 				window.location.href = '#tpl/orderConfirm';
 			}

@@ -11,38 +11,39 @@
 .sort-wrap .cont .tips{ padding: 1.5rem 0; font-size: 1.2rem; color: #9baab5; line-height: 1.2rem;}
 .vertical .sort-wrap .main{ padding-top: 4.5rem;}
 .vertical .sort-wrap .sort-page-nav{ width: 100%; height: 4.4rem;}
-.vertical .sort-wrap .page-sort{ position: relative; height: 3.4rem;; border-bottom: 1px solid #ddd;}
+.vertical .sort-wrap .page-sort{ position: relative; height: 3.4rem;/* border-bottom: 1px solid #eaeaea;*/}
 .vertical .sort-wrap .page-sort a{ width: 8.2rem; height: 3.4rem; font-size: 1.2rem; color: #1a1a1a; line-height: 3.4rem;}
 .vertical .sort-wrap .page-sort a.on{ color: #fb4c45;}
 .vertical .sort-wrap .page-sort p{ position: absolute; top: 0; right: 1rem; height: 3.4rem; font-size: 1.1rem; color: #a6a6a6; line-height: 3.4rem;}
 .vertical .sort-wrap .lists{ padding: 1.3rem 0 0;}
-.vertical .sort-wrap .lists li{ width: 22.6rem; margin-bottom: 0.6rem; padding: 0 1rem 0 13.5rem;}
+.vertical .sort-wrap .lists li{ width: 23rem; margin-bottom: 0.6rem; padding: 0 1rem 0 13.5rem;}
 .vertical .sort-wrap .lists .img-box{ position: absolute; top: 0; left: 1rem; width: 11.5rem; height: 11.5rem; overflow: hidden;}
-.vertical .sort-wrap .lists .name{ height: 3.6rem; margin-bottom: 3rem; padding: 0.6rem 0 0 0.4rem; font-size: 1.2rem; color: #1a1a1a; line-height: 1.8rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
-.vertical .sort-wrap .lists .price{ height: 2.4rem; padding-left: 0.4rem; font-size: 1.5rem; color: #fb4c45; text-indent: -0.3rem; line-height: 1.5rem;}
-.vertical .sort-wrap .lists .price span{ margin-left: 1.0rem; font-size: 1rem; color: #a6a6a6; text-decoration: line-through;}
+.vertical .sort-wrap .lists .name{ height: 3.6rem; margin-bottom: 3rem; padding: 0.6rem 0 0 0.4rem; font-size: 1.3rem; color: #1a1a1a; line-height: 1.8rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
+.vertical .sort-wrap .lists .price{ height: 2.4rem; padding-left: 0.4rem; font-size: 1.6rem; color: #fb4c45; text-indent: -0.3rem; line-height: 1.5rem;}
+.vertical .sort-wrap .lists .price span{ margin-left: 1.0rem; font-size: 1.1rem; color: #a6a6a6; text-decoration: line-through;}
 .vertical .sort-wrap .lists .sales,
 .vertical .sort-wrap .lists .comment{ display: none;}
-.vertical .sort-wrap .lists .all-info{ height: 2.6rem; padding-left: 0.4rem; border-bottom: 1px solid #ddd; font-size: 1rem; color: #a6a6a6; line-height: 1rem;}
+.vertical .sort-wrap .lists .all-info{ height: 2.6rem; padding-left: 0.4rem; font-size: 1.1rem; color: #a6a6a6; line-height: 1.1rem;}
 .vertical .sort-wrap .lists .btn{ position: absolute; bottom: 1.6rem; right: 1rem; display: block; width: 7.2rem; height: 3.3rem; background: #f0514b; border-radius: 0.2rem; font-size: 1.5rem; color: #fff; text-align: center; line-height: 3.5rem;}
 
 .level .sort-wrap .main{ padding: 3.45rem 0 0;}
 .level .sort-wrap .sort-page-nav{ left: 5.9rem; height: 3.5rem;}
 .level .sort-wrap .sort-page-nav ul{ height: 3.45rem;}
 .level .sort-wrap .sort-page-nav li{ width: 12.16rem; height: 3.4rem;}
-.level .sort-wrap .sort-page-nav a{ height: 3.2rem; line-height: 3.4rem;}
-.level .sort-wrap .page-sort{ position: relative; height: 2.6rem; padding: 0 1rem 0 2.8rem; border-bottom: 2px solid #e2e2e2;}
-.level .sort-wrap .page-sort a{ width: 10.8rem; height: 2.6rem; font-size: 1.2rem; color: #212b3e; line-height: 2.6rem;}
+.level .sort-wrap .sort-page-nav a{ height: 3.2rem; line-height: 3.2rem;}
+.level .sort-wrap .page-sort{ position: relative; height: 3.2rem; padding: 0 1rem 0 0;}
+.level .sort-wrap .page-sort a{ width: 10.8rem; height: 3.2rem; font-size: 1.2rem; color: #1a1a1a; line-height: 3.2rem;}
 .level .sort-wrap .page-sort a.on{ color: #f0514b;}
-.level .sort-wrap .page-sort p{ position: absolute; top: 0; right: 1rem; height: 2.6rem; font-size: 1.1rem; color: #9baab5; line-height: 2.6rem;}
+.level .sort-wrap .page-sort p{ position: absolute; top: 0; right: 1rem; height: 3.2rem; font-size: 1.1rem; color: #a6a6a6; line-height: 3.2rem;}
 .level .sort-wrap .lists{ padding: 1rem 1rem 0.5rem;}
-.level .sort-wrap .lists li{ width: 16.9rem; margin: 0 1rem 0.5rem 0; padding-left: 12rem;}
+.level .sort-wrap .lists li{ width: 16.85rem; margin: 0 1rem 0.5rem 0; padding-left: 12rem; background: #fff;}
 .level .sort-wrap .lists li:nth-child(2n){ margin-right: 0;}
-.level .sort-wrap .lists .img-box{ position: absolute; top: 0; left: 0; width: 10.95rem; height: 10.95rem; background: #f9f9f9; border: 1px solid #d2d2d2; border-radius: 0.2rem;}
-.level .sort-wrap .lists .name{ height: 3.6rem; margin-bottom: 1.1rem; font-size: 1.3rem; color: #212b3e; line-height: 1.8rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
-.level .sort-wrap .lists .price{ height: 1.3rem; margin-bottom: 3.2rem; font-size: 1.3rem; color: #f0514b; line-height: 1.3rem;}
-.level .sort-wrap .lists .price span{ margin-left: 1rem; font-size: 1rem; color: #9baab5; text-decoration: line-through;}
-.level .sort-wrap .lists .sales{ height: 1.8rem; border-bottom: 1px solid #e7e6e6; font-size: 1.2rem; color: #9baab5; line-height: 1.3rem;}
+.level .sort-wrap .lists .img-box{ position: absolute; top: 0; left: 0; width: 10.95rem; height: 10.95rem; background: #fff; overflow: hidden;}
+/*.level .sort-wrap .lists .img-box:before{ position: absolute; top: 0; left: 0; content: ''; width: 200%; height: 200%; border: 1px solid #eaeaea; -webkit-transform: scale(0.5); -webkit-transform-origin: 0 0;}*/
+.level .sort-wrap .lists .name{ height: 3.6rem; margin-bottom: 2.7rem; padding-top: 0.1rem; font-size: 1.2rem; color: #1a1a1a; line-height: 1.8rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
+.level .sort-wrap .lists .price{ height: 2.9rem; font-size: 1.5rem; color: #fb4c45; text-indent: -0.2rem; line-height: 1.5rem; overflow: hidden;}
+.level .sort-wrap .lists .price span{ margin-left: 0.8rem; font-size: 1rem; color: #a6a6a6; text-decoration: line-through;}
+.level .sort-wrap .lists .sales{ height: 2.3rem; font-size: 1rem; color: #a6a6a6; line-height: 1rem;}
 .level .sort-wrap .lists .comment,
 .level .sort-wrap .lists .all-info{ display: none;}
-.level .sort-wrap .lists .btn{ position: absolute; right: 0; bottom: 0.8rem; display: block; width: 7.2rem; height: 2.7rem; background: #f0514b; border-radius: 0.3rem; font-size: 1.5rem; color: #fff; text-align: center; line-height: 2.7rem;}
+.level .sort-wrap .lists .btn{ position: absolute; right: 0; bottom: 1.3rem; display: block; width: 7rem; height: 2.5rem; background: #fb4c45; border-radius: 0.3rem; font-size: 1.2rem; color: #fff; text-align: center; line-height: 2.7rem;}

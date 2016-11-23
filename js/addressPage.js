@@ -7,12 +7,12 @@ define(function (require) {
         title: '地址管理',
         body: tpl,
         init: function () {
-
+          
         },
 
         beforeopen : function()
         {
-            btnKey()
+            btnKey();
             console.log(addBtnKey)
             // 重置滚动条到顶部
             $('.my-address-wrap .border-box').scrollTop(0,0);
@@ -74,7 +74,7 @@ define(function (require) {
                           user_address.html('<div class="tips txc"><img src="images/myAddress/adress-icon.png" alt="没有收货地址"><p>当前还没有地址，赶紧添加地址吧！</p></div>')
                          }
                     });
-
+                    return false;
                     // console.log($(self).parents('#myAdd').find('.myAdd').length)
                 });
 
@@ -84,7 +84,7 @@ define(function (require) {
                     if($setDefault.eq(i).attr('def')==1){
                       $setDefault.eq(i).find("i").removeClass("icon-setDefault").addClass("icon-right");
                       $setDefault.eq(i).find("i").parent().find("span").text("默认地址");
-                      $setDefault.eq(i).parents(".myAdd").insertBefore($(".myAdd").eq(0))
+                      $setDefault.eq(i).parents(".myAdd").insertBefore($(".myAdd").eq(0));
                     }
                 }
 
@@ -145,6 +145,16 @@ define(function (require) {
 
 
             });
+        },
+        afteropen: function(){
+          if ($('#myAdd .addevent')) {
+              $('#myAdd .myAdd').removeClass('on');
+              $('#myAdd .addevent').each(function(){
+                if ($(this).attr('rid') == addRid) {
+                  $(this).parent().addClass('on');
+                };
+              })
+          };
         },
         afterclose:function(){
            addBtnKey=false;

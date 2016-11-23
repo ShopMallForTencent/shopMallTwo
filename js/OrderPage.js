@@ -16,13 +16,13 @@ define(function (require) {
         	if (_w < _h) {
         	   $pageNavUl.css('width',$pageNavLi.length*7.5+'rem'); 
         	} else{
-        	    $pageNavUl.css('width',$pageNavLi.length*12.16+'rem'); 
+        	    $pageNavUl.css('width','100%'); 
         	}
         	$(window).resize(function(){
         	    if (_w < _h) {
-        	       $pageNavUl.css('width',$pageNavLi.length*7.5+'rem'); 
+        	        $pageNavUl.css('width',$pageNavLi.length*7.5+'rem'); 
         	    } else{
-        	        $pageNavUl.css('width',$pageNavLi.length*12.16+'rem');
+        	        $pageNavUl.css('width','100%');
         	    }
         	});
             // 选择订单状态查询

@@ -21,7 +21,7 @@ if (_w < _h) {
 
 // 根据宽高写入rem的方法
 var screenFun = function(){
-    if (_w < _h || orient == 0) {
+    if (orient == 0) {
         pageW = 750;
         document.documentElement.style.fontSize = _w/pageW*20+'px';
         document.body.className = 'vertical';
@@ -30,6 +30,9 @@ var screenFun = function(){
         document.documentElement.style.fontSize = _w/pageW*20+'px';
         document.body.className = 'level';
     }
+    if (isIndex) {
+        loadBanner();
+    };
 }
 // 页面加载完成执行
 document.addEventListener("DOMContentLoaded",function(e){
@@ -37,16 +40,16 @@ document.addEventListener("DOMContentLoaded",function(e){
 });
 
 // 切换横竖屏执行(PC端)
-// window.addEventListener('resize',function(){
-//     _w = document.documentElement.clientWidth || document.body.clientWidth,
-//     _h = document.documentElement.clientHeight || document.body.clientHeight;
-//     if (_w < _h) {
-//         orient = 0;
-//     } else{
-//         orient = 90;
-//     }
-//     screenFun();
-// });
+window.addEventListener('resize',function(){
+    _w = document.documentElement.clientWidth || document.body.clientWidth,
+    _h = document.documentElement.clientHeight || document.body.clientHeight;
+    if (_w < _h) {
+        orient = 0;
+    } else{
+        orient = 90;
+    }
+    screenFun();
+});
 // 切换横竖屏执行(移动端)
 window.addEventListener("orientationchange", function() {
     _w = document.documentElement.clientWidth || document.body.clientWidth,

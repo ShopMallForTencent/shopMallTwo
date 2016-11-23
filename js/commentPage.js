@@ -68,6 +68,16 @@ define(function (require) {
 						$star.eq(i).addClass('on');
 					};
 				});
+
+				// 匿名选择
+				var $anonymousBtn = $('.anonymous a');
+				$anonymousBtn.on('click',function(){
+					if ($(this).hasClass('on')) {
+						$(this).removeClass('on');
+					} else{
+						$(this).addClass('on');
+					}
+				});
 			});
         },
         beforeopen : function(){

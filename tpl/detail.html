@@ -1,6 +1,7 @@
 ﻿<div class='page-container-wrap' id='page-container-wrap'>
     <link rel="stylesheet" href="./css/ware.css">
-    <div class="wrap index-wrap ware-wrap pr" id="wrap">
+    <div class="wrap ware-wrap pr">
+        <a class='backtotop lsp' href="javascript:;" title='返回顶部'>返回顶部</a>
         <div class="border-box">
             <div class='ware withebg'>
                 <div class='ware_img'>
@@ -40,27 +41,31 @@
             </div>
             <!--ware E-->
 
-            <!--z` S-->
+            <!--ware_nav S-->
             <div class='ware_nav_body' id='ware_nav_body'>
-                <div class='ware_nav' id='ware_nav'>
-                    <a class='db fl select' href="javascript:" title='商品介绍'>商品介绍</a>
-                    <a class='db fl' href="javascript:" title='规格参数'>规格参数</a>
-                    <a class='db fl' href="javascript:" title='买家评论'>买家评论</a>
+                <div class='ware_nav clearfix' id='ware_nav'>
+                    <a class='db fl border-line-bot select' href="javascript:" title='商品介绍'>商品介绍</a>
+                    <a class='db fl border-line-bot' href="javascript:" title='规格参数'>规格参数</a>
+                    <a class='db fl border-line-bot' href="javascript:" title='买家评论'>买家评论</a>
                 </div>
             </div>
             <!--ware_nav E-->
 
             <!--商品介绍 S-->
             <div id='spxq' class='spxq'>
-                <ul>
-                    <script id="spxq_art" type="text/html">  
-                    {{if isAdmin}} 
-                        {{each countent as value index}}   
-                            <li>{{value}}</li>
-                         {{/each}} 
+                <script id="spxq_art" type="text/html">  
+                    {{if isAdmin}}
+                        {{if countent}}
+                            <ul>
+                                {{each countent as value index}}   
+                                    <li>{{value}}</li>
+                                {{/each}}
+                            </ul>
+                        {{else}}
+                            <p class="not-explain txc">没有商品介绍</p>
+                        {{/if}} 
                     {{/if}}
-                    </script>    
-                </ul>
+                </script>    
             </div>
             <!--商品介绍 E-->
 
@@ -85,23 +90,25 @@
                 <div id='discuss_pj' class='discuss_pj'>
                     <script id="user_pj_art" type="text/html"> 
                     {{if isAdmin}} 
-                    <dl>
-                        <dt class='gray'><strong>评价 </strong>(<span>{{public_list.r_num}}</span>)条</dt>
-                        <dd>
-                            <span>综合评价</span>
-                            <p class='starlilst fr'>
-                                {{ #public_list.ave_score | dateFormat}}
-                            </p>
-                        </dd>
-                     </dl>
-                     {{/if}}  
+                        <dl>
+                            <dt class='gray'><strong>评价 </strong><span>({{review.length}}条)</span></dt>
+                            <dd>
+                                <span>综合评价</span>
+                                <p class='starlilst fr'>
+                                    {{ #public_list.ave_score | dateFormat}}
+                                </p>
+                            </dd>
+                         </dl>
+                         {{if review.length == 0}}
+                            <div class="tips txc">暂时没有客户评论，赶紧来评论吧！</div>
+                         {{/if}}
+                    {{/if}}
                     </script> 
                 </div> 
                 <div id='user_comment'>
                     <script id="user_art" type="text/html">  
                     {{if isAdmin}}
                         {{if review.length == 0}}
-                            <div class="tips txc">该商品尚无买家评论</div>
                             {{else if review.length > 0 && review.length <= 3}}
                                 {{each review as value index}} 
                                 <div class='user'>  
@@ -110,7 +117,7 @@
                                         <li class='dil lx2 fl'>{{review[index].name}}</li>
                                         <li class='dil lx3 fr'>{{review[index].c_time}}</li>
                                     </ul>
-                                    <div class='user_main'>
+                                    <div class='user_main border-line-top'>
                                         <p class='starlilst'>
                                             {{ #review[index].score | dateFormat}}
                                         </p>
@@ -157,13 +164,13 @@
             <!--买家评论 E -->
         </div>
         <!--buy_nav S -->
-        <div class='buy_nav' id='buy_nav'>
+        <div class='buy_nav border-line-top' id='buy_nav'>
             <ul class='yh'>
                 <li class='fl lx1'><a href="#tpl/chatSystem" title='客服'><strong>客服</strong><i></i></a></li>
                 <li class='fl lx2'><span>5</span><a href="#tpl/cart" title='购物车'><strong>购物车</strong><i></i></a></li>
-                <li class='fl lx3'><a href="javascript:showDialog('jrgwc')" title='加入购物车'>加入购物车</a></li>
-                <li class='fl lx4'><a href="javascript:showDialog('ljgm')" title='立即购买'>立即购买</a></li>
-                <li class='fl lx5'><a href="javascript:" title='已售完'>已售完</a></li>
+                <li class='fl lx3' style="display:none0"><a href="javascript:showDialog('jrgwc')" title='加入购物车'>加入购物车</a></li>
+                <li class='fl lx4' style="display:none0"><a href="javascript:showDialog('ljgm')" title='立即购买'>立即购买</a></li>
+                <li class='fl lx5' style="display:block0"><a href="javascript:" title='已售完'>已售完</a></li>
                 <li class='fl lx6'><a href="javascript:" title='已下架'>已下架</a></li>
             </ul>
         </div>
@@ -172,7 +179,7 @@
         <div class='ljgm gmtc gmtc_show' id='ljgm' style='display:none;'>
             <div class='gmtc_main'>
                 <a class='close' href="javascript:closeDialog('ljgm')" title='关闭'>×</a>
-                    <div class='sp_price' id='sp_price_ljgm'>
+                    <div class='sp_price border-line-bot' id='sp_price_ljgm'>
                         <script id="sp_price_ljgm_art" type="text/html">  
                             <span class='imgbox dil'><em><img src={{p_specification[0].image}}></em></span>
                             <div class='sp_price_text'>
@@ -181,7 +188,7 @@
                             </div>
                         </script> 
                     </div>
-                    <div class='sp_color' id='sp_color_gm'>
+                    <div class='sp_color border-line-bot' id='sp_color_gm'>
                         <script id="ljgm_art" type="text/html">  
                         {{if isAdmin}} 
                             {{each g_specification as value index}} 
@@ -200,11 +207,13 @@
                     <div class='sp_val clearfix' id='sp_val_ljgm'>
                         <script id="sp_val_ljgm_art" type="text/html">  
                         <p class='dil'>数量　</p>
-                        <div class='jzq dil'>
-                            <span class='min'>-</span>  
-                            <span class='text_box'>1</span>   
-                            <span class='add'>+</span>
+                        <div class='jzq dil clearfix'>
                             <strong>(库存: <em class='kc'>{{p_specification[0].stock}}</em>)</strong>
+                            <div class="fl">
+                                <span class='min'>-</span>  
+                                <span class='text_box'>1</span>   
+                                <span class='add'>+</span>
+                            </div>
                         </div>
                          </script>  
                     </div>
@@ -218,8 +227,8 @@
             <div class='gmtc_main'>
                 <span class='shop_car_success'><img src="../images/ware/shop_car_success.png"></span>
                 <a class='close' href="javascript:closeDialog('jrgwc')" title='关闭'>×</a>
-                <div class='sp_price' id='sp_price_jrgwc'></div>
-                <div class='sp_color' id="sp_color_jrgwc"></div>
+                <div class='sp_price border-line-bot' id='sp_price_jrgwc'></div>
+                <div class='sp_color border-line-bot' id="sp_color_jrgwc"></div>
                 <div class='sp_val' id='sp_val_jrgwc'></div>
                 <a id='jrgwcbnt' class='ljgmbnt jrgwcbnt' href="javascript:" title='加入购物车'>加入购物车</a>
             </div>

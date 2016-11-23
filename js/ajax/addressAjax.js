@@ -27,7 +27,6 @@ function addressList(func)
 
 //设置默认地址
 function addDdfault (productID) {
-	console.log("r_id:"+productID)
 	$.ajax({
 		url:ajaxPath + 'receiver/default',
 		type : 'POST',
@@ -36,7 +35,11 @@ function addDdfault (productID) {
 	    crossDomain: true,
 		data : {"r_id" : productID},
 		success:function (data) {
-			console.log(data.msg);
+			showTips({
+				'text':'设置默认地址成功',
+				'type':true,
+				'time':1000
+			});
 		},
 		error:function () {
 		console.log('fail')

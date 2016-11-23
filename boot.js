@@ -1,6 +1,7 @@
 var $doc = $(document);
 
-var ajaxPath = 'http://apps.gzh.qq.com/shop/index.php?r=';
+// var ajaxPath = 'http://apps.gzh.qq.com/shop/index.php?r=';
+var ajaxPath = 'http://apps.gzh.qq.com/testShop/index.php?r=';
 
 //动态加载js， 公共
 function loadjs(src,func)  
@@ -80,7 +81,7 @@ var personalPage = {
   }
 };
 
-// 商品详情页
+// 商品列表
 var warePage = {
   route: 'tpl/detail',
   classname: 'ware',
@@ -132,7 +133,7 @@ var chatSystemPage = {
   }
 }
 
-// order_detials
+// 订单详情
 var orderDetailsPage = {
   route: 'tpl/orderDetails',
   classname: 'orderDetailsPage',
@@ -140,6 +141,19 @@ var orderDetailsPage = {
   view: function() {
     var $page = this
     seajs.use(['js/orderDetailsPage'], function(viewData) {
+      $doc.trigger('spa:initpage', [$page, viewData])
+    })
+  }
+}
+
+// 订单详情
+var refundDetailsPage = {
+  route: 'tpl/refundDetails',
+  classname: 'refundDetailsPage',
+  animate: 'slideInLeft',
+  view: function() {
+    var $page = this
+    seajs.use(['js/refundDetailsPage'], function(viewData) {
       $doc.trigger('spa:initpage', [$page, viewData])
     })
   }
@@ -281,7 +295,9 @@ $doc.trigger('spa:route', [
       inputAddPage,
       commentPage,
       information,
-      refund
+      refund,
+      success,
+      refundDetailsPage
   ])
 
 // demo:侧边栏菜单

@@ -125,6 +125,20 @@ function hidePop(e) {
     document.getElementById(e).style.display = 'none';
 }
 
+//延时加载并判断是否加载完毕
+function loadjs(url,succ,v){var elem=delay_js(url);if((navigator.userAgent.indexOf('MSIE')==-1)?false:true){elem.onreadystatechange=function(){if(this.readyState&&this.readyState=="loading") return;else succ(v);};}else elem.onload=function(){succ(v);};elem.onerror=function(){};};
+
+//移动已经加载过的js/css
+function removejscssfile(filename, filetype){
+    var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none"
+    var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none"
+    var allsuspects=document.getElementsByTagName(targetelement)
+    for (var i=allsuspects.length; i>=0; i--){
+        if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1)
+        allsuspects[i].parentNode.removeChild(allsuspects[i])
+    }
+}
+
 // 显示提示框
 function showTips(obj){
     showPop('pop-tips');
@@ -145,3 +159,8 @@ function showTips(obj){
         hidePop('pop-tips');
     },time);
 }
+
+// 主页轮播
+var isIndex = false,
+    bannerHtml = '',
+    indexSwiper1 = indexSwiper2 = null;

@@ -92,6 +92,8 @@ function ajax_Success(arr)
 	sp_idx.html('1/' + length);
 
 	var mySwiper = new Swiper('.swiper-container',{
+	    observer:true,
+	    observeParents:true,
 	    onSlideChangeEnd:function(swiper){ 
 	        sp_idx.html(swiper.activeIndex+1 + '/' + length);
 	    }
@@ -103,47 +105,37 @@ function ajax_Success(arr)
 	
 	function sel(Did){
 		$(Did + ' a').on('touchend', function(){
-			  //取消
-			  if(this.className.indexOf('select') != -1)
-			  {   selCancel = true
-			  	  $(this).removeClass('select');
-			  	  var selectBnt = getSelectBnt($(Did + ' a'));
-			  	  selg($(this).attr("zdy"),arr,$(Did + ' a'))
-			  }
-			  //选中
-			  else if(this.className.indexOf('no') == -1)
-			  {	  selCancel = false
-			  	  selg($(this).attr("zdy"),arr,$(Did + ' a'))
-			  	  $(this).addClass('select');  	
-			  }	
-
-			  //插入图片和价格到弹窗上
-		  	 for(var i=0; i<arr.length; i++)
-			 {
-			 	 var p_s = arr[i].p_s;
-			 	 if (isContained(p_s, selArr)) 
-			 	 {
+			if(this.className.indexOf('select') != -1) { //取消   
+			  	selCancel = true
+			  	$(this).removeClass('select');
+			  	var selectBnt = getSelectBnt($(Did + ' a'));
+			  	selg($(this).attr("zdy"),arr,$(Did + ' a'))
+			} else if (this.className.indexOf('no') == -1) { //选中
+				selCancel = false
+			  	selg($(this).attr("zdy"),arr,$(Did + ' a'))
+			  	$(this).addClass('select');  	
+			}	
+			//插入图片和价格到弹窗上
+		  	for(var i=0; i<arr.length; i++){
+			 	var p_s = arr[i].p_s;
+			 	if (isContained(p_s, selArr)) {
 			 	 	//console.log($(Did).get(0))
-			 	 	 var img = arr[i].image;
-			 	 	 var price = arr[i].price;
-			 	 	 var kc = arr[i].stock;
-
-			 	 	 //购物车弹窗
-			 	 	 if (Did == '#sp_color_jrgwc') 
-			 	 	 {
-			 	 	 	$('#jrgwc .imgbox em img').get(0).src = img;
+			 	 	var img = arr[i].image;
+			 	 	var price = arr[i].price;
+			 	 	var kc = arr[i].stock;
+					//购物车弹窗
+			 	 	if (Did == '#sp_color_jrgwc') {
+			 	 		$('#jrgwc .imgbox em img').get(0).src = img;
 			 	 	 	$('#jrgwc .sp_price_text .p2 span').html(price/100);
 			 	 	 	$('#jrgwc .kc').html(kc);
-			 	 	 }
-			 	 	 else
-			 	 	 {
+			 	 	} else {
 			 	 	 	$('#ljgm .imgbox em img').get(0).src = img;
 			 	 	 	$('#ljgm .sp_price_text .p2 span').html(price/100);
 			 	 	 	$('#ljgm .kc').html(kc);
-			 	 	 }
-			 	 	 break;
+			 	 	}
+			 	 	break;
 			 	 }
-			 }
+			}
 		});
 	}
 }
@@ -366,6 +358,7 @@ function ljgm(data)
 				},
 				success: function(dt){
 					console.log(dt.result[0].receiver)
+					Ec_Socket.dir = 'p';
 					Ew_Socket.data = {
 						"quantity" : parseInt($('#ljgm .text_box').html()),
 						 "p_id" : p_id, 

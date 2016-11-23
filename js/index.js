@@ -1,20 +1,10 @@
 define(function (require) {
     var tpl = require('tpl/home.html');
     var indexAjax = require('js/ajax/indexAjax');
-    var slide = require('js/slide.v2.0.min');
     return {
         title: '首页',
         body: tpl,
         init: function () {
-            // banner轮播效果
-            Zepto(function($){
-			    imgSlide = new mo.Slide({
-			        target: $('#banner-box li'),
-			        direction: 'x',
-                    controller: true
-			    });
-			});
-
             // 显示隐藏返回顶部按钮
             $backtotop = $('.index-wrap .backtotop');
             $('.index-wrap .border-box').on('scroll',function(){
@@ -35,8 +25,50 @@ define(function (require) {
             // 控制底部导航栏状态
             $('.nav-box').show();
             $('.nav-box li').removeClass('on').eq(0).addClass('on');
+
             // 加载轮播图
-            indexBanner();
+            isIndex = true;
+            loadBanner();
+            // indexBannerAjax(function(){
+            //     indexBannerSwiper();
+            // });
+        },
+        afterclose: function(){
+            isIndex = false;
         }
     }
 });
+
+function loadBanner(){
+    removejscssfile('js/swiper.min.js','js');
+    loadjs('js/swiper.min.js',function(){
+        if (indexSwiper1 != null) {
+            indexSwiper1.destroy(true);
+            indexSwiper2.destroy(true);
+        };
+        indexSwiper1 = indexSwiper2 = null;
+        indexSwiper1 = new Swiper('#ver-banner',{
+            pagination: '#ver-banner .index-pagination',
+            loop:true,
+            grabCursor: true,
+            paginationClickable: true,
+            observer:true,
+            observeParents:true
+        });
+        indexSwiper2 = new Swiper('#lev-banner',{
+            loop: true,
+            effect: 'coverflow',
+            slidesPerView: 3,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflow: {
+                rotate: 30,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+            },
+            observer:true,
+            observeParents:true
+        });
+    });  
+}
