@@ -4,6 +4,7 @@
         <a class='backtotop lsp' href="javascript:;" title='返回顶部'>返回顶部</a>
         <div class="border-box">
             <div class="banner-box pr" id="banner-box">
+<<<<<<< HEAD
                 <div class="ver-banner swiper-container" id="ver-banner">
                     <ul class="img-slide swiper-wrapper">
                         <li class="swiper-slide"><a href="javascript:;"><img src="images/v1.jpg" alt="v1"></a></li>
@@ -23,11 +24,35 @@
             <!--<script id="indexbannertemplate" type="text/html">
                 {{if isAdmin}}
                     <ul class="img-slide swiper-wrapper">
+=======
+                <ul class="img-slide">
+                    <li><a href="javascript:;"><img src="images/v1.jpg" alt="v1"></a></li>
+                    <li><a href="javascript:;"><img src="images/v2.jpg" alt="v1"></a></li>
+                    <li><a href="javascript:;"><img src="images/v3.jpg" alt="v1"></a></li>
+                </ul>
+                <ul class="small-img">
+                    <li><a href="javascript:;"><img src="images/v1.jpg" alt="v1"></a></li>
+                    <li><a href="javascript:;"><img src="images/v2.jpg" alt="v1"></a></li>
+                    <li><a href="javascript:;"><img src="images/v3.jpg" alt="v1"></a></li>
+                </ul>
+            </div>
+            <!--<script id="indexbannertemplate" type="text/html">
+                {{if isAdmin}}
+                    <ul class="img-slide">
+>>>>>>> 688ca31043e2e7f77d5499df2160c69b2cb495f3
                         {{each bName value as i}}
                             <li class="swiper-slide"><a href="{{bName[i].advertisers.url}}"><img src="{{bName[i].advertisers.image}}" alt="{{bName[i].advertisers.title}}"></a></li>
                         {{/each}}
                     </ul>
+<<<<<<< HEAD
                     <div class="index-pagination pa txc"></div>
+=======
+                    <ul class="small-img">
+                        {{each bName value as i}}
+                            <li><img src="{{bName[i].advertisers.image}}" alt="{{bName[i].advertisers.title}}"></li>
+                        {{/each}}
+                    </ul>
+>>>>>>> 688ca31043e2e7f77d5499df2160c69b2cb495f3
                 {{/if}}
             </script>-->
             <div class="index-page-nav">

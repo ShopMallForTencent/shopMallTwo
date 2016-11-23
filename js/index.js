@@ -5,6 +5,39 @@ define(function (require) {
         title: '首页',
         body: tpl,
         init: function () {
+<<<<<<< HEAD
+=======
+            // banner轮播效果
+            Zepto(function($){
+			    imgSlide = new mo.Slide({
+			        target: $('#banner-box .img-slide li'),
+			        direction: 'x',
+                    controller: true,
+                    event:{
+                        change:function(){
+                            var index = this.curPage;
+                            var leftNum,rightNum;
+                            var $smallLi = $('#banner-box .small-img li');
+                            $smallLi.removeClass('none left right');
+                            if (index == 0) {
+                                leftNum = 2;
+                            } else{
+                                leftNum = index - 1;
+                            }
+                            if (index == 2) {
+                                rightNum = 0;
+                            } else{
+                                rightNum = index + 1;
+                            }
+                            $smallLi.eq(leftNum).addClass('left');
+                            $smallLi.eq(index).addClass('none');
+                            $smallLi.eq(rightNum).addClass('right');
+                        }
+                    }
+			    });
+			});
+
+>>>>>>> 688ca31043e2e7f77d5499df2160c69b2cb495f3
             // 显示隐藏返回顶部按钮
             $backtotop = $('.index-wrap .backtotop');
             $('.index-wrap .border-box').on('scroll',function(){

@@ -3,6 +3,7 @@
 .ensure-order-wrap strong{font-weight: bold;;}
 .ensure-order-wrap .addsp{background: url(../images/myAddress/sprite.png) no-repeat;background-size: 20rem;}
 .vertical .ensure-order-wrap .border-box{ border-bottom-width: 6.5rem;}
+<<<<<<< HEAD
 .ensure-order-wrap .addBox{ position: relative; display: block; margin-bottom: 1rem; padding-top: 1rem; background: #fff; overflow: hidden;}
 .ensure-order-wrap .addBox .user-info{ height: 2.4rem; margin-bottom: 0.2rem; padding: 0.6rem 0 0 3.2rem; font-size: 1.4rem; color: #212b3e; line-height: 2.4rem;}
 .ensure-order-wrap .addBox .user-info strong{ margin-right: 2.8rem; font-size: 1.5rem; font-weight: bold;}
@@ -32,6 +33,36 @@
 .vertical .ensure-order-wrap .countFee{ padding: 1.2rem 1rem; background: #fff;}
 .vertical .ensure-order-wrap .countFee div{ float: left; width: 100%;}
 .vertical .ensure-order-wrap .countFee p{ float: left; width: 100%; font-size: 1.3rem; color: #1a1a1a; line-height: 2.7rem; }
+=======
+.vertical .ensure-order-wrap .addBox{ position: relative; display: block; margin-bottom: 1rem; padding-top: 1rem; background: #fff; overflow: hidden;}
+.vertical .ensure-order-wrap .addBox .user-info{ height: 2.4rem; margin-bottom: 0.2rem; padding: 0.6rem 0 0 3.2rem; font-size: 1.4rem; color: #212b3e; line-height: 2.4rem;}
+.vertical .ensure-order-wrap .addBox .user-info strong{ margin-right: 2.8rem; font-size: 1.5rem; font-weight: bold;}
+.vertical .ensure-order-wrap .addBox .add{ position: relative; width: 32rem; margin-bottom: 2.25rem; padding: 0 2.3rem 0 3.2rem; font-size: 1.2rem; color: #818181; line-height: 1.6rem;}
+.vertical .ensure-order-wrap #user_address{ position: relative;}
+.vertical .ensure-order-wrap #user_address:before{ position: absolute; top: 50%; right: 1rem; z-index: 99; content: ''; width: 0.8rem; height: 1.1rem; margin-top: -0.55rem; background: url(../images/personal/per-sp.png) no-repeat -13.4rem 0; background-size: 18rem; pointer-events: none;}
+.vertical .ensure-order-wrap .line{ width: 100%; height: 0.25rem; background: url(../images/myAddress/add-line.jpg) repeat-x; background-size: 2.8rem;}
+.vertical .ensure-order-wrap .addBox .add i{ top: 50%; left: 1rem; width: 1.2rem; height: 1.5rem; margin-top: -0.65rem; background-position: -8.8rem -2rem;}
+.vertical .ensure-order-wrap .not-addBox{ font-size: 0; text-align: center; line-height: 4.4rem;}
+.vertical .ensure-order-wrap .not-addBox span{ font-size: 1.2rem; color: #6e6e6e;}
+.vertical .ensure-order-wrap .not-addBox i{ display: inline-block; width: 1.2rem; height: 1.5rem; margin-right: 0.5rem; background-position: -8.8rem -2rem; vertical-align: middle;}
+
+.vertical .ensure-order-wrap .shopList{background: #fff; overflow: hidden;}
+.vertical .ensure-order-wrap .shopList .shopName{ padding-left: 1rem; font-size: 1.4rem; color: #1a1a1a; line-height: 4.4rem;}
+.vertical .ensure-order-wrap .shopList .shopName img{ width: auto; height: 1.5rem; margin-right: 1rem; vertical-align: middle;}
+.vertical .ensure-order-wrap .itemList{ position: relative; margin-bottom: 1rem; padding:1rem 1rem 1rem 11.7rem;}
+.vertical .ensure-order-wrap .itemList:nth-child(2){ margin-top: 1rem;}
+.vertical .ensure-order-wrap .itemList .img-box{position: absolute;top:1rem;left:1rem;width: 9.3rem;height: 9.3rem; overflow: hidden;}
+.vertical .ensure-order-wrap .itemList .img-box img{ display: block;}
+.vertical .ensure-order-wrap .itemList .right .listName{ height: 3.6rem; margin-bottom: 0.3rem; padding-top: 0.2rem; font-size: 1.2rem; color: #1a1a1a; line-height: 1.8rem; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;}
+.vertical .ensure-order-wrap .itemList .right .color{ display: none; margin-bottom: 0.9rem; font-size: 1.1rem; color: #a6a6a6; line-height: 1.8rem;}
+.vertical .ensure-order-wrap .itemList .right .color:nth-child(3){ display: block;}
+.vertical .ensure-order-wrap .itemList .nums{ position: relative;}
+.vertical .ensure-order-wrap .itemList .nums p:nth-of-type(1){font-size: 1.5rem; color: #fb4c45; line-height: 2.5rem;float: left;}
+.vertical .ensure-order-wrap .itemList .nums p:nth-of-type(1) .rmb{font-size: 1.2rem;}
+.vertical .ensure-order-wrap .itemList .nums p:nth-of-type(2){ font-size: 1.2rem; color: #a6a6a6; line-height: 2.5rem; float: right;}
+.vertical .ensure-order-wrap .countFee{ padding: 1.2rem 1rem; background: #fff;}
+.vertical .ensure-order-wrap .countFee p{ font-size: 1.3rem; color: #1a1a1a; line-height: 2.7rem; }
+>>>>>>> 688ca31043e2e7f77d5499df2160c69b2cb495f3
 .vertical .ensure-order-wrap .countFee p .feeName{float: left;}
 .vertical .ensure-order-wrap .countFee p .feeNum{float: right;font-size: 1.4rem;color:#fb4c45;}
 .vertical .ensure-order-wrap .countFee .feeNum span:nth-of-type(1){font-size: 1.3rem;}

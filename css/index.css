@@ -11,6 +11,7 @@
 .index-wrap .lists .enter-btn{ top: 0; left: 0; z-index: 9; width: 100%; height: 100%;}
 .vertical .index-wrap .lev-banner{ display: none;}
 .vertical .index-wrap .banner-box{ width: 100%; height: 18rem; overflow: hidden;}
+<<<<<<< HEAD
 .vertical .index-wrap .banner-box .ver-banner{ display: block; height: 18rem;}
 .vertical .index-wrap .banner-box .ver-banner .img-slide{ position: relative; z-index: 9; width: 100%; height: 18rem;}
 .vertical .index-wrap .banner-box .ver-banner .img-slide li{ float: left; width: 100%; height: 18rem;}
@@ -19,6 +20,16 @@
 .vertical .index-wrap .banner-box .index-pagination{ position: absolute; bottom: 1rem; left: 0; z-index: 99; width: 100%; font-size: 0; text-align: center;}
 .vertical .index-wrap .banner-box .index-pagination span{ display: inline-block; width: 0.8rem; height: 0.8rem; margin: 0 0.2rem; background: #88888f; border-radius: 100%; text-indent: -9999em; overflow: hidden;}
 .vertical .index-wrap .banner-box .index-pagination span.swiper-pagination-bullet-active{ background: #fff;}
+=======
+.vertical .index-wrap .banner-box .small-img{ display: none;}
+.vertical .index-wrap .banner-box .img-slide{ position: relative; z-index: 9; width: 100%; height: 18rem;}
+.vertical .index-wrap .banner-box .img-slide li{ float: left; width: 100%; height: 18rem;}
+.vertical .index-wrap .banner-box a,
+.vertical .index-wrap .banner-box img{ display: block; width: 100%;}
+.vertical .index-wrap .banner-box .controller{ position: absolute; bottom: 1rem; left: 0; z-index: 5; width: 100%; font-size: 0; text-align: center;}
+.vertical .index-wrap .banner-box .controller li{ display: inline-block; width: 0.8rem; height: 0.8rem; margin: 0 0.2rem; background: #88888f; border-radius: 100%; text-indent: -9999em; overflow: hidden;}
+.vertical .index-wrap .banner-box .controller li.current{ background: #fff;}
+>>>>>>> 688ca31043e2e7f77d5499df2160c69b2cb495f3
 .vertical .index-wrap .index-page-nav{ display: block; margin-bottom: 1rem; padding: 0 1.5rem; background: #fff;/* border-bottom: 1px solid #e1e1e1;*/}
 .vertical .index-wrap .index-page-nav ul{ width: 100%; height: 9rem;}
 .vertical .index-wrap .index-page-nav li{ float: left; width: 25%; height: 100%;}
@@ -46,12 +57,24 @@
 
 .level .index-wrap{ background: #fff;}
 .level .index-wrap .banner-box{ height: 12.3rem; overflow: hidden;}
+<<<<<<< HEAD
 .level .index-wrap .banner-box .ver-banner{ display: none;}
 .level .index-wrap .banner-box .lev-banner{ display: block; height: 12.3rem;}
 .level .index-wrap .banner-box .lev-banner .img-slide{ position: relative; z-index: 9; width: 25.6rem; height: 12.3rem;}
 .level .index-wrap .banner-box .lev-banner .img-slide li{ float: left; width: 100%; height: 100%;}
 .level .index-wrap .banner-box .lev-banner a,
 .level .index-wrap .banner-box .lev-banner img{ display: block; width: auto; height: 100%; margin: 0 auto;}
+=======
+.level .index-wrap .banner-box .small-img{ position: absolute; top: 0.5rem; left: 0; z-index: 1; width: 100%; height: 10.4rem; overflow: hidden; pointer-events: none;}
+.level .index-wrap .banner-box .small-img li{ position: absolute; top: 0;}
+.level .index-wrap .banner-box .small-img li.none{ display: none;}
+.level .index-wrap .banner-box .small-img li.left{ left: 0;}
+.level .index-wrap .banner-box .small-img li.right{ right: 0;}
+.level .index-wrap .banner-box .img-slide{ position: relative; z-index: 9; width: 100%; height: 12.3rem;}
+.level .index-wrap .banner-box .img-slide li{ float: left; width: 100%; height: 100%;}
+.level .index-wrap .banner-box a,
+.level .index-wrap .banner-box img{ display: block; width: auto; height: 100%; margin: 0 auto;}
+>>>>>>> 688ca31043e2e7f77d5499df2160c69b2cb495f3
 .level .index-wrap .main{ padding: 1rem 1rem 0; background: #fff;}
 .level .index-wrap .hd{ padding-right: 0; padding-left: 0;}
 .level .index-wrap .hd .more{ right: 0;}

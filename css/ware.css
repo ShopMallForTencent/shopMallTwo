@@ -32,7 +32,11 @@
 /*ware_nav*/
 .ware-wrap .ware_nav_body{ height: 4.5rem; background: #fff; line-height: 4.5rem;}
 .ware-wrap .ware_nav{ background: #fff;}
+<<<<<<< HEAD
 .ware-wrap .ware_nav a{width: 12.5rem; text-align: center; font-size: 1.4rem; color: #1a1a1a;}
+=======
+.ware-wrap .ware_nav a{width: 12.5rem; text-align: center;/* border-bottom:1px solid #eaeaea;*/ font-size: 1.4rem; color: #1a1a1a;}
+>>>>>>> 688ca31043e2e7f77d5499df2160c69b2cb495f3
 .ware-wrap .ware_nav .select{ color: #fb4c45;}
 .ware-wrap .ware_nav .select:before{border-bottom-color: #fb4c45;}
 
@@ -98,8 +102,13 @@
 .ware-wrap .ggcs .not{ font-size: 1.2rem; color: #a6a6a6; line-height: 13.6rem;}
 
 /*spxq*/
+<<<<<<< HEAD
 .ware-wrap .spxq ul{ width: 100%; padding: 1rem 0; background: #fff; overflow: hidden;}
 .ware-wrap .spxq li{ width: 100%; margin-bottom: 0.5rem; padding: 0 1rem; font-size: 1.2rem; color: #1a1a1a; line-height: 2.2rem;}
+=======
+.ware-wrap .spxq ul{ padding: 1rem 0; background: #fff;}
+.ware-wrap .spxq li{ width: 35.5rem; margin-bottom: 0.5rem; padding: 0 1rem; font-size: 1.2rem; color: #1a1a1a; line-height: 2.2rem;}
+>>>>>>> 688ca31043e2e7f77d5499df2160c69b2cb495f3
 .ware-wrap .spxq .not-explain{ font-size: 1.2rem; color: #a6a6a6; line-height: 12rem;}
 
 /*gmtc*/
@@ -129,6 +138,15 @@
 .ware-wrap .gmtc .sp_val .jzq{ float: right; margin-right: 1.6rem; font-size: 1.3rem; color: #1a1a1a; line-height: 2.8rem;}
 .ware-wrap .gmtc .sp_val p{ font-size: 1.3rem; color: #6e6e6e; line-height: 2.8rem;}
 
+<<<<<<< HEAD
+=======
+/*.vertical .shopping-cart-wrap .right .actNum{ position: absolute; bottom:1.2rem; right:1rem; color: #212b3e; font-size: 1.44rem;text-align: center;}
+.vertical .shopping-cart-wrap .right .actNum p{ border-top:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6;}
+.vertical .shopping-cart-wrap .right .actNum a{ box-sizing: border-box; border: 1px solid #d6d6d6; border-top: none; border-bottom: none; width: 2.35rem;height: 2.4rem;float: left; font-size: 2.6rem;color: #212b3e;line-height: 2.4rem;}
+.vertical .shopping-cart-wrap .right .actNum a.plus{ font-size: 2.0rem; line-height: 2.2rem;}
+.vertical .shopping-cart-wrap .right .actNum span{ box-sizing: border-box; float: left;width: 5.35rem; height: 2.4rem;text-align: center;line-height: 2.6rem;}*/
+
+>>>>>>> 688ca31043e2e7f77d5499df2160c69b2cb495f3
 .ware-wrap .gmtc .sp_val .jzq div{ border-top:1px solid #d6d6d6; border-bottom:1px solid #d6d6d6; color: #212b3e; font-size: 1.44rem;text-align: center;}
 /*.ware-wrap .gmtc .sp_val span{ float: left; text-align: center; font-size: 1.6rem; height: 2.7rem; line-height: 2.7rem;}*/
 .ware-wrap .gmtc .sp_val .jzq span{ box-sizing: border-box; float: left; width: 5.35rem; height: 2.4rem; text-align: center;line-height: 2.6rem;}
